@@ -154,6 +154,10 @@
             <li>
             <a href="/seccion/salud" style="text-decoration:none">@lang('data.salud')</a></li>
           </ul>
+          <ul class="w3-ul w3-hoverable w3-center">
+            <li>
+            <a href="#" style="text-decoration:none">Prueba</a></li>
+          </ul>
         </p>
     </div>
 
