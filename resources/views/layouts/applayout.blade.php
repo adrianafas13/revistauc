@@ -111,6 +111,9 @@
           <a class="w3-bar-item w3-button" style="margin-top:20px;">
             <i class="fab fa-facebook-square fa-2x"></i>
           </a>  
+          <a class="w3-bar-item w3-button" style="margin-top:20px;">
+            <i class="fab fa-user fa-2x"></i>
+          </a>
         </div>
     </div>
 
@@ -153,10 +156,6 @@
          <ul class="w3-ul w3-hoverable w3-center">
             <li>
             <a href="/seccion/salud" style="text-decoration:none">@lang('data.salud')</a></li>
-          </ul>
-          <ul class="w3-ul w3-hoverable w3-center">
-            <li>
-            <a href="#" style="text-decoration:none">Prueba</a></li>
           </ul>
         </p>
     </div>
