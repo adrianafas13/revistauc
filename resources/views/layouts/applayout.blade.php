@@ -111,9 +111,6 @@
           <a class="w3-bar-item w3-button" style="margin-top:20px;">
             <i class="fab fa-facebook-square fa-2x"></i>
           </a>  
-          <a class="w3-bar-item w3-button" style="margin-top:20px;">
-            <i class="fab fa-user fa-2x"></i>
-          </a>
         </div>
     </div>
 
