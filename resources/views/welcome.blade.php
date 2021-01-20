@@ -25,7 +25,7 @@
     @endforeach
     </div>
    <div class="w3-third ">
-        <div class="w3-card w3-margin" style="background-color: #C3CED7;">
+        <div class="w3-card w3-margin-right" style="background-color: #C3CED7;">
             <div class="w3-container w3-padding" style="background-color: #386685;">
                 <h4>@lang('data.popular')</h4>
             </div>
