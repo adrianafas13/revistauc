@@ -24,30 +24,23 @@
         </div>  
     @endforeach
     </div>
-   <div class="w3-third ">
-        <div class="w3-card w3-margin-right" style="background-color: #C3CED7;">
+   <div class="w3-third">
+        <div class="w3-card w3-margin-right">
             <div class="w3-container w3-padding" style="background-color: #386685;">
                 <h4>@lang('data.popular')</h4>
             </div>
             @foreach($articles as $article)
-            <ul class="w3-ul w3-hover-white">
+            <ul class="w3-ul w3-white w3-border w3-hover-gray">
                 <a href="{{route('art', $article->slug)}}">
-                <li class="w3-padding-16">
+                <li class="w3-padding-12">
                     <div class="w3-row">
-                    <div class="w3-third">
-                        <div class="w3-center" style="font-family:'Oswald', sans-serif;font-size:14px, font-weight:400px, color: #000000;">
-                            <img src="/images/{{ App::isLocale('es')?$article->ruta_image:$article->ruta_en_image }}" alt="Image" class="w3-left w3-margin-right" style="margin-top:25px; width:100%; height: auto;">
-                        </div> 
-                    </div>
-                    <div class="w3-twothird">
-                        <div class="w3-center">
+                        <div class="w3-margin" style="font-family:'Oswald', sans-serif;font-size:14px, font-weight:400px, color: #000000;">
                             <span><p><b>{{ App::isLocale('es')?$article->title:$article->en_title }}
                             </b></p></span>
                             <span ><p>{{ $article->author }}</p></span>
-                            <span><p>{{ $article->created_at }}</p></span> 
+                            <span><p>@lang('data.'.$article->section)</p></span> 
                         </div>
                     </div>  
-                </div> 
                 </li>
             </a>
             </ul>

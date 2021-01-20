@@ -66,8 +66,8 @@
   <div class="w3-dropdown-hover w3-right" style="margin-top:20px;">
     <button class="w3-button"><i class="fa fa-globe fa-lg"></i>{{ App::getLocale() }}</button>
     <div class="w3-dropdown-content w3-bar-block w3-card-4">
-      <a class="w3-bar-item w3-button" href="/lang/es"> @lang('data.español')</a>
-      <a class="w3-bar-item w3-button" href="/lang/en"> @lang('data.ingles')</a>
+      <a class="w3-bar-item w3-button" href="/lang/es">@lang('data.español')</a>
+      <a class="w3-bar-item w3-button" href="/lang/en">@lang('data.ingles')</a>
     </div>
   </div>
   <a href="{{route('contacto')}}" class="w3-bar-item w3-button w3-right" style="margin-top:20px;">@lang('data.contactanos')</a>
