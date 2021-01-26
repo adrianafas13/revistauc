@@ -1,3 +1,63 @@
+<style>
+/* Add a black background color to the top navigation */
+.topnav {
+  background-color: white;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  display: block;
+  color: #707070;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 14px;
+  font-family:'Nirmala UI', sans-serif;">
+}
+
+/* Add an active class to highlight the current page */
+.active {
+  background-color: #386685;
+  color: white;
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+  display: none;
+
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 600px){  
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .topnav.responsive .dropdown {float: none;}
+  .topnav.responsive .dropdown-content {position: relative;}
+  .topnav.responsive .dropdown .dropbtn {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+}
+</style>
+
+
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
@@ -20,67 +80,67 @@
 </head>
 
 <body>
-<!-- Sidebar (hidden by default) -->
-<div class="w3-bar">
-  <div class="w3-margin">
-    <div style="font-family:'Nirmala UI', sans-serif;font-size:14px, font-weight:400px, color: #707070;">
-  <img src="{{ asset('dist/img/logotipo.png') }}" alt="logo" style="width:13%; margin-left: 15px;">
-<div class="w3-bar-item w3-right">
-  <form type="get" action=" {{route('search')}} ">
-    <button class="w3-bar-item w3-button w3-green w3-right" style="margin-top:13px;"><i class="fas fa-search"></i></button>
-    <input type="text" name="query" class="w3-bar-item w3-input w3-right " style="margin-top:13px;" placeholder="Buscar Artículo">
-  </form>
-</div>
-   
-  @guest
-      <div class="w3-dropdown-hover w3-right" style="margin-top:20px;">
-        <button class="w3-button"><i class="fa fa-user fa-lg"></i></button>
-          <div class="w3-dropdown-content w3-bar-block w3-card-4">
-            <a class="w3-bar-item w3-button" href="{{ route('login') }}">{{ __('Login') }}</a>
-          @if (Route::has('register'))
-            <a class="w3-bar-item w3-button" href="{{ route('register') }}">{{ __('Register') }}</a>
-          @endif
-          </div>
-      </div>
-    @else
-      <div class="w3-dropdown-hover w3-right" style="margin-top:20px;">   
-        <button class="w3-button">{{ Auth::user()->name }} <span class="caret"></span></button>
-          <div class="w3-dropdown-content w3-bar-block w3-card-4">
-            @hasrole('Admin')
-             <a class="w3-bar-item w3-button" href="{{ route('admin') }}">Panel de Administrador</a>
-            @endhasrole
-            @hasrole('comment_admin')
-             <a class="w3-bar-item w3-button" href="{{ route('admin') }}">Panel de Administrador</a>
-            @endhasrole
-            <a class="w3-bar-item w3-button" href="{{ route('logout') }}"
-                onclick="event.preventDefault();
-                document.getElementById('logout-form').submit();">
-                {{ __('Logout') }}
-              </a>
-              <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                @csrf
-              </form>
+  <div class="topnav" id="myTopnav">
+  <div class="w3-bar">
+    <div class="w3-margin">
+      <img src="{{ asset('dist/img/logotipo.png') }}" alt="logo" class="w3-bar-item w3-left" style="width:13%; margin-left: 15px;">
+      <a href="/" class="w3-bar-item w3-button w3-left" style="margin-top:20px;">Home</a>
+      <a href="{{route('articulos')}}" class="w3-bar-item w3-button w3-left" style="margin-top:20px;">@lang('data.articulos')</a>
+      <a href="{{route('sobrenosotros')}}" class="w3-bar-item w3-button w3-left" style="margin-top:20px;">@lang('data.sobre_nosotros')</a>
+      <a href="{{route('contacto')}}" class="w3-bar-item w3-button w3-left" style="margin-top:20px;">@lang('data.contactanos')</a>
+
+      <form type="get" action=" {{route('search')}} ">
+        <input type="text" name="query" class="w3-bar-item w3-input w3-left " style="margin-top:20px; background-color:black;" placeholder="Buscar Artículo"> 
+        <button class="w3-bar-item w3-button w3-green w3-left" style="margin-top:20px;"><i class="fas fa-search"></i></button>
+      </form>  
+
+          <button class="w3-bar-item w3-button w3-right" style="margin-top:20px;"><i class="fa fa-globe fa-lg"></i>{{ App::getLocale() }}</button>
+            <div class="w3-dropdown-content w3-bar-block w3-card-4">
+          <a class="w3-bar-item w3-button" href="/lang/es">@lang('data.español')</a>
+          <a class="w3-bar-item w3-button" href="/lang/en">@lang('data.ingles')</a>
+        </div>
+
+        @guest
+                <div class="w3-dropdown-hover w3-right" style="margin-top:24px;">
+                  <button class="w3-button"><i class="fa fa-user fa-lg"></i></button>
+                    <div class="w3-dropdown-content w3-bar-block w3-card-4">
+                      <a class="w3-bar-item w3-button" href="{{ route('login') }}">{{ __('Login') }}</a>
+                    @if (Route::has('register'))
+                      <a class="w3-bar-item w3-button" href="{{ route('register') }}">{{ __('Register') }}</a>
+                    @endif
+                    </div>
+                </div>
+              @else
+              <div class="w3-dropdown-hover w3-right" style="margin-top:24px;">   
+                <button class="w3-button">{{ Auth::user()->name }} <span class="caret"></span></button>
+                  <div class="w3-dropdown-content w3-bar-block w3-card-4">
+                    @hasrole('Admin')
+                    <a class="w3-bar-item w3-button" href="{{ route('admin') }}">Panel de Administrador</a>
+                    @endhasrole
+                    @hasrole('comment_admin')
+                    <a class="w3-bar-item w3-button" href="{{ route('admin') }}">Panel de Administrador</a>
+                    @endhasrole
+                    <a class="w3-bar-item w3-button" href="{{ route('logout') }}"
+                        onclick="event.preventDefault();
+                        document.getElementById('logout-form').submit();">
+                        {{ __('Logout') }}
+                      </a>
+                      <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                        @csrf
+                      </form>
+                    </div>
+                  </div>
+              @endguest
             </div>
-          </div>
-      @endguest
-  <div class="w3-dropdown-hover w3-right" style="margin-top:20px;">
-    <button class="w3-button"><i class="fa fa-globe fa-lg"></i>{{ App::getLocale() }}</button>
-    <div class="w3-dropdown-content w3-bar-block w3-card-4">
-      <a class="w3-bar-item w3-button" href="/lang/es">@lang('data.español')</a>
-      <a class="w3-bar-item w3-button" href="/lang/en">@lang('data.ingles')</a>
-    </div>
-  </div>
-  <a href="{{route('contacto')}}" class="w3-bar-item w3-button w3-right" style="margin-top:20px;">@lang('data.contactanos')</a>
-  <a href="{{route('sobrenosotros')}}" class="w3-bar-item w3-button w3-right" style="margin-top:20px;">@lang('data.sobre_nosotros')</a>
-   <a href="{{route('articulos')}}" class="w3-bar-item w3-button w3-right" style="margin-top:20px;">@lang('data.articulos')</a>
-  <a href="/" class="w3-bar-item w3-button w3-right" style="margin-top:20px;">Home</a>
-  
+            
+         
 
- </div>
+        </div>
+      </div>
+    </div>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
   </div>
 </div>
-
-
   <main>
     @yield('content')
   </main>
@@ -167,12 +227,23 @@
 </footer>
 </div>
 
+
 <script>
   $.widget.bridge('uibutton', $.ui.button)
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <!-- Bootstrap 4 -->
 <script src="{{ asset('plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+<script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
 
 </body>
 </html>
