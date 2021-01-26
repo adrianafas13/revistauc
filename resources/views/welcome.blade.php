@@ -1,5 +1,5 @@
 
-@extends('layouts.applayout')
+@extends('layouts.userlayout')
 
 @section('content')
 <div style="background-color:#EAF0F6;">
