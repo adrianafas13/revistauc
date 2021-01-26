@@ -199,11 +199,14 @@
                 <img src="{{ asset('dist/img/logotipo.png') }}" alt="logo" style="width:13%; align=center;">
 
                 <div class="w3-right">
-                    <button class="w3-bar-item w3-button w3-right" style="margin-top:20px;"><i class="fa fa-globe fa-lg"></i>{{ App::getLocale() }}</button>
+
+                <div class="w3-dropdown-hover w3-right" style="margin-top:22px;">
+                    <button class="w3-button"><i class="fa fa-globe fa-lg"></i>{{ App::getLocale() }}</button>
                         <div class="w3-dropdown-content w3-bar-block w3-card-4">
                             <a class="w3-bar-item w3-button" href="/lang/es">@lang('data.español')</a>
                             <a class="w3-bar-item w3-button" href="/lang/en">@lang('data.ingles')</a>
                         </div>
+                </div>
 
                 @guest
 
@@ -254,14 +257,14 @@
             </button>
            
                 <div class="dropdown-content">
-                    <a href="#">Administración</a>
-                    <a href="#">Arte</a>
-                    <a href="#">Idiomas</a>
-                    <a href="#">Informatica</a>
-                    <a href="#">Derecho</a>
-                    <a href="#">Gerencia</a>
-                    <a href="#">Historia</a>
-                    <a href="#">Salud</a>
+                    <a href="/seccion/administracion">@lang('data.administracion')</a>
+                    <a href="/seccion/arte">@lang('data.arte')</a>
+                    <a href="/seccion/idiomas">@lang('data.idiomas')</a>
+                    <a href="/seccion/informatica">@lang('data.informatica')</a>
+                    <a href="/seccion/derecho">@lang('data.derecho')</a>
+                    <a href="/seccion/gerencia">@lang('data.gerencia')</a>
+                    <a href="/seccion/historia">@lang('data.historia')</a>
+                    <a href="/seccion/salud">@lang('data.salud')</a>
                 </div>
         </div>
 
