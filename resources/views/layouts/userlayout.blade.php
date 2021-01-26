@@ -62,7 +62,7 @@
   padding: 12px 16px;
   text-decoration: none;
   display: block;
-  text-align: left;
+  text-align: right;
 }
 
 /* Add a dark background on topnav links and the dropdown button on hover */
@@ -185,7 +185,7 @@
     <div class="w3-bar">
         <div class="w3-margin">
             <div class="w3-center">
-                <img src="{{ asset('dist/img/logotipo.png') }}" alt="logo" style="width:13%;">
+                <img src="{{ asset('dist/img/logotipo.png') }}" alt="logo" style="width:13%; align=center;">
 
                 <div class="w3-right">
                     <a class="w3-bar-item w3-button" style="margin-top:10px;">
@@ -207,12 +207,19 @@
             <button class="dropbtn">Lineas de Investigación
                 <i class="fa fa-caret-down"></i>
             </button>
-            <div class="dropdown-content">
-                <a href="#">Link 1</a>
-                <a href="#">Link 2</a>
-                <a href="#">Link 3</a>
-            </div>
+           
+                <div class="dropdown-content">
+                    <a href="#">Administración</a>
+                    <a href="#">Arte</a>
+                    <a href="#">Idiomas</a>
+                    <a href="#">Informatica</a>
+                    <a href="#">Derecho</a>
+                    <a href="#">Gerencia</a>
+                    <a href="#">Historia</a>
+                    <a href="#">Salud</a>
+                </div>
         </div>
+
         <a href="#news">Ediciones</a>
         <a href="#contact">Autores</a>
         <a href="#about">Información</a>
@@ -229,12 +236,15 @@
         
     </div>
 
-
     <main>
     @yield('content')
     </main>
 
-
+    <div class="footer">
+        <div class="w3-center">
+            <p><b>Derechos Reservados &copy 2020. Revista Científica. Universidad de Margarita</b></p>
+        </div>
+    </div>
 
 
 <script>
