@@ -114,6 +114,47 @@
     text-align: left;
   }
 }
+.topnav .search-container {
+  float: right;
+}
+.topnav input[type=text] {
+  padding: 6px 30px;
+  margin-top: 6px;
+  font-size: 15px;
+  border: none;
+}
+
+.topnav .search-container button {
+  float: right;
+  padding: 12px 12px;
+  margin-top: 6px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.topnav .search-container button:hover {
+  background: #ccc;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav .search-container {
+    float: none;
+  }
+  .topnav a, .topnav input[type=text], .topnav .search-container button {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 8px;
+  }
+  .topnav input[type=text] {
+    border: 1px solid #ccc;  
+  }
+}
 </style>
 
 
@@ -178,13 +219,24 @@
         <a href="javascript:void(0);" class="icon" onclick="myFunction()">
             <i class="fa fa-bars"></i>
         </a>
+
+        <div class="search-container">
+            <form action="/action_page.php">
+            <input type="text" placeholder="Search.." name="search">
+            <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+        </div>
         
     </div>
 
 
     <main>
     @yield('content')
-  </main>
+    </main>
+
+
+
+
 <script>
   $.widget.bridge('uibutton', $.ui.button)
 </script>
