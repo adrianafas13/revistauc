@@ -144,12 +144,18 @@
 }
 
 .topnav .search-container button:hover {
-  background: #ccc;
+  background: #303030;
+  color: #fff;
 }
 
-.topnav .w3-bar-item .w3-button button:hover { 
+.w3-bar .icon a { 
+    color:#303030;
+    background-color: white;
+}
+
+.w3-bar .icon a:hover { 
     color:#336699;
-    background:white;
+    background-color:red;
 }
 
 @media screen and (max-width: 600px) {
@@ -196,22 +202,24 @@
     <div class="w3-bar">
         <div class="w3-margin">
             <div class="w3-left">
-                    <a class="w3-bar-item w3-button" style="margin-top:10px;">
+                <div class="icon">
+                    <a class="w3-button" style="margin-top:10px;">
                         <i class="fab fa-twitter fa-2x"></i>
                     </a>
-                    <a class="w3-bar-item w3-button" style="margin-top:10px;">
+                    <a class="w3-button" style="margin-top:10px;">
                         <i class="fab fa-instagram fa-2x"></i>
                     </a>
-                    <a class="w3-bar-item w3-button" style="margin-top:10px;">
+                    <a class="w3-button" style="margin-top:10px;">
                         <i class="fab fa-facebook fa-2x"></i>
                     </a>  
                 </div>
+            </div>
 
             <div class="w3-center">
                 <img src="{{ asset('dist/img/logotipo.png') }}" alt="logo" style="width:13%; align=center;">
 
             <div class="w3-right">
-
+            <div class="icon">
             @guest
 
                 <div class="w3-dropdown-hover" style="margin-top:10px;">
@@ -258,7 +266,7 @@
                         <a href="/lang/en">@lang('data.ingles')</a>
                     </div>
             </div>
-  
+        </div>
         </div>
 
         </div> 
