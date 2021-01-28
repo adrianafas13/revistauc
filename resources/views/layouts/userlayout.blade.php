@@ -48,9 +48,9 @@
 /* Style the dropdown content (hidden by default) */
 .dropdown-content {
   display: none;
-  position: absolute;
+  position: fixed;
   background-color: #f9f9f9;
-  min-width: 160px;
+  min-width: 225px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
 }
@@ -62,12 +62,12 @@
   padding: 12px 16px;
   text-decoration: none;
   display: block;
-  text-align: right;
+  text-align: center;
 }
 
 /* Add a dark background on topnav links and the dropdown button on hover */
 .topnav a:hover, .dropdown:hover .dropbtn {
-  background-color: #555;
+  background-color: #303030;
   color: white;
 }
 
@@ -148,14 +148,33 @@
   color: #fff;
 }
 
-.w3-bar .icon a { 
+.w3-bar .social-media i { 
     color:#303030;
     background-color: white;
 }
 
-.w3-bar .icon a:hover { 
+.w3-bar .social-media i:hover { 
     color:#336699;
-    background-color:red;
+    background-color:white;
+}
+.w3-bar .language i { 
+    color:#303030;
+    background-color: white;
+}
+
+.w3-bar .language i:hover { 
+    color:#336699;
+    background-color:white;
+}
+
+.w3-bar .user-login i { 
+    color:#303030;
+    background-color: white;
+}
+
+.w3-bar .user-login i:hover { 
+    color:#336699;
+    background-color:white;
 }
 
 @media screen and (max-width: 600px) {
@@ -199,17 +218,17 @@
 </head>
 <body>
 
-    <div class="w3-bar">
+    <div class="w3-bar w3-light-white">
         <div class="w3-margin">
             <div class="w3-left">
-                <div class="icon">
-                    <a class="w3-button" style="margin-top:10px;">
+                <div class="social-media">
+                    <a class="w3-button w3-hover-white" style="margin-top:10px;">
                         <i class="fab fa-twitter fa-2x"></i>
                     </a>
-                    <a class="w3-button" style="margin-top:10px;">
+                    <a class="w3-button w3-hover-white" style="margin-top:10px;">
                         <i class="fab fa-instagram fa-2x"></i>
                     </a>
-                    <a class="w3-button" style="margin-top:10px;">
+                    <a class="w3-button w3-hover-white" style="margin-top:10px;">
                         <i class="fab fa-facebook fa-2x"></i>
                     </a>  
                 </div>
@@ -219,21 +238,23 @@
                 <img src="{{ asset('dist/img/logotipo.png') }}" alt="logo" style="width:13%; align=center;">
 
             <div class="w3-right">
-            <div class="icon">
+            
             @guest
 
-                <div class="w3-dropdown-hover" style="margin-top:10px;">
-                    <button class="w3-button"><i class="fas fa-user-circle fa-2x"></i></button>
+            <div class="w3-dropdown-hover" style="margin-top:10px;">
+                <div class="user-login">
+                    <button class="w3-button w3-hover-white" style="background-color:white;"><i class="fas fa-user-circle fa-2x"></i></button>
                         <div class="w3-dropdown-content w3-bar-block w3-card-4">
                             <a class="w3-bar-item w3-button" href="{{ route('login') }}">{{ __('Login') }}</a>
                                 @if (Route::has('register'))
                                     <a class="w3-bar-item w3-button" href="{{ route('register') }}">{{ __('Register') }}</a>
                                 @endif
                         </div>
+                    </div>
                 </div>
 
                 @else
-                <div class="w3-dropdown-hover w3-right" style="margin-top:24px;">   
+                <div class="w3-dropdown-hover" style="margin-top:24px;">   
                     <button class="w3-button">{{ Auth::user()->name }} <span class="caret"></span></button>
                         <div class="w3-dropdown-content w3-bar-block w3-card-4">
 
@@ -258,20 +279,22 @@
                         </div>
                 </div>
             @endguest
-
+            
             <div class="dropdown" style="margin-top:7px;">
-                <button class="dropbtn" style="color:black;"><i class="fa fa-globe fa-lg"></i>{{ App::getLocale() }}</i></button>
-                    <div class="dropdown-content w3-bar-block w3-card-4">
-                        <a href="/lang/es">@lang('data.español')</a>
-                        <a href="/lang/en">@lang('data.ingles')</a>
-                    </div>
+                <div class="language">
+                    <button class="dropbtn" style="color:#303030; background-color:white;"><i class="fa fa-globe fa-lg"></i>{{ App::getLocale() }}</i></button>
+                        <div class="dropdown-content">
+                            <a href="/lang/es">@lang('data.español')</a>
+                            <a href="/lang/en">@lang('data.ingles')</a>
+                        </div>
+                </div>
             </div>
         </div>
-        </div>
+    </div>
 
         </div> 
 
-    </div>
+    
 
     <div class="topnav" id="myTopnav">
         <div class="dropdown">
