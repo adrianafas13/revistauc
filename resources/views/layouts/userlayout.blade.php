@@ -177,6 +177,12 @@
     background-color:white;
 }
 
+.w3-bar .w3-dropdown-content a{
+   font-size:17px;
+   text-align:center;
+}
+
+
 @media screen and (max-width: 600px) {
   .topnav .search-container {
     float: none;
@@ -244,7 +250,7 @@
             <div class="w3-dropdown-hover" style="margin-top:10px;">
                 <div class="user-login">
                     <button class="w3-button w3-hover-white" style="background-color:white;"><i class="fas fa-user-circle fa-2x"></i></button>
-                        <div class="w3-dropdown-content w3-bar-block w3-card-4">
+                        <div class="w3-dropdown-content w3-bar-block w3-card-2">
                             <a class="w3-bar-item w3-button" href="{{ route('login') }}">{{ __('Login') }}</a>
                                 @if (Route::has('register'))
                                     <a class="w3-bar-item w3-button" href="{{ route('register') }}">{{ __('Register') }}</a>
@@ -256,7 +262,7 @@
                 @else
                 <div class="w3-dropdown-hover" style="margin-top:24px;">   
                     <button class="w3-button">{{ Auth::user()->name }} <span class="caret"></span></button>
-                        <div class="w3-dropdown-content w3-bar-block w3-card-4">
+                        <div class="w3-dropdown-content w3-bar-block w3-card-2">
 
                             @hasrole('Admin')
                                 <a class="w3-bar-item w3-button" href="{{ route('admin') }}">Panel de Administrador</a>
@@ -284,8 +290,8 @@
                 <div class="language">
                     <button class="dropbtn" style="color:#303030; background-color:white;"><i class="fa fa-globe fa-lg"></i>{{ App::getLocale() }}</i></button>
                         <div class="dropdown-content">
-                            <a href="/lang/es">@lang('data.español')</a>
-                            <a href="/lang/en">@lang('data.ingles')</a>
+                            <a style="text-align:left;" href="/lang/es">@lang('data.español')</a>
+                            <a style="text-align:left;" href="/lang/en">@lang('data.ingles')</a>
                         </div>
                 </div>
             </div>
