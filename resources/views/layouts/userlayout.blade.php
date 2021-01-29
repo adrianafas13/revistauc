@@ -202,64 +202,72 @@
 
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Unimar Científica @yield('co-title')</title>
 
-  <link  rel="icon" href="/dist/img/logo.png" type="image/png" />
+    <head>
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script src="{{ asset('js/app.js') }}" defer></script>
+        <meta charset="utf-8">
 
-  <link rel="stylesheet" href="{{ asset('css/w3.css') }}">
-  {{-- <link rel="stylesheet" href="{{ asset('css/app.css') }}"> --}}
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <title>Unimar Científica @yield('co-title')</title>
 
-  <link rel="stylesheet" href="{{ asset('plugins/fontawesome-free/css/all.min.css') }}">
+        <link  rel="icon" href="/dist/img/logo.png" type="image/png" />
 
-   <link rel="stylesheet" href="{{ asset('plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css') }}">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-</head>
-<body>
+        <script src="{{ asset('js/app.js') }}" defer></script>
 
-    <div class="w3-bar w3-light-white">
-        <div class="w3-margin">
-            <div class="w3-left">
-                <div class="social-media">
-                    <a class="w3-button w3-hover-white" style="margin-top:10px;">
-                        <i class="fab fa-twitter fa-2x"></i>
-                    </a>
-                    <a class="w3-button w3-hover-white" style="margin-top:10px;">
-                        <i class="fab fa-instagram fa-2x"></i>
-                    </a>
-                    <a class="w3-button w3-hover-white" style="margin-top:10px;">
-                        <i class="fab fa-facebook fa-2x"></i>
-                    </a>  
+        <link rel="stylesheet" href="{{ asset('css/w3.css') }}">
+        
+        {{-- <link rel="stylesheet" href="{{ asset('css/app.css') }}"> --}}
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <link rel="stylesheet" href="{{ asset('plugins/fontawesome-free/css/all.min.css') }}">
+
+        <link rel="stylesheet" href="{{ asset('plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css') }}">
+
+    </head>
+
+    <body>
+
+        <div class="w3-bar w3-light-white">
+            <div class="w3-margin">
+                <div class="w3-left w3-hide-small">
+                    <div class="social-media">
+                        <a class="w3-button w3-hover-white" style="margin-top:10px;">
+                            <i class="fab fa-twitter fa-2x"></i>
+                        </a>
+                        <a class="w3-button w3-hover-white" style="margin-top:10px;">
+                            <i class="fab fa-instagram fa-2x"></i>
+                        </a>
+                        <a class="w3-button w3-hover-white" style="margin-top:10px;">
+                            <i class="fab fa-facebook fa-2x"></i>
+                        </a>  
+                    </div>
                 </div>
-            </div>
 
-            <div class="w3-center">
-                <img src="{{ asset('dist/img/logotipo.png') }}" alt="logo" style="width:13%; align=center;">
+                <div class="w3-center">
+                    <img src="{{ asset('dist/img/logotipo.png') }}" alt="logo" style="width:13%; align=center;">
 
-            <div class="w3-right">
-            
-            @guest
+                <div class="w3-right">
+                
+                @guest
 
-            <div class="w3-dropdown-hover" style="margin-top:10px;">
-                <div class="user-login">
-                    <button class="w3-button w3-hover-white" style="background-color:white;"><i class="fas fa-user-circle fa-2x"></i></button>
-                        <div class="w3-dropdown-content w3-bar-block w3-card-2">
-                            <a class="w3-bar-item w3-button" href="{{ route('login') }}">{{ __('Login') }}</a>
-                                @if (Route::has('register'))
-                                    <a class="w3-bar-item w3-button" href="{{ route('register') }}">{{ __('Register') }}</a>
-                                @endif
-                        </div>
+                <div class="w3-dropdown-hover" style="margin-top:10px;">
+                    <div class="user-login w3-hide-small">
+                        <button class="w3-button w3-hover-white" style="background-color:white;"><i class="fas fa-user-circle fa-2x"></i></button>
+                            <div class="w3-dropdown-content w3-bar-block w3-card-2">
+                                <a class="w3-bar-item w3-button" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                    @if (Route::has('register'))
+                                        <a class="w3-bar-item w3-button" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                    @endif
+                            </div>
                     </div>
                 </div>
 
                 @else
+
                 <div class="w3-dropdown-hover" style="margin-top:24px;">   
                     <button class="w3-button">{{ Auth::user()->name }} <span class="caret"></span></button>
                         <div class="w3-dropdown-content w3-bar-block w3-card-2">
@@ -277,92 +285,94 @@
                                     document.getElementById('logout-form').submit();">
                                     {{ __('Logout') }}
                                 </a>
-                                
+                                    
                                 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                     @csrf
                                 </form>
 
                         </div>
                 </div>
-            @endguest
-            
-            <div class="dropdown" style="margin-top:7px;">
-                <div class="language">
-                    <button class="dropbtn" style="color:#303030; background-color:white;"><i class="fa fa-globe fa-lg"></i>{{ App::getLocale() }}</i></button>
-                        <div class="dropdown-content">
-                            <a style="text-align:left;" href="/lang/es">@lang('data.español')</a>
-                            <a style="text-align:left;" href="/lang/en">@lang('data.ingles')</a>
-                        </div>
+
+                @endguest
+                
+                <div class="dropdown w3-hide-small" style="margin-top:7px;">
+                    <div class="language">
+                        <button class="dropbtn" style="color:#303030; background-color:white;"><i class="fa fa-globe fa-lg"></i>{{ App::getLocale() }}</i></button>
+                            <div class="dropdown-content">
+                                <a style="text-align:left;" href="/lang/es">@lang('data.español')</a>
+                                <a style="text-align:left;" href="/lang/en">@lang('data.ingles')</a>
+                            </div>
+                    </div>
                 </div>
+                
             </div>
         </div>
-    </div>
 
         </div> 
 
-    
 
-    <div class="topnav" id="myTopnav">
-        <div class="dropdown">
-            <button class="dropbtn">Lineas de Investigación
-                <i class="fa fa-caret-down"></i>
-            </button>
-           
-                <div class="dropdown-content">
-                    <a href="/seccion/administracion">@lang('data.administracion')</a>
-                    <a href="/seccion/arte">@lang('data.arte')</a>
-                    <a href="/seccion/idiomas">@lang('data.idiomas')</a>
-                    <a href="/seccion/informatica">@lang('data.informatica')</a>
-                    <a href="/seccion/derecho">@lang('data.derecho')</a>
-                    <a href="/seccion/gerencia">@lang('data.gerencia')</a>
-                    <a href="/seccion/historia">@lang('data.historia')</a>
-                    <a href="/seccion/salud">@lang('data.salud')</a>
-                </div>
+        <div class="topnav" id="myTopnav">
+            <div class="dropdown">
+                <button class="dropbtn">Lineas de Investigación
+                    <i class="fa fa-caret-down"></i>
+                </button>
+            
+                    <div class="dropdown-content">
+                        <a href="/seccion/administracion">@lang('data.administracion')</a>
+                        <a href="/seccion/arte">@lang('data.arte')</a>
+                        <a href="/seccion/idiomas">@lang('data.idiomas')</a>
+                        <a href="/seccion/informatica">@lang('data.informatica')</a>
+                        <a href="/seccion/derecho">@lang('data.derecho')</a>
+                        <a href="/seccion/gerencia">@lang('data.gerencia')</a>
+                        <a href="/seccion/historia">@lang('data.historia')</a>
+                        <a href="/seccion/salud">@lang('data.salud')</a>
+                    </div>
+            </div>
+
+            <a href="#news">Ediciones</a>
+            <a href="#contact">Autores</a>
+            <a href="#about">Información</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fa fa-bars"></i></a>
+
+            <div class="search-container">
+                <form action="/action_page.php">
+                    <input type="text" placeholder="Search.." name="search">
+                        <button type="submit"><i class="fa fa-search"></i></button>
+                </form>    
+            </div>
+            
         </div>
 
-        <a href="#news">Ediciones</a>
-        <a href="#contact">Autores</a>
-        <a href="#about">Información</a>
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-            <i class="fa fa-bars"></i>
-        </a>
+        <main>
+            @yield('content')
+        </main>
 
-        <div class="search-container">
-            <form action="/action_page.php">
-                <input type="text" placeholder="Search.." name="search">
-                    <button type="submit"><i class="fa fa-search"></i></button>
-            </form>    
+        <div class="footer" style="padding:3px; background-color:#336699;">
+            <div class="w3-center">
+                <p><b>Derechos Reservados &copy 2020. Revista Científica. Universidad de Margarita</b></p>
+            </div>
         </div>
+
+
+        <script>$.widget.bridge('uibutton', $.ui.button)</script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
         
-    </div>
+        <!-- Bootstrap 4 -->
+        <script src="{{ asset('plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+        
+        <script>
+            /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+            function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+            }
+        </script>
 
-    <main>
-    @yield('content')
-    </main>
+    </body>
 
-    <div class="footer" style="padding:3px; background-color:#336699;">
-        <div class="w3-center">
-            <p><b>Derechos Reservados &copy 2020. Revista Científica. Universidad de Margarita</b></p>
-        </div>
-    </div>
-
-
-<script>
-  $.widget.bridge('uibutton', $.ui.button)
-</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<!-- Bootstrap 4 -->
-<script src="{{ asset('plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
-<script>
-/* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
-function myFunction() {
-  var x = document.getElementById("myTopnav");
-  if (x.className === "topnav") {
-    x.className += " responsive";
-  } else {
-    x.className = "topnav";
-  }
-}
-</script>
-</body>
 </html>
