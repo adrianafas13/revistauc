@@ -148,41 +148,6 @@
   color: #fff;
 }
 
-.w3-bar .social-media i { 
-    color:#303030;
-    background-color: white;
-}
-
-.w3-bar .social-media i:hover { 
-    color:#336699;
-    background-color:white;
-}
-.w3-bar .language i { 
-    color:#303030;
-    background-color: white;
-}
-
-.w3-bar .language i:hover { 
-    color:#336699;
-    background-color:white;
-}
-
-.w3-bar .user-login i { 
-    color:#303030;
-    background-color: white;
-}
-
-.w3-bar .user-login i:hover { 
-    color:#336699;
-    background-color:white;
-}
-
-.w3-bar .w3-dropdown-content a{
-   font-size:17px;
-   text-align:center;
-}
-
-
 @media screen and (max-width: 600px) {
   .topnav .search-container {
     float: none;
