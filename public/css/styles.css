@@ -156,25 +156,26 @@
         }
 
         .topnav .search-container button {
-        float: right;
-        padding: 9px 13px;
-        background: #1fbe6b;
-        color:#fff;
-        font-size: 14px;
-        border-radius:20px;
-        border: none;
-        cursor: pointer;
+            float: right;
+            padding: 9px 13px;
+            background: #1fbe6b;
+            color:#fff;
+            font-size: 14px;
+            border-radius:20px;
+            border: none;
+            cursor: pointer;
         }
 
-        .topnav .search-container button:hover {
-        background: #303030;
-        color: #fff;
-        }
+            .topnav .search-container button:hover {
+                background: #303030;
+                color: #fff;
+            }
 
     @media screen and (max-width: 600px) {
         .topnav .search-container {
         float: none;
     }
+
     .topnav a, .topnav input[type=text], .topnav .search-container button {
         float: none;
         display: block;
@@ -191,60 +192,41 @@
     text-align:center;
     color:#fff;
 }
-.footer ul#social-media li{
+    .footer ul#social-media li{
         display:inline;
         float: center;
         padding: 20px 10px;
     }
 
-/*------------------------------------------------------------*/
+/*------------------------MAIN CONTENT---------------------------*/
+.container-title{
+    text-align:center;
+}
 .col-6{
     padding: 0px 0px 30px;
 }
-
 .carousel-inner{
     
     border-radius: 15px;
 }
-
 /* Container holding the image and the text */
 .info-container {
   position: relative;
 
 }
-
-.info-container img{
-    border-radius: 15px;
-  }
-
-/* Bottom right text */
-.text-block {
-    position: absolute; /* Position the background text */
-  bottom: 0; /* At the bottom. Use top:0 to append it to the top */
-  background: rgb(0, 0, 0); /* Fallback color */
-  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
-  color: #f1f1f1; /* Grey text */
-  width: 100%; /* Full width */
-  padding: 15px; /* Some padding */
-  border-bottom-left-radius:15px;
-    border-bottom-right-radius:15px;
-}
+    .info-container img{
+        border-radius: 15px;
+    }
 
 .carousel-caption{
-position: absolute; /* Position the background text */
-  bottom: 0; /* At the bottom. Use top:0 to append it to the top */
-  background: rgb(0, 0, 0); /* Fallback color */
-  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
-  color: #f1f1f1; /* Grey text */
-  width: 100%; /* Full width */
-  padding: 20px; /* Some padding */
-    
+    position: absolute; /* Position the background text */
+    bottom: 0; /* At the bottom. Use top:0 to append it to the top */
+    background: rgb(0, 0, 0); /* Fallback color */
+    background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+    color: #f1f1f1; /* Grey text */
+    width: 100%; /* Full width */
+    padding: 20px; /* Some padding */    
 }
-
-.container-title{
-    text-align:center;
-}
-
 .popular-bar{
     display: flex;
     justify-content: center;
@@ -254,13 +236,32 @@ position: absolute; /* Position the background text */
     border-top-left-radius:15px;
     border-top-right-radius:15px;
 }
-.footer-popular-bar{
-    display: flex;
-    justify-content: center;
-    background-color:#1fbe6b;
-    padding: 15px 5px;
-    color:#fff;
+    .footer-popular-bar{
+        display: flex;
+        justify-content: center;
+        background-color:#1fbe6b;
+        padding: 15px 5px;
+        color:#fff;
+        border-bottom-left-radius:15px;
+        border-bottom-right-radius:15px;
+    }
+
+
+.text-block {
+    position: absolute; /* Position the background text */
+    bottom: 0; /* At the bottom. Use top:0 to append it to the top */
+    background: rgb(0, 0, 0); /* Fallback color */
+    background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+    color: #f1f1f1; /* Grey text */
+    width: 100%; /* Full width */
+    padding: 15px; /* Some padding */
     border-bottom-left-radius:15px;
     border-bottom-right-radius:15px;
 }
+
+
+
+
+
+
 

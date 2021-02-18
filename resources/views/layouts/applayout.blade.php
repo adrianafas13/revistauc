@@ -1,249 +1,196 @@
-<style>
-/* Add a black background color to the top navigation */
-.topnav {
-  background-color: white;
-  overflow: hidden;
-}
-
-/* Style the links inside the navigation bar */
-.topnav a {
-  display: block;
-  color: #707070;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 14px;
-  font-family:'Nirmala UI', sans-serif;">
-}
-
-/* Add an active class to highlight the current page */
-.active {
-  background-color: #386685;
-  color: white;
-}
-
-/* Hide the link that should open and close the topnav on small screens */
-.topnav .icon {
-  display: none;
-
-/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
-@media screen and (max-width: 600px){  
-  .topnav a.icon {
-    float: right;
-    display: block;
-  }
-}
-
-/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
-@media screen and (max-width: 600px) {
-  .topnav.responsive {position: relative;}
-  .topnav.responsive a.icon {
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-  .topnav.responsive a {
-    float: none;
-    display: block;
-    text-align: left;
-  }
-  .topnav.responsive .dropdown {float: none;}
-  .topnav.responsive .dropdown-content {position: relative;}
-  .topnav.responsive .dropdown .dropbtn {
-    display: block;
-    width: 100%;
-    text-align: left;
-  }
-}
-</style>
-
 
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Unimar Científica @yield('co-title')</title>
 
-  <link  rel="icon" href="/dist/img/logo.png" type="image/png" />
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Unimar Científica @yield('co-title')</title>
+        <link  rel="icon" href="/dist/img/logo.png" type="image/png" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script src="{{ asset('js/app.js') }}" defer></script>
+        <script src="{{ asset('js/app.js') }}" defer></script>
+        <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/w3.css') }}">
+        {{-- <link rel="stylesheet" href="{{ asset('css/app.css') }}"> --}}
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="{{ asset('plugins/fontawesome-free/css/all.min.css') }}">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    </head>
 
-  <link rel="stylesheet" href="{{ asset('css/w3.css') }}">
-  {{-- <link rel="stylesheet" href="{{ asset('css/app.css') }}"> --}}
+    <body>
+        <div class="container-fluid">
+            <div class="header">
+                <div class="row">
+                    <!-- header logo -->
+                    <div class="col">
+                        <div class="logotipo">
+                            <img src="{{ asset('dist/img/logotipo.png') }}" alt="logo" width="180px" height="auto">
+                        </div>
+                    </div>
+                    <!-- header icons -->
+                    <div class="col">
+                        <ul id="iconos">
+                            <!-- languaje icon -->
+                            <li class="nav-item">
+                                <div class="dropdown">
+                                    <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <i class="fa fa-globe fa-2x"></i>{{ App::getLocale() }}</i>
+                                    </button>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <a class="dropdown-item" href="/lang/es">@lang('data.español')</a>
+                                        <a class="dropdown-item" href="/lang/en">@lang('data.ingles')</a>
+                                    </div>
+                                </div>     
+                            </li>
+                            <!-- login/singin icon -->
+                            @guest
+                            <li class="nav-item">
+                                <div class="dropdown">
+                                    <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <i class="fas fa-user-circle fa-2x"></i>
+                                    </button>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <a class="dropdown-item" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                            @if (Route::has('register'))
+                                                <a class="dropdown-item" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                            @endif
+                                    </div>
+                                </div>
+                            </li>
 
-  <link rel="stylesheet" href="{{ asset('plugins/fontawesome-free/css/all.min.css') }}">
+                            @else
+                            <li class="nav-item">
+                                <div class="dropdown">
+                                    <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        {{ Auth::user()->name }} <span class="caret">
+                                    </button>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
 
-   <link rel="stylesheet" href="{{ asset('plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css') }}">
+                                        @hasrole('Admin')
+                                            <a class="dropdown-item" href="{{ route('admin') }}">Panel de Administrador</a>
+                                        @endhasrole
 
-</head>
+                                        @hasrole('comment_admin')
+                                            <a class="dropdown-item" href="{{ route('admin') }}">Panel de Administrador</a>
+                                        @endhasrole
 
-<body>
-  <div class="topnav" id="myTopnav">
-  <div class="w3-bar">
-    <div class="w3-margin">
-      <img src="{{ asset('dist/img/logotipo.png') }}" alt="logo" class="w3-bar-item w3-left" style="width:13%; margin-left: 15px;">
-      <a href="/" class="w3-bar-item w3-button w3-left" style="margin-top:20px;">Home</a>
-      <a href="{{route('articulos')}}" class="w3-bar-item w3-button w3-left" style="margin-top:20px;">@lang('data.articulos')</a>
-      <a href="{{route('sobrenosotros')}}" class="w3-bar-item w3-button w3-left" style="margin-top:20px;">@lang('data.sobre_nosotros')</a>
-      <a href="{{route('contacto')}}" class="w3-bar-item w3-button w3-left" style="margin-top:20px;">@lang('data.contactanos')</a>
+                                            <a class="dropdown-item" href="{{ route('logout') }}"
+                                                onclick="event.preventDefault();
+                                                document.getElementById('logout-form').submit();">
+                                                {{ __('Logout') }}
+                                            </a>
+                                                
+                                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                                @csrf
+                                            </form>
+                                    </div>
+                                </div>
+                            </li>
+                            @endguest
 
-      <form type="get" action=" {{route('search')}} ">
-        <input type="text" name="query" class="w3-bar-item w3-input w3-left " style="margin-top:20px; background-color:black;" placeholder="Buscar Artículo"> 
-        <button class="w3-bar-item w3-button w3-green w3-left" style="margin-top:20px;"><i class="fas fa-search"></i></button>
-      </form>  
-
-          <button class="w3-bar-item w3-button w3-right" style="margin-top:20px;"><i class="fa fa-globe fa-lg"></i>{{ App::getLocale() }}</button>
-            <div class="w3-dropdown-content w3-bar-block w3-card-4">
-          <a class="w3-bar-item w3-button" href="/lang/es">@lang('data.español')</a>
-          <a class="w3-bar-item w3-button" href="/lang/en">@lang('data.ingles')</a>
-        </div>
-
-        @guest
-                <div class="w3-dropdown-hover w3-right" style="margin-top:24px;">
-                  <button class="w3-button"><i class="fa fa-user fa-lg"></i></button>
-                    <div class="w3-dropdown-content w3-bar-block w3-card-4">
-                      <a class="w3-bar-item w3-button" href="{{ route('login') }}">{{ __('Login') }}</a>
-                    @if (Route::has('register'))
-                      <a class="w3-bar-item w3-button" href="{{ route('register') }}">{{ __('Register') }}</a>
-                    @endif
+                        </ul>
                     </div>
                 </div>
-              @else
-              <div class="w3-dropdown-hover w3-right" style="margin-top:24px;">   
-                <button class="w3-button">{{ Auth::user()->name }} <span class="caret"></span></button>
-                  <div class="w3-dropdown-content w3-bar-block w3-card-4">
-                    @hasrole('Admin')
-                    <a class="w3-bar-item w3-button" href="{{ route('admin') }}">Panel de Administrador</a>
-                    @endhasrole
-                    @hasrole('comment_admin')
-                    <a class="w3-bar-item w3-button" href="{{ route('admin') }}">Panel de Administrador</a>
-                    @endhasrole
-                    <a class="w3-bar-item w3-button" href="{{ route('logout') }}"
-                        onclick="event.preventDefault();
-                        document.getElementById('logout-form').submit();">
-                        {{ __('Logout') }}
-                      </a>
-                      <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                        @csrf
-                      </form>
-                    </div>
-                  </div>
-              @endguest
             </div>
-            
-         
+        
+            <!-- navbar -->
+            <div class="topnav" id="myTopnav">
+                
+                <div class="dropdown">
+                    <button class="dropbtn">Lineas de Investigación
+                        <i class="fa fa-caret-down"></i>
+                    </button>
 
+                    <div class="dropdown-content">
+                        <a href="/seccion/administracion">@lang('data.administracion')</a>
+                        <a href="/seccion/arte">@lang('data.arte')</a>
+                        <a href="/seccion/idiomas">@lang('data.idiomas')</a>
+                        <a href="/seccion/informatica">@lang('data.informatica')</a>
+                        <a href="/seccion/derecho">@lang('data.derecho')</a>
+                        <a href="/seccion/gerencia">@lang('data.gerencia')</a>
+                        <a href="/seccion/historia">@lang('data.historia')</a>
+                        <a href="/seccion/salud">@lang('data.salud')</a>
+                    </div>
+                </div>
+
+                <a href="{{route('articulos')}}">@lang('data.articulos')</a>
+                <a href="#contact">@lang('data.autores')</a>
+                <a href="{{route('sobrenosotros')}}">@lang('data.informacion')</a>
+                    
+                <!--search bar -->
+                <div class="search-container">
+                    <form type="get" action=" {{route('search')}} ">
+                        <input type="text" name="query" placeholder="Search..">
+                            <button type="submit">
+                                <i class="fa fa-search"></i>
+                            </button>
+                    </form>    
+                </div>
+
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fa fa-bars"></i></a>
+                    
+            </div>
+
+            <main>
+                @yield('content')
+            </main>
+
+            <div class="footer">
+                <div class="row">
+                    <!-- unimar link -->
+                    <div class="col-sm">
+                        <div class="unimar-link">
+                            <a href="http://www.unimar.edu.ve/unimarportal/index.php">
+                                <img src="{{ asset('dist/img/white-logo.png') }}" alt="logo blanco" width="180px" height="auto">
+                            </a>
+                        </div>
+                    </div>
+                    <!-- contact info -->
+                    <div class="col-sm">
+                        <div class="info-contact">
+                            <p><b>Información de Contacto</p></b>
+                            <p>Telefono: 0295 - 2870101<br>
+                            Correo: revista.cientifica@unimar.edu.ve<br>
+                            Departamento de Postgrado</p>
+                            <p><b>2021 &copy Universidad de Margarita</b></p>
+                        </div>
+                    </div>
+                    <!-- social media -->
+                    <div class="col-sm">
+                        <ul id="social-media">
+                            <p><b>Redes Sociales</p></b>
+                            <li class="nav-item">
+                                <a href=#facebook>
+                                    <img src="{{ asset('dist/img/fb-white.png') }}" alt="logo blanco" width="40px" height="auto">
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href=#twitter>
+                                    <img src="{{ asset('dist/img/tw-white.png') }}" alt="logo blanco" width="40px" height="auto">
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href=#instagram>
+                                    <img src="{{ asset('dist/img/ig-white.png') }}" alt="logo blanco" width="40px" height="auto">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-    <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
-  </div>
-</div>
-  <main>
-    @yield('content')
-  </main>
-<!-- Footer -->
-<br>
-<div class="foot" style="font-family:'Nirmala UI', sans-serif;font-size:14px, font-weight:400px, color: #707070;">
-    <div class="w3-third w3-serif">
-      <div class="w3-center">
-        <a href="http://unimar.edu.ve/unimarportal/index.php">
-        <img src="{{ asset('dist/img/unimar.png') }}" alt="logo" style="width:30%">
-        </a>
-        <p><b>Universidad de Margarita</b></p>
-        <p><b>Alma Mater del Caribe</b></p>
-        <p>Sistema realizado como requisito para optar por el título de Ingenieria de Sistema</p>
+ 
+        <script>
+            function myFunction() {
+                var x = document.getElementById("myTopnav");
+                if (x.className === "topnav") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "topnav";
+                }
+            }
+        </script>
 
-    </div>
-  </div>
-      
-  <div class="w3-third w3-center">
-      <h3>@lang('data.redes_sociales')</h3>
-        <div class="w3-bar">
-        <a class="w3-bar-item w3-button" style="margin-top:20px;">
-            <i class="fab fa-twitter-square fa-2x"></i>
-          </a>
-          <a class="w3-bar-item w3-button" style="margin-top:20px;">
-            <i class="fab fa-instagram-square fa-2x"></i>
-          </a>
-          <a class="w3-bar-item w3-button" style="margin-top:20px;">
-            <i class="fab fa-facebook-square fa-2x"></i>
-          </a>  
-        </div>
-    </div>
-
-    <div class="w3-third w3-center">
-      <h3>@lang('data.secciones')</h3>
-        <p>
-          <ul class="w3-ul w3-hoverable w3-center">
-            <li>
-              <a href="/seccion/administracion" style="text-decoration:none">@lang('data.administracion')</a>
-            </li>
-          </ul>
-          <ul class="w3-ul w3-hoverable w3-center">
-            <li>
-            <a href="/seccion/arte" style="text-decoration:none">@lang('data.arte')</a>
-          </li>
-          </ul>
-          <ul class="w3-ul w3-hoverable w3-center">
-            <li>
-            <a href="/seccion/idiomas" style="text-decoration:none">@lang('data.idiomas')</a>
-          </li>
-          </ul>
-          <ul class="w3-ul w3-hoverable w3-center">
-            <li>
-            <a href="/seccion/informatica" style="text-decoration:none">@lang('data.informatica')</a>
-          </li>
-          </ul>
-         <ul class="w3-ul w3-hoverable w3-center">
-            <li>
-            <a href="/seccion/derecho" style="text-decoration:none">@lang('data.derecho')</a>
-          </li>
-          </ul>
-         <ul class="w3-ul w3-hoverable w3-center">
-            <li>
-            <a href="/seccion/gerencia" style="text-decoration:none">@lang('data.gerencia')</a></li>
-          </ul>
-          <ul class="w3-ul w3-hoverable w3-center">
-            <li>
-            <a href="/seccion/historia" style="text-decoration:none">@lang('data.historia')</a></li>
-          </ul>
-         <ul class="w3-ul w3-hoverable w3-center">
-            <li>
-            <a href="/seccion/salud" style="text-decoration:none">@lang('data.salud')</a></li>
-          </ul>
-        </p>
-    </div>
-
-    </div>
-    
-  <footer>
-    <div class="w3-center">
-      <p><b>Derechos Reservados &copy 2020. Revista Científica. Universidad de Margarita</b></p>
-    </div>
-  
-</footer>
-</div>
-
-
-<script>
-  $.widget.bridge('uibutton', $.ui.button)
-</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<!-- Bootstrap 4 -->
-<script src="{{ asset('plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
-<script>
-function myFunction() {
-  var x = document.getElementById("myTopnav");
-  if (x.className === "topnav") {
-    x.className += " responsive";
-  } else {
-    x.className = "topnav";
-  }
-}
-</script>
-
-</body>
+    </body>
 </html>

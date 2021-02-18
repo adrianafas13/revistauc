@@ -14,7 +14,8 @@ return [
 	'ingles' => 'EN',
 
 	'articulos' => 'Artículos',
-	'sobre_nosotros' => 'Nosotros',
+	'informacion' => 'Información',
+	'autores' => 'Autores',
 	'contactanos' => 'Contáctanos',
 	'secciones' => 'Líneas de Investigación',
 	'redes_sociales' => 'Siguenos en',
