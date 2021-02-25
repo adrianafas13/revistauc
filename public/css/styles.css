@@ -1,5 +1,7 @@
 
-
+.container-fluid {
+    height: 100%;
+  }
 
 /* ----------HEADER-------------------*/
 .header{
@@ -202,9 +204,13 @@
 .container-title{
     text-align:center;
 }
-.col-6{
-    padding: 0px 0px 30px;
+.col-md-6{
+    padding: 0px 30px;
 }
+    .col-sm-3{
+        padding: 0px 0px 30px;
+    }
+
 .carousel-inner{
     
     border-radius: 15px;
@@ -227,7 +233,8 @@
     width: 100%; /* Full width */
     padding: 20px; /* Some padding */    
 }
-.popular-bar{
+
+.side-popular .popular-bar{
     display: flex;
     justify-content: center;
     background-color:#1fbe6b;
@@ -236,7 +243,8 @@
     border-top-left-radius:15px;
     border-top-right-radius:15px;
 }
-    .footer-popular-bar{
+
+    .side-popular .footer-popular-bar{
         display: flex;
         justify-content: center;
         background-color:#1fbe6b;
@@ -245,6 +253,7 @@
         border-bottom-left-radius:15px;
         border-bottom-right-radius:15px;
     }
+
 
 
 .text-block {
@@ -259,7 +268,56 @@
     border-bottom-right-radius:15px;
 }
 
+/*------------------ARTICLE STRUCTURE-------------------------*/
+.article .col-md-3 h2{
+	text-align:right;
+}
+.article .title-article{
+	text-align:center;
+}
+.article .img-article{
+	display:flex;
+	margin-left:auto;
+	margin-right:auto;
+	width:85%;
+	height: 500px;
+}
+.article .info-img{
+	text-align:right;
+	padding-right: 80px;
+}
+.article .resume-article{
+	padding-top: 50px;
+	padding-right: 100px;
+	padding-left: 100px;
+	padding-bottom: 20px;
 
+}
+.article .full-article{
+	padding-left: 40%;
+	padding-bottom: 35px;
+}
+.article .info-article{
+	background-color:#EBE9E8;
+	padding-top: 20px;
+	padding-right: 20px;
+	padding-bottom: 195px;
+	text-align:right;
+}
+
+.article .background-comment{
+	background-color:#EBE9E8;
+	padding-top: 20px;
+}
+.article .comment-area input{
+	float:right;
+	margin-right: 9px;
+	margin-top: 5px;
+}
+
+.article .posted-comment-area p{
+	margin-left:15px;
+}
 
 
 

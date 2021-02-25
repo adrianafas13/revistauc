@@ -40,26 +40,28 @@
         </div>
 
         <!-- lateral bar -->
-        <div class="col-sm-3 col-md-6 col-lg-4">
-            <div class="popular-bar">
-                <h4>@lang('data.popular')</h4>
-            </div>
+        <div class="col-md-6 col-sm-3 col-lg-4">
+            <div class="side-popular">
+                <div class="popular-bar">
+                    <h4>@lang('data.popular')</h4>
+                </div>
 
-            @foreach($articles as $article)
-                <ul class="list-group">
-                    <a href="{{route('art', $article->slug)}}" class="list-group-item list-group-item-action flex-column align-items-start">
-                        <div class="d-flex w-100 justify-content-between">
-                            <h5 class="mb-1">{{ App::isLocale('es')?$article->title:$article->en_title }}</h5>
-                            <small class="text-muted">@lang('data.'.$article->section)</small>
-                        </div>
-                        <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-                        <small class="text-muted">{{ $article->author }}</small>
-                    </a>
-                </ul>
-            @endforeach
+                @foreach($articles as $article)
+                    <ul class="list-group">
+                        <a href="{{route('art', $article->slug)}}" class="list-group-item list-group-item-action flex-column align-items-start">
+                            <div class="d-flex w-100 justify-content-between">
+                                <h5 class="mb-1">{{ App::isLocale('es')?$article->title:$article->en_title }}</h5>
+                                <small class="text-muted">@lang('data.'.$article->section)</small>
+                            </div>
+                            <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                            <small class="text-muted">{{ $article->author }}</small>
+                        </a>
+                    </ul>
+                @endforeach
 
-            <div class="footer-popular-bar">
-                <i class="fas fa-star"></i>
+                <div class="footer-popular-bar">
+                    <i class="fas fa-star"></i>
+                </div>
             </div>
         </div>
 
@@ -78,7 +80,7 @@
 
         <!-- articles -->
         @foreach($articles as $article)
-            <div class="col-6">
+            <div class="col-md-6 col-sm-3">
                 <div class="info-container">
                     <a href="{{route('art', $article->slug)}}" style="text-decoration:none">
                         <img src="/images/{{ App::isLocale('es')?$article->ruta_image:$article->ruta_en_image }}" style="width:100%; height: 350px;">
@@ -88,6 +90,7 @@
                             <p><i>{{ $article->created_at }}</i></p>  
                         </div>
                 </div> 
+  
             </div>
         @endforeach
              
