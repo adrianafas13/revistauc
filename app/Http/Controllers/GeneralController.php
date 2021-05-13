@@ -23,6 +23,10 @@ class GeneralController extends Controller
         return view('/articulos',compact('articles'));
     }
 
+    public function authors(){
+        return view('/authorsCatalog');
+    }
+
     public function show($slug){
         $article=Article::with(['comment','comment.user'])->where('slug',$slug)->first();
 

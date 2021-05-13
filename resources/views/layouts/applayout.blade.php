@@ -6,147 +6,155 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Unimar Científica @yield('co-title')</title>
-        <link  rel="icon" href="/dist/img/logo.png" type="image/png" />
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link  rel="icon" href="/images/logo.png" type="image/png"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        <script src="{{ asset('js/app.js') }}" defer></script>
-        <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
-        <link rel="stylesheet" href="{{ asset('css/w3.css') }}">
-        {{-- <link rel="stylesheet" href="{{ asset('css/app.css') }}"> --}}
+        
+        
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="{{ asset('plugins/fontawesome-free/css/all.min.css') }}">
+        <link rel="stylesheet" href="{{asset('plugins/fontawesome-free/css/all.min.css') }}">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        
+        <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
     </head>
 
     <body>
-        <div class="container-fluid">
-            <div class="header">
-                <div class="row">
-                    <!-- header logo -->
-                    <div class="col">
+        <div class=".container-xl">
+            <!------------------------------------------------- NAVBAR ------------------------------------------------------------>
+            <nav class="navbar navbar-expand-md sticky-top">
+                <button class="navbar-toggler" data-toggle="collapse" data-target="#collapse_target">
+                   <span class="navbar-toggler-icon"><i class="fa fa-bars" aria-hidden="true" style="color:#e6e6ff"></i></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="collapse_target">
+                <!------------------------------------------------- LOGO ------------------------------------------------------------>
+                    <ul class="navbar-nav">
                         <div class="logotipo">
-                            <img src="{{ asset('dist/img/logotipo.png') }}" alt="logo" width="180px" height="auto">
+                            <a href="{{route('welcome')}}">
+                                <img src="{{ asset('images/fb-white.png') }}" alt="logo" width="60px" height="auto">
+                            </a>
                         </div>
-                    </div>
-                    <!-- header icons -->
-                    <div class="col">
-                        <ul id="iconos">
-                            <!-- languaje icon -->
-                            <li class="nav-item">
-                                <div class="dropdown">
-                                    <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        <i class="fa fa-globe fa-2x"></i>{{ App::getLocale() }}</i>
-                                    </button>
-                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                        <a class="dropdown-item" href="/lang/es">@lang('data.español')</a>
-                                        <a class="dropdown-item" href="/lang/en">@lang('data.ingles')</a>
-                                    </div>
-                                </div>     
-                            </li>
-                            <!-- login/singin icon -->
-                            @guest
-                            <li class="nav-item">
-                                <div class="dropdown">
-                                    <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        <i class="fas fa-user-circle fa-2x"></i>
-                                    </button>
-                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                        <a class="dropdown-item" href="{{ route('login') }}">{{ __('Login') }}</a>
-                                            @if (Route::has('register'))
-                                                <a class="dropdown-item" href="{{ route('register') }}">{{ __('Register') }}</a>
-                                            @endif
-                                    </div>
-                                </div>
-                            </li>
-
-                            @else
-                            <li class="nav-item">
-                                <div class="dropdown">
-                                    <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        {{ Auth::user()->name }} <span class="caret">
-                                    </button>
-                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-
-                                        @hasrole('Admin')
-                                            <a class="dropdown-item" href="{{ route('admin') }}">Panel de Administrador</a>
-                                        @endhasrole
-
-                                        @hasrole('comment_admin')
-                                            <a class="dropdown-item" href="{{ route('admin') }}">Panel de Administrador</a>
-                                        @endhasrole
-
-                                            <a class="dropdown-item" href="{{ route('logout') }}"
-                                                onclick="event.preventDefault();
-                                                document.getElementById('logout-form').submit();">
-                                                {{ __('Logout') }}
-                                            </a>
-                                                
-                                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                                @csrf
-                                            </form>
-                                    </div>
-                                </div>
-                            </li>
-                            @endguest
-
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        
-            <!-- navbar -->
-            <div class="topnav" id="myTopnav">
-                
-                <div class="dropdown">
-                    <button class="dropbtn">Lineas de Investigación
-                        <i class="fa fa-caret-down"></i>
-                    </button>
-
-                    <div class="dropdown-content">
-                        <a href="/seccion/administracion">@lang('data.administracion')</a>
-                        <a href="/seccion/arte">@lang('data.arte')</a>
-                        <a href="/seccion/idiomas">@lang('data.idiomas')</a>
-                        <a href="/seccion/informatica">@lang('data.informatica')</a>
-                        <a href="/seccion/derecho">@lang('data.derecho')</a>
-                        <a href="/seccion/gerencia">@lang('data.gerencia')</a>
-                        <a href="/seccion/historia">@lang('data.historia')</a>
-                        <a href="/seccion/salud">@lang('data.salud')</a>
-                    </div>
-                </div>
-
-                <a href="{{route('articulos')}}">@lang('data.articulos')</a>
-                <a href="#contact">@lang('data.autores')</a>
-                <a href="{{route('sobrenosotros')}}">@lang('data.informacion')</a>
-                    
-                <!--search bar -->
-                <div class="search-container">
-                    <form type="get" action=" {{route('search')}} ">
-                        <input type="text" name="query" placeholder="Search..">
-                            <button type="submit">
-                                <i class="fa fa-search"></i>
+                    </ul>
+                    <!------------------------------------------------- ENLACES ------------------------------------------------------------>
+                    <ul class="navbar-nav ml-auto">
+                        <li class="navbar-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" id="dropdown_target" href="#">
+                                Lineas de Investigación
+                                <span class="caret"></span>
+                            </a>
+                            <div class="dropdown-menu" id="lineas" arial-labelledby="dropdown_target">
+                                <a class="dropdown-item" href="/seccion/administracion">@lang('data.administracion')</a>
+                                <a class="dropdown-item" href="/seccion/arte">@lang('data.arte')</a>
+                                <a class="dropdown-item" href="/seccion/idiomas">@lang('data.idiomas')</a>
+                                <a class="dropdown-item" href="/seccion/informatica">@lang('data.informatica')</a>
+                                <a class="dropdown-item" href="/seccion/derecho">@lang('data.derecho')</a>
+                                <a class="dropdown-item" href="/seccion/gerencia">@lang('data.gerencia')</a>
+                                <a class="dropdown-item" href="/seccion/historia">@lang('data.historia')</a>
+                                <a class="dropdown-item" href="/seccion/salud">@lang('data.salud')</a>
+                            </div>
+                        </li>
+                        <li class="navbar-item">
+                            <a class="nav-link"  href="{{route('autores')}}">@lang('data.autores')</a>
+                        </li>
+                        <li class="navbar-item">
+                            <a class="nav-link" href="{{route('articulos')}}">@lang('data.articulos')</a>
+                        </li>
+                        <li class="navbar-item">
+                            <a class="nav-link" href="{{route('sobrenosotros')}}">@lang('data.informacion')</a>
+                        </li>
+                        <!------------------------------------------------- BUSCADOR ------------------------------------------------------------>
+                        <li class="navbar-item dropdown" id="icons">
+                            <button class="btn dropdown-toggle" type="button" id="dropdownSearch" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fa fa-search fa-fw"></i>
                             </button>
-                    </form>    
+                            <div class="dropdown-menu dropdown-menu-lg-right" aria-labelledby="dropdownSearch">
+                                <form class="px-4 py-3" type="get" action=" {{route('search')}} ">
+                                    <input class="input" type="text" name="query" placeholder="Buscar...">
+                                    <button type="submit" class="btn btn-success">Buscar</button>
+                                </form>
+                            </div>
+                        </li>
+                        <!------------------------------------------------- ICONOS DE IDIOMAS ------------------------------------------------------------>                            
+                        <li class="navbar-item dropdown" id="icons"> 
+                            <button class="btn dropdown-toggle" type="button" id="dropdownLanguajeButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fa fa-globe fa-fw">{{ App::getLocale() }}</i>
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-lg-right" aria-labelledby="dropdownLanguajeButton">
+                                <a class="dropdown-item" href="/lang/es">@lang('data.español')</a>
+                                <a class="dropdown-item" href="/lang/en">@lang('data.ingles')</a>
+                                <a class="dropdown-item" href="#">italiano</a>
+                            </div>
+                        </li>
+                        <!------------------------------------------------- USUARIO ------------------------------------------------------------>
+                        @guest
+                        <li class="nav-item dropdown" id="icons">
+                            <button class="btn dropdown-toggle" type="button" id="dropdownSingin" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-user-circle fa-fw"></i>
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-lg-right" aria-labelledby="dropdownSingin">
+                                <a class="dropdown-item" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                    @if (Route::has('register'))
+                                        <a class="dropdown-item" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                    @endif
+                            </div>
+                        </li>
+
+                        @else
+                        <li class="nav-item dropdown">
+                            <button class="btn dropdown-toggle" type="button" id="dropdownSingUp" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                {{ Auth::user()->name }} 
+                                <span class="caret">
+                            </button>
+
+                            <div class="dropdown-menu dropdown-menu-lg-right" aria-labelledby="dropdownSingUp">
+
+                                @hasrole('Admin')
+                                    <a class="dropdown-item" href="{{ route('admin') }}">Panel de Administrador</a>
+                                @endhasrole
+
+                                @hasrole('comment_admin')
+                                    <a class="dropdown-item" href="{{ route('admin') }}">Panel de Administrador</a>
+                                @endhasrole
+
+                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                        onclick="event.preventDefault();
+                                        document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
+                                    </a>
+                                                    
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                        @csrf
+                                    </form>
+                                    
+                            </div>
+
+                        </li>
+                        @endguest
+
+                    </ul>
+
                 </div>
 
-                <a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fa fa-bars"></i></a>
-                    
-            </div>
+            </nav>
 
+       
+            <!------------------------------------------------- CONTENIDO ------------------------------------------------------------>       
             <main>
                 @yield('content')
             </main>
+            <!------------------------------------------------- FOOTER ------------------------------------------------------------>
 
             <div class="footer">
                 <div class="row">
-                    <!-- unimar link -->
+                    <!------------------------------------------------- ENLACE DE UNIMAR ------------------------------------------------------------>
                     <div class="col-sm">
                         <div class="unimar-link">
                             <a href="http://www.unimar.edu.ve/unimarportal/index.php">
-                                <img src="{{ asset('dist/img/white-logo.png') }}" alt="logo blanco" width="180px" height="auto">
+                                <img src="{{ asset('images/white-logo.png') }}" alt="logo blanco" width="150px" height="auto">
                             </a>
                         </div>
                     </div>
-                    <!-- contact info -->
+                    <!------------------------------------------------- INFORMACÍON ------------------------------------------------------------>
                     <div class="col-sm">
                         <div class="info-contact">
                             <p><b>Información de Contacto</p></b>
@@ -156,41 +164,35 @@
                             <p><b>2021 &copy Universidad de Margarita</b></p>
                         </div>
                     </div>
-                    <!-- social media -->
+                    <!------------------------------------------------- REDES SOCIALES ------------------------------------------------------------>
                     <div class="col-sm">
                         <ul id="social-media">
                             <p><b>Redes Sociales</p></b>
                             <li class="nav-item">
                                 <a href=#facebook>
-                                    <img src="{{ asset('dist/img/fb-white.png') }}" alt="logo blanco" width="40px" height="auto">
+                                    <img src="{{ asset('images/fb-white.png') }}" alt="logo blanco" width="40px" height="auto">
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a href=#twitter>
-                                    <img src="{{ asset('dist/img/tw-white.png') }}" alt="logo blanco" width="40px" height="auto">
+                                    <img src="{{ asset('images/tw-white.png') }}" alt="logo blanco" width="40px" height="auto">
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a href=#instagram>
-                                    <img src="{{ asset('dist/img/ig-white.png') }}" alt="logo blanco" width="40px" height="auto">
+                                    <img src="{{ asset('images/ig-white.png') }}" alt="logo blanco" width="40px" height="auto">
                                 </a>
                             </li>
                         </ul>
                     </div>
+
                 </div>
             </div>
         </div>
- 
-        <script>
-            function myFunction() {
-                var x = document.getElementById("myTopnav");
-                if (x.className === "topnav") {
-                    x.className += " responsive";
-                } else {
-                    x.className = "topnav";
-                }
-            }
-        </script>
+    <!------------------------------------------------- SCRIPTS ------------------------------------------------------------>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
 
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     </body>
 </html>

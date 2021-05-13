@@ -8,6 +8,7 @@ Route::get('/seccion/{seccion}', 'ArticlesController@seccion');
 Route::get('/art/{slug}', 'GeneralController@show')->name('art');
 Route::post('/art/{article}', 'GeneralController@store')->name('art.store');
 Route::get('/contacto', 'GeneralController@contacto')->name('contacto');
+Route::get('/autores', 'GeneralController@authors')->name('autores');
 Route::get('/sobrenosotros', 'GeneralController@sobre')->name('sobrenosotros');
 Route::get('/lang/{locale}','GeneralController@setlocale');
 Route::get('search','GeneralController@search')->name('search');
