@@ -1,19 +1,17 @@
-@extends('layouts.app')
-
-@section('content')
-<div style="background-image: url('dist/img/admibanner.jpg'); background-size: cover";>
-<br><br>
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-6">
-            <div class="card">
-            <div class="card-header">
-<div class="w3-center">
-    <br>
-                    <img src="{{ asset('dist/img/logotipo.png') }}" alt="logo" style="width:30%">
-                </div>
-
-                <div class="card-body">
+@guest()
+<div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">
+                    <img src="{{ asset('images/logotipo.png') }}" alt="logo" style="width:30%">
+                    Registro
+                </h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
 
@@ -75,11 +73,11 @@
                             </div>
                         </div>
                     </form>
-                </div>
-            </div>
-        </div>
-    </div>
+                    </div>
+
+<div class="modal-footer"></div>
 </div>
 </div>
-<br><br><br>
-@endsection
+</div>
+
+@endguest

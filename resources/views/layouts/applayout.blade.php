@@ -94,7 +94,7 @@
                             <div class="dropdown-menu dropdown-menu-lg-right" aria-labelledby="dropdownSingin">
                                 <a class="dropdown-item" href="#" data-toggle="modal" data-target="#loginModal">Login</a>
                                     @if (Route::has('register'))
-                                        <a class="dropdown-item" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                        <a class="dropdown-item" href="#" data-toggle="modal" data-target="#registerModal">Register</a>
                                     @endif
                             </div>
                         </li>
@@ -195,5 +195,6 @@
 
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     @include('auth.login')
+    @include('auth.register')
     </body>
 </html>
