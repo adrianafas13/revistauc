@@ -62,6 +62,7 @@
                         <div class="d-flex w-100 justify-content-between">
                             <h6 class="mb-1"><b>{{ App::isLocale('es')?$article->title:$article->en_title }}</b></h6>
                             <small class="text-muted">@lang('data.'.$article->section)</small>
+                            <br>
                             <p class="mb-1">{{ $article->author }}</i></p>
                         </div>
                     </a>

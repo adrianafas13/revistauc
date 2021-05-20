@@ -92,7 +92,7 @@
                                 <i class="fas fa-user-circle fa-fw"></i>
                             </button>
                             <div class="dropdown-menu dropdown-menu-lg-right" aria-labelledby="dropdownSingin">
-                                <a class="dropdown-item" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#loginModal">Login</a>
                                     @if (Route::has('register'))
                                         <a class="dropdown-item" href="{{ route('register') }}">{{ __('Register') }}</a>
                                     @endif
@@ -194,5 +194,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
 
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    @include('auth.login')
     </body>
 </html>
