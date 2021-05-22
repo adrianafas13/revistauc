@@ -2,19 +2,22 @@
 <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="modalLogin" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
+
             <div class="modal-header">
                     <div class="modal-logo" id="modalLogin">   
                         <img src="{{ asset('images/logotipo.png') }}" alt="logo">
                     </div>
-                   
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
                 </button>
             </div>
+
             <div class="modal-body">
+
                 <div class="modal-title">
                     <h6>Iniciar Sesión</h6>
                 </div>
+
                 <form method="POST" action="{{ route('login') }}">
                     @csrf
 
@@ -49,6 +52,7 @@
                     
                     <div class="form-group">
                         <div class="row">
+
                             <div class="col-6">
                                 @if (Route::has('password.request'))
                                     <a class="btn btn-outline-dark btn-block btn-lg" href="{{ route('password.request') }}">
@@ -56,14 +60,18 @@
                                     </a>
                                 @endif
                             </div>
+
                             <div class="col-6">
                                 <button type="submit" class="btn btn-success btn-block btn-lg">
                                     {{ __('Login') }}
                                 </button>
                             </div>
+
                         </div>
                     </div>
+                    
                 </form>
+
             </div>
         </div>
     </div>

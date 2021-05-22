@@ -94,7 +94,7 @@
                             <div class="dropdown-menu dropdown-menu-lg-right" aria-labelledby="dropdownSingin">
                                 <a class="dropdown-item" href="#" data-toggle="modal" data-target="#loginModal">Login</a>
                                     @if (Route::has('register'))
-                                        <a class="dropdown-item" href="#" data-toggle="modal" data-target="#registerModal">Register</a>
+                                        <a class="dropdown-item" href="#" data-toggle="modal" data-target="#singinModal">Register</a>
                                     @endif
                             </div>
                         </li>
