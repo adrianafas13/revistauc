@@ -1,40 +1,3 @@
-<style>
-
-.modal-content {
-	padding: 10px;
-	border-radius: 5px;
-	border: none;
-   
-}
-.modal-header .modal-logo img{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 40%;
-}
-.modal-body  .form-group {
-	position: relative;
-}
-.modal-body h6{
-    font-size: 18px;
-    padding-bottom: 6px;
-}
-.modal-body i {
-	position: absolute;
-	left: 13px;
-	top: 11px;
-	font-size: 18px;
-}
-.modal-body .form-control {
-	padding-left: 40px;
-}
-
-.modal-body .col-6 a{
-    font-size: 15px;
-}
-</style>
-
-
 @guest()
 <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="modalLogin" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
@@ -50,7 +13,7 @@
             </div>
             <div class="modal-body">
                 <div class="modal-title">
-                    <h6>Inicia Sesión</h6>
+                    <h6>Iniciar Sesión</h6>
                 </div>
                 <form method="POST" action="{{ route('login') }}">
                     @csrf
@@ -83,6 +46,7 @@
                                 </label>
                         </div>
                     </div>
+                    
                     <div class="form-group">
                         <div class="row">
                             <div class="col-6">
@@ -93,15 +57,13 @@
                                 @endif
                             </div>
                             <div class="col-6">
-                                <a type="submit" class="btn btn-success btn-block btn-lg">
+                                <button type="submit" class="btn btn-success btn-block btn-lg">
                                     {{ __('Login') }}
-                                </a>
+                                </button>
                             </div>
                         </div>
                     </div>
                 </form>
-
-
             </div>
         </div>
     </div>

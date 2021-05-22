@@ -1,3 +1,5 @@
+
+/*---------------------BARRA DE NAVEGACIÓN----------------------------------*/
 .navbar {
     background-color: #003366;
     color:#fff;
@@ -34,7 +36,43 @@
     width: 200px;
     text-align: center;
   }
-  /*-----------------FOOTER------------------------*/
+/*--------------------------------------MODAL DE LOGIN/SINGIN--------------------------------------------------*/
+#loginModal .modal-content {
+	padding: 10px;
+	border-radius: 5px;
+	border: none;
+   
+}
+#loginModal .modal-header .modal-logo img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+}
+#loginModal .modal-body  .form-group {
+	position: relative;
+}
+#loginModal .modal-body h6{
+    font-size: 18px;
+    padding-bottom: 6px;
+}
+#loginModal .modal-body i {
+	position: absolute;
+	left: 13px;
+	top: 11px;
+	font-size: 18px;
+}
+#loginModal .modal-body .form-control {
+	padding-left: 40px;
+}
+#loginModal .modal-body .col-6 a{
+    font-size: 15px;
+}
+#loginModal .modal-body .col-6 button{
+  font-size: 15px;
+}
+
+/*-------------------------------------FOOTER----------------------------------------------------------------*/
 .footer{
   align-self: flex-end;
     padding:10px 0px;
@@ -50,7 +88,7 @@
         float: center;
         padding: 15px 5px;
     }
-/********************************************************/
+/*-------------------------------------------HOME-----------------------------------------------------------*/
 #carousel{
     padding-top: 25px;
     padding-bottom: 25px;
@@ -126,7 +164,7 @@
     margin-left: 5px;
     margin-right: 5px;
   }
-
+/*------------------------------------------------ARTICULO-----------------------------------------------------------*/
   .flecha{color:#FA0707;}
 
   #content_bar_left{background-color: #f0eeee;}
@@ -185,7 +223,7 @@
   .background-comment .posted-comment-area p{
     margin-left: 35px;
   }
-/***********************************************/
+/*--------------------------------------CATÁLOGO DE AUTORES--------------------------------------------------*/
 .title-author h2{
   text-align: left;
   font-size: 30px;
