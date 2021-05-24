@@ -18,15 +18,15 @@
 					<br>
 					<div class="info-article">
 					<ul class="section-article" id="container_color">
-							<p><b>Sección:</b></p>
+							<p><b>@lang('data.seccion')</b></p>
 							<p>{{ $article->section }}</p>
 						</ul>
 						<ul class="author-article" id="container_color">
-							<p><b>Autor:</b></p>
+							<p><b>@lang('data.autor')</b></p>
 							<p>{{ $article->author }}</p>
 						</ul>
 						<ul class="data-article" id="container_color">
-							<p><b>Fecha:</b></p>
+							<p><b>@lang('data.fecha')</b></p>
 							<p>{{ $article->created_at }}</p>
 						</ul>
 							<br>

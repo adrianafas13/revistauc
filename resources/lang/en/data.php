@@ -47,5 +47,8 @@ return [
 	'escribe_comentario' => 'Post a comment:',
 	'enviar' => 'Send',
 	'descarga' => 'Download Article',
+	'fecha' => 'Date',
+	'autor'=>'Author',
+	'seccion' => 'Section'
 
 ];

@@ -159,17 +159,17 @@
                     <!------------------------------------------------- INFORMACÍON ------------------------------------------------------------>
                     <div class="col-sm">
                         <div class="info-contact">
-                            <p><b>Información de Contacto</p></b>
-                            <p>Telefono: 0295 - 2870101<br>
-                            Correo: revista.cientifica@unimar.edu.ve<br>
-                            Departamento de Postgrado</p>
+                            <p><b>@lang('data.info_contacto')</p></b>
+                            <p>@lang('data.telefono'): 0295 - 2870101<br>
+                            @lang('data.correo'): revista.cientifica@unimar.edu.ve<br>
+                            @lang('data.postgrado')</p>
                             <p><b>2021 &copy Universidad de Margarita</b></p>
                         </div>
                     </div>
                     <!------------------------------------------------- REDES SOCIALES ------------------------------------------------------------>
                     <div class="col-sm">
                         <ul id="social-media">
-                            <p><b>Redes Sociales</p></b>
+                            <p><b>@lang('data.redes_sociales')</p></b>
                             <li class="nav-item">
                                 <a href=#facebook>
                                     <img src="{{ asset('images/fb-white.png') }}" alt="logo blanco" width="40px" height="auto">

@@ -48,5 +48,8 @@ return [
 	'escribe_comentario' => 'Escribe un Comentario:',
 	'enviar' => 'Enviar',
 	'descarga' => 'Descargar Artículo',
+	'fecha' => 'Fecha',
+	'autor'=>'Autor',
+	'seccion' => 'Sección'
 
 ];
