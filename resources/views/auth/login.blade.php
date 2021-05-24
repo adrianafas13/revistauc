@@ -15,7 +15,7 @@
             <div class="modal-body">
 
                 <div class="modal-title">
-                    <h6>Iniciar Sesión</h6>
+                    <h6>@lang('data.iniciar_sesion')</h6>
                 </div>
 
                 <form method="POST" action="{{ route('login') }}">
@@ -23,7 +23,7 @@
 
                     <div class="form-group">
                         <i class="fas fa-envelope"></i>
-						<input type="email" id="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="Correo Electronico">
+						<input type="email" id="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="@lang('data.correo')">
                             @error('email')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -33,7 +33,7 @@
                     
                     <div class="form-group">
 						<i class="fa fa-lock"></i>
-						<input type="password" id="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password" placeholder="Contraseña">					
+						<input type="password" id="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password" placeholder="@lang('data.contraseña')">					
                             @error('password')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -45,7 +45,7 @@
                         <div class="form-check">
                             <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
                                 <label class="form-check-label" for="remember">
-                                    {{ __('Remember Me') }}
+                                    @lang('data.recuerdame')
                                 </label>
                         </div>
                     </div>
@@ -56,14 +56,14 @@
                             <div class="col-6">
                                 @if (Route::has('password.request'))
                                     <a class="btn btn-outline-dark btn-block btn-lg" href="{{ route('password.request') }}">
-                                        {{ __('Forgot Your Password?') }}
+                                        @lang('data.olvido_contraseña')
                                     </a>
                                 @endif
                             </div>
 
                             <div class="col-6">
                                 <button type="submit" class="btn btn-success btn-block btn-lg">
-                                    {{ __('Login') }}
+                                    @lang('data.acceso')
                                 </button>
                             </div>
 

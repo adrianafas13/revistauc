@@ -39,7 +39,7 @@
                     <ul class="navbar-nav ml-auto">
                         <li class="navbar-item dropdown">
                             <a class="nav-link dropdown-toggle" data-toggle="dropdown" id="dropdown_target" href="#">
-                                Lineas de Investigación
+                                @lang('data.secciones')
                                 <span class="caret"></span>
                             </a>
                             <div class="dropdown-menu" id="lineas" arial-labelledby="dropdown_target">
@@ -48,16 +48,18 @@
                                 <a class="dropdown-item" href="/seccion/idiomas">@lang('data.idiomas')</a>
                                 <a class="dropdown-item" href="/seccion/informatica">@lang('data.informatica')</a>
                                 <a class="dropdown-item" href="/seccion/derecho">@lang('data.derecho')</a>
+                                <a class="dropdown-item" href="#">@lang('data.educacion')</a>
                                 <a class="dropdown-item" href="/seccion/gerencia">@lang('data.gerencia')</a>
                                 <a class="dropdown-item" href="/seccion/historia">@lang('data.historia')</a>
                                 <a class="dropdown-item" href="/seccion/salud">@lang('data.salud')</a>
+                                <a class="dropdown-item" href="#">@lang('data.turismo')</a>
                             </div>
                         </li>
                         <li class="navbar-item">
                             <a class="nav-link"  href="{{route('autores')}}">@lang('data.autores')</a>
                         </li>
                         <li class="navbar-item">
-                            <a class="nav-link" href="{{route('articulos')}}">@lang('data.articulos')</a>
+                            <a class="nav-link" href="{{route('articulos')}}">@lang('data.ediciones')</a>
                         </li>
                         <li class="navbar-item">
                             <a class="nav-link" href="{{route('sobrenosotros')}}">@lang('data.informacion')</a>
@@ -69,8 +71,8 @@
                             </button>
                             <div class="dropdown-menu dropdown-menu-lg-right" aria-labelledby="dropdownSearch">
                                 <form class="px-4 py-3" type="get" action=" {{route('search')}} ">
-                                    <input class="input" type="text" name="query" placeholder="Buscar...">
-                                    <button type="submit" class="btn btn-success">Buscar</button>
+                                    <input class="input" type="text" name="query" placeholder="@lang('data.buscar')...">
+                                    <button type="submit" class="btn btn-success">@lang('data.buscar')</button>
                                 </form>
                             </div>
                         </li>
@@ -92,9 +94,9 @@
                                 <i class="fas fa-user-circle fa-fw"></i>
                             </button>
                             <div class="dropdown-menu dropdown-menu-lg-right" aria-labelledby="dropdownSingin">
-                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#loginModal">Login</a>
+                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#loginModal">@lang('data.iniciar_sesion')</a>
                                     @if (Route::has('register'))
-                                        <a class="dropdown-item" href="#" data-toggle="modal" data-target="#singinModal">Register</a>
+                                        <a class="dropdown-item" href="#" data-toggle="modal" data-target="#singinModal">@lang('data.registro')</a>
                                     @endif
                             </div>
                         </li>

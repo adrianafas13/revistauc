@@ -15,7 +15,7 @@
             <div class="modal-body">
 
                 <div class="modal-title">
-                    <h6>Registro</h6>
+                    <h6>@lang('data.registro')</h6>
                 </div>
 
                 <form method="POST" action="{{ route('register') }}">
@@ -23,7 +23,7 @@
 
                     <div class="form-group">
                         <i class="fa fa-user"></i>
-                        <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus placeholder="Nombre y Apellido">
+                        <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus placeholder="@lang('data.nombre_apellido')">
                             @error('name')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -33,7 +33,7 @@
 
                     <div class="form-group">
                         <i class="fas fa-envelope"></i>
-                        <input type="email" id="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="Correo Electronico">
+                        <input type="email" id="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="@lang('data.correo')">
                             @error('email')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -45,7 +45,7 @@
 
                     <div class="form-group">
                         <i class="fa fa-lock"></i>
-                        <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password" autofocus placeholder="Contraseña">
+                        <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password" autofocus placeholder="@lang('data.contraseña')">
                             @error('password')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -55,12 +55,12 @@
 
                     <div class="form-group">
                         <i class="fa fa-lock"></i>
-                        <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password" autofocus placeholder="Repita la contraseña">
+                        <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password" autofocus placeholder="@lang('data.rep_contraseña')">
                     </div>
 
                     <div class="form-group">
                         <button type="submit" class="btn btn-primary btn-block btn-lg">
-                            {{ __('Register') }}
+                            @lang('data.registro')
                         </button>
                            
                     </div>
