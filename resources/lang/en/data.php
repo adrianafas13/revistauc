@@ -11,6 +11,7 @@ return [
 	'secciones' => 'Research Lines',
 	'español' => 'ES',
 	'ingles' => 'EN',
+	'italiano' => 'IT',
 	//LINEAS DE INVESTIGACION
 	'administracion' => 'Administration',
 	'arte' => 'Art',

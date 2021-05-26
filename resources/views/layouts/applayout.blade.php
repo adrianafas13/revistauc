@@ -84,7 +84,7 @@
                             <div class="dropdown-menu dropdown-menu-lg-right" aria-labelledby="dropdownLanguajeButton">
                                 <a class="dropdown-item" href="/lang/es">@lang('data.español')</a>
                                 <a class="dropdown-item" href="/lang/en">@lang('data.ingles')</a>
-                                <a class="dropdown-item" href="#">italiano</a>
+                                <a class="dropdown-item" href="/lang/it">@lang('data.italiano')</a>
                             </div>
                         </li>
                         <!------------------------------------------------- USUARIO ------------------------------------------------------------>
