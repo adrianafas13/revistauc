@@ -82,9 +82,9 @@
                                 <i class="fa fa-globe fa-fw">{{ App::getLocale() }}</i>
                             </button>
                             <div class="dropdown-menu dropdown-menu-lg-right" aria-labelledby="dropdownLanguajeButton">
-                                <a class="dropdown-item" href="/lang/es">@lang('data.español')</a>
-                                <a class="dropdown-item" href="/lang/en">@lang('data.ingles')</a>
-                                <a class="dropdown-item" href="/lang/it">@lang('data.italiano')</a>
+                                <a class="dropdown-item" href="/lang/es">@lang('data.español') <img src="{{ asset('images/spanish.png') }}" alt="lang" width="16px" height="auto"></a>
+                                <a class="dropdown-item" href="/lang/en">@lang('data.ingles') <img src="{{ asset('images/english.png') }}" alt="lang" width="16px" height="auto"></a>
+                                <a class="dropdown-item" href="/lang/it">@lang('data.italiano') <img src="{{ asset('images/italy.png') }}" alt="lang" width="16px" height="auto"></a>
                             </div>
                         </li>
                         <!------------------------------------------------- USUARIO ------------------------------------------------------------>
