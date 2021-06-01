@@ -45,7 +45,7 @@ return [
 	'buscar' => 'Buscar',
 	//ARTICULO
 	'resumen' => 'Resumen:',
-	'seccion_comentarios' => 'Sección de Comentarios:',
+	'seccion_comentarios' => 'COMENTARIOS',
 	'escribe_comentario' => 'Escribe un Comentario:',
 	'enviar' => 'Enviar',
 	'descarga' => 'Descargar Artículo',
