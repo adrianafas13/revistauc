@@ -341,16 +341,43 @@ position: relative;
   font-size: 30px;
   margin-left: 60px;
 }
- #abc_authors img{
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width:160px;
-  height:auto;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  #abc_authors img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width:160px;
+    height:auto;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+/*****************MODALES DE LOS AUTORES***************/
+.modal-content .modal-author-content .modal-header{
+  background-color: #003366;
+  position: relative;
+  color:#f1f1f1;
+  height: 65px;
 }
-
+.modal-content .modal-author-content .modal-header span{
+  font-size: 20px;
+  color:#f1f1f1;
+}
+.modal-content .modal-author-content .modal-header .modal-title p{
+  font-size: 18px;
+}
+.modal-content .modal-author-content .modal-body .modal-info-author{
+  padding-top: 4px;
+  padding-bottom: 4px;
+  line-height: 3px;
+}
+  .modal-content .modal-author-content .modal-body .modal-info-author .modal-author-name p{
+    margin-left: 5px;
+    font-size: 15px;
+  }
+  .modal-content .modal-author-content .modal-body .modal-info-author .modal-author-article p{
+    margin-left:9px;
+    font-size: 13px;
+    line-height: 17px;
+  }
 /******************************************************/
 
 .title-sections h2{
