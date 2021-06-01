@@ -196,138 +196,145 @@ position: relative;
     margin-right: 5px;
   }
 /*------------------------------------------------ARTICULO-----------------------------------------------------------*/
-
+/*TITULO*/
   .article .title-article h2{
       text-align: center;
-      font-size: 25px;
+      font-size: 27px;
   }
-  .article .img-article img{
-    width: 80%;
-    height: auto;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 5px;
-    box-shadow: 4px 4px rgba(158, 158, 158, 0.4);
-  }
-  .article .info-img{
-    float:right;
-    padding-right: 100px;
-  }
-  .article .title-resume-article{
-    font-size: 16px;
-    margin-left: 20px;
-    margin-right: 20px;
-  }
-  .article .resume-article{
-    font-size: 15px;
-    text-align: justify;
-    margin-top:20px;
-    margin-left: 65px;
-    margin-right: 65px;
-    margin-bottom:30px;
-  }
-  .article .button-article{
-    text-align: center;
-  }
+    /*IMAGEN DEL ARTÍCULO*/
+    .article .img-article img{
+      width: 80%;
+      height: auto;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      border-radius: 5px;
+      box-shadow: 4px 4px rgba(158, 158, 158, 0.4);
+    }
+      /*INFORMACION DE LA IMAGEN DEL ARTÍCULO*/
+      .article .info-img{
+        float:right;
+        padding-right: 100px;
+      }
+        /*ABSTRACTO DEL ARTÍCULO*/
+        .article .title-resume-article{
+          font-size: 16px;
+          margin-left: 20px;
+          margin-right: 20px;
+        }
+        .article .resume-article{
+          font-size: 15px;
+          text-align: justify;
+          margin-top:20px;
+          margin-left: 65px;
+          margin-right: 65px;
+          margin-bottom:30px;
+        }
+          /*BOTON DE DESCARGA DEL ARTÍCULO COMPLETO*/
+          .article .button-article{
+            text-align: center;
+          }
+/************************BARRA LATERAL DE INFORMACIÓN DEL AUTOR*****************/
   #content_bar_right{
     background-color:rgba(177, 119, 104, 0.103);
-    /*rgba(177, 119, 104, 0.137);*/
   }
-  #content_bar_right .content{
-    margin-right: 25px;
+    #content_bar_right .content{
+      margin-right: 30px;
+    }
+    #content_bar_right .content h6{ 
+      text-align: center;
+      font-size: 17px;
+    }
+      /*FOTO DEL AUTOR*/
+      #content_bar_right .content img{
+        width: 160px;
+        height: 160px;
+        border-radius: 80%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        box-shadow: 4px 4px rgba(158, 158, 158, 0.4);
+      }
+        /*CENTRADO DEL CONTENIDO*/
+        #content_bar_right .content{
+          line-height: 16px;
+        }
+        #content_bar_right .content p{ 
+          text-align: justify;
+          font-size: 14px;
+        }
+/**************************ÁREA DE COMENTARIOS*******************************/
+  .article-comments .background-comment{
+    background-color: rgba(255, 255, 255, 0.747);
+    color: #000;
+    box-shadow: 0px 1px 0px rgb(223, 223, 223) inset;
   }
-  #content_bar_right .content h6{ 
-    text-align: center;
-    font-size: 18px;
-  }
-  #content_bar_right .content img{
-    width: 160px;
-    height: 160px;
-    border-radius: 80%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    box-shadow: 4px 4px rgba(158, 158, 158, 0.4);
-  }
-  #content_bar_right .content{
-    line-height: 16px;
-  }
-  #content_bar_right .content p{ 
-    text-align: justify;
-    font-size: 14px;
-  }
-   /******************************/
+    .article-comments .comment-header{
+      padding-top:20px;
+    }
+  /*CAJA DE COMENTARIOS*/
   .article-comments .comment-header .comment-area p{
     padding-top: 3px;
     font-size: 18px;
     line-height: 2px;
   }
-  .article-comments .comment-header .comment-area .gradiente{
-    color: #06801bbe;
-    padding-bottom: 3px;
-  }
-  .article-comments .comment-header .comment-area form{
-    display: flex;
-  }
-  .article-comments .comment-header .comment-area textarea{
-    display: inline-block;
-    width: 90%;
-    resize: none;
-  }
-  .article-comments .comment-header .comment-area #submit {
-    display: inline-block;
-    width: 10%;
-  }
-  .article-comments .background-comment{
-    background-color: rgba(255, 255, 255, 0.747);;
-    color: #000;
-    box-shadow: 0px 1px 0px rgb(223, 223, 223) inset;
-  }
-  .article-comments .comment-header{
-    padding-top:20px;
-  }
-  .article-comments .comment-header p{
+    .article-comments .comment-header .comment-area .gradiente{
+      color: #06801bbe;
+      padding-bottom: 3px;
+    }
+      .article-comments .comment-header .comment-area form{
+        display: flex;
+      }
+        .article-comments .comment-header .comment-area textarea{
+          display: inline-block;
+          width: 90%;
+          resize: none;
+        }
+          .article-comments .comment-header .comment-area #submit {
+            display: inline-block;
+            width: 10%;
+          }
+  /*ENCABEZADO DE COMENTARIOS*/
+  .article-comments .comment-header .title-comment-section p{
     padding-top: 3px;
     font-size: 18px;
     line-height: 2px;
   }
-  .article-comments .comment-header .gradiente{
-    color: #06801bbe;
-  }
-  .article-comments .comment-header .inivtacion{
-    padding-top: 4px;
-   }
-  .article-comments .comment-header .inivtacion p{
-    background-color: #d6d6d6ab;
-    width: 300px;
-    height: 35px;
-    line-height: 25px;
-    text-align: center;
-    font-size: 13px;
-    color: rgb(133, 2, 2);
-  }
-
+    .article-comments .comment-header .title-comment-section .gradiente{
+      color: #06801bbe;
+    }
+      .article-comments .comment-header .title-comment-section .inivtacion{
+        padding-top: 4px;
+      }
+        .article-comments .comment-header .title-comment-section .inivtacion p{
+          background-color: #d6d6d6ab;
+          width: 300px;
+          height: 35px;
+          line-height: 25px;
+          text-align: center;
+          font-size: 13px;
+          color: rgb(133, 2, 2);
+        }
+/******************LISTADO DE COMENTARIOS PUBLICADOS*************************/
   .article-comments .posted-comment-area .user-name-comment img{
     width: 25px;
     height: auto;
     display: inline-block;
     float: left;
-    margin-left:15px;
+    margin-left: 15px;
     position: relative;
   }
-  .article-comments .posted-comment-area .user-name-comment p{
-    font-size: 15px;
-    margin-left: 45px;
-    padding-top:1px;
-  }
-  .article-comments .posted-comment-area .user-comment p{
-    font-size: 15px;
-    margin-left:50px;
-    padding-bottom:7px; 
-    line-height: 2px;
- 
-  }
+    .article-comments .posted-comment-area .user-name-comment p{
+      font-size: 15px;
+      margin-left: 45px;
+      padding-top:1px;
+    }
+      .article-comments .posted-comment-area .user-comment p{
+        font-size: 15px;
+        margin-left:50px;
+        padding-bottom:7px; 
+        line-height: 2px;
+      }
 /*--------------------------------------CATÁLOGO DE AUTORES--------------------------------------------------*/
 .title-author h2{
   text-align: left;

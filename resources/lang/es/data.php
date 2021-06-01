@@ -4,7 +4,7 @@ return [
 
 	//HOME
 	'popular'=> 'Artículos Destacados',
-	'edicion' => 'EDICIONES',
+	'edicion' => 'EDICIÓN',
 	//NAVBAR
 	'ediciones' => 'Ediciones',
 	'informacion' => 'Información',
