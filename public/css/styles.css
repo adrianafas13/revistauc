@@ -1,3 +1,4 @@
+.main{min-height: 440px;}
 
 /*---------------------BARRA DE NAVEGACIÓN----------------------------------*/
 .navbar {
@@ -105,7 +106,9 @@ position: relative;
 }
 /*-------------------------------------FOOTER----------------------------------------------------------------*/
 .footer{
-  align-self: flex-end;
+    position: static;
+    
+    
     padding:10px 0px;
     background-color: #002044;
     text-align:center;
@@ -113,6 +116,7 @@ position: relative;
     font-size: 13px;
     padding: 1em;
     width: 100%;
+    
 }
     .footer ul#social-media li{
         display:inline;
@@ -320,9 +324,9 @@ position: relative;
     width: 25px;
     height: auto;
     display: inline-block;
-    float: left;
-    margin-left: 15px;
     position: relative;
+    left: 15px;
+    float: left;
   }
     .article-comments .posted-comment-area .user-name-comment p{
       font-size: 15px;
@@ -379,3 +383,5 @@ position: relative;
   font-size: 30px;
   margin-left: 60px;
 }
+/*---------------------ADMIN PANEL----------------------------------------------*/
+

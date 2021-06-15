@@ -6,7 +6,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Unimar Científica @yield('co-title')</title>
-        <link  rel="icon" href="/images/logo.png" type="image/png"/>
+        <link  rel="icon" href="/images/unimar-científica.png" type="image/png"/>
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
         
@@ -31,7 +31,7 @@
                     <ul class="navbar-nav">
                         <div class="logotipo">
                             <a href="{{route('welcome')}}">
-                                <img src="{{ asset('images/fb-white.png') }}" alt="logo" width="60px" height="auto">
+                                <img src="{{ asset('images/unimar-científica-logo-white.png') }}" alt="logo" width="190px" height="auto">
                             </a>
                         </div>
                     </ul>
@@ -62,7 +62,7 @@
                             <a class="nav-link" href="{{route('articulos')}}">@lang('data.ediciones')</a>
                         </li>
                         <li class="navbar-item">
-                            <a class="nav-link" href="{{route('sobrenosotros')}}">@lang('data.informacion')</a>
+                            <a class="nav-link" href="{{route('contacto')}}">@lang('data.contacto')</a>
                         </li>
                         <!------------------------------------------------- BUSCADOR ------------------------------------------------------------>
                         <li class="navbar-item dropdown" id="icons">
@@ -82,9 +82,9 @@
                                 <i class="fa fa-globe fa-fw">{{ App::getLocale() }}</i>
                             </button>
                             <div class="dropdown-menu dropdown-menu-lg-right" aria-labelledby="dropdownLanguajeButton">
-                                <a class="dropdown-item" href="/lang/es">@lang('data.español') <img src="{{ asset('images/spanish.png') }}" alt="lang" width="16px" height="auto"></a>
-                                <a class="dropdown-item" href="/lang/en">@lang('data.ingles') <img src="{{ asset('images/english.png') }}" alt="lang" width="16px" height="auto"></a>
-                                <a class="dropdown-item" href="/lang/it">@lang('data.italiano') <img src="{{ asset('images/italy.png') }}" alt="lang" width="16px" height="auto"></a>
+                                <a class="dropdown-item" href="/lang/es"> <img src="{{ asset('images/spanish.png') }}" alt="lang" width="16px" height="auto"> @lang('data.español')</a>
+                                <a class="dropdown-item" href="/lang/en"> <img src="{{ asset('images/english.png') }}" alt="lang" width="16px" height="auto"> @lang('data.ingles')</a>
+                                <a class="dropdown-item" href="/lang/it"> <img src="{{ asset('images/italy.png') }}" alt="lang" width="16px" height="auto"> @lang('data.italiano')</a>
                             </div>
                         </li>
                         <!------------------------------------------------- USUARIO ------------------------------------------------------------>
@@ -146,7 +146,7 @@
             </main>
             <!------------------------------------------------- FOOTER ------------------------------------------------------------>
 
-            <div class="footer">
+            <div class="footer col-sm-12">
                 <div class="row">
                     <!------------------------------------------------- ENLACE DE UNIMAR ------------------------------------------------------------>
                     <div class="col-sm">

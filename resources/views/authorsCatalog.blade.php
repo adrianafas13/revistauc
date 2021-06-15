@@ -9,135 +9,140 @@
         <div class="row" id="abc_authors">
             <div class="col-lg-2 col-md-4 col-sm-2" >
                 <a href="#" data-toggle="modal" data-target="#authorsModal">
-                    <img src="{{asset('images/A-10.png')}}" alt="A_author">
+                    <img src="{{asset('images/A.png')}}" alt="A_author">
                 </a>
             </div>
             <div class="col-lg-2 col-md-4 col-sm-2">
                 <a href="#" data-toggle="modal" data-target="#authorsModal">
-                    <img src="{{asset('images/B-10.png')}}" alt="B_author">
+                    <img src="{{asset('images/B.png')}}" alt="B_author">
                 </a>
             </div>
             <div class="col-lg-2 col-md-4 col-sm-2">
                 <a href="#" data-toggle="modal" data-target="#authorsModal">
-                    <img src="{{asset('images/C-10.png')}}" alt="C_author">
+                    <img src="{{asset('images/C.png')}}" alt="C_author">
                 </a>
             </div>
             <div class="col-lg-2 col-md-4 col-sm-2">
                 <a href="#" data-toggle="modal" data-target="#authorsModal">
-                    <img src="{{asset('images/D-10.png')}}" alt="D_author">
+                    <img src="{{asset('images/D.png')}}" alt="D_author">
                 </a>
             </div>
             <div class="col-lg-2 col-md-4 col-sm-2" >
                 <a href="#" data-toggle="modal" data-target="#authorsModal">
-                    <img src="{{asset('images/E-10.png')}}" alt="E_author">
+                    <img src="{{asset('images/E.png')}}" alt="E_author">
                 </a>
             </div>
             <div class="col-lg-2 col-md-4 col-sm-2" >
                 <a href="#" data-toggle="modal" data-target="#authorsModal">
-                    <img src="{{asset('images/F-10.png')}}" alt="E_author">
+                    <img src="{{asset('images/F.png')}}" alt="E_author">
                 </a>
             </div>
         </div>
         <div class="row" id="abc_authors">
             <div class="col-lg-2 col-md-4 col-sm-2" >
                 <a href="#" data-toggle="modal" data-target="#authorsModal">
-                    <img src="{{asset('images/H-10.png')}}" alt="H_author">
+                    <img src="{{asset('images/G.png')}}" alt="G_author">
                 </a>
             </div>
             <div class="col-lg-2 col-md-4 col-sm-2">
                 <a href="#" data-toggle="modal" data-target="#authorsModal">
-                    <img src="{{asset('images/I-10.png')}}" alt="I_author">
+                    <img src="{{asset('images/H.png')}}" alt="H_author">
                 </a>
             </div>
             <div class="col-lg-2 col-md-4 col-sm-2">
                 <a href="#" data-toggle="modal" data-target="#authorsModal">
-                    <img src="{{asset('images/J-10.png')}}" alt="J_author">
+                    <img src="{{asset('images/I.png')}}" alt="I_author">
                 </a>
             </div>
             <div class="col-lg-2 col-md-4 col-sm-2">
                 <a href="#" data-toggle="modal" data-target="#authorsModal">
-                    <img src="{{asset('images/K-10.png')}}" alt="K_author">
+                    <img src="{{asset('images/J.png')}}" alt="J_author">
                 </a>
             </div>
             <div class="col-lg-2 col-md-4 col-sm-2" >
                 <a href="#" data-toggle="modal" data-target="#authorsModal">
-                    <img src="{{asset('images/L-10.png')}}" alt="L_author">
+                    <img src="{{asset('images/K.png')}}" alt="K_author">
                 </a>
             </div>
             <div class="col-lg-2 col-md-4 col-sm-2" >
                 <a href="#" data-toggle="modal" data-target="#authorsModal">
-                    <img src="{{asset('images/M-10.png')}}" alt="M_author">
+                    <img src="{{asset('images/L.png')}}" alt="L_author">
                 </a>
             </div>
         </div>
         <div class="row" id="abc_authors">
             <div class="col-lg-2 col-md-4 col-sm-2" >
                 <a href="#" data-toggle="modal" data-target="#authorsModal">
-                    <img src="{{asset('images/N-10.png')}}" alt="N_author">
+                    <img src="{{asset('images/M.png')}}" alt="M_author">
                 </a>
             </div>
             <div class="col-lg-2 col-md-4 col-sm-2">
                 <a href="#" data-toggle="modal" data-target="#authorsModal">
-                    <img src="{{asset('images/O-10.png')}}" alt="O_author">
+                    <img src="{{asset('images/N.png')}}" alt="N_author">
                 </a>
             </div>
             <div class="col-lg-2 col-md-4 col-sm-2">
                 <a href="#" data-toggle="modal" data-target="#authorsModal">
-                    <img src="{{asset('images/P-10.png')}}" alt="P_author">
+                    <img src="{{asset('images/O.png')}}" alt="O_author">
                 </a>
             </div>
             <div class="col-lg-2 col-md-4 col-sm-2">
                 <a href="#" data-toggle="modal" data-target="#authorsModal">
-                    <img src="{{asset('images/Q-10.png')}}" alt="Q_author">
+                    <img src="{{asset('images/P.png')}}" alt="P_author">
                 </a>
             </div>
             <div class="col-lg-2 col-md-4 col-sm-2" >
                 <a href="#" data-toggle="modal" data-target="#authorsModal">
-                    <img src="{{asset('images/R-10.png')}}" alt="R_author">
+                    <img src="{{asset('images/Q.png')}}" alt="Q_author">
                 </a>
             </div>
             <div class="col-lg-2 col-md-4 col-sm-2" >
                 <a href="#" data-toggle="modal" data-target="#authorsModal">
-                    <img src="{{asset('images/S-10.png')}}" alt="S_author">
+                    <img src="{{asset('images/R.png')}}" alt="R_author">
                 </a>
             </div>
         </div>
         <div class="row" id="abc_authors">
             <div class="col-lg-2 col-md-4 col-sm-2" >
                 <a href="#" data-toggle="modal" data-target="#authorsModal">
-                    <img src="{{asset('images/T-10.png')}}" alt="T_author">
+                    <img src="{{asset('images/S.png')}}" alt="S_author">
                 </a>
             </div>
             <div class="col-lg-2 col-md-4 col-sm-2">
                 <a href="#" data-toggle="modal" data-target="#authorsModal">
-                    <img src="{{asset('images/U-10.png')}}" alt="U_author">
+                    <img src="{{asset('images/T.png')}}" alt="T_author">
                 </a>
             </div>
             <div class="col-lg-2 col-md-4 col-sm-2">
                 <a href="#" data-toggle="modal" data-target="#authorsModal">
-                    <img src="{{asset('images/V-10.png')}}" alt="V_author">
+                    <img src="{{asset('images/U.png')}}" alt="U_author">
                 </a>
             </div>
             <div class="col-lg-2 col-md-4 col-sm-2">
                 <a href="#" data-toggle="modal" data-target="#authorsModal">
-                    <img src="{{asset('images/W-10.png')}}" alt="W_author">
+                    <img src="{{asset('images/V.png')}}" alt="V_author">
                 </a>
             </div>
             <div class="col-lg-2 col-md-4 col-sm-2" >
                 <a href="#" data-toggle="modal" data-target="#authorsModal">
-                    <img src="{{asset('images/X-10.png')}}" alt="X_author">
+                    <img src="{{asset('images/W.png')}}" alt="W_author">
                 </a>
             </div>
             <div class="col-lg-2 col-md-4 col-sm-2" >
                 <a href="#" data-toggle="modal" data-target="#authorsModal">
-                    <img src="{{asset('images/Y-10.png')}}" alt="Y_author">
+                    <img src="{{asset('images/X.png')}}" alt="X_author">
                 </a>
             </div>
         </div>
         <div class="row" id="abc_authors">
             <div class="col-lg-2 col-md-4 col-sm-2" >
                 <a href="#" data-toggle="modal" data-target="#authorsModal">
-                    <img src="{{asset('images/Z-10.png')}}" alt="Z_author">
+                    <img src="{{asset('images/Y.png')}}" alt="Y_author">
+                </a>
+            </div>
+            <div class="col-lg-2 col-md-4 col-sm-2" >
+                <a href="#" data-toggle="modal" data-target="#authorsModal">
+                    <img src="{{asset('images/Z.png')}}" alt="Z_author">
                 </a>
             </div>
         </div>

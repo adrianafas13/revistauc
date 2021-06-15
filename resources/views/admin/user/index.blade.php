@@ -1,44 +1,63 @@
 @extends('layouts.adminlayout')
 @section('content')
-<div class="row justify-content-center">
-<h2><b>Lista de Usuarios</b></h2>
-</div>
+<br>
 <div class="container">
-<table class="w3-table-all w3-striped w3-bordered w3-centered w3-hoverable">
-	<tr class="w3-teal">
-	  
-	  <th scope="col">Nombre</th>
-	  <th scope="col">Correo</th>
-	  <th scope="col">Rol</th>
-	  <th scope="col">Operaciones</th>
-	  <th scope="col"></th>
-	</tr>
-	@foreach($users as $user)
-	<tr>
-		<th>{{ $user->name }}</th>
-		<th>{{ $user->email }}</th>
-		<th>{{ implode(', ', $user->roles()->get()->pluck('name')->toArray()) }}</th>
-		<th>
-			<a href=" {{route('user.edit', $user->id )}} ">
-				<button type="button" class="btn btn-primary btn-sm">Modificar</button>
-			</a>
-		</th>
+<br>
+	<div class="row">
+		<div class="col-8">
+		<br><br>
+			<h4>Usuarios registrados en el sistema:</h4>
+		</div>
+		<div class="col-4">
+		<br><br>
+			<div class="input-group">
+				
+				<input type="text" class="form-control" placeholder="Buscar..." aria-label="buscardor_usuarios" aria-describedby="btnBuscadorUsuarios">
+				<div class="input-group-prepend">
+					<button type="button" id="btnBuscadorUsuarios"class="btn btn-primary btn-sm"> <i class="fas fa-search"> </i></button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<hr>
 
-		<th>
-			<form action=" {{route('user.destroy', $user->id) }}" method="POST">
-				{{method_field('DELETE') }}
-				@csrf
-				<button type="submit" class="btn btn-danger btn-sm">Eliminar</button>
-    		</form>
-    	</th>
+	<table class="table table-striped table-bordered">
 
-		
-	</tr>
-	<tr>
-		  
-	 @endforeach
+  		<thead class="thead-dark">
+		  	<tr>
+				<th scope="col">Nombre</th>
+				<th scope="col">Correo</th>
+				<th scope="col">Rol</th>
+				<th scope="col">Modificar</th>
+				<th scope="col">Eliminar</th>
+			</tr>
+		</thead>
 
-</table>
-</tr>
+  		<tbody>
+			@foreach($users as $user)
+			<tr>
+				<th>{{ $user->name }}</th>
+				<th>{{ $user->email }}</th>
+				<th>{{ implode(', ', $user->roles()->get()->pluck('name')->toArray()) }}</th>
+				<th>
+					<a href=" {{route('user.edit', $user->id )}} ">
+						<button type="button" class="btn btn-success btn-sm"><i class="fas fa-edit"></i></button>
+					</a>
+				</th>
+
+				<th>
+					<form action=" {{route('user.destroy', $user->id) }}" method="POST">
+						{{method_field('DELETE') }}
+						@csrf
+						<button type="submit" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></button>
+    				</form>
+    			</th>
+			</tr>
+			@endforeach
+		</tbody>
+
+	</table>
+	<br><br>
+</div>
 
 @endsection 

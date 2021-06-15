@@ -1,4 +1,9 @@
 @extends('layouts.adminlayout')
 @section('content')
-<img src="{{ asset('dist/img/admibanner.jpg') }}" style="width:100%; height: 600px;"></a>
+<br><br>
+<div class="container">
+<br>
+<h5>Bienvenido al <b>Panel de Administrador</b> de la Revista Científica de UNIMAR</h5>
+<hr>
+</div>
 @endsection 

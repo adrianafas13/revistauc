@@ -6,7 +6,7 @@ return [
 	'edicion' => 'EDIZIONE',
 	//NAVBAR
 	'ediciones' => 'Edizioni',
-	'informacion' => 'Informazione',
+	'contacto' => 'Contacto',
 	'autores' => 'Autori',
 	'secciones' => 'Linee di Indagine',
 	'español' => 'ES',

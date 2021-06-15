@@ -1,6 +1,127 @@
 @extends('layouts.adminlayout')
 @section('content')
-<style>
+<br><br><br>
+<div class="container">
+	<br>
+	<h4>Nuevo Artículo</h4>
+	<hr>
+
+  	<form method="post" action="/admin/article" enctype="multipart/form-data">
+	  <br>
+	  	<h5><i>Información General:</i></h5>
+		<hr>
+		<div class="row">
+    		<div class="col-4">
+				<p>Autor:</p>
+			</div>
+    		<div class="col-8">
+
+			</div>
+  		</div>
+		<div class="row">
+    		<div class="col-4">
+				<p>Sección:</p>
+			</div>
+    		<div class="col-8">
+				<select id="section"  name="section">
+					<option value="administracion">Administracion</option>
+					<option value="arte">Arte</option>
+					<option value="idiomas">Idiomas</option>
+					<option value="informatica">Informatica</option>
+					<option value="derecho">Derecho</option>
+					<option value="gerencia">Gerencia</option>
+					<option value="historia">Historia</option>
+					<option value="salud">Salud</option>
+				</select>
+			</div>
+  		</div>
+		<br>
+		<!--Español-->
+	  	<h5><i>Artículo en Español</i></h5>
+		<hr>
+		<!--Titulo del articulo en español-->
+		<div class="row">
+    		<div class="col-4">
+				<p>Título:</p>
+			</div>
+    		<div class="col-8">
+				<input type="text" required id="title" name="title" placeholder="Título del Artículo">
+			</div>
+  		</div>
+		<!--Imagen del articulo en español-->
+		<div class="row">
+    		<div class="col-4">
+				<p>Imagen:</p>
+			</div>
+    		<div class="col-8">
+				<input accept="image/*" required type="file" name="image" value="image">
+			</div>
+  		</div>
+		<!--Astra del articulo en español-->
+		<div class="row">
+    		<div class="col-4">
+				<p>Astra del Artículo:</p>
+			</div>
+    		<div class="col-8">
+				<textarea id="text" name="text" required placeholder="Resumen del Artículo" style="width:400px; height:200px"></textarea>
+			</div>
+  		</div>
+		<!--PDF del articulo en español-->
+		<div class="row">
+    		<div class="col-4">
+				<p>Archivo PDF del artículo:</p>
+			</div>
+    		<div class="col-8">
+				<input accept="file/*" required type="file" name="file" value="file">
+			</div>
+  		</div>
+		  <!--English-->
+	  	<h5><i>Article on English</i></h5>
+		<hr>
+		<!--Titulo del articulo en ingles-->
+		<div class="row">
+    		<div class="col-4">
+				<p>Title:</p>
+			</div>
+    		<div class="col-8">
+				<input type="text" required id="en_title" name="en_title" placeholder="Title of Article">
+			</div>
+  		</div>
+		<!--Imagen del articulo en ingles-->
+		<div class="row">
+    		<div class="col-4">
+				<p>Image:</p>
+			</div>
+    		<div class="col-8">
+				<input accept="image/*" required type="file" name="en_image" value="en_image">
+			</div>
+  		</div>
+		<!--Astra del articulo en ingles-->
+		<div class="row">
+    		<div class="col-4">
+				<p>Article resume:</p>
+			</div>
+    		<div class="col-8">
+				<textarea id="en_text" required name="en_text" placeholder="Resume of the Article" style="width:400px; height:200px"></textarea>
+			</div>
+  		</div>
+		<!--PDF del articulo en ingles-->
+		<div class="row">
+    		<div class="col-4">
+				<p>PFD File:</p>
+			</div>
+    		<div class="col-8">
+				<input accept="file/*" required type="file" name="en_file" value="en_file">
+			</div>
+  		</div>
+		
+
+	</form>
+</div>
+
+@endsection
+
+<!--<style>
 * {
   box-sizing: border-box;
 }
@@ -72,9 +193,9 @@ h3{
 }
 </style>
 
-<div class="container">
-  <form method="post" action="/admin/article" enctype="multipart/form-data">
-  	<h3>Información General</h3>
+
+
+  	
 
   	<div class="row">
 		  <div class="col-25" align="center">
@@ -196,7 +317,6 @@ h3{
             @endforeach
         </ul>
     </div>
-@endif
+@endif-->
 
-@endsection
 

@@ -7,7 +7,7 @@ return [
 	'edicion' => 'EDICIÓN',
 	//NAVBAR
 	'ediciones' => 'Ediciones',
-	'informacion' => 'Información',
+	'contacto' => 'Contacto',
 	'autores' => 'Autores',
 	'secciones' => 'Líneas de Investigación',
 	'español' => 'ES',
