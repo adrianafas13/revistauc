@@ -7,7 +7,7 @@ return [
 	'edicion' => 'EDICIÓN',
 	//NAVBAR
 	'ediciones' => 'Ediciones',
-	'contacto' => 'Contacto',
+	'contacto' => 'Información',
 	'autores' => 'Autores',
 	'secciones' => 'Líneas de Investigación',
 	'español' => 'ES',
@@ -37,7 +37,7 @@ return [
 	'rep_contraseña' => 'Repita su contraseña',
 	//FOOTER
 	'redes_sociales' => 'Siguenos en',
-	'info_contacto' => 'Información de Contacto',
+	'info_contacto' => 'Contacto',
 	'telefono' => 'Teléfono',
 	'postgrado' => 'Departamento de Postgrado',
 	//BUSQUEDA

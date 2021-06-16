@@ -4,7 +4,7 @@
 <br>
 <div class="container-fluid">
     <div class="title-sections">
-        <h2><b>@lang('data.articulos')</b></h2>
+        <h2><b>EDICIONES PUBLICADAS</b></h2>
     </div>
     <hr>
 

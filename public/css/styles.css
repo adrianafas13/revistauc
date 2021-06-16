@@ -16,10 +16,10 @@
  }
   .navbar a { color: #fff; }
   .navbar .dropdown-menu a { color: #303030; }
-  .navbar .dropdown-menu a:hover { 
+  /*.navbar .dropdown-menu a:hover { 
     background-color: #303030; 
     color:#fff;
-  }
+  }*/
   .navbar-nav #search-box i{
     background-color: white;
   }

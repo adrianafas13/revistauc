@@ -6,7 +6,7 @@ return [
 	'edicion' => 'EDIZIONE',
 	//NAVBAR
 	'ediciones' => 'Edizioni',
-	'contacto' => 'Contacto',
+	'contacto' => 'Informazione',
 	'autores' => 'Autori',
 	'secciones' => 'Linee di Indagine',
 	'español' => 'ES',
@@ -36,7 +36,7 @@ return [
 	'rep_contraseña' => 'Ripeti la tua password',
 	//FOOTER
 	'redes_sociales' => 'Seguirci',
-	'info_contacto' => 'Informazioni di Contatto',
+	'info_contacto' => 'Contatto',
 	'telefono' => 'Telefono',
 	'postgrado' => 'Dipartimento di Specializzazione',
 	//BUSQUEDA

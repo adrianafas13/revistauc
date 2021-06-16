@@ -23,25 +23,25 @@
                   <p><b>Nombre y Apellido del Autor</b></p>
                 </div>
                 <div class="modal-author-article">
-                  <p>Título completo de los articulos publicados por el autor en la revista cientifica de la universidad de margarita</p>
+                  <p style="margin:30px;">Título completo de los articulos publicados por el autor en la revista cientifica de la universidad de margarita</p>
                 </div>
                 <div class="modal-author-name">
                   <p><b>Nombre y Apellido del Autor</b></p>
                 </div>
                 <div class="modal-author-article">
-                  <p>Título completo de los articulos publicados por el autor en la revista cientifica de la universidad de margarita</p>
+                  <p style="margin:30px;">Título completo de los articulos publicados por el autor en la revista cientifica de la universidad de margarita</p>
                 </div>
                 <div class="modal-author-name">
                   <p><b>Nombre y Apellido del Autor</b></p>
                 </div>
                 <div class="modal-author-article">
-                  <p>Título completo de los articulos publicados por el autor en la revista cientifica de la universidad de margarita</p>
+                  <p style="margin:30px;">Título completo de los articulos publicados por el autor en la revista cientifica de la universidad de margarita</p>
                 </div>
                 <div class="modal-author-name">
                   <p><b>Nombre y Apellido del Autor</b></p>
                 </div>
                 <div class="modal-author-article">
-                  <p>Título completo de los articulos publicados por el autor en la revista cientifica de la universidad de margarita</p>
+                  <p style="margin:30px;">Título completo de los articulos publicados por el autor en la revista cientifica de la universidad de margarita</p>
                 </div>
              
             </div> 

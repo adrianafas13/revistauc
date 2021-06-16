@@ -48,7 +48,7 @@
 
 					<h6><b>Información del Autor</b></h6>
 					<hr>
-					<img src="/images/foto-perfil.jpg">
+					<img src="/images/perfil.jpg">
 					<br>
 
 					<div class="info-container">
@@ -121,7 +121,7 @@
 						@foreach($article->comment as $comment)
 							<hr>
 								<div class="user-name-comment">
-									<img src="/images/logo.png">
+									<img src="/images/uni.png">
 									<p><b>{{ $comment->user->name }}</b></p>
 								</div>
 								<div class="user-comment">

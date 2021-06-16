@@ -5,7 +5,7 @@
 
             <div class="modal-header">
                     <div class="modal-logo" id="modalSingIn">   
-                        <img src="{{ asset('images/logotipo.png') }}" alt="logo">
+                        <img src="{{ asset('images/unimar-científica-logo.png') }}" alt="logo">
                     </div>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
