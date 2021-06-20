@@ -11,7 +11,7 @@
                 <div class="carousel-inner">
                     <!-- Carousel item -->
                     <div class="carousel-item active">
-                        <img src="images/6261.jpg" class="d-block w-100" alt="img1" style="height:505px;">
+                        <img src="images/uni1.jpg" class="d-block w-100" alt="img1" style="height:505px;">
                         <div class="carousel-caption d-md-block">
                             <h5><b>Prueba</b></h5>
                             <p>We had such a great time in LA!</p>
@@ -19,7 +19,7 @@
                     </div>
                      <!-- Carousel item -->
                     <div class="carousel-item">
-                        <img src="images/6261.jpg" class="d-block w-100" alt="img2" style="height:505px;">
+                        <img src="images/uni2.jpg" class="d-block w-100" alt="img2" style="height:505px;">
                         <div class="carousel-caption d-md-block">
                             <h5><b>Prueba 2</b></h5>
                             <p>We had such a great time in LA!</p>
@@ -27,7 +27,7 @@
                     </div>
                      <!-- Carousel item -->
                     <div class="carousel-item">
-                        <img src="images/6261.jpg" class="d-block w-100" alt="img2" style="height:505px;">
+                        <img src="images/uni3.jpg" class="d-block w-100" alt="img2" style="height:505px;">
                         <div class="carousel-caption d-md-block">
                             <h5><b>Prueba 3</b></h5>
                             <p>We had such a great time in LA!</p>
