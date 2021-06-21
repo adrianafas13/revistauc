@@ -23,7 +23,7 @@
             <!------------------------------------------------- NAVBAR ------------------------------------------------------------>
             <nav class="navbar navbar-expand-md sticky-top">
                 <button class="navbar-toggler" data-toggle="collapse" data-target="#collapse_target">
-                   <span class="navbar-toggler-icon"><i class="fa fa-bars" aria-hidden="true" style="color:#e6e6ff"></i></span>
+                    <span class="navbar-toggler-icon"><i class="fa fa-bars" aria-hidden="true" style="color:#e6e6ff"></i></span>
                 </button>
 
                 <div class="collapse navbar-collapse" id="collapse_target">
@@ -59,7 +59,7 @@
                             <a class="nav-link"  href="{{route('autores')}}">@lang('data.autores')</a>
                         </li>
                         <li class="navbar-item">
-                            <a class="nav-link" href="{{route('articulos')}}">@lang('data.ediciones')</a>
+                            <a class="nav-link" href="{{route('edicion')}}">@lang('data.ediciones')</a>
                         </li>
                         <li class="navbar-item">
                             <a class="nav-link" href="{{route('contacto')}}">@lang('data.contacto')</a>
@@ -81,7 +81,7 @@
                             <button class="btn dropdown-toggle" type="button" id="dropdownLanguajeButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <i class="fa fa-globe fa-fw">{{ App::getLocale() }}</i>
                             </button>
-                            <div class="dropdown-menu dropdown-menu-lg-right" aria-labelledby="dropdownLanguajeButton">
+                            <div class="dropdown-menu dropdown-menu-lg-right" aria-labelledby="dropdownLanguajeButton" style="text-align: center;">
                                 <a class="dropdown-item" href="/lang/es"> <img src="{{ asset('images/spanish.png') }}" alt="lang" width="16px" height="auto"> @lang('data.español')</a>
                                 <a class="dropdown-item" href="/lang/en"> <img src="{{ asset('images/english.png') }}" alt="lang" width="16px" height="auto"> @lang('data.ingles')</a>
                                 <a class="dropdown-item" href="/lang/it"> <img src="{{ asset('images/italy.png') }}" alt="lang" width="16px" height="auto"> @lang('data.italiano')</a>
@@ -139,7 +139,6 @@
 
             </nav>
 
-       
             <!------------------------------------------------- CONTENIDO ------------------------------------------------------------>       
             <main>
                 @yield('content')

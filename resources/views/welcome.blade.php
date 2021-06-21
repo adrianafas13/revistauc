@@ -17,7 +17,7 @@
                             <p>We had such a great time in LA!</p>
                         </div>
                     </div>
-                     <!-- Carousel item -->
+                    <!-- Carousel item -->
                     <div class="carousel-item">
                         <img src="images/uni2.jpg" class="d-block w-100" alt="img2" style="height:505px;">
                         <div class="carousel-caption d-md-block">
@@ -25,7 +25,7 @@
                             <p>We had such a great time in LA!</p>
                         </div>
                     </div>
-                     <!-- Carousel item -->
+                    <!-- Carousel item -->
                     <div class="carousel-item">
                         <img src="images/uni3.jpg" class="d-block w-100" alt="img2" style="height:505px;">
                         <div class="carousel-caption d-md-block">
@@ -52,25 +52,22 @@
                 <!-- titulo -->
                 <div class="list-group-item list-group-item-action" id="popular_header_barside">
                     <div class="d-flex w-100 justify-content-between">
-                        <h6><b>@lang('data.popular')</b></h6>
+                        <h5><b>@lang('data.popular')</b></h5>
                         <i class="fas fa-fire-alt"></i>
                     </div>
                 </div>
                 <!-- articulos populares -->
                 @foreach($articles as $article)
-                    <a href="{{route('art', $article->slug)}}" class="list-group-item list-group-item-action">
-                        <div class="d-flex w-100 justify-content-between">
-                            <h6 class="mb-1"><b>{{ App::isLocale('es')?$article->title:$article->en_title }}</b></h6>
-                            <small class="text-muted">@lang('data.'.$article->section)</small>
-                            <br>
-                            <p class="mb-1">{{ $article->author }}</i></p>
-                        </div>
-                    </a>
+                <a href="{{route('art', $article->slug)}}" class="list-group-item list-group-item-action">
+                    <div class="contenido-popular-bar">
+                        <h6><b>{{ App::isLocale('es')?$article->title:$article->en_title }}</b></h6>
+                        <p><i>@lang('data.'.$article->section)</i></p>
+                        <p><b>{{ $article->author }}</b></p>
+                    </div>
+                </a>
                 @endforeach
-
             </div>
         </div>
-
     </div>
 
 <!------------------------------------------------- NOMBRE DE LA EDICIÓN ------------------------------------------------------------>
@@ -79,17 +76,19 @@
             <h4><b>@lang('data.edicion') MAYO 2021</b></h4>
         </div>
     <hr>
+</div>
 <!------------------------------------------------- ARTICULOS ------------------------------------------------------------>  
+<div class="container">
     <div class="row">
         <!-- articulo -->
         @foreach($articles as $article)
             <div class="col-md-6" id="article">
                 <div class="article-container">
-                    <a href="{{route('art', $article->slug)}}" style="text-decoration:none">
+                    <a href="{{route('art', $article->slug)}}">
                         <img src="/images/{{ App::isLocale('es')?$article->ruta_image:$article->ruta_en_image }}" style="width:100%; height: 350px;">
-                        <a href="#" class="badge badge-success" id="tag">{{ $article->section }}</a>
+                        <a href="#" class="badge" id="tag">{{ $article->section }}</a>
                         <div class="article-text overlay-text">
-                            <p><b>{{ App::isLocale('es')?$article->title:$article->en_title }}</b></p> 
+                            <h6><b>{{ App::isLocale('es')?$article->title:$article->en_title }}</b></h6> 
                             <p><i>{{ $article->author }}</i></p>  
                         </div>
                     </a>
@@ -97,4 +96,5 @@
             </div>
         @endforeach     
     </div>
+</div>
 @endsection

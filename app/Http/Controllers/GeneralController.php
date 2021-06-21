@@ -38,6 +38,10 @@ class GeneralController extends Controller
         $contacts=Contact::all();
         return view('/contacto',compact('contacts'));
     }
+    //<!--tentativo-->
+    public function edicion(){
+        return view('/edicion');
+    }
 
     public function sobre(){
         $abouts=About::all();
