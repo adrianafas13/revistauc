@@ -385,13 +385,12 @@ li.navbar-item a:focus {
 .title-author h2 {
     text-align: left;
     font-size: 30px;
-    margin-left: 60px;
 }
 #abc_authors img {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 160px;
+    width: 100%;
     height: auto;
     padding-top: 15px;
     padding-bottom: 15px;

@@ -1,7 +1,7 @@
 @extends('layouts.applayout')
 @section('content')
 <br>
-    <div class="container-fluid">
+    <div class="container">
         <div class="title-author">
             <h2><b>CATÁLOGO DE AUTORES:</b></h2>
         </div>

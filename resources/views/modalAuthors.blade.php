@@ -17,7 +17,6 @@
         <div class="modal-body px-0">
           <div style="overflow-y: hidden; height: calc(100vh - 15rem);">
             <div class="px-2" style="overflow-y: auto; height: auto;">
-         
               <div class="modal-info-author">
                 <div class="modal-author-name">
                   <p><b>Nombre y Apellido del Autor</b></p>
@@ -43,7 +42,6 @@
                 <div class="modal-author-article">
                   <p style="margin:30px;">Título completo de los articulos publicados por el autor en la revista cientifica de la universidad de margarita</p>
                 </div>
-             
             </div> 
           </div>
         </div>
