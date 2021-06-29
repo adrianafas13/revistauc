@@ -20,23 +20,23 @@ class UsersTableSeeder extends Seeder
         $userRole = Role::where('name', 'user')->first();
 
         $admin = User::create([
-        	'name' => 'Admin',
-        	'email' => 'adrianafas13@hotmail.com',
-        	'email_verified_at' => now(),
-        	'password' => bcrypt('admin1234')
-            ]);
+            'name' => 'Admin',
+            'email' => 'adrianafas13@hotmail.com',
+            'email_verified_at' => now(),
+            'password' => bcrypt('admin1234')
+        ]);
             
-            $comment_admin = User::create([
+        $comment_admin = User::create([
             'name' => 'Comment Admin',
             'email' => 'comment@mail.com',
             'email_verified_at' => now(),
-        	'password' => bcrypt('comment1234')
+            'password' => bcrypt('comment1234')
         ]);
 
         $user = User::create([
-        	'name' => 'User',
-        	'email' => 'user@mail.com',
-        	'password' => bcrypt('user1234')
+            'name' => 'User',
+            'email' => 'user@mail.com',
+            'password' => bcrypt('user1234')
         ]);
 
         $admin->roles()->attach($adminRole);
