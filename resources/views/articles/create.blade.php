@@ -1,6 +1,3 @@
-
-
-
 @extends('layouts.adminlayout')
 @section('content')
 <div class=".xl-container">
@@ -9,7 +6,7 @@
 	<hr>
 
 	<form method="post" action="/admin/article" enctype="multipart/form-data">
-		<h5><i>Información General:</i></h5>
+		<h5>Información General:</h5>
 		<hr>
 
 		<div class="row">
@@ -39,48 +36,50 @@
 
 		<br>
 		<!--Español-->
-		<div class="spanish-backgorund" style="background-color:#FEFA4957;">
-			<h5><i>Artículo en Español</i></h5>
-			<hr>
+		<div class="spanish-backgorund">
+			<div class="spanish-content">
+				<h5>Artículo en Español</h5>
+				<hr>
 
-			<!--Titulo del articulo en español-->
-			<div class="row">
-				<div class="col-4">
-					<p>Título:</p>
+				<!--Titulo del articulo en español-->
+				<div class="row">
+					<div class="col-4">
+						<p>Título:</p>
+					</div>
+					<div class="col-8">
+						<input type="text" required id="title" name="title" placeholder="Título del Artículo">
+					</div>
 				</div>
-				<div class="col-8">
-					<input type="text" required id="title" name="title" placeholder="Título del Artículo">
-				</div>
-			</div>
 
-			<!--Imagen del articulo en español-->
-			<div class="row">
-				<div class="col-4">
-					<p>Imagen:</p>
+				<!--Imagen del articulo en español-->
+				<div class="row">
+					<div class="col-4">
+						<p>Imagen:</p>
+					</div>
+					<div class="col-8">
+						<input accept="image/*" required type="file" name="image" value="image">
+					</div>
 				</div>
-				<div class="col-8">
-					<input accept="image/*" required type="file" name="image" value="image">
-				</div>
-			</div>
 
-			<!--Astra del articulo en español-->
-			<div class="row">
-				<div class="col-4">
-					<p>Astra del Artículo:</p>
+				<!--Astra del articulo en español-->
+				<div class="row">
+					<div class="col-4">
+						<p>Astra del Artículo:</p>
+					</div>
+					<div class="col-8">
+						<textarea id="text" name="text" required placeholder="Resumen del Artículo" style="width:400px; height:200px"></textarea>
+					</div>
 				</div>
-				<div class="col-8">
-					<textarea id="text" name="text" required placeholder="Resumen del Artículo" style="width:400px; height:200px"></textarea>
-				</div>
-			</div>
 
-			<!--PDF del articulo en español-->
-			<div class="row">
-				<div class="col-4">
-					<p>Archivo PDF del artículo:</p>
+				<!--PDF del articulo en español-->
+				<div class="row">
+					<div class="col-4">
+						<p>Archivo PDF del artículo:</p>
+					</div>
+					<div class="col-8">
+						<input accept="file/*" required type="file" name="file" value="file">
+					</div>	
 				</div>
-				<div class="col-8">
-					<input accept="file/*" required type="file" name="file" value="file">
-				</div>	
 			</div>
 		</div>
 
