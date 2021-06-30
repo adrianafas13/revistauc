@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="{{asset('plugins/fontawesome-free/css/all.min.css') }}">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-        
+  <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
   <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
 </head>
 
@@ -115,8 +115,27 @@
   </div>
 
 <!------------------------------------------------- SCRIPTS ------------------------------------------------------------>
+
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  </body>
+  <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
+  <script>
+		$('#summernote_spanish').summernote({
+			placeholder: 'Resumen del Artículo',
+			tabsize: 2,
+			height: 200	
+		});
+    $('#summernote_english').summernote({
+			placeholder: 'Resume of the Article',
+			tabsize: 2,
+			height: 200	
+		});
+    $('#summernote_italian').summernote({
+			placeholder: "Riassunto Dell'Articolo",
+			tabsize: 2,
+			height: 200,
+		});
+    </script>
+</body>
 </html>

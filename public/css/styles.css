@@ -534,7 +534,7 @@ div.content {
 
 /********************************************/
 .spanish-backgorund {
-    background-color: #fefa4957;
+    background-color: #fdf5001e;
     border-radius: 10px;
     padding: 10px;
 }
@@ -543,13 +543,72 @@ div.content {
     font-size: 25px;
 }
 
+/*.spanish-backgorund input {
+    align-items: center;
+    justify-content: center;
+    background-color: #18b933;
+}*/
+
 .english-backgorund {
-    background-color: #4a49fe3b;
+    background-color: #1100fd11;
     border-radius: 10px;
     padding: 10px;
 }
+.english-backgorund h5 {
+    text-align: center;
+    font-size: 25px;
+}
+
 .italian-backgorund {
-    background-color: #49fe4a54;
+    background-color: #49fe491c;
     border-radius: 10px;
     padding: 10px;
+}
+.italian-backgorund h5 {
+    text-align: center;
+    font-size: 25px;
+}
+#title-info p {
+    margin-top: 20px;
+    margin-right: 30px;
+    text-align: right;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+input[type="text"] {
+    margin: 5px;
+    height: 50px;
+    padding: 5px 15px;
+    width: 800px;
+    background: #fff;
+    color: #000;
+    border-color: rgba(156, 155, 155, 0.692);
+    cursor: pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+
+input[type="file"] {
+    margin: 5px;
+    padding: 5px 15px;
+    background: #7c7c7c;
+    color: #fff;
+    border: 0 none;
+    cursor: pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    margin: 5px;
+    padding: 10px 25px;
+    background: #0f4601;
+    color: #fff;
+    border: 0 none;
+    cursor: pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: 700;
 }
