@@ -1,5 +1,6 @@
 
 @extends('layouts.adminlayout')
+
 @section('content')
 <div class=".xl-container">
 	<br>
