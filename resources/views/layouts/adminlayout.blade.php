@@ -85,7 +85,7 @@
 
       <li class="nav-item">
         <a class="nav-link" type="button" data-toggle="collapse" data-target="#collapseEdiciones" aria-expanded="false" aria-controls="collapseExample">
-          <i class="far fa-newspaper fa-lg"></i> Ediciones
+          <i class="far fa-fa-lg"></i> Ediciones
         </a>
         <div class="collapse" id="collapseEdiciones">
           <div class="card card-body">
@@ -120,22 +120,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
-  <script>
-		$('#summernote_spanish').summernote({
-			placeholder: 'Resumen del Artículo',
-			tabsize: 2,
-			height: 200	
-		});
-    $('#summernote_english').summernote({
-			placeholder: 'Resume of the Article',
-			tabsize: 2,
-			height: 200	
-		});
-    $('#summernote_italian').summernote({
-			placeholder: "Riassunto Dell'Articolo",
-			tabsize: 2,
-			height: 200,
-		});
-    </script>
+  <script src="/resources/js/script.js"></script>
 </body>
 </html>
