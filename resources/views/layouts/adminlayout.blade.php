@@ -35,6 +35,7 @@
     <!------------------------------------------------- SIDEBAR ------------------------------------------------------------>
   <div class="sidebar">
     <ul class="nav flex-column">
+
       <li class="nav-item">
         <a class="nav-link" type="button" data-toggle="collapse" data-target="#collapseAuthor" aria-expanded="false" aria-controls="collapseExample">
           <i class="far fa-newspaper fa-lg"></i> Autores
@@ -106,6 +107,20 @@
           </div>
         </div>
       </li>
+
+      @hasrole('Admin')
+      <li class="nav-item">
+        <a class="nav-link" type="button" data-toggle="collapse" data-target="#collapseUsuarios" aria-expanded="false" aria-controls="collapseExample">
+          <i class="far fa-user fa-lg"></i>  Usuarios
+        </a>
+        <div class="collapse" id="collapseUsuarios">
+          <div class="card card-body">
+            <a class="dropdown-item" href=" {{ route('user.index') }}">Ver lista</a>
+          </div>
+        </div>
+      </li>
+      @endhasrole
+
     </ul>
   </div>
 
@@ -120,6 +135,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
-  <script src="/resources/js/script.js"></script>
+  <script src="{{ asset('js/script.js') }}"></script>
 </body>
 </html>

@@ -2,16 +2,12 @@
 @section('content')
 <br>
 <div class="container">
-<br>
 	<div class="row">
 		<div class="col-8">
-		<br><br>
 			<h4>Usuarios registrados en el sistema:</h4>
 		</div>
 		<div class="col-4">
-		<br><br>
 			<div class="input-group">
-				
 				<input type="text" class="form-control" placeholder="Buscar..." aria-label="buscardor_usuarios" aria-describedby="btnBuscadorUsuarios">
 				<div class="input-group-prepend">
 					<button type="button" id="btnBuscadorUsuarios"class="btn btn-primary btn-sm"> <i class="fas fa-search"> </i></button>
@@ -23,8 +19,8 @@
 
 	<table class="table table-striped table-bordered">
 
-  		<thead class="thead-dark">
-		  	<tr>
+		<thead class="thead-dark">
+			<tr>
 				<th scope="col">Nombre</th>
 				<th scope="col">Correo</th>
 				<th scope="col">Rol</th>
@@ -33,7 +29,7 @@
 			</tr>
 		</thead>
 
-  		<tbody>
+		<tbody>
 			@foreach($users as $user)
 			<tr>
 				<th>{{ $user->name }}</th>
@@ -50,14 +46,14 @@
 						{{method_field('DELETE') }}
 						@csrf
 						<button type="submit" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></button>
-    				</form>
-    			</th>
+					</form>
+				</th>
 			</tr>
 			@endforeach
 		</tbody>
 
 	</table>
-	<br><br>
+	<br>
 </div>
 
 @endsection 
