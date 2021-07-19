@@ -21,8 +21,9 @@
 	<table class="table table-striped table-bordered">
 		<thead class="thead-dark">
 		<tr>
-			<th scope="col">Apellido</th>
-			<th scope="col">Nombre</th>
+		<th scope="col">Título / Español</th>
+			<th scope="col">Title / English</th>
+			<th scope="col">Titulo / Italiano</th>
 			<th scope="col">Modificar</th>
 			<th scope="col">Eliminar</th>
 		</tr>
@@ -31,8 +32,9 @@
 		<tbody>
 		
 		<tr>
-			<td><p>Apellido</p></td>
-			<td><p>Nombre</p></td>
+			<td><p>Español</p></td>
+			<td><p>English</p></td>
+			<td><p>Italiano</p></td>
 			<td>	
 				<a href="#" class="btn btn-success btn-sm"><i class="fas fa-edit"></i></a>
 			</td>

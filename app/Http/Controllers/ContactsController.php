@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 class ContactsController extends Controller
 {
-   
+
     public function index()
     {
         $contacts=Contact::orderBy('id','desc')->paginate(8);

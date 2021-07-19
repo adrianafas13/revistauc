@@ -38,7 +38,7 @@
 
       <li class="nav-item">
         <a class="nav-link" type="button" data-toggle="collapse" data-target="#collapseAuthor" aria-expanded="false" aria-controls="collapseExample">
-          <i class="far fa-newspaper fa-lg"></i> Autores
+          <i class="far fa-pencil-alt fa-lg"></i> Autores
         </a>
         <div class="collapse" id="collapseAuthor">
           <div class="card card-body">
@@ -72,7 +72,7 @@
         </div>
       </li>
 
-      <li class="nav-item">
+      <!--<li class="nav-item">
         <a class="nav-link" type="button" data-toggle="collapse" data-target="#collapseSecciones" aria-expanded="false" aria-controls="collapseExample">
           <i class="far fa-newspaper fa-lg"></i> Secciones
         </a>
@@ -83,6 +83,7 @@
           </div>
         </div>
       </li>
+      -->
 
       <li class="nav-item">
         <a class="nav-link" type="button" data-toggle="collapse" data-target="#collapseEdiciones" aria-expanded="false" aria-controls="collapseExample">
@@ -103,7 +104,7 @@
         <div class="collapse" id="collapseInformacion">
           <div class="card card-body">
             <a class="dropdown-item" href="#">Añadir</a>
-            <a class="dropdown-item" href="#">Ver disponibles</a>
+            <a class="dropdown-item"href="{{ route('contact.index') }}">Ver disponibles</a>
           </div>
         </div>
       </li>

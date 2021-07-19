@@ -1,18 +1,16 @@
 @extends('layouts.adminlayout')
 @section('content')
 <div class="container">
+<br>
 	<div class="row">
-		<div class="col-8">
-			<h4>Lista de artículos publicados:</h4>
+	<div class="col-8">
+			<h4>Lista de Artículos Públicados:</h4>
 		</div>
 		<div class="col-4">
-		<br><br>
 			<div class="input-group">
-				
-				<input type="text" class="form-control" placeholder="Buscar..." aria-label="buscardor_usuarios" aria-describedby="btnBuscadorUsuarios">
-				<div class="input-group-prepend">
-					<button type="button" id="btnBuscadorUsuarios"class="btn btn-primary btn-sm"> <i class="fas fa-search"> </i></button>
-				</div>
+				<input type="search" class="form-control rounded" placeholder="Buscar..." aria-label="Search"
+					aria-describedby="search-addon" />
+				<button type="button" class="btn btn-outline-primary">Buscar</button>
 			</div>
 		</div>
 	</div>
