@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Edition;
 use Illuminate\Http\Request;
 
 class EditionsController extends Controller
@@ -13,7 +13,7 @@ class EditionsController extends Controller
      */
     public function index()
     {
-        //
+        return view("editions.index");
     }
  
     /**

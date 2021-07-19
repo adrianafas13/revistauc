@@ -11,7 +11,7 @@ class AuthorsController extends Controller
     {
         return view("authors.index");
     }
- 
+
     /**
      * Show the form for creating a new resource.
      *
@@ -21,7 +21,7 @@ class AuthorsController extends Controller
     {
         //
     }
- 
+
     /**
      * Store a newly created resource in storage.
      *
@@ -32,7 +32,7 @@ class AuthorsController extends Controller
     {
         //
     }
- 
+
     /**
      * Display the specified resource.
      *
@@ -43,7 +43,7 @@ class AuthorsController extends Controller
     {
         //
     }
- 
+
     /**
      * Show the form for editing the specified resource.
      *
@@ -54,7 +54,7 @@ class AuthorsController extends Controller
     {
         //
     }
- 
+
     /**
      * Update the specified resource in storage.
      *
@@ -66,7 +66,7 @@ class AuthorsController extends Controller
     {
         //
     }
- 
+
     /**
      * Remove the specified resource from storage.
      *

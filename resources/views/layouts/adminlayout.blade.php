@@ -67,7 +67,7 @@
         <div class="collapse" id="collapseCarousel">
           <div class="card card-body">
             <a class="dropdown-item" href="#">Crear nuevo</a>
-            <a class="dropdown-item" href="#">Ver disponibles</a>
+            <a class="dropdown-item"  href="{{ route('carousel.index') }}">Ver disponibles</a>
           </div>
         </div>
       </li>
@@ -91,7 +91,7 @@
         <div class="collapse" id="collapseEdiciones">
           <div class="card card-body">
             <a class="dropdown-item" href="#">Crear nueva</a>
-            <a class="dropdown-item" href="#">Ver ediciones</a>
+            <a class="dropdown-item" href="{{ route('editions.index') }}">Ver ediciones</a>
           </div>
         </div>
       </li>

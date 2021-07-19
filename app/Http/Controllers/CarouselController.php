@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Carousel;
 use Illuminate\Http\Request;
 
 class CarouselController extends Controller
@@ -13,7 +13,7 @@ class CarouselController extends Controller
      */
     public function index()
     {
-        //
+        return view("carousel.index");
     }
  
     /**
