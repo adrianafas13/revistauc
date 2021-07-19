@@ -38,7 +38,7 @@
 
       <li class="nav-item">
         <a class="nav-link" type="button" data-toggle="collapse" data-target="#collapseAuthor" aria-expanded="false" aria-controls="collapseExample">
-          <i class="far fa-pencil-alt fa-lg"></i> Autores
+          <i class="fas fa-pencil-alt fa-lg"></i> Autores
         </a>
         <div class="collapse" id="collapseAuthor">
           <div class="card card-body">
@@ -50,7 +50,7 @@
 
       <li class="nav-item">
         <a class="nav-link" type="button" data-toggle="collapse" data-target="#collapseArticle" aria-expanded="false" aria-controls="collapseExample">
-          <i class="far fa-newspaper fa-lg"></i> Artículos
+          <i class="far fa-sticky-note fa-lg"></i> Artículos
         </a>
         <div class="collapse" id="collapseArticle">
           <div class="card card-body">
@@ -62,7 +62,7 @@
 
       <li class="nav-item">
         <a class="nav-link" type="button" data-toggle="collapse" data-target="#collapseCarousel" aria-expanded="false" aria-controls="collapseExample">
-          <i class="far fa-newspaper fa-lg"></i> Carousel
+          <i class="fas fa-images fa-lg"></i> Carousel
         </a>
         <div class="collapse" id="collapseCarousel">
           <div class="card card-body">
@@ -87,7 +87,7 @@
 
       <li class="nav-item">
         <a class="nav-link" type="button" data-toggle="collapse" data-target="#collapseEdiciones" aria-expanded="false" aria-controls="collapseExample">
-          <i class="far fa-fa-lg"></i> Ediciones
+          <i class="far fa-newspaper fa-lg"></i> Ediciones
         </a>
         <div class="collapse" id="collapseEdiciones">
           <div class="card card-body">
@@ -99,7 +99,7 @@
 
       <li class="nav-item">
         <a class="nav-link" type="button" data-toggle="collapse" data-target="#collapseInformacion" aria-expanded="false" aria-controls="collapseExample">
-          <i class="far fa-newspaper fa-lg"></i> Información
+          <i class="fas fa-info fa-lg"></i> Información
         </a>
         <div class="collapse" id="collapseInformacion">
           <div class="card card-body">
@@ -112,7 +112,7 @@
       @hasrole('Admin')
       <li class="nav-item">
         <a class="nav-link" type="button" data-toggle="collapse" data-target="#collapseUsuarios" aria-expanded="false" aria-controls="collapseExample">
-          <i class="far fa-user fa-lg"></i>  Usuarios
+          <i class="fas fa-users fa-lg"></i>  Usuarios
         </a>
         <div class="collapse" id="collapseUsuarios">
           <div class="card card-body">
