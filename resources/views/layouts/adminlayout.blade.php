@@ -43,7 +43,7 @@
         <div class="collapse" id="collapseAuthor">
           <div class="card card-body">
             <a class="dropdown-item" href="#">Registrar</a>
-            <a class="dropdown-item" href="#">Ver lista</a>
+            <a class="dropdown-item" href="{{ route('authors.index') }}">Ver Lista</a>
           </div>
         </div>
       </li>
