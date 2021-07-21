@@ -42,7 +42,7 @@
         </a>
         <div class="collapse" id="collapseAuthor">
           <div class="card card-body">
-            <a class="dropdown-item" href="#">Registrar</a>
+            <a class="dropdown-item" href="{{ route('authors.create') }}">Registrar</a>
             <a class="dropdown-item" href="{{ route('authors.index') }}">Ver Lista</a>
           </div>
         </div>
@@ -66,7 +66,7 @@
         </a>
         <div class="collapse" id="collapseCarousel">
           <div class="card card-body">
-            <a class="dropdown-item" href="#">Crear nuevo</a>
+            <a class="dropdown-item" href="{{ route('carousel.create') }}">Crear nuevo</a>
             <a class="dropdown-item"  href="{{ route('carousel.index') }}">Ver disponibles</a>
           </div>
         </div>

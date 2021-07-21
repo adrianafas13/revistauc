@@ -19,7 +19,7 @@ class AuthorsController extends Controller
      */
     public function create()
     {
-        //
+        return view("authors.create");
     }
 
     /**
