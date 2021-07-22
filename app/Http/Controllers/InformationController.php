@@ -14,7 +14,7 @@ class InformationController extends Controller
      */
     public function index()
     {
-        //
+        return view("information.index");
     }
 
     /**
@@ -83,3 +83,4 @@ class InformationController extends Controller
         //
     }
 }
+ 

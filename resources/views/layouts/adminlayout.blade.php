@@ -103,8 +103,8 @@
         </a>
         <div class="collapse" id="collapseInformacion">
           <div class="card card-body">
-            <a class="dropdown-item" href="{{ route('contact.create') }}">Añadir</a>
-            <a class="dropdown-item" href="{{ route('contact.index') }}">Ver disponibles</a>
+            <a class="dropdown-item" href="#">Añadir</a>
+            <a class="dropdown-item" href="{{ route('information.index') }}">Ver disponibles</a>
           </div>
         </div>
       </li>

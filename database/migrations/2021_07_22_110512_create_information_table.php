@@ -41,4 +41,4 @@ class CreateInformationTable extends Migration
     {
         Schema::dropIfExists('information');
     }
-}
+} 
