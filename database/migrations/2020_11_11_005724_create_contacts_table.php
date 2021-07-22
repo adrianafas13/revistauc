@@ -16,8 +16,6 @@ class CreateContactsTable extends Migration
             $table->string('contact_title',255)->nullable(false);
             $table->text('contact_text')->nullable(false);
 
-           
-
             /**english**/
             $table->string('en_contact_title',255)->nullable(false);
             $table->text('en_contact_text')->nullable(false);

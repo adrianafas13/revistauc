@@ -37,4 +37,5 @@ Route::middleware(['auth','auth.admin'])->prefix('admin')->group(function(){
 	Route::resource('/authors', 'AuthorsController');
 	Route::resource('/carousel', 'CarouselController');
 	Route::resource('/editions', 'EditionsController');
+	Route::resource('/information', 'InformationController');
 });
