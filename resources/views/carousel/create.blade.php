@@ -59,7 +59,7 @@
 				</div>
 			</div>
 
-			<!--Titulo del articulo en español-->
+			<!--Titulo del articulo en ingles-->
 			<div class="row">
 				<div class="col-3" id="title-info">
 					<p>Title:</p>
@@ -69,7 +69,7 @@
 				</div>
 			</div>
 
-            <!--Texto del Carousel en español-->
+            <!--Texto del Carousel en ingles-->
 			<div class="row">
 				<div class="col-3" id="title-info">
 					<p>Texto del Carousel</p>
@@ -85,7 +85,7 @@
 			<h5><b>Carousel en Italiano</b></h5>
 			<hr>
 
-            <!--Imagen del carousel en español-->
+            <!--Imagen del carousel en italiano-->
 			<div class="row">
 				<div class="col-3" id="title-info">
 					<p>Image:</p>
@@ -95,7 +95,7 @@
 				</div>
 			</div>
 
-			<!--Titulo del articulo en español-->
+			<!--Titulo del articulo en italiano-->
 			<div class="row">
 				<div class="col-3" id="title-info">
 					<p>Title:</p>

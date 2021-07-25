@@ -4,7 +4,7 @@
 <br>
 	<div class="row">
 	<div class="col-8">
-			<h4>Informacion disponible:</h4>
+			<h4><b>Informacion disponible:</b></h4>
 		</div>
 		<div class="col-4">
 			<div class="input-group">

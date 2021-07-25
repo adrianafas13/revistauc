@@ -47,3 +47,19 @@ $("#summernote_author_italian").summernote({
     tabsize: 2,
     height: 200,
 });
+/*area de informacion*/
+$("#summernote_information").summernote({
+    placeholder: "Información a publicar",
+    tabsize: 2,
+    height: 200,
+});
+$("#summernote_information_english").summernote({
+    placeholder: "Información a publicar",
+    tabsize: 2,
+    height: 200,
+});
+$("#summernote_information_italian").summernote({
+    placeholder: "Información a publicar",
+    tabsize: 2,
+    height: 200,
+});

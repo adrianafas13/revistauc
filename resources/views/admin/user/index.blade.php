@@ -4,7 +4,7 @@
 <br>
 	<div class="row">
 	<div class="col-8">
-			<h4>Usuarios registrados en el sistema:</h4>
+			<h4>Usuarios registrados en el sistema:</b></h4>
 		</div>
 		<div class="col-4">
 			<div class="input-group">
@@ -56,3 +56,7 @@
 </div>
 
 @endsection 
+
+<!--<a href="#" data-toggle="modal" data-target="#editUserModal">
+						<button type="button" class="btn btn-success btn-sm"><i class="fas fa-edit"></i></button>
+					</a>-->
