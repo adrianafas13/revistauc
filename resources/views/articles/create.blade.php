@@ -15,7 +15,9 @@
 			<div class="col-3" id="title-info">
 				<p>Autor:</p>
 			</div>	
-			<div class="col-9"></div>
+			<div class="col-9">
+				<input type="text" required id="author" name="author" placeholder="Autor del Artículo">
+			</div>
 		</div>
 
 		<div class="row">
@@ -133,12 +135,12 @@
 		</div>
 
 		<br>
-		<!--Italian-->
+		<!--Italian
 		<div class="italian-backgorund">
 			<h5><b>Articolo in Italiano</b></h5>
 			<hr>
 
-			<!--Titulo del articulo en italiano-->
+			Titulo del articulo en italiano
 			<div class="row">
 				<div class="col-3" id="title-info">
 					<p>Titolo:</p>
@@ -148,7 +150,7 @@
 				</div>
 			</div>
 
-			<!--Imagen del articulo en italiano-->
+			Imagen del articulo en italiano
 			<div class="row">
 				<div class="col-3" id="title-info">
 					<p>Imamagine:</p>
@@ -158,7 +160,7 @@
 				</div>
 			</div>
 
-			<!--Astra del articulo en italiano-->
+			Astra del articulo en italiano
 			<div class="row">
 				<div class="col-3" id="title-info">
 					<p>Curriculum Dell'Articolo:</p>
@@ -168,7 +170,7 @@
 				</div>
 			</div>
 
-			<!--PDF del articulo en italiano-->
+			PDF del articulo en italiano
 			<div class="row">
 				<div class="col-3" id="title-info">
 					<p>PFD Archivo:</p>
@@ -178,7 +180,7 @@
 				</div>
 			</div>
 		</div>
-
+-->
 	@csrf
 	<div>
 		<input type="submit" name="enviar" value="Publicar">

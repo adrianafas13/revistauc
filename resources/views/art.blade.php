@@ -29,7 +29,7 @@
 				<div class="resume-article">
 					<div class="container">
 						<p><b><i>@lang('data.resumen')</i></b></p>
-						<p style="text-indent:20px; align=justify" >{{ App::isLocale('es')?$article->text:$article->en_text }}</p>
+						<div>{!! App::isLocale('es')?$article->text:$article->en_text !!}</div>
 					</div>
 				</div>
 
