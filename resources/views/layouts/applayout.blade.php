@@ -147,48 +147,57 @@
 
             <div class="footer col-sm-12">
                 <div class="row">
-                    <!------------------------------------------------- ENLACE DE UNIMAR ------------------------------------------------------------>
-                    <div class="col-sm">
-                        <div class="unimar-link">
-                            <a href="http://www.unimar.edu.ve/unimarportal/index.php">
-                                <img src="{{ asset('images/white-logo.png') }}" alt="logo blanco" width="150px" height="auto">
-                            </a>
-                        </div>
-                    </div>
-                    <!------------------------------------------------- INFORMACÍON ------------------------------------------------------------>
-                    <div class="col-sm">
-                        <div class="info-contact">
-                            <p><b>@lang('data.info_contacto')</p></b>
-                            <p>@lang('data.telefono'): 0295 - 2870101<br>
-                            @lang('data.correo'): revista.cientifica@unimar.edu.ve<br>
-                            @lang('data.postgrado')</p>
-                            <p><b>2021 &copy Universidad de Margarita</b></p>
-                        </div>
-                    </div>
                     <!------------------------------------------------- REDES SOCIALES ------------------------------------------------------------>
                     <div class="col-sm">
                         <ul id="social-media">
                             <p><b>@lang('data.redes_sociales')</p></b>
                             <li class="nav-item">
                                 <a href=#facebook>
-                                    <img src="{{ asset('images/fb-white.png') }}" alt="logo blanco" width="40px" height="auto">
+                                    <img src="{{ asset('images/fb-white.png') }}" alt="logo blanco">
+                                    <span> Facebook</span>
                                 </a>
                             </li>
-                            <li class="nav-item">
-                                <a href=#twitter>
-                                    <img src="{{ asset('images/tw-white.png') }}" alt="logo blanco" width="40px" height="auto">
-                                </a>
-                            </li>
+                            
                             <li class="nav-item">
                                 <a href=#instagram>
-                                    <img src="{{ asset('images/ig-white.png') }}" alt="logo blanco" width="40px" height="auto">
+                                    <img src="{{ asset('images/ig-white.png') }}" alt="logo blanco"><span> Instagram</span>
                                 </a>
                             </li>
+                            
+                            <li class="nav-item">
+                                <a href=#twitter>
+                                    <img src="{{ asset('images/tw-white.png') }}" alt="logo blanco"><span> Twitter  </span>
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a href=#linkedin>
+                                    <img src="{{ asset('images/ig-white.png') }}" alt="logo blanco"><span> Linked In  </span>
+                                </a>
+                            </li>
+
                         </ul>
+                    </div>
+                    <!------------------------------------------------- BLANC SPACE ------------------------------------------------------------>
+                    <div class="col-sm">
+                        
+                    </div>
+                    
+                    <!------------------------------------------------- ENLACE DE UNIMAR ------------------------------------------------------------>
+                    <div class="col-sm">
+                        <div class="unimar-link">
+                            <a href="http://www.unimar.edu.ve/unimarportal/index.php">
+                                <img src="{{ asset('images/white-logo.png') }}" alt="logo blanco">
+                            </a>
+                        </div>
                     </div>
 
                 </div>
+                <div class="footer-copy" style="align:center">
+                    <p><b> Universidad de Margarita 2021 Copyright &copy Todos los derechos reservados</b></p>
+                </div>
             </div>
+            
         </div>
     <!------------------------------------------------- SCRIPTS ------------------------------------------------------------>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
