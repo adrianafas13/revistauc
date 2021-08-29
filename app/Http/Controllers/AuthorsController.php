@@ -9,8 +9,10 @@ class AuthorsController extends Controller
 
     public function index()
     {
-        return view("authors.index");
-    }
+        $authors=Author::all();
+        $authors=Author::orderBy('created_at','desc')->orderBy('id')->paginate(10);
+        return view("authors.index" , compact("authors"));
+    } 
 
     /**
      * Show the form for creating a new resource.
@@ -30,7 +32,19 @@ class AuthorsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $author=new Author;
+        /**español**/
+        $author->name_author=$request->name_author;
+        $author->lastname_author=$request->lastname_author;
+        $author->email_author=$request->email_author;
+        $author->grades_author=$request->grades_author;
+        $author->resume_author=$request->resume_author;
+        /**english**/
+        $author->en_grades_author=$request->en_grades_author;
+        $author->en_resume_author=$request->en_resume_author;
+
+        $author->save();
+        return redirect("/admin/authors"); 
     }
 
     /**
@@ -39,9 +53,11 @@ class AuthorsController extends Controller
      * @param  \App\Post  $post
      * @return \Illuminate\Http\Response
      */
-    public function show(Post $post)
+    public function show($id)
     {
-        //
+        $author=Author::findOrFail($id);
+
+        return view("authors.show" , compact("author"));
     }
 
     /**
@@ -50,9 +66,11 @@ class AuthorsController extends Controller
      * @param  \App\Post  $post
      * @return \Illuminate\Http\Response
      */
-    public function edit(Post $post)
+    public function edit($id)
     {
-        //
+        $author=Author::findOrFail($id);
+
+        return view("authors.edit", compact("author"));
     }
 
     /**
@@ -62,9 +80,13 @@ class AuthorsController extends Controller
      * @param  \App\Post  $post
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Post $post)
+    public function update(Request $request, $id)
     {
-        //
+        $author=Author::findOrFail($id);
+
+        $author->update($request->all());
+
+        return redirect("/admin/authors");
     }
 
     /**
@@ -73,8 +95,10 @@ class AuthorsController extends Controller
      * @param  \App\Post  $post
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Post $post)
+    public function destroy($id)
     {
-        //
+        $author=Author::findOrFail($id);
+        $author->delete();
+        return redirect("/admin/authors");
     }
 }

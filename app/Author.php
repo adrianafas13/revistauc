@@ -21,4 +21,4 @@ class Author extends Model
         "it_grades_author",
         "it_resume_author",
 	];
-}
+} 

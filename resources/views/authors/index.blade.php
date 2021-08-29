@@ -26,23 +26,25 @@
 			<th scope="col">Modificar</th>
 			<th scope="col">Eliminar</th>
 		</tr>
-		</thead>
+		</thead> 
 
 		<tbody>
-		
+		@foreach($authors as $author)
 		<tr>
-			<td><p>Apellido</p></td>
-			<td><p>Nombre</p></td>
+			<td><p>{{ $author->name_author }}</p></td>
+			<td><p>{{ $author->lastname_author }}</p></td>
 			<td>	
-				<a href="#" class="btn btn-success btn-sm"><i class="fas fa-edit"></i></a>
+				<a href=" {{route('authors.edit', $author->id)}} " class="btn btn-success btn-sm"><i class="fas fa-edit"></i></a>
 			</td>
 			<td>
-				<form action="#" method="post">
+				<form action="{{route('authors.destroy', $author->id)}}" method="post">
+					@csrf
+					@method('delete')
 					<button type="submit" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></button>
 				</form>
 			</td>
 		</tr>
-		
+		@endforeach
 		</tbody>
 	</table>
 
