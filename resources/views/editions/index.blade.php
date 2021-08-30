@@ -23,28 +23,28 @@
 		<tr>
 		<th scope="col">Título / Español</th>
 			<th scope="col">Title / English</th>
-			<th scope="col">Titulo / Italiano</th>
 			<th scope="col">Modificar</th>
 			<th scope="col">Eliminar</th>
 		</tr>
 		</thead>
 
 		<tbody>
-		
+		@foreach($editions as $edition)
 		<tr>
-			<td><p>Español</p></td>
-			<td><p>English</p></td>
-			<td><p>Italiano</p></td>
+			<td><p>{{ $edition->title_edition }}</p></td>
+			<td><p>{{ $edition->en_title_edition }}</p></td>
 			<td>	
-				<a href="#" class="btn btn-success btn-sm"><i class="fas fa-edit"></i></a>
+			<a href=" {{route('editions.edit', $edition->id)}} " class="btn btn-success btn-sm"><i class="fas fa-edit"></i></a>
 			</td>
 			<td>
-				<form action="#" method="post">
+				<form action="{{route('editions.destroy', $edition->id)}}" method="post">
+					@csrf
+					@method('delete')
 					<button type="submit" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></button>
 				</form>
 			</td>
 		</tr>
-		
+		@endforeach
 		</tbody>
 	</table>
 

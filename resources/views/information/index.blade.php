@@ -37,11 +37,12 @@
 				</th>
 				<th>
 					<form action="{{route('information.destroy', $information->id)}}"  method="POST"">
-					@csrf
-					@method('delete')
-					<button type="submit" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></button>
-				</form>
-			</tr>
+						@csrf
+						@method('delete')
+						<button type="submit" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></button>
+					</form>
+				</th>
+		</tr>
 		@endforeach
 		</tbody>
 
