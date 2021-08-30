@@ -14,7 +14,9 @@ class InformationController extends Controller
      */
     public function index()
     {
-        return view("information.index");
+        $information=Information::all();
+        $information=Information::orderBy('created_at','desc')->orderBy('id')->paginate(15);
+        return view("information.index" , compact("information"));
     }
 
     /**
@@ -35,7 +37,16 @@ class InformationController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $information=new Information;
+        /**español**/
+        $information->information_title=$request->information_title;
+        $information->information_text=$request->information_text;
+        /**english**/
+        $information->en_information_title=$request->en_information_title;
+        $information->en_information_text=$request->en_information_text;
+
+        $information->save();
+        return redirect("/admin/information"); 
     }
 
     /**
@@ -44,9 +55,11 @@ class InformationController extends Controller
      * @param  \App\Information  $information
      * @return \Illuminate\Http\Response
      */
-    public function show(Information $information)
+    public function show($id)
     {
-        //
+        $information=Information::findOrFail($id);
+
+        return view("information.show" , compact("information"));
     }
 
     /**
@@ -55,9 +68,11 @@ class InformationController extends Controller
      * @param  \App\Information  $information
      * @return \Illuminate\Http\Response
      */
-    public function edit(Information $information)
+    public function edit($id)
     {
-        //
+        $information=Information::findOrFail($id);
+
+        return view("information.edit" , compact("information"));
     }
 
     /**
@@ -67,9 +82,13 @@ class InformationController extends Controller
      * @param  \App\Information  $information
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Information $information)
+    public function update(Request $request, $id)
     {
-        //
+        $information=Information::findOrFail($id);
+
+        $information->update($request->all());
+
+        return redirect("/admin/information");
     }
 
     /**
@@ -78,9 +97,10 @@ class InformationController extends Controller
      * @param  \App\Information  $information
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Information $information)
+    public function destroy($id)
     {
-        //
+        $information=Information::findOrFail($id);
+        $information->delete();
+        return redirect("/admin/information");
     }
 }
- 

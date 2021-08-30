@@ -22,30 +22,27 @@
 			<tr>
 				<th scope="col">Título / Español</th>
 				<th scope="col">Title / English</th>
-				<th scope="col">Titulo / Italian</th>
 				<th scope="col">Modificar</th>
 				<th scope="col">Eliminar</th>
 			</tr>
 		</thead>
 
 		<tbody>
-			<tr>
-				
-                <th>español</th>
-                <th>ingles</th>
-				<th>italiano</th>
-
+		@foreach($information as $information)
+		<tr>
+			<td><p>{{ $information->information_title }}</p></td>
+			<td><p>{{ $information->en_information_title }}</p></td>
 				<th>
-					<a href="#">
-						<button type="button" class="btn btn-success btn-sm"><i class="fas fa-edit"></i></button>
-					</a>
+				<a href=" {{route('information.edit', $information->id)}} " class="btn btn-success btn-sm"><i class="fas fa-edit"></i></a>
 				</th>
 				<th>
-					<form action="#"  method="POST"">
+					<form action="{{route('information.destroy', $information->id)}}"  method="POST"">
+					@csrf
+					@method('delete')
 					<button type="submit" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></button>
 				</form>
 			</tr>
-
+		@endforeach
 		</tbody>
 
 	</table>

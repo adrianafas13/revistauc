@@ -47,7 +47,7 @@ class AuthorsController extends Controller
         return redirect("/admin/authors"); 
     }
 
-    /**
+    /** 
      * Display the specified resource.
      *
      * @param  \App\Post  $post
