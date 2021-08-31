@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Article;
+use App\Author;
 use Illuminate\Http\Request;
 use App\Http\Requests\ArticleRequest;
 
@@ -18,7 +19,8 @@ class ArticlesController extends Controller
 
     public function create()
     {
-        return view('articles.create');
+        $authors = Author::get();
+        return view('articles.create', compact('authors'));
     }
 
     public function seccion($seccion){

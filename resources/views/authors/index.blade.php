@@ -21,8 +21,7 @@
 	<table class="table table-striped table-bordered">
 		<thead class="thead-dark">
 		<tr>
-			<th scope="col">Apellido</th>
-			<th scope="col">Nombre</th>
+			<th scope="col">Apellido y Nombre</th>
 			<th scope="col">Modificar</th>
 			<th scope="col">Eliminar</th>
 		</tr>
@@ -32,7 +31,6 @@
 		@foreach($authors as $author)
 		<tr>
 			<td><p>{{ $author->name_author }}</p></td>
-			<td><p>{{ $author->lastname_author }}</p></td>
 			<td>	
 				<a href=" {{route('authors.edit', $author->id)}} " class="btn btn-success btn-sm"><i class="fas fa-edit"></i></a>
 			</td>

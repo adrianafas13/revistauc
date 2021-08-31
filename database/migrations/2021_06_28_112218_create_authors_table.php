@@ -17,7 +17,6 @@ class CreateAuthorsTable extends Migration
             $table->bigIncrements('id');
             /*spanish*/
             $table->string('name_author',150)->nullable(false);
-            $table->string('lastname_author',150)->nullable(false);
             $table->string('email_author',60)->nullable(false)->unique();
             $table->string('grades_author',300)->nullable(false);
             $table->string('resume_author',900)->nullable(false);

@@ -16,7 +16,16 @@
 				<p>Autor:</p>
 			</div>	
 			<div class="col-9">
-				<input type="text" required id="author" name="author" placeholder="Autor del Artículo">
+				<!--input type="text" required id="author" name="author" placeholder="Autor del Artículo"-->
+				<div class="form-group">
+					
+					<select class="form-control" id="author">
+					@foreach($authors as $author)
+						<option>{{ $author->name_author }}</option>
+					@endforeach
+					</select>
+					
+				</div>
 			</div>
 		</div>
 
@@ -25,7 +34,8 @@
 				<p>Sección:</p>
 			</div>
 			<div class="col-9">
-				<select id="section"  name="section">
+				<div class="form-group">
+				<select class="form-control" id="section"  name="section">
 					<option value="administracion">Administracion</option>
 					<option value="arte">Arte</option>
 					<option value="idiomas">Idiomas</option>
@@ -35,6 +45,7 @@
 					<option value="historia">Historia</option>
 					<option value="salud">Salud</option>
 				</select>
+				</div>
 			</div>
 		</div>
 

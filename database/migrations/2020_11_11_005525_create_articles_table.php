@@ -12,7 +12,7 @@ class CreateArticlesTable extends Migration
         Schema::create('articles', function (Blueprint $table) {
             $table->bigIncrements('id');
             /**general**/
-            $table->string('author',150)->nullable(false);
+            $table->bigInteger('author_id');
             $table->string('section',150)->nullable(false);
             /**español**/
             $table->string('title',255)->nullable(false)->unique();

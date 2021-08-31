@@ -23,4 +23,8 @@ class Article extends Model
 	public function comment(){
 		return $this->hasMany('App\Comment','articles_id')->where('approved',1)->orderBy('id','desc');
 	}
+
+	public function author(){
+		return $this->belongsTo('App\Author','author_id');
+	}
 }
