@@ -60,9 +60,7 @@
 					<p>Imagen:</p>
 				</div>
 				<div class="col-9">
-				
-						<input accept="image/*" required type="file" name="image" value="image">
-					
+					<input accept="image/*" required type="file" name="image" value="image">
 				</div>
 			</div>
 

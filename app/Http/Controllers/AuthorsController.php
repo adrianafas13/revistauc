@@ -1,8 +1,10 @@
 <?php
-
+ 
 namespace App\Http\Controllers;
+
 use App\Author;
 use Illuminate\Http\Request;
+use App\Http\Requests\AuthorRequest;
 
 class AuthorsController extends Controller
 {
@@ -30,20 +32,21 @@ class AuthorsController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(AuthorRequest $request)
     {
-        $author=new Author;
-        /**español**/
-        $author->name_author=$request->name_author;
-        $author->lastname_author=$request->lastname_author;
-        $author->email_author=$request->email_author;
-        $author->grades_author=$request->grades_author;
-        $author->resume_author=$request->resume_author;
-        /**english**/
-        $author->en_grades_author=$request->en_grades_author;
-        $author->en_resume_author=$request->en_resume_author;
+        $authors=$request->all();
 
-        $author->save();
+        if($authorimg=$request->file('image_author')){
+
+            $infoimg=$authorimg->getClientOriginalName();
+
+            $authorimg->move('images', $infoimg);
+
+            $authors['route_image_author']=$infoimg;
+
+        }
+        Author::create($authors);
+
         return redirect("/admin/authors"); 
     }
 

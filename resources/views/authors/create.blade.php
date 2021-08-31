@@ -18,7 +18,7 @@
 		</div>
 		<!--Apellido del autor-->
 		<div class="row">
-			<div class="col-3" id="title-info">
+			<div class="col-3" id="title-info"> 
 				<p>Apellido:</p>
 			</div>
 			<div class="col-9">
@@ -34,15 +34,15 @@
 				<input type="text" required id="email_author" name="email_author" placeholder="Correo Electronico del Autor">
 			</div>
 		</div>
-		<!--Imagen del autor
+		<!--Imagen del autor-->
 		<div class="row">
 			<div class="col-3" id="title-info">
 				<p>Foto del Autor:</p>
 			</div>
 			<div class="col-9">
-				<input accept="image/*" required type="file" name="route_image_author" value="route_image_author">
+				<input accept="image/*" required type="file" name="image_author" value="image">
 			</div>
-		</div>-->
+		</div>
 		<!--Español-->
 		<br>
 		<div class="spanish-backgorund">
