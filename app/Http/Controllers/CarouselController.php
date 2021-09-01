@@ -1,8 +1,11 @@
 <?php
-
+ 
 namespace App\Http\Controllers;
+
 use App\Carousel;
 use Illuminate\Http\Request;
+use App\Http\Requests\CarouselRequest;
+
 
 class CarouselController extends Controller
 {
@@ -13,9 +16,11 @@ class CarouselController extends Controller
      */
     public function index()
     {
-        return view("carousel.index");
+        $carousel=Carousel::all();
+        $carousel=Carousel::orderBy('created_at','desc')->orderBy('id')->paginate(3);
+        return view("carousel.index" , compact("carousel"));
     }
- 
+
     /**
      * Show the form for creating a new resource.
      *
@@ -25,7 +30,7 @@ class CarouselController extends Controller
     {
         return view('carousel.create');
     }
- 
+
     /**
      * Store a newly created resource in storage.
      *
@@ -34,18 +39,47 @@ class CarouselController extends Controller
      */
     public function store(Request $request)
     {
-        //
+      
+        $enter=$request->all();
+
+        //carga de imagen de articulo en español
+        if($carouseles=$request->file('es_image_carousel')){
+
+            $infocarousel=$carouseles->getClientOriginalName();
+
+            $carouseles->move('images', $infocarousel);
+
+            $enter['route_image_carousel']=$infocarousel;
+
+        }
+
+        //carga de imagen de articulo en español
+        if($carouselen=$request->file('en_image_carousel')){
+
+            $infocarousel=$carouselen->getClientOriginalName();
+
+            $carouselen->move('images', $infocarousel);
+
+            $enter['en_route_image_carousel']=$infocarousel;
+
+        }
+
+        Carousel::create($enter);
+
+        return redirect("/admin/carousel");
     }
- 
+
     /**
      * Display the specified resource.
      *
      * @param  \App\Post  $post
      * @return \Illuminate\Http\Response
      */
-    public function show(Post $post)
+    public function show($id)
     {
-        //
+        $carousel=Carousel::findOrFail($id);
+
+        return view("carousel.show" , compact("carousel"));
     }
  
     /**
@@ -54,9 +88,11 @@ class CarouselController extends Controller
      * @param  \App\Post  $post
      * @return \Illuminate\Http\Response
      */
-    public function edit(Post $post)
+    public function edit($id)
     {
-        //
+        $carousel=Carousel::findOrFail($id);
+
+        return view("carousel.edit", compact("carousel"));
     }
  
     /**
@@ -66,9 +102,13 @@ class CarouselController extends Controller
      * @param  \App\Post  $post
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Post $post)
+    public function update(Request $request, $id)
     {
-        //
+        $carousel=Carousel::findOrFail($id);
+
+        $carousel->update($request->all());
+
+        return redirect("/admin/carousel");
     }
  
     /**
@@ -77,8 +117,12 @@ class CarouselController extends Controller
      * @param  \App\Post  $post
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Post $post)
+    public function destroy($id)
     {
-        //
+        $carousel=Carousel::findOrFail($id);
+
+        $carousel->delete();
+
+        return redirect("/admin/carousel");
     }
 }

@@ -1,7 +1,7 @@
 @extends('layouts.adminlayout')
 
 @section('content')
-<div class="container">
+<div class="container"> 
 <br>
 	<div class="row">
 	
@@ -21,30 +21,26 @@
 	<table class="table table-striped table-bordered">
 		<thead class="thead-dark">
 		<tr>
-			<th scope="col">Título / Español</th>
-			<th scope="col">Title / English</th>
-			<th scope="col">Titulo / Italiano</th>
-			<th scope="col">Modificar</th>
+			<th scope="col">Descripción</th>
+			<th scope="col">Description</th>
 			<th scope="col">Eliminar</th>
 		</tr>
 		</thead>
 
 		<tbody>
-		
+		@foreach($carousel as $carousel)
 		<tr>
-			<td><p>Español</p></td>
-			<td><p>English</p></td>
-			<td><p>Italiano</p></td>
-			<td>	
-				<a href="#" class="btn btn-success btn-sm"><i class="fas fa-edit"></i></a>
-			</td>
+			<td><p>{{ $carousel->title_carousel }}</p></td>
+			<td><p>{{ $carousel->en_title_carousel }}</p></td>
 			<td>
-				<form action="#" method="post">
+				<form action="{{route('carousel.destroy', $carousel->id)}}" method="post">
+					@csrf
+					@method('delete')
 					<button type="submit" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></button>
 				</form>
 			</td>
 		</tr>
-		
+		@endforeach
 		</tbody>
 	</table>
 

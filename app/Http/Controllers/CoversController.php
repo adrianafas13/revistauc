@@ -93,6 +93,6 @@ class CoversController extends Controller
 
         $cover->delete();
 
-         return redirect("/admin");
+        return redirect("/admin");
     }
 }
