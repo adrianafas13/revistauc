@@ -21,7 +21,8 @@
 	<table class="table table-striped table-bordered">
 		<thead class="thead-dark">
 		<tr>
-		<th scope="col">Título / Español</th>
+			<th scope="col">Número de la Edición</th>
+			<th scope="col">Título / Español</th>
 			<th scope="col">Title / English</th>
 			<th scope="col">Modificar</th>
 			<th scope="col">Eliminar</th>
@@ -31,6 +32,7 @@
 		<tbody>
 		@foreach($editions as $edition)
 		<tr>
+			<td><p>{{ $edition->number_edition }}</p></td>
 			<td><p>{{ $edition->title_edition }}</p></td>
 			<td><p>{{ $edition->en_title_edition }}</p></td>
 			<td>	

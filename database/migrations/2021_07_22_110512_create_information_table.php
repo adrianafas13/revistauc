@@ -24,10 +24,6 @@ class CreateInformationTable extends Migration
             $table->string('en_information_title',355)->nullable(false);
             $table->text('en_information_text')->nullable(false);
 
-            /**italian**/
-            $table->string('it_information_title',355)->nullable(false);
-            $table->text('it_information_text')->nullable(false); 
-
             $table->timestamps();
         });
     }

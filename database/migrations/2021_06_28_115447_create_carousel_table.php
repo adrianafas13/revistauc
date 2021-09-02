@@ -23,10 +23,6 @@ class CreateCarouselTable extends Migration
             $table->text('en_route_image_carousel');
             $table->string('en_title_carousel',1000)->nullable(false);
             $table->string('en_info_carousel',2000)->nullable(false);
-            /*italian*/
-            $table->text('it_route_image_carousel');
-            $table->string('it_title_carousel',1000)->nullable(false);
-            $table->string('it_info_carousel',2000)->nullable(false);
 
             $table->timestamps();
         });

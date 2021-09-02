@@ -13,6 +13,7 @@ class CreateArticlesTable extends Migration
             $table->bigIncrements('id');
             /**general**/
             $table->bigInteger('author_id');
+            $table->bigInteger('edition_id');
             $table->string('section',150)->nullable(false);
             /**español**/
             $table->string('title',255)->nullable(false)->unique();

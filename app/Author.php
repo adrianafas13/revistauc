@@ -6,6 +6,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Author extends Model
 {
+    public function article(){
+		return $this->belongsTo('App\Article','articles_id');
+	}
+    
     protected $fillable=[
         /*spanish*/
         "name_author",

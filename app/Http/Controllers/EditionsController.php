@@ -36,15 +36,15 @@ class EditionsController extends Controller
      */
     public function store(Request $request)
     {
-        $edition=new Edition;
-        /**español**/
-        $edition->title_edition=$request->title_edition;
-        $edition->number_edition=$request->number_edition;
-        /**english**/
-        $edition->en_title_edition=$request->en_title_edition;
-        $edition->en_number_edition=$request->en_number_edition;
+        $editions=new Edition;
 
-        $edition->save();
+        $editions->number_edition=$request->number_edition;
+        /**español**/
+        $editions->title_edition=$request->title_edition;
+        /**english**/
+        $editions->en_title_edition=$request->en_title_edition;
+
+        $editions->save();
         return redirect("/admin/editions"); 
     }
 
@@ -56,7 +56,7 @@ class EditionsController extends Controller
      */
     public function show($id)
     {
-        $edition=Edition::findOrFail($id);
+        $editions=Edition::findOrFail($id);
 
         return view("editions.show" , compact("edition"));
     }
@@ -69,7 +69,7 @@ class EditionsController extends Controller
      */
     public function edit($id)
     {
-        $edition=Edition::findOrFail($id);
+        $editions=Edition::findOrFail($id);
 
         return view("editions.edit" , compact("edition"));
     }
@@ -83,9 +83,9 @@ class EditionsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $edition=Edition::findOrFail($id);
+        $editions=Edition::findOrFail($id);
 
-        $edition->update($request->all());
+        $editions->update($request->all());
 
         return redirect("/admin/editions");
     }
@@ -98,8 +98,8 @@ class EditionsController extends Controller
      */
     public function destroy($id)
     {
-        $edition=Edition::findOrFail($id);
-        $edition->delete();
+        $editions=Edition::findOrFail($id);
+        $editions->delete();
         return redirect("/admin/editions");
     }
 }

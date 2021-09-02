@@ -13,6 +13,24 @@
 
 		<div class="row">
 			<div class="col-3" id="title-info">
+				<p>Edición:</p>
+			</div>	
+			<div class="col-9">
+				<!--input type="text" required id="author" name="author" placeholder="Autor del Artículo"-->
+				<div class="form-group">
+					
+					<select class="form-control" id="edition">
+					@foreach($editions as $edition)
+						<option>{{ $edition->number_edition }}</option>
+					@endforeach
+					</select>
+					
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-3" id="title-info">
 				<p>Autor:</p>
 			</div>	
 			<div class="col-9">
@@ -28,6 +46,7 @@
 				</div>
 			</div>
 		</div>
+		
 
 		<div class="row">
 			<div class="col-3" id="title-info">

@@ -26,9 +26,6 @@ class CreateAuthorsTable extends Migration
             $table->string('en_grades_author',300)->nullable(false);
             $table->string('en_resume_author',900)->nullable(false);
 
-            /*italian*/
-            $table->string('it_grades_author',300)->nullable(false);
-            $table->string('it_resume_author',900)->nullable(false);
             $table->timestamps();
         });
     }
