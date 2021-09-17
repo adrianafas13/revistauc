@@ -1,3 +1,20 @@
+//navbar script
+/*let menuOpenBtn = document.querySelector(".navbar .bx-menu");
+let closeOpenBtn = document.querySelector(".nav-links .bx-x");
+let navLinks = document.querySelector(".nav-links");
+let dropdown_arrow = document.querySelector(".hoverarrow");
+/*menuOpenBtn.addEventListener("click", ()=>{
+    navLinks.style.left="0";
+});
+closeOpenBtn.addEventListener("click", ()=>{
+    navLinks.style.left="-100%";
+});
+//sidebar
+dropdown_arrow.addEventListener("click", ()=>{
+    navLinks.classList.toggle("show");
+});*/
+
+//summernote scripts
 $("#summernote_spanish").summernote({
     placeholder: "Resumen del Artículo",
     tabsize: 2,
@@ -5,28 +22,6 @@ $("#summernote_spanish").summernote({
 });
 $("#summernote_english").summernote({
     placeholder: "Resume of the Article",
-    tabsize: 2,
-    height: 200,
-});
-$("#summernote_italian").summernote({
-    placeholder: "Riassunto Dell'Articolo",
-    tabsize: 2,
-    height: 200,
-});
-
-/*informacion dentro del carousel de imagenes*/
-$("#summernote_carousel_spanish").summernote({
-    placeholder: "Informacion del Carousel",
-    tabsize: 2,
-    height: 200,
-});
-$("#summernote_carousel_english").summernote({
-    placeholder: "Informacion del Carousel",
-    tabsize: 2,
-    height: 200,
-});
-$("#summernote_carousel_italian").summernote({
-    placeholder: "Informacion del Carousel",
     tabsize: 2,
     height: 200,
 });
@@ -42,11 +37,7 @@ $("#summernote_author_english").summernote({
     tabsize: 2,
     height: 200,
 });
-$("#summernote_author_italian").summernote({
-    placeholder: "Informacion del Autor",
-    tabsize: 2,
-    height: 200,
-});
+
 /*area de informacion*/
 $("#summernote_information").summernote({
     placeholder: "Información a publicar",
@@ -58,8 +49,4 @@ $("#summernote_information_english").summernote({
     tabsize: 2,
     height: 200,
 });
-$("#summernote_information_italian").summernote({
-    placeholder: "Información a publicar",
-    tabsize: 2,
-    height: 200,
-});
+

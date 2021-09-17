@@ -7,6 +7,7 @@ use App\Article;
 use App\Contact;
 use App\About;
 use App\Comment;
+use App\Carousel;
 use Illuminate\Http\Request;
 
 class GeneralController extends Controller
@@ -15,7 +16,8 @@ class GeneralController extends Controller
     {
         $articles = Article::orderBy('created_at','desc')->orderBy('id')->paginate(9);
         $covers=Cover::all();
-    	return view('/welcome',compact('articles','covers'));
+        $carousels=Carousel::all();
+    	return view('/welcome',compact('articles','covers', 'carousels'));
 	}
 
      public function arti(){

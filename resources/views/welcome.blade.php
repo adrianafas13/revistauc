@@ -6,46 +6,30 @@
 <div class="container-fluid">
     <div class="row">
 <!------------------------------------------------- CAROUSEL ------------------------------------------------------------>
-        <div class="col-md-8" id="carousel">
-            <div id="myCarousel" class="carousel slide" data-ride="carousel" >
+        <div class="col-md-8">
+        <br>
+            <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel"> 
                 <div class="carousel-inner">
-                    <!-- Carousel item -->
-                    <div class="carousel-item active">
-                        <img src="images/uni1.jpg" class="d-block w-100" alt="img1" style="height:505px;">
-                        <div class="carousel-caption d-md-block">
-                            <h5><b>Prueba</b></h5>
-                            <p>We had such a great time in LA!</p>
+                    @php $i =1; @endphp
+                    @foreach($carousels as $carousel)
+                        <div class="carousel-item {{$i == '1' ? 'active':''  }} ">
+                            @php $i++; @endphp
+                            <img src="/images/{{ App::isLocale('es')?$carousel->route_image_carousel:$carousel->en_route_image_carousel }}" class="d-block w-100" style="height:505px;">
                         </div>
-                    </div>
-                    <!-- Carousel item -->
-                    <div class="carousel-item">
-                        <img src="images/uni2.jpg" class="d-block w-100" alt="img2" style="height:505px;">
-                        <div class="carousel-caption d-md-block">
-                            <h5><b>Prueba 2</b></h5>
-                            <p>We had such a great time in LA!</p>
-                        </div>
-                    </div>
-                    <!-- Carousel item -->
-                    <div class="carousel-item">
-                        <img src="images/uni3.jpg" class="d-block w-100" alt="img2" style="height:505px;">
-                        <div class="carousel-caption d-md-block">
-                            <h5><b>Prueba 3</b></h5>
-                            <p>We had such a great time in LA!</p>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
-                <!-- Carousel controls -->
-                <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+
+                <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span class="sr-only">Previous</span>
                 </a>
-
-                <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+                <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="sr-only">Next</span>
                 </a>
             </div>
         </div>
+
 <!------------------------------------------------- BARRA LATERAL ------------------------------------------------------------>
         <div class="col-md-4" id="popular">
             <div class="list-group">
@@ -53,7 +37,7 @@
                 <div class="list-group-item list-group-item-action" id="popular_header_barside">
                     <div class="d-flex w-100 justify-content-between">
                         <h5><b>@lang('data.popular')</b></h5>
-                        <i class="fas fa-fire-alt"></i>
+                        <i class="far fa-star"></i>
                     </div>
                 </div>
                 <!-- articulos populares -->

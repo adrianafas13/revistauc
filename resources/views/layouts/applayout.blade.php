@@ -22,19 +22,19 @@
         <div class=".container-xl">
             <!------------------------------------------------- NAVBAR ------------------------------------------------------------>
             <nav class="navbar navbar-expand-md sticky-top">
-                <button class="navbar-toggler" data-toggle="collapse" data-target="#collapse_target">
-                    <span class="navbar-toggler-icon"><i class="fa fa-bars" aria-hidden="true" style="color:#e6e6ff"></i></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="collapse_target">
                 <!------------------------------------------------- LOGO ------------------------------------------------------------>
                     <ul class="navbar-nav">
                         <div class="logotipo">
                             <a href="{{route('welcome')}}">
-                                <img src="{{ asset('images/unimar-científica-logo-white.png') }}" alt="logo" width="190px" height="auto">
+                                <img src="{{ asset('images/LogotypeUCWhite.png') }}" alt="logo" width="175px" height="auto" style="margin-top:10px; margin-left:10px;">
                             </a>
                         </div>
                     </ul>
+                    <button class="navbar-toggler" data-toggle="collapse" data-target="#collapse_target">
+                        <span class="navbar-toggler-icon"><i class="fa fa-bars" aria-hidden="true" style="color:#e6e6ff; margin-top:5px;"></i></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="collapse_target">
                     <!------------------------------------------------- ENLACES ------------------------------------------------------------>
                     <ul class="navbar-nav ml-auto">
                         <li class="navbar-item dropdown">
@@ -42,7 +42,7 @@
                                 @lang('data.secciones')
                                 <span class="caret"></span>
                             </a>
-                            <div class="dropdown-menu" id="lineas" arial-labelledby="dropdown_target">
+                            <div class="dropdown-menu" id="lineas" arial-labelledby="dropdown_target" style="text-align: center;">
                                 <a class="dropdown-item" href="/seccion/administracion">@lang('data.administracion')</a>
                                 <a class="dropdown-item" href="/seccion/arte">@lang('data.arte')</a>
                                 <a class="dropdown-item" href="/seccion/idiomas">@lang('data.idiomas')</a>
@@ -69,7 +69,7 @@
                             <button class="btn dropdown-toggle" type="button" id="dropdownSearch" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <i class="fa fa-search fa-fw"></i>
                             </button>
-                            <div class="dropdown-menu dropdown-menu-lg-right" aria-labelledby="dropdownSearch">
+                            <div class="dropdown-menu dropdown-menu-lg-right" aria-labelledby="dropdownSearch" style="aling-items: center;">
                                 <form class="px-4 py-3" type="get" action=" {{route('search')}} ">
                                     <input class="input" type="text" name="query" placeholder="@lang('data.buscar')...">
                                     <button type="submit" class="btn btn-success">@lang('data.buscar')</button>
@@ -84,7 +84,7 @@
                             <div class="dropdown-menu dropdown-menu-lg-right" aria-labelledby="dropdownLanguajeButton" style="text-align: center;">
                                 <a class="dropdown-item" href="/lang/es"> <img src="{{ asset('images/spanish.png') }}" alt="lang" width="16px" height="auto"> @lang('data.español')</a>
                                 <a class="dropdown-item" href="/lang/en"> <img src="{{ asset('images/english.png') }}" alt="lang" width="16px" height="auto"> @lang('data.ingles')</a>
-                                <a class="dropdown-item" href="/lang/it"> <img src="{{ asset('images/italy.png') }}" alt="lang" width="16px" height="auto"> @lang('data.italiano')</a>
+                               
                             </div>
                         </li>
                         <!------------------------------------------------- USUARIO ------------------------------------------------------------>
@@ -93,7 +93,7 @@
                             <button class="btn dropdown-toggle" type="button" id="dropdownSingin" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <i class="fas fa-user-circle fa-fw"></i>
                             </button>
-                            <div class="dropdown-menu dropdown-menu-lg-right" aria-labelledby="dropdownSingin">
+                            <div class="dropdown-menu dropdown-menu-lg-right" aria-labelledby="dropdownSingin"  style="text-align: center;">
                                 <a class="dropdown-item" href="#" data-toggle="modal" data-target="#loginModal">@lang('data.iniciar_sesion')</a>
                                     @if (Route::has('register'))
                                         <a class="dropdown-item" href="#" data-toggle="modal" data-target="#singinModal">@lang('data.registro')</a>

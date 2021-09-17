@@ -1,117 +1,99 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- CSRF Token -->
-    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Unimar Científica @yield('co-title')</title>
+        <link  rel="icon" href="/images/unimar-científica.png" type="image/png"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- Boxicons CSS -->
+        <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="{{asset('plugins/fontawesome-free/css/all.min.css') }}">
 
-    <title>Unimar Científica</title>
-    <link  rel="icon"   href="dist/img/logo.png" type="image/png" />
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="{{ asset('css/estilos.css') }}">
+    </head>
 
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
-
-    <!-- Fonts -->
-    <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-
-    <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-
-     <script src="{{ asset('js/app.js') }}" defer></script>
-
-  <link rel="stylesheet" href="{{ asset('css/w3.css') }}">
-
-  <link rel="stylesheet" href="{{ asset('plugins/fontawesome-free/css/all.min.css') }}">
-
-   <link rel="stylesheet" href="{{ asset('plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css') }}">
-
-</head>
-<body>
-<!-- Sidebar (hidden by default) -->
-<div class="w3-bar">
-  <div class="w3-margin">
-    <div style="font-family:'Nirmala UI', sans-serif;font-size:14px, font-weight:400px, color: #707070;">
-  <img src="{{ asset('dist/img/logotipo.png') }}" alt="logo" style="width:13%; margin-left: 15px;">
-<div class="w3-bar-item w3-right">
-  <form type="get" action=" {{route('search')}} ">
-    <button class="w3-bar-item w3-button w3-green w3-right" style="margin-top:13px;"><i class="fas fa-search"></i></button>
-    <input type="text" name="query" class="w3-bar-item w3-input w3-right " style="margin-top:13px;" placeholder="Buscar Artículo">
-  </form>
-</div>
-   
-  @guest
-      <div class="w3-dropdown-hover w3-right" style="margin-top:20px;">
-        <button class="w3-button"><i class="fa fa-user fa-lg"></i></button>
-          <div class="w3-dropdown-content w3-bar-block w3-card-4">
-            <a class="w3-bar-item w3-button" href="{{ route('login') }}">{{ __('Login') }}</a>
-          @if (Route::has('register'))
-            <a class="w3-bar-item w3-button" href="{{ route('register') }}">{{ __('Register') }}</a>
-          @endif
+    <body>
+      <!--NAVBAR-->
+      <nav>
+        <div class="navbar">
+        
+          <div class="logo">
+            <img src="{{ asset('images/unimar-científica-logo-white.png') }}" alt="logo" width="190px" height="auto">
           </div>
-      </div>
-    @else
-      <div class="w3-dropdown-hover w3-right" style="margin-top:20px;">   
-        <button class="w3-button">{{ Auth::user()->name }} <span class="caret"></span></button>
-          <div class="w3-dropdown-content w3-bar-block w3-card-4">
-            @hasrole('Admin')
-             <a class="w3-bar-item w3-button" href="{{ route('admin') }}">Panel de Administrador</a>
-            @endhasrole
-            @hasrole('comment_admin')
-             <a class="w3-bar-item w3-button" href="{{ route('admin') }}">Panel de Administrador</a>
-            @endhasrole
-            <a class="w3-bar-item w3-button" href="{{ route('logout') }}"
-                onclick="event.preventDefault();
-                document.getElementById('logout-form').submit();">
-                {{ __('Logout') }}
-              </a>
-              <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                @csrf
-              </form>
+          <div class="nav-links">
+            <div class="sidebar-logo">
+              <img src="{{ asset('images/unimar-científica-logo-white.png') }}" alt="logo" width="190px" height="auto">
+              <i class='bx bx-x'></i>
             </div>
+            <ul class="links">
+              <li>
+                <a href="#">Lineas de Investigación</a>
+                <i class='bx bx-chevron-down arrow hoverarrow'></i>
+                <ul class="dropdown-menu sub-menu">
+                  <li><a href="#">sera</a></li>
+                  <li><a href="#">que</a></li>
+                  <li><a href="#">esto</a></li>
+                  <li><a href="#">si</a></li>
+                  <li><a href="#">funciona?</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">Autores
+              </li>
+              <li>
+                <a href="#">Ediciones</a>
+              </li>
+              <li>
+                <a href="#">Informacion</a>
+              </li>
+              <li>
+                <a href="#"><i class='bx bx-search-alt'></i></a>
+                <i class='bx bx-chevron-down arrow hoverarrow'></i>
+                <ul class="dropdown-menu search-bar">
+                  <form class="search" type="get" action=" {{route('search')}} ">
+                    <input class="input" type="text" name="query" placeholder="@lang('data.buscar')...">
+                  </form>
+                </ul>
+              </li>
+              <li>
+                <a href="#"><i class='bx bx-world' ></i></a>
+                <i class='bx bx-chevron-down arrow hoverarrow'></i>
+                  <ul class="dropdown-menu sub-menu">
+                    <li><a href="#">Español</a></li>
+                    <li><a href="#">Ingles</a></li>
+                  </ul>
+              </li>
+              <li>
+                <a href="#"><i class='bx bxs-user'></i></i></a>
+                <i class='bx bx-chevron-down arrow hoverarrow'></i>
+                  <ul class="dropdown-menu sub-menu">
+                    <li><a href="#">Iniciar Sesión</a></li>
+                    <li><a href="#">Registrarse</a></li>
+                  </ul>
+              </li>
+            </ul>
           </div>
-      @endguest
-  <div class="w3-dropdown-hover w3-right" style="margin-top:20px;">
-    <button class="w3-button"><i class="fa fa-globe fa-lg"></i>{{ App::getLocale() }}</button>
-    <div class="w3-dropdown-content w3-bar-block w3-card-4">
-      <a class="w3-bar-item w3-button" href="/lang/es">@lang('data.español')</a>
-      <a class="w3-bar-item w3-button" href="/lang/en">@lang('data.ingles')</a>
-    </div>
-  </div>
-  <a href="{{route('contacto')}}" class="w3-bar-item w3-button w3-right" style="margin-top:20px;">@lang('data.contactanos')</a>
-  <a href="{{route('sobrenosotros')}}" class="w3-bar-item w3-button w3-right" style="margin-top:20px;">@lang('data.sobre_nosotros')</a>
-   <a href="{{route('articulos')}}" class="w3-bar-item w3-button w3-right" style="margin-top:20px;">@lang('data.articulos')</a>
-  <a href="/" class="w3-bar-item w3-button w3-right" style="margin-top:20px;">Home</a>
+          <i class='bx bx-menu'></i>
+        </div>
+      </nav>  
+      <!-- Page content -->
+      <div class="content">
+      
+      </div>
+
+        <!------------------------------------------------- SCRIPTS ------------------------------------------------------------>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
   
-
- </div>
-  </div>
-</div>
-
-
-  <main>
-            @yield('content')
-          </main>
-<!-- Footer -->
-<br>
-  <footer>
-    <div class="w3-center">
-      <p><b>Derechos Reservados &copy 2020. Revista Científica. Universidad de Margarita</b></p>
-    </div>
-  
-</footer>
-</div>
-
-
-<script>
-  $.widget.bridge('uibutton', $.ui.button)
-</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<!-- Bootstrap 4 -->
-<script src="{{ asset('plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
-
-</body>
+    <script src="{{ asset('js/script.js') }}"></script>
+    @include('auth.login')
+    @include('auth.register')
+    </body>
 </html>
