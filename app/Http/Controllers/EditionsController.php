@@ -16,6 +16,7 @@ class EditionsController extends Controller
     public function index()
     {
         $editions=Edition::all();
+        $editions=Edition::orderBy('id')->paginate(15);
         return view("editions.index", compact("editions"));
     }
 
@@ -35,9 +36,8 @@ class EditionsController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(EditionRequest $request)
+    public function store(Request $request)
     {
-        $editions = Edition::first();
 
         $enter=$request->all();
 
