@@ -19,19 +19,18 @@
                 <!-- titulo -->
                 <div class="list-group-item list-group-item-action" id="popular_header_barside">
                     <div class="d-flex w-100 justify-content-between">
-                        <h5><b>@lang('data.popular')</b></h5>
+                        <h5><b>Información</b></h5>
                         <i class="far fa-star"></i>
                     </div>
                 </div>
                 <!-- articulos populares -->
-                @foreach($articles as $article)
-                <a href="{{route('art', $article->slug)}}" class="list-group-item list-group-item-action">
+                @foreach($editions as $edition)
                     <div class="contenido-popular-bar">
-                        <h6><b>{{ App::isLocale('es')?$article->title:$article->en_title }}</b></h6>
-                        <p><i>@lang('data.'.$article->section)</i></p>
-                        <p><b>{{ $article->author }}</b></p>
+                        <p>Volumen:<b>{{ $edition->edition_number }}</b></p>
+                        <p>Fecha:<b>{{ $edition->edition_date }}</b></p>
+                        <p>Titulo:<b>{{ App::isLocale('es')?$edition->edition_title:$edition->edition_title_en }}</b></p>
+                        <p>Descripción:<b>{!! App::isLocale('es')?$edition->edition_description:$edition->edition_description_en !!}</b></p>
                     </div>
-                </a>
                 @endforeach
             </div>
         </div>
@@ -39,10 +38,13 @@
 
 <!------------------------------------------------- NOMBRE DE LA EDICIÓN ------------------------------------------------------------>
     <hr>
-    <!--  <div class="edition_title">
-            <h4><b>@lang('data.edicion') MAYO 2021</b></h4>
+        <div class="edition_title">
+            @foreach($editions as $edition)
+                <h4><b>{{ App::isLocale('es')?$edition->edition_title:$edition->edition_title_en }}</b></h4>
+                
+            @endforeach
         </div>
-    <hr>-->
+    <hr>
 </div>
 <!------------------------------------------------- ARTICULOS ------------------------------------------------------------>  
 <div class="container">

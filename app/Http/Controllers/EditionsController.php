@@ -24,7 +24,7 @@ class EditionsController extends Controller
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
-     */
+     */ 
     public function create()
     {
         return view("editions.create");
@@ -78,7 +78,7 @@ class EditionsController extends Controller
     {
         $editions=Edition::findOrFail($id);
 
-        return view("editions.show" , compact("edition"));
+        return view("editions.show" , compact("editions"));
     }
 
     /**
@@ -91,7 +91,7 @@ class EditionsController extends Controller
     {
         $editions=Edition::findOrFail($id);
 
-        return view("editions.edit" , compact("edition"));
+        return view("editions.edit" , compact("editions"));
     }
 
     /**
@@ -103,9 +103,34 @@ class EditionsController extends Controller
      */
     public function update(Request $request, $id)
     {
+    
+        $enter=$request->all();
+
         $editions=Edition::findOrFail($id);
 
-        $editions->update($request->all());
+        //carga de imagen de la edicion en español
+        if($edition_es=$request->file('edition_image')){
+
+            $infoedition=$edition_es->getClientOriginalName();
+
+            $edition_es->move('images', $infoedition);
+
+            $enter['edition_route_image']=$infoedition;
+
+        }
+
+        //carga de imagen dela edicion en ingles
+        if($esdition_en=$request->file('edition_image_en')){
+
+            $infoedition=$esdition_en->getClientOriginalName();
+
+            $esdition_en->move('images', $infoedition);
+
+            $enter['edition_route_image_en']=$infoedition;
+
+        }
+
+        $editions->update($enter);
 
         return redirect("/admin/editions");
     }
