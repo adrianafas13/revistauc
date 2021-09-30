@@ -8,26 +8,9 @@
 <!------------------------------------------------- CAROUSEL ------------------------------------------------------------>
         <div class="col-md-8">
         <br>
-            <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel"> 
-                <div class="carousel-inner">
-                    @php $i =1; @endphp
-                    @foreach($carousels as $carousel)
-                        <div class="carousel-item {{$i == '1' ? 'active':''  }} ">
-                            @php $i++; @endphp
-                            <img src="/images/{{ App::isLocale('es')?$carousel->route_image_carousel:$carousel->en_route_image_carousel }}" class="d-block w-100" style="height:505px;">
-                        </div>
-                    @endforeach
-                </div>
-
-                <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
-            </div>
+            @foreach($editions as $edition)
+                <img src="/images/{{ App::isLocale('es')?$edition->edition_route_image:$edition->edition_route_image_en }}" class="d-block w-100" style="height:505px;">
+            @endforeach
         </div>
 
 <!------------------------------------------------- BARRA LATERAL ------------------------------------------------------------>
@@ -56,10 +39,10 @@
 
 <!------------------------------------------------- NOMBRE DE LA EDICIÓN ------------------------------------------------------------>
     <hr>
-        <div class="edition_title">
+    <!--  <div class="edition_title">
             <h4><b>@lang('data.edicion') MAYO 2021</b></h4>
         </div>
-    <hr>
+    <hr>-->
 </div>
 <!------------------------------------------------- ARTICULOS ------------------------------------------------------------>  
 <div class="container">

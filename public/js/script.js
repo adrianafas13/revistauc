@@ -13,6 +13,12 @@ closeOpenBtn.addEventListener("click", ()=>{
 dropdown_arrow.addEventListener("click", ()=>{
     navLinks.classList.toggle("show");
 });*/
+//data picker
+$(function(){
+    $('#datepicker').datepicker({
+        orientation: "bottom"
+    });
+});
 
 //summernote scripts
 $("#summernote_spanish").summernote({
@@ -50,3 +56,14 @@ $("#summernote_information_english").summernote({
     height: 200,
 });
 
+/*textbox descripcion de las ediciones*/
+$("#summernote_edition_description").summernote({
+    placeholder: "Descripción de la edición",
+    tabsize: 2,
+    height: 200,
+});
+$("#summernote_edition_description_en").summernote({
+    placeholder: "Description of the edition",
+    tabsize: 2,
+    height: 200,
+});

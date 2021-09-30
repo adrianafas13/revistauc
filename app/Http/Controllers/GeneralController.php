@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Cover;
 use App\Article;
+use App\Edition;
 use App\Contact;
 use App\About;
 use App\Comment;
@@ -14,14 +15,14 @@ class GeneralController extends Controller
 {
     public function index()
     {
-        $articles = Article::orderBy('created_at','desc')->orderBy('id')->paginate(9);
+        $articles = Article::orderBy('created_at','desc')->orderBy('id')->paginate(10);
         $covers=Cover::all();
-        $carousels=Carousel::all();
-    	return view('/welcome',compact('articles','covers', 'carousels'));
+        $editions=Edition::all();
+        return view('/welcome',compact('articles','covers', 'editions'));
 	}
 
-     public function arti(){
-        $articles = Article::orderBy('created_at','desc')->orderBy('id')->paginate(9);
+    public function arti(){
+        $articles = Article::orderBy('created_at','desc')->orderBy('id')->paginate(10);
         return view('/articulos',compact('articles'));
     }
 

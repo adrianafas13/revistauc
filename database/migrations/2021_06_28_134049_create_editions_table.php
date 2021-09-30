@@ -15,13 +15,19 @@ class CreateEditionsTable extends Migration
     {
         Schema::create('editions', function (Blueprint $table) {
             $table->bigIncrements('id');
-            
-            $table->integer('number_edition')->nullable(false);
             /*spanish*/
-            $table->string('title_edition',1500)->nullable(false);
+            $table->integer('edition_number')->nullable(false);
+            $table->string('edition_date')->nullable();
+            $table->string('edition_title',1500)->nullable(false);
+            $table->text('edition_description')->nullable(false);
+            $table->text('edition_route_image');
             /*english*/
-            $table->string('en_title_edition',1500)->nullable(false);
-            $table->timestamps();
+            $table->string('edition_title_en',1500)->nullable(false);
+            $table->text('edition_description_en')->nullable(false);
+            $table->text('edition_route_image_en');
+            /**/ 
+            $table->unsignedInteger('article_id');
+            //$table->timestamps();
         });
     }
 

@@ -13,7 +13,6 @@
     color: #fff;
     font-size: 15px;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-    
 }
 .navbar li a{
     line-height: 30px;
@@ -41,12 +40,13 @@ li.navbar-item a:focus {
     background: #084456;
     color: #fff;
     border:none;
+    box-shadow: 2px rgba(0, 0, 0, 0.2);
 }
 .navbar .dropdown-menu .dropdown-item:hover{
     background: #F6E5C0;
     text-decoration: none;
     color:#000;
-    
+    font-weight: 500;
 }
 .navbar-nav #search-box i {
     background-color: white;
@@ -136,42 +136,47 @@ li.navbar-item a:focus {
 #singinModal .modal-body button {
     font-size: 15px;
 }
+#singinModal input[type="text"] .form-control{
+    height: 45px;
+    width: 100%;
+    background: #fff;
+    color: #000;
+    border-color: rgba(156, 155, 155, 0.692);
+    cursor: pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
 /*-------------------------------------FOOTER----------------------------------------------------------------*/
 .footer {
+    background-color: #084456;
+    color: #fff;
+    font-size: 12px;
+    box-shadow: 2px rgba(0, 0, 0, 0.2);
     position: static;
     padding: 10px 0px;
-    background-color: #013131;
     text-align: center;
-    color: #fff;
-    font-size: 13px;
     padding: 1em;
     width: 100%;
 }
-.footer ul#social-media li {
-    display: inline;
-    float: left;
-    padding: 5px;
-    margin-right: 5em;
-    margin-left: 8em;
+.footer ul#social-media .social-media-title{
+    margin-top: 45px;
 }
-
-.footer ul#social-media li span{
-    color:#fff;
+.footer ul#social-media .social-media-title p{
     text-transform: uppercase;
+    font-weight: 500;
 }
-
-.footer ul#social-media li img{
-    width:25px;
-    height: auto;
-}
-.footer .unimar-link a{
-    display: block;
-    margin: 2em;
+.footer ul#social-media li {
+    display: inline-block;
 }
 
 .footer .unimar-link img{
     width:165px; 
     height:auto;
+    margin-top:35px;
+}
+.footer .pev-link img{
+    width:210px; 
+    height:200px;
 }
 /*-------------------------------------------HOME-----------------------------------------------------------*/
 #carousel {
@@ -211,10 +216,11 @@ li.navbar-item a:focus {
     color: #000;
 }
 .list-group #popular_header_barside h5 {
-    font-size: 15px;
+    font-size: 17px;
+    font-weight: bold;
 }
 .list-group #popular_header_barside i {
-    font-size: 15px;
+    font-size: 17px;
 }
 
 .list-group .contenido-popular-bar h6 {
@@ -586,12 +592,6 @@ div.content {
     font-size: 25px;
 }
 
-/*.spanish-backgorund input {
-    align-items: center;
-    justify-content: center;
-    background-color: #18b933;
-}*/
-
 .english-backgorund {
     background-color: #1100fd11;
     border-radius: 10px;
@@ -602,15 +602,6 @@ div.content {
     font-size: 25px;
 }
 
-.italian-backgorund {
-    background-color: #49fe491c;
-    border-radius: 10px;
-    padding: 10px;
-}
-.italian-backgorund h5 {
-    text-align: center;
-    font-size: 25px;
-}
 #title-info p {
     margin-top: 20px;
     margin-right: 30px;
@@ -623,7 +614,7 @@ input[type="text"] {
     margin: 5px;
     height: 50px;
     padding: 5px 15px;
-    width: 800px;
+    width: 750px;
     background: #fff;
     color: #000;
     border-color: rgba(156, 155, 155, 0.692);

@@ -39,7 +39,7 @@ class CarouselController extends Controller
      */
     public function store(Request $request)
     {
-      
+    
         $enter=$request->all();
 
         //carga de imagen de articulo en español

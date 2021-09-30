@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Article;
 use App\Author;
-use App\Edition;
 use Illuminate\Http\Request;
 use App\Http\Requests\ArticleRequest;
 
@@ -20,7 +19,7 @@ class ArticlesController extends Controller
 
     public function create()
     {
-        $authors = Author::get();
+        $authors = Author::get(); 
         $editions = Edition::get();
         return view('articles.create', compact('authors', 'editions'));
     }

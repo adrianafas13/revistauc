@@ -1,8 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use App\Edition;
 use Illuminate\Http\Request;
+use App\Http\Requests\EditionRequest;
 
 class EditionsController extends Controller
 {
@@ -14,7 +16,6 @@ class EditionsController extends Controller
     public function index()
     {
         $editions=Edition::all();
-        $editions=Edition::orderBy('created_at','desc')->orderBy('id')->paginate(15);
         return view("editions.index", compact("editions"));
     }
 
@@ -34,20 +35,39 @@ class EditionsController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(EditionRequest $request)
     {
-        $editions=new Edition;
+        $editions = Edition::first();
 
-        $editions->number_edition=$request->number_edition;
-        /**español**/
-        $editions->title_edition=$request->title_edition;
-        /**english**/
-        $editions->en_title_edition=$request->en_title_edition;
+        $enter=$request->all();
 
-        $editions->save();
-        return redirect("/admin/editions"); 
+        //carga de imagen de la edicion en español
+        if($edition_es=$request->file('edition_image')){
+
+            $infoedition=$edition_es->getClientOriginalName();
+
+            $edition_es->move('images', $infoedition);
+
+            $enter['edition_route_image']=$infoedition;
+
+        }
+
+        //carga de imagen dela edicion en ingles
+        if($esdition_en=$request->file('edition_image_en')){
+
+            $infoedition=$esdition_en->getClientOriginalName();
+
+            $esdition_en->move('images', $infoedition);
+
+            $enter['edition_route_image_en']=$infoedition;
+
+        }
+
+        Edition::create($enter);
+
+        return redirect("/admin/editions");
+
     }
-
     /**
      * Display the specified resource.
      *
@@ -99,7 +119,9 @@ class EditionsController extends Controller
     public function destroy($id)
     {
         $editions=Edition::findOrFail($id);
+
         $editions->delete();
+
         return redirect("/admin/editions");
     }
 }

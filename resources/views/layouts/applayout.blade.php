@@ -42,7 +42,7 @@
                                 @lang('data.secciones')
                                 <span class="caret"></span>
                             </a>
-                            <div class="dropdown-menu" id="lineas" arial-labelledby="dropdown_target" style="text-align: center;">
+                            <div class=" dropdown-menu" id="lineas" arial-labelledby="dropdown_target" style="text-align: center;">
                                 <a class="dropdown-item" href="/seccion/administracion">@lang('data.administracion')</a>
                                 <a class="dropdown-item" href="/seccion/arte">@lang('data.arte')</a>
                                 <a class="dropdown-item" href="/seccion/idiomas">@lang('data.idiomas')</a>
@@ -84,7 +84,6 @@
                             <div class="dropdown-menu dropdown-menu-lg-right" aria-labelledby="dropdownLanguajeButton" style="text-align: center;">
                                 <a class="dropdown-item" href="/lang/es"> <img src="{{ asset('images/spanish.png') }}" alt="lang" width="16px" height="auto"> @lang('data.español')</a>
                                 <a class="dropdown-item" href="/lang/en"> <img src="{{ asset('images/english.png') }}" alt="lang" width="16px" height="auto"> @lang('data.ingles')</a>
-                               
                             </div>
                         </li>
                         <!------------------------------------------------- USUARIO ------------------------------------------------------------>
@@ -93,7 +92,7 @@
                             <button class="btn dropdown-toggle" type="button" id="dropdownSingin" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <i class="fas fa-user-circle fa-fw"></i>
                             </button>
-                            <div class="dropdown-menu dropdown-menu-lg-right" aria-labelledby="dropdownSingin"  style="text-align: center;">
+                            <div class="dropdown-menu dropdown-menu-lg-right" aria-labelledby="dropdownSingin"  style="">
                                 <a class="dropdown-item" href="#" data-toggle="modal" data-target="#loginModal">@lang('data.iniciar_sesion')</a>
                                     @if (Route::has('register'))
                                         <a class="dropdown-item" href="#" data-toggle="modal" data-target="#singinModal">@lang('data.registro')</a>
@@ -103,7 +102,7 @@
 
                         @else
                         <li class="nav-item dropdown">
-                            <button class="btn dropdown-toggle" type="button" id="dropdownSingUp" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <button class="btn dropdown-toggle" type="button" id="dropdownSingUp" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:#fff; margin-top:5px;">
                                 {{ Auth::user()->name }} 
                                 <span class="caret">
                             </button>
@@ -150,44 +149,45 @@
                     <!------------------------------------------------- REDES SOCIALES ------------------------------------------------------------>
                     <div class="col-sm">
                         <ul id="social-media">
-                            <p><b>@lang('data.redes_sociales')</p></b>
+                            <div class="social-media-title">
+                                <p><b>@lang('data.redes_sociales')</p></b>
+                            </div>
                             <li class="nav-item">
                                 <a href=#facebook>
-                                    <img src="{{ asset('images/fb-white.png') }}" alt="logo blanco">
-                                    <span> Facebook</span>
+                                    <img src="{{ asset('images/Facebook-White.png') }}" alt="logo blanco" style="width:35px; height:auto; margin-top:2px;">
                                 </a>
                             </li>
-                            
                             <li class="nav-item">
                                 <a href=#instagram>
-                                    <img src="{{ asset('images/ig-white.png') }}" alt="logo blanco"><span> Instagram</span>
+                                    <img src="{{ asset('images/Instagram-White.png') }}" alt="logo blanco" style="width:45px; height:auto; margin-top:10px;">
                                 </a>
                             </li>
-                            
                             <li class="nav-item">
                                 <a href=#twitter>
-                                    <img src="{{ asset('images/tw-white.png') }}" alt="logo blanco"><span> Twitter  </span>
+                                    <img src="{{ asset('images/Twitter-White.png') }}" alt="logo blanco" style="width:50px; height:auto; margin-top:10px;">
                                 </a>
                             </li>
-
                             <li class="nav-item">
                                 <a href=#linkedin>
-                                    <img src="{{ asset('images/ig-white.png') }}" alt="logo blanco"><span> Linked In  </span>
+                                    <img src="{{ asset('images/Linkedin-White.png') }}" alt="logo blanco" style="width:55px; height:auto; margin-top:10px;">
                                 </a>
                             </li>
-
                         </ul>
                     </div>
                     <!------------------------------------------------- BLANC SPACE ------------------------------------------------------------>
                     <div class="col-sm">
-                        
+                        <div class="unimar-link">
+                            <a href="http://www.unimar.edu.ve/unimarportal/index.php">
+                                <img src="{{ asset('images/white-logo.png') }}" alt="logo blanco">
+                            </a>
+                        </div>
                     </div>
                     
                     <!------------------------------------------------- ENLACE DE UNIMAR ------------------------------------------------------------>
                     <div class="col-sm">
-                        <div class="unimar-link">
+                        <div class="pev-link">
                             <a href="http://www.unimar.edu.ve/unimarportal/index.php">
-                                <img src="{{ asset('images/white-logo.png') }}" alt="logo blanco">
+                                <img src="{{ asset('images/pevwhite.png') }}" alt="logo blanco">
                             </a>
                         </div>
                     </div>

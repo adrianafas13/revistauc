@@ -10,10 +10,18 @@ class Edition extends Model
 		return $this->belongsTo('App\Article','articles_id');
 	}
     protected $fillable=[
+        /*general*/
+        "edition_number",
+        "edition_date",
         /*spanish*/
-        "title_edition",
-        "number_edition",
+        "edition_title",
+        "edition_description",
+        "edition_route_image",
         /*english*/
-        "en_title_edition",
-	];
+        "edition_title_en",
+        "edition_description_en",
+        "edition_route_image_en",
+    ];
+
+    public $timestamps = false;
 }

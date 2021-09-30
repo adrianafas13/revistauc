@@ -32,9 +32,9 @@
 		<tbody>
 		@foreach($editions as $edition)
 		<tr>
-			<td><p>{{ $edition->number_edition }}</p></td>
-			<td><p>{{ $edition->title_edition }}</p></td>
-			<td><p>{{ $edition->en_title_edition }}</p></td>
+			<td><p>{{ $edition->edition_number }}</p></td>
+			<td><p>{{ $edition->edition_title }}</p></td>
+			<td><p>{{ $edition->edition_title_en }}</p></td>
 			<td>	
 			<a href=" {{route('editions.edit', $edition->id)}} " class="btn btn-success btn-sm"><i class="fas fa-edit"></i></a>
 			</td>

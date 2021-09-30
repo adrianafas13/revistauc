@@ -5,7 +5,7 @@
 
             <div class="modal-header">
                     <div class="modal-logo" id="modalSingIn">   
-                        <img src="{{ asset('images/unimar-científica-logo.png') }}" alt="logo">
+                        <img src="{{ asset('images/Logotype-Unimar.png') }}" alt="logo">
                     </div>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
@@ -41,8 +41,6 @@
                             @enderror    
                     </div>
 
-                        
-
                     <div class="form-group">
                         <i class="fa fa-lock"></i>
                         <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password" autofocus placeholder="@lang('data.contraseña')">
@@ -62,7 +60,6 @@
                         <button type="submit" class="btn btn-primary btn-block btn-lg">
                             @lang('data.registro')
                         </button>
-                           
                     </div>
                 </form>
             </div>
