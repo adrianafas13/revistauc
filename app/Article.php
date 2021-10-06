@@ -29,6 +29,6 @@ class Article extends Model
 	}
 
 	public function edition(){
-		return $this->belongsTo('App\Edition','edition_id');
+		return $this->belongsTo('\App\Edition');
 	}
 }

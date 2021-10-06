@@ -11,6 +11,8 @@ class CreateArticlesTable extends Migration
     {
         Schema::create('articles', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->unsignedBigInteger('edition_id')->unsigned();
+
             /**general**/
             $table->string('section',150)->nullable(false);
             /**español**/
@@ -26,6 +28,8 @@ class CreateArticlesTable extends Migration
             $table->string('ruta_en_file');
             
             $table->timestamps();
+
+            $table->foreign('edition_id')->references('id')->on('edition')->onDelete('cascade');
         });
     }
 

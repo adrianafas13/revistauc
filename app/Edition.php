@@ -6,9 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Edition extends Model
 {
-    public function article(){
-		return $this->belongsTo('App\Article','articles_id');
-	}
+    
     protected $fillable=[
         /*general*/
         "edition_number",
@@ -24,4 +22,9 @@ class Edition extends Model
     ];
 
     public $timestamps = false;
+
+    public function articles()
+    {
+        return $this->hasMany('\App\Article');
+    }
 }
