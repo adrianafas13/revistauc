@@ -18,19 +18,11 @@
 			<div class="col-9">
 				<!--input type="text" required id="author" name="author" placeholder="Autor del Artículo"-->
 				<div class="form-group">
-					<!--$editions = App\Article::find(1)->edition()->get();
-					<select class="form-control" id="edition">
-						foreach ($editions as $edition) {
-							<option>{{ $edition->number_edition }}</option>
+					<select class="form-control" id="edition" name="edition_id" placeholder="Autor del Artículo">
+						@foreach($editions as $edition)
+							<option>{{ $edition->edition_number }}</option>
 						@endforeach
 					</select>
-					}-->
-					<select class="form-control" id="edition">
-					@foreach($editions as $edition)
-						<option>{{ $edition->number_edition }}</option>
-					@endforeach
-					</select>
-					
 				</div>
 			</div>
 		</div>

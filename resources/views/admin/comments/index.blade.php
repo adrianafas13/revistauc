@@ -8,7 +8,7 @@
 
 	<table class="table table-striped table-bordered">
 		<thead class="thead-dark">
-		  	<tr>
+			<tr>
 				<th scope="col">Comentario</th>
 				<th scope="col">Usuario</th>
 				<th scope="col">Articulo</th>
