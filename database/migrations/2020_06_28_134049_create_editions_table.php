@@ -25,8 +25,7 @@ class CreateEditionsTable extends Migration
             $table->string('edition_title_en',1500)->nullable(false);
             $table->text('edition_description_en')->nullable(false);
             $table->text('edition_route_image_en');
-            /**/ 
-            $table->unsignedInteger('article_id');
+            
             //$table->timestamps();
         });
     }

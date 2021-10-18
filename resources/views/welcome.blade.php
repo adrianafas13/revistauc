@@ -19,7 +19,7 @@
                 <!-- titulo -->
                 <div class="list-group-item list-group-item-action" id="popular_header_barside">
                     <div class="d-flex w-100 justify-content-between">
-                        <h5><b>Información</b></h5>
+                        <h5><b>Indice</b></h5>
                         <i class="far fa-star"></i>
                     </div>
                 </div>
@@ -47,23 +47,24 @@
     <hr>
 </div>
 <!------------------------------------------------- ARTICULOS ------------------------------------------------------------>  
-<div class="container">
-    <div class="row">
+<div class="container-fluid">
         <!-- articulo -->
         @foreach($articles as $article)
-            <div class="col-md-6" id="article">
-                <div class="article-container">
-                    <a href="{{route('art', $article->slug)}}">
-                        <img src="/images/{{ App::isLocale('es')?$article->ruta_image:$article->ruta_en_image }}" style="width:100%; height: 350px;">
-                        <a href="#" class="badge" id="tag">{{ $article->section }}</a>
-                        <div class="article-text overlay-text">
+        <div class="card mb-3">
+            <div class="row no-gutters">
+                <a href="{{route('art', $article->slug)}}">
+                    <div class="col-md-6">
+                        <img src="/images/{{ App::isLocale('es')?$article->ruta_image:$article->ruta_en_image }}" style="width:400px; height: 250px;">
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card-body">
+                            <a href="#" class="badge" id="tag">{{ $article->section }}</a>
                             <h6><b>{{ App::isLocale('es')?$article->title:$article->en_title }}</b></h6> 
-                            <p><i>{{ $article->author }}</i></p>  
                         </div>
-                    </a>
-                </div>  
+                    </div>
+                </a>
             </div>
+        </div> 
         @endforeach     
-    </div>
 </div>
 @endsection

@@ -16,11 +16,10 @@
 				<p>Edición:</p>
 			</div>	
 			<div class="col-9">
-				<!--input type="text" required id="author" name="author" placeholder="Autor del Artículo"-->
 				<div class="form-group">
-					<select class="form-control" id="edition" name="edition_id" placeholder="Autor del Artículo">
-						@foreach($editions as $edition)
-							<option>{{ $edition->edition_number }}</option>
+					<select class="form-control" id="edition_id" name="edition_id" placeholder="Autor del Artículo">
+						@foreach ($editions as $edition)
+							<option value="{{$edition->id}}"> {{$edition->edition_number}} </option>
 						@endforeach
 					</select>
 				</div>
@@ -32,13 +31,11 @@
 				<p>Autor:</p>
 			</div>	
 			<div class="col-9">
-				<!--input type="text" required id="author" name="author" placeholder="Autor del Artículo"-->
 				<div class="form-group">
-					
-					<select class="form-control" id="author">
-					@foreach($authors as $author)
-						<option>{{ $author->name_author }}</option>
-					@endforeach
+					<select class="form-control" id="author" name="author_id" placeholder="Autor del Artículo">
+						@foreach ($authors as $author)
+							<option value="{{$author->id}}"> {{$author->name_author}} </option>
+						@endforeach
 					</select>
 					
 				</div>
@@ -52,7 +49,7 @@
 			</div>
 			<div class="col-9">
 				<div class="form-group">
-				<select class="form-control" id="section"  name="section">
+				<select class="form-control" id="section"  name="section" placeholder="Linea de Investigación">
 					<option value="administracion">Administracion</option>
 					<option value="arte">Arte</option>
 					<option value="idiomas">Idiomas</option>

@@ -17,18 +17,18 @@ class Article extends Model
 		"en_title", 
 		"ruta_en_image", 
 		"en_text", 
-		"ruta_en_file"
+		"ruta_en_file",
+		"edition_id",
+		"author_id",
 	];
-
+	public $timestamps = false;
 	public function comment(){
 		return $this->hasMany('App\Comment','articles_id')->where('approved',1)->orderBy('id','desc');
 	}
-
-	public function author(){
-		return $this->belongsTo('App\Author','author_id');
-	}
-
 	public function edition(){
-		return $this->belongsTo('\App\Edition');
+        return $this->belongsTo('App\Edition', 'edition_id');
 	}
+	public function author(){
+        return $this->belongsTo('App\Author', 'author_id');
+    }
 }

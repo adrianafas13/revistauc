@@ -14,15 +14,15 @@ class ArticlesController extends Controller
     public function index()
     {
         $articles=Article::all();
-        $articles=Article::orderBy('created_at','desc')->orderBy('id')->paginate(10);
+        $articles=Article::orderBy('id')->paginate(10);
         return view("articles.index" , compact("articles"));
     }
 
     public function create()
-    {
-        $authors = Author::get(); 
-        $editions = Edition::get();
-        return view('articles.create', compact('authors', 'editions'));
+    {   
+        $editions=Edition::all();
+        $authors=Author::all();
+        return view('articles.create', compact("editions", "authors"));
     }
 
     public function seccion($seccion){
@@ -30,7 +30,6 @@ class ArticlesController extends Controller
         return view("articulos" , compact("articles"));
     }
 
-    
     public function store(ArticleRequest $request)
     {
         $enter=$request->all();
@@ -85,13 +84,14 @@ class ArticlesController extends Controller
 
         Article::create($enter);
 
-        return redirect("/admin");
+        return redirect("/admin/article/");
     }
 
     public function show($article){
+
         $article=Article::with(['comment','comment.user'])->where('slug',$article)->first();
 
-        return view("articles.show" , compact("article"));
+        return view("articles.show" , compact("article", "editions"));
 
     }
 

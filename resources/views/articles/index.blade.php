@@ -21,7 +21,7 @@
 		<tr>
 			<th scope="col">Título / Español</th>
 			<th scope="col">Title / English</th>
-			<th scope="col">Titulo / Italiano</th>
+			<th scope="col">Edicion</th>
 			<th scope="col">Autor</th>
 			<th scope="col">Sección</th>
 			<th scope="col">Modificar</th>
@@ -34,8 +34,8 @@
 		<tr>
 			<td><p>{{ $article->title }}</p></td>
 			<td><p>{{ $article->en_title }}</p></td>
-			<td><p>italiano</p></td>
-			<td><p>{{ $article->author }}</p></td>
+			<td><p>{{ $article->edition_id }}</p></td>
+			<td><p>{{ $article->author_id }}</p></td>
 			<td><p>{{ $article->section }}</p></td>
 			<td>	
 				<a href="{{route('article.edit', $article->id)}}" class="btn btn-success btn-sm"><i class="fas fa-edit"></i></a>

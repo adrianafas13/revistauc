@@ -6,9 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Author extends Model
 {
-    public function article(){
-		return $this->belongsTo('App\Article','articles_id');
-	}
     
     protected $fillable=[
         /*spanish*/
@@ -25,4 +22,8 @@ class Author extends Model
         "it_grades_author",
         "it_resume_author",
 	];
+    
+    public function articles(){
+        return $this->hasMany('App\Article', 'author_id');
+    }
 } 

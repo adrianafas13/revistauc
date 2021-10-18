@@ -15,9 +15,9 @@ class GeneralController extends Controller
 {
     public function index()
     {
-        $articles = Article::orderBy('created_at','desc')->orderBy('id')->paginate(10);
-        $covers=Cover::all();
         $editions=Edition::all();
+        $articles = Article::orderBy('id')->paginate(10);
+        $covers=Cover::all();
         return view('/welcome',compact('articles','covers', 'editions'));
 	}
 
