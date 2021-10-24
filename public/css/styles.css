@@ -4,6 +4,7 @@
     font-family: 'Roboto', sans-serif;
 }
 .main {
+    background-color: rgb(238, 238, 238);
     min-height: 440px;
 }
 
@@ -153,7 +154,6 @@ li.navbar-item a:focus {
     font-size: 12px;
     box-shadow: 2px rgba(0, 0, 0, 0.2);
     position: static;
-    padding: 10px 0px;
     text-align: center;
     padding: 1em;
     width: 100%;
@@ -179,31 +179,9 @@ li.navbar-item a:focus {
     height:200px;
 }
 /*-------------------------------------------HOME-----------------------------------------------------------*/
-#carousel {
-    padding-top: 25px;
-    padding-bottom: 25px;
-}
-
-.carousel-item .carousel-caption {
-    position: absolute;
-    background-color: rgb(12, 12, 12, 0.9);
-    max-width: 100%;
-    width: 100%;
-    left: 0;
-    padding: 15px;
-    bottom: 0;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-}
-
-.carousel-item img {
+.edition-cover img{
     border-radius: 5px;
-}
-.carousel-item .carousel-caption h5 {
-    font-size: 20px;
-}
-.carousel-item .carousel-caption p {
-    font-size: 17px;
+    box-shadow: 4px 4px rgba(158, 158, 158, 0.2);
 }
 
 #popular {
@@ -220,7 +198,7 @@ li.navbar-item a:focus {
     font-weight: bold;
 }
 .list-group #popular_header_barside i {
-    font-size: 17px;
+    font-size: 20px;
 }
 
 .list-group .contenido-popular-bar h6 {
@@ -234,59 +212,28 @@ li.navbar-item a:focus {
 
     margin-bottom: 4px;
 }
+.list-group-item:hover{
+    transition: all 0.3s ease-out;
+    background: rgba(234, 150, 88, 0.1);
+}
 
 .edition_title h4 {
     font-size: 23px;
     text-align: center;
 }
 
-#article {
-    padding-top: 10px;
-    padding-bottom: 20px;
+.mb-3{
+    box-shadow: 4px 4px rgba(158, 158, 158, 0.2);
+}
+.card:hover{
+    transition: all 0.3s ease-out;
+    background: rgba(234, 150, 88, 0.1);
 }
 
-.article-container {
-    position: relative;
-    border-color: #131313;
-}
-.article-container img {
-    border-radius: 5px;
-}
-.article-container #tag {
-    position: absolute;
-    right: 0px;
-    padding: 10px;
-    float: right;
-    font-size: 14px;
-    background-color: #18b933;
-    color: #fff;
-    border-color: #131313;
+.card-body .badge{
+    background-color: #084456;
+    color:#fff;
     text-transform: uppercase;
-}
-.article-text {
-    position: absolute;
-    bottom: 0;
-    background: rgb(0, 0, 0);
-    background: rgba(0, 0, 0, 0.9);
-    color: #f1f1f1;
-    width: 100%;
-    padding: 10px;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-}
-.article-text h6 {
-    font-size: 17px;
-    margin-left: 5px;
-    margin-right: 5px;
-    text-align: center;
-    align-items: center;
-}
-.article-text p {
-    font-size: 14px;
-    text-align: justify;
-    margin-left: 5px;
-    margin-right: 5px;
-    margin-left: 15px;
 }
 /*------------------------------------------------ARTICULO-----------------------------------------------------------*/
 /*TITULO*/
@@ -558,7 +505,7 @@ div.content {
     padding: 1px 16px;
     height: 1000px;
 }
-/**************************************************/
+/*******************EDICIONES*******************************/
 .main .container #edicion {
     padding-bottom: 10px;
 }
@@ -568,10 +515,6 @@ div.content {
     border-color: #979797;
 }
 
-.main .container #edicion .card img {
-    width: 100%;
-    height: 200px;
-}
 .main .container #edicion .card h5 {
     text-align: center;
 }

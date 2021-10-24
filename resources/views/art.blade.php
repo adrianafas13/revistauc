@@ -44,41 +44,30 @@
 
 			<div class="col-sm-3" id="content_bar_right">
 				<div class="content">
-					<br>
-
-					<h6><b>Información del Autor</b></h6>
-					<hr>
-					<img src="/images/perfil.jpg">
-					<br>
-
-					<div class="info-container">
-
-						<ul class="author-article" >
-							<p><b>{{ $article->author }}</b></p>
-							<p>Br. en Ciencias Sociales</p>
-							<p><b>Contacto: </b> juan@gmail.com</p>
-						</ul>
-
-						<ul class="bio-author" >
-							<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat".</p>
-						</ul>
-
+					@foreach ($authors as $author)
 						<br>
-						<ul class="section-article" >
-							<p><b>@lang('data.seccion'): </b> {{ $article->section }}</p>
-						</ul>
-
-						<ul class="data-article" >
-							<p><b>@lang('data.fecha'): </b> {{ $article->created_at }}</p>
-						</ul>
-									
-					</div>
-					
+						<h6><b>Información del Autor</b></h6>
+						<hr>
+						<img src="/images/{{ $author->route_image_author }}" class="img-fluid">
+						<br>
+						<div class="info-container">
+							<ul class="author-article" >
+								<p><b>{{ $author->name_author }}</b></p>
+								<p>{{ $author->grades_author }}</p>
+								<p><b>Contacto: </b>{{ $author->email_author }}</p>
+							</ul>
+							<ul class="bio-author" >
+								<p>{!! $author->resume_author !!}</p>
+							</ul>
+							<br>
+							<ul class="section-article" >
+								<p><b>@lang('data.seccion'): </b> {{ $article->section }}</p>
+							</ul>
+						</div>
+					@endforeach
 				</div>
 			</div>
-
 		</div>
-
 	</div>
 </div>
 

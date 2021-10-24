@@ -1,7 +1,7 @@
 @extends('layouts.applayout')
 @section('content')
-<br>
 <div class="main">
+<br>
     <div class="container" >
         <div class="title-sections">
             <h2><b>EDICIONES PUBLICADAS</b></h2>
@@ -9,36 +9,20 @@
         <hr>
 
         <div class="row" id="edicion">
-            <div class="col-sm">
-                <div class="card">
-                <img src="images/uni1.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">EDICIÓN: <b>ENERO 2021</b></h5>
-                        
-                        <a href="#" class="btn btn-outline-secondary">Ver edición</a>
+            <div class="col-6">
+                @foreach ($editions as $edition)
+                    <div class="card">
+                    <img src="/images/{{ App::isLocale('es')?$edition->edition_route_image:$edition->edition_route_image_en }}" class="img-fluid">
+                        <div class="card-body">
+                            <h5 class="card-title">EDICIÓN: <b>{{ $edition->edition_title }}</b></h5>
+                            
+                            <a href="#" class="btn btn-outline-secondary">Ver edición</a>
+                        </div>
                     </div>
-                </div>
-            </div>
-            <div class="col-sm">
-            <div class="card">
-                <img src="images/uni2.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">EDICIÓN: <b>ENERO 2021</b></h5>
-                        
-                        <a href="#" class="btn btn-outline-secondary">Ver edición</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm">
-            <div class="card">
-                <img src="images/uni3.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">EDICIÓN: <b>ENERO 2021</b></h5>
-                        <a href="#" class="btn btn-outline-secondary">Ver edición</a>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
+        <br>
     </div>
 </div>
 @endsection

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Cover;
+use App\Author;
 use App\Article;
 use App\Edition;
 use App\Contact;
@@ -16,14 +17,16 @@ class GeneralController extends Controller
     public function index()
     {
         $editions=Edition::all();
+        $authors=Author::all();
         $articles = Article::orderBy('id')->paginate(10);
         $covers=Cover::all();
-        return view('/welcome',compact('articles','covers', 'editions'));
+        return view('/welcome',compact('articles','covers', 'editions', 'authors'));
 	}
 
     public function arti(){
+        $authors=Author::all();
         $articles = Article::orderBy('created_at','desc')->orderBy('id')->paginate(10);
-        return view('/articulos',compact('articles'));
+        return view('/articulos',compact('articles', 'authors'));
     }
 
     public function authors(){
@@ -31,9 +34,9 @@ class GeneralController extends Controller
     }
 
     public function show($slug){
+        $authors=Author::all();
         $article=Article::with(['comment','comment.user'])->where('slug',$slug)->first();
-
-        return view("art" , compact("article"));
+        return view("/art", compact('article', 'authors'));
 
     }
 
@@ -43,7 +46,9 @@ class GeneralController extends Controller
     }
     //<!--tentativo-->
     public function edicion(){
-        return view('/edicion');
+        $editions=Edition::all();
+        $editions = Edition::orderBy('id')->paginate(10);
+        return view('/edicion', compact('editions'));
     }
 
     public function sobre(){

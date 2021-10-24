@@ -14,8 +14,9 @@ class ArticlesController extends Controller
     public function index()
     {
         $articles=Article::all();
+        $authors=Author::all();
         $articles=Article::orderBy('id')->paginate(10);
-        return view("articles.index" , compact("articles"));
+        return view("articles.index" , compact("articles", "authors"));
     }
 
     public function create()
@@ -91,7 +92,7 @@ class ArticlesController extends Controller
 
         $article=Article::with(['comment','comment.user'])->where('slug',$article)->first();
 
-        return view("articles.show" , compact("article", "editions"));
+        return view("articles.show" , compact("article", "editions", "authors"));
 
     }
 
