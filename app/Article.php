@@ -15,9 +15,7 @@ class Article extends Model
 		"text", 
 		"ruta_file", 
 		"en_title", 
-		"ruta_en_image", 
 		"en_text", 
-		"ruta_en_file",
 		"edition_id",
 		"author_id",
 	];

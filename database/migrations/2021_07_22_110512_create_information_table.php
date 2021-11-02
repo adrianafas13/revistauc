@@ -19,11 +19,11 @@ class CreateInformationTable extends Migration
             /**español**/
             $table->string('information_title',355)->nullable(false);
             $table->text('information_text')->nullable(false);
-
+            $table->string('ruta_info_file')->nulleable();
             /**english**/
             $table->string('en_information_title',355)->nullable(false);
             $table->text('en_information_text')->nullable(false);
-
+            $table->string('ruta_info_en_file')->nulleable();
             $table->timestamps();
         });
     }

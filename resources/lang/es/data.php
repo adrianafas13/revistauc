@@ -9,7 +9,7 @@ return [
 	'ediciones' => 'Ediciones',
 	'contacto' => 'Información',
 	'autores' => 'Autores',
-	'secciones' => 'Líneas de Investigación',
+	'secciones' => 'Ámbitos de Conocimiento',
 	'español' => 'ES',
 	'ingles' => 'EN',
 	'italiano' => 'IT',

@@ -59,30 +59,6 @@ class ArticlesController extends Controller
 
         }
 
-
-        //carga de imagen de articulo en ingles
-        if($archivoimgen=$request->file('en_image')){
-
-            $infoimgen=$archivoimgen->getClientOriginalName();
-
-            $archivoimgen->move('images', $infoimgen);
-
-            $enter['ruta_en_image']=$infoimgen;
-
-        }
-
-
-        //carga de archivo de articulo en ingles
-        if($archivofileen=$request->file('en_file')){
-
-            $infofileen=$archivofileen->getClientOriginalName();
-
-            $archivofileen->move('files', $infofileen);
-
-            $enter['ruta_en_file']=$infofileen;
-
-        }
-
         Article::create($enter);
 
         return redirect("/admin/article/");
@@ -131,29 +107,6 @@ class ArticlesController extends Controller
 
         }
 
-
-        //carga de imagen de articulo en ingles
-        if($archivoimgen=$request->file('en_image')){
-
-            $infoimgen=$archivoimgen->getClientOriginalName();
-
-            $archivoimgen->move('images', $infoimgen);
-
-            $enter['ruta_en_image']=$infoimgen;
-
-        }
-
-
-        //carga de archivo de articulo en ingles
-        if($archivofileen=$request->file('en_file')){
-
-            $infofileen=$archivofileen->getClientOriginalName();
-
-            $archivofileen->move('files', $infofileen);
-
-            $enter['ruta_en_file']=$infofileen;
-
-        }
 
         $article->update($enter);
 

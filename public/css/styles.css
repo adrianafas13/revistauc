@@ -432,7 +432,7 @@ li.navbar-item a:focus {
 /*---------------------ADMIN PANEL----------------------------------------------*/
 /*---------------------layout---------------------*/
 .navbar #navbar-admin {
-    background-color: #003366;
+    background-color: #084456;
     font-size: 15px;
     display: flex;
     align-items: center;
@@ -452,18 +452,21 @@ li.navbar-item a:focus {
     margin: 0;
     padding: 0;
     width: 200px;
-    background-color: #f1f1f1;
+    background-color: #313131;
     position: fixed;
     height: 100%;
     overflow: auto;
 }
 
-.sidenav a,
-.dropdown-btn {
+.sidebar #sidebar-items{
+    background-color: #313131;
+    color: #fff;
+}
+
+.sidenav a, .dropdown-btn {
     padding: 6px 8px 6px 16px;
     text-decoration: none;
     font-size: 20px;
-    color: #818181;
     display: block;
     border: none;
     background: none;
@@ -473,16 +476,17 @@ li.navbar-item a:focus {
     outline: none;
 }
 
-/* On mouse-over */
-.sidenav a:hover,
-.dropdown-btn:hover {
-    color: #f1f1f1;
+ /*On mouse-over */
+.sidenav a:hover{
+    color:#04aa6d
 }
-
+.dropdown-btn:hover {
+    background-color: red;
+}
 /* Sidebar links */
 .sidebar a {
     display: block;
-    color: black;
+    color: #fff;
     padding: 16px;
     text-decoration: none;
 }
@@ -503,8 +507,8 @@ li.navbar-item a:focus {
 div.content {
     margin-left: 200px;
     padding: 1px 16px;
-    height: 1000px;
 }
+
 /*******************EDICIONES*******************************/
 .main .container #edicion {
     padding-bottom: 10px;

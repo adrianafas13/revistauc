@@ -8,7 +8,7 @@ return [
 	'ediciones' => 'Editions',
 	'contacto' => 'Information',
 	'autores' => 'Authors',
-	'secciones' => 'Research Lines',
+	'secciones' => 'Knowledge Areas',
 	'español' => 'ES',
 	'ingles' => 'EN',
 	'italiano' => 'IT',

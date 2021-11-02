@@ -4,24 +4,37 @@
 <br>
     <div class="container" >
         <div class="title-sections">
-            <h2><b>EDICIONES PUBLICADAS</b></h2>
+            <h4><b>EDICIONES PUBLICADAS</b></h4>
         </div>
         <hr>
 
-        <div class="row" id="edicion">
-            <div class="col-6">
-                @foreach ($editions as $edition)
-                    <div class="card">
-                    <img src="/images/{{ App::isLocale('es')?$edition->edition_route_image:$edition->edition_route_image_en }}" class="img-fluid">
-                        <div class="card-body">
-                            <h5 class="card-title">EDICIÓN: <b>{{ $edition->edition_title }}</b></h5>
+        <div class="container mt-5">
+        <!-- articulo --> 
+        @foreach($editions as $edition)
+        <div class="card mb-3">
+            <div class="row no-gutters">  
+            
+                <div class="col-md-4">
+                    <img src="/images/portada01.png" class="img-fluid">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5><b>{{ App::isLocale('es')?$edition->edition_title:$edition->edition_title_en }}</b></h5>
+                        <p><b>FECHA DE PUBLICACIÓN: </b> 01/11/2021</p>
+                        <p>{!! $edition->edition_description !!}</p>
+
                             
-                            <a href="#" class="btn btn-outline-secondary">Ver edición</a>
-                        </div>
+
+                        <a href="/files/fulledition.pdf" type="button" class="btn btn-outline-dark">Edición Completa</a>
                     </div>
-                @endforeach
+                </div>
             </div>
         </div>
+        @endforeach  
+        <br>
+    </div>
+
+        
         <br>
     </div>
 </div>

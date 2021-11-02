@@ -7,17 +7,17 @@
 	<div class="article">
 
 		<div class="row">
-			
+
 			<div class="col-sm-9">
 				<br>
-				
+
 				<div class="title-article">
 					<h2><b>{{ App::isLocale('es')?$article->title:$article->en_title }}</b></h2>
 					<br>
 				</div>
 
 				<div class="img-article">
-					<img src="/images/{{ App::isLocale('es')?$article->ruta_image:$article->ruta_en_image }}">
+					<img src="/images/{{$article->ruta_image}}">
 				</div>
 
 				<div class="info-img">
@@ -35,7 +35,7 @@
 
 				@auth
 				<div class="button-article">
-					<button type="button" class="btn btn-success" href="/files/{{ App::isLocale('es')?$article->ruta_file:$article->ruta_en_file }}"><i class="fas fa-download"></i> @lang('data.descarga')</button>
+					<a href="/files/{{ $article->ruta_file }}" type="button" class="btn btn-success"><i class="fas fa-download"></i> @lang('data.descarga')</a>
 				</div>
 				@endauth
 
@@ -44,27 +44,25 @@
 
 			<div class="col-sm-3" id="content_bar_right">
 				<div class="content">
-					@foreach ($authors as $author)
-						<br>
-						<h6><b>Información del Autor</b></h6>
-						<hr>
-						<img src="/images/{{ $author->route_image_author }}" class="img-fluid">
-						<br>
-						<div class="info-container">
-							<ul class="author-article" >
-								<p><b>{{ $author->name_author }}</b></p>
-								<p>{{ $author->grades_author }}</p>
-								<p><b>Contacto: </b>{{ $author->email_author }}</p>
-							</ul>
-							<ul class="bio-author" >
-								<p>{!! $author->resume_author !!}</p>
-							</ul>
-							<br>
-							<ul class="section-article" >
-								<p><b>@lang('data.seccion'): </b> {{ $article->section }}</p>
-							</ul>
-						</div>
-					@endforeach
+                    <br>
+                    <h6><b>Información del Autor</b></h6>
+                    <hr>
+                    <img src="/images/{{ $article->author->route_image_author }}" class="img-fluid">
+                    <br>
+                    <div class="info-container">
+                        <ul class="author-article" >
+                            <p><b>{{ $article->author->name_author }}</b></p>
+                            <p>{{ $article->author->grades_author }}</p>
+                            <p><b>Contacto: </b>{{ $article->author->email_author }}</p>
+                        </ul>
+                        <ul class="bio-author" >
+                            <p>{!! $article->author->resume_author !!}</p>
+                        </ul>
+                        <br>
+                        <ul class="section-article" >
+                            <p><b>@lang('data.seccion'): </b> {{ $article->section }}</p>
+                        </ul>
+                    </div>
 				</div>
 			</div>
 		</div>
@@ -105,7 +103,7 @@
 							</div>
 						@endif
 					</div>
-					
+
 					<div class="posted-comment-area">
 						@foreach($article->comment as $comment)
 							<hr>
@@ -124,7 +122,7 @@
 
 				<div class="col-2"></div>
 			</div>
-			
+
 		</div>
 	</div>
 </div>

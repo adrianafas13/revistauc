@@ -10,11 +10,11 @@ class Information extends Model
         /*spanish*/
         "information_title",
         "information_text",
+        "ruta_info_file",
         /*english*/
         "en_information_title",
         "en_information_text",
-        /*italiano*/
-        "it_information_title",
-        "it_information_text",
+        "ruta_info_en_file"
+        
 	];
 }

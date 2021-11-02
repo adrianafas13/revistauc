@@ -77,7 +77,6 @@ class EditionsController extends Controller
     public function show($id)
     {
         $editions=Edition::findOrFail($id);
-
         return view("editions.show" , compact("editions"));
     }
 

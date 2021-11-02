@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Information;
 use Illuminate\Http\Request;
+use App\Http\Requests\InformationRequest;
 
 class InformationController extends Controller
 {
@@ -18,43 +19,40 @@ class InformationController extends Controller
         $information=Information::orderBy('created_at','desc')->orderBy('id')->paginate(15);
         return view("information.index" , compact("information"));
     }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create()
     {
         return view("information.create");
     }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
-        $information=new Information;
-        /**español**/
-        $information->information_title=$request->information_title;
-        $information->information_text=$request->information_text;
-        /**english**/
-        $information->en_information_title=$request->en_information_title;
-        $information->en_information_text=$request->en_information_text;
+        $enter=$request->all();
+        //carga de imagen de articulo en español
+        if($archivoinfo=$request->file('info_file')){
 
-        $information->save();
-        return redirect("/admin/information"); 
+        $infoes=$archivoinfo->getClientOriginalName();
+
+        $archivoinfo->move('files', $infoes);
+
+        $enter['ruta_info_file']=$infoes;
+
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Information  $information
-     * @return \Illuminate\Http\Response
-     */
+    //carga de imagen de articulo en español
+    if($archivoinfoen=$request->file('info_en_file')){
+
+        $infoen=$archivoinfoen->getClientOriginalName();
+
+        $archivoinfoen->move('files', $infoen);
+
+        $enter['ruta_info_en_file']=$infoen;
+
+    }
+
+        Information::create($enter);
+
+        return redirect("/admin/information/");
+    }
+
     public function show($id)
     {
         $information=Information::findOrFail($id);
@@ -62,12 +60,6 @@ class InformationController extends Controller
         return view("information.show" , compact("information"));
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Information  $information
-     * @return \Illuminate\Http\Response
-     */
     public function edit($id)
     {
         $information=Information::findOrFail($id);
@@ -75,13 +67,6 @@ class InformationController extends Controller
         return view("information.edit" , compact("information"));
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Information  $information
-     * @return \Illuminate\Http\Response
-     */
     public function update(Request $request, $id)
     {
         $information=Information::findOrFail($id);
@@ -91,12 +76,6 @@ class InformationController extends Controller
         return redirect("/admin/information");
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Information  $information
-     * @return \Illuminate\Http\Response
-     */
     public function destroy($id)
     {
         $information=Information::findOrFail($id);

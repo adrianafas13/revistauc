@@ -11,117 +11,144 @@
 
     <input type="hidden" name="_method" value="PUT">
 
-    <div class="row">
-  		<div class="col-25" align="center">
-  		  <label>Autor:</label>
-  		</div>
-  		<div class="col-75">
-  		  <input type="text" required id="author" name="author" value="{{$article->author}}">
-  		</div>
-  	</div>
+    <h5>Información General:</h5>
+		<hr>
 
-  	<div class="row">
-      <div class="col-25" align="center">
-        <label>Sección:</label>
-      </div>
-    	<div class="col-75">
-    		<select id="section" name="section" value="{{$article->section}}">
-    			<option value="administracion">Administracion</option>
-    			<option value="arte">Arte</option>
-    			<option value="idiomas">Idiomas</option>
-    			<option value="informatica">Informatica</option>
-    			<option value="derecho">Derecho</option>
-    			<option value="gerencia">Gerencia</option>
-    			<option value="historia">Historia</option>
-    			<option value="salud">Salud</option>
-    		</select>
-    	</div>
-    </div>
+		<div class="row">
+			<div class="col-3" id="title-info">
+				<p>Edición:</p>
+			</div>	
+			<div class="col-9">
+				<div class="form-group">
+					<select class="form-control" id="edition_id" value="{{$article->edition_id}}">
+						@foreach ($editions as $edition)
+							<option value="{{$edition->id}}"> {{$edition->edition_number}} </option>
+						@endforeach
+					</select>
+				</div>
+			</div>
+		</div>
 
-    <br>
-    		
-    <h3>Artículo en Español</h3>
-    <div class="row">
-      <div class="col-25" align="center">
-        <label>Título:</label>
-      </div>
-  		<div class="col-75">
-  		  <input type="text" required id="title" name="title" value="{{$article->title}}">
-  		</div>
-    </div>
-  		
-  	<div class="row">
-  		<div class="col-25" align="center">
-  		  <label>Imagen:</label>
-  		</div>
-  		<div class="col-75">
-  		  <input accept="image/*"  id="image" name="image" type="file">
-  		</div>
-  	</div>
+		<div class="row">
+			<div class="col-3" id="title-info">
+				<p>Autor:</p>
+			</div>	
+			<div class="col-9">
+				<div class="form-group">
+					<select class="form-control" id="author" value="{{$article->author_id}}">
+						@foreach ($authors as $author)
+							<option value="{{$author->id}}"> {{$author->name_author}} </option>
+						@endforeach
+					</select>
+					
+				</div>
+			</div>
+		</div>
+		
 
-    <div class="row">
-      <div class="col-25" align="center">
-        <label>Texto:</label>
-      </div>
-      <div class="col-75">
-        <textarea id="text" required name="text" style="height:200px">{{$article->text}}</textarea>
-      </div>
-    </div>
+		<div class="row">
+			<div class="col-3" id="title-info">
+				<p>Sección:</p>
+			</div>
+			<div class="col-9">
+				<div class="form-group">
+				<select class="form-control" id="section" value="{{$article->section}}">
+					<option value="administracion">Administracion</option>
+					<option value="arte">Arte</option>
+					<option value="idiomas">Idiomas</option>
+					<option value="informatica">Informatica</option>
+					<option value="derecho">Derecho</option>
+					<option value="gerencia">Gerencia</option>
+					<option value="historia">Historia</option>
+					<option value="salud">Salud</option>
+				</select>
+				</div>
+			</div>
+		</div>
 
-    <div class="row">
-      <div class="col-25" align="center">
-        <label>Archvo:</label>
-      </div>
-      <div class="col-75">
-        <input accept="file/*"  id="file" name="file" type="file">
-      </div>
-    </div>
+		<br>
+		<!--Español-->
+		<div class="spanish-backgorund">
+			<h5><b>Artículo en Español</b></h5>
+			<hr>
 
-    <h3>Article on English</h3>
-    <div class="row">
-      <div class="col-25" align="center">
-        <label>Title:</label>
-      </div>
-  		<div class="col-75">
-  		  <input type="text" required id="en_title" name="en_title" value="{{$article->en_title}}">
-  		</div>
-    </div>
+			<!--Titulo del articulo en español-->
+			<div class="row">
+				<div class="col-3" id="title-info">
+					<p>Título:</p>
+				</div>
+				<div class="col-9">
+					<input type="text" required id="title" value="{{$article->title}}">
+				</div>
+			</div>
 
-  	<div class="row">
-      <div class="col-25" align="center">
-  		  <label>Image:</label>
-  		</div>
-  		<div class="col-75">
-  		  <input accept="image/*"  id="en_image" name="en_image" type="file">
-  		</div>
-  	</div>
+			<!--Imagen del articulo en español-->
+			<div class="row">
+				<div class="col-3" id="title-info">
+					<p>Imagen:</p>
+				</div>
+				<div class="col-9">
+					<input accept="image/*" required type="file" value="{{$article->image}}">
+				</div>
+			</div>
 
-    <div class="row">
-      <div class="col-25" align="center">
-        <label>Text:</label>
-      </div>
-      <div class="col-75">
-        <textarea id="en_text" required name="en_text" style="height:200px">{{$article->en_text}}</textarea>
-      </div>
-    </div>
+			<!--Astra del articulo en español-->
+			<div class="row">
+				<div class="col-3" id="title-info">
+					<p>Astra del Artículo:</p>
+				</div>
+				<div class="col-9">
+					<textarea id="summernote_spanish" name="text"></textarea>
+				</div>
+			</div>
 
-    <div class="row">
-      <div class="col-25" align="center">
-        <label>File:</label>
-      </div>
-      <div class="col-75">
-        <input accept="file/*"  id="en_file" name="en_file" type="file">
-      </div>
-    </div>
+			<!--PDF del articulo en español-->
+			<div class="row">
+				<div class="col-3" id="title-info">
+					<p>Archivo PDF del artículo:</p>
+				</div>
+				<div class="col-9">
+					<input accept="file/*" required type="file" value="{{$article->file}}">
+				</div>	
+			</div>
+		</div>
 
-    		@csrf
+		<br>
+		<!--English-->
+		<div class="english-backgorund">
+			<h5><b>Article on English</b></h5>
+			<hr>
 
-  	<div class="row justify-content-center">
-  		<input type="submit" name="enviar" value="Actualizar Artículo">
-  	</div>
-  </form>
+			<!--Titulo del articulo en ingles-->
+			<div class="row">
+				<div class="col-3" id="title-info">
+					<p>Title:</p>
+				</div>
+				<div class="col-9">
+					<input type="text" required id="en_title" value="{{$article->en_title}}">
+				</div>
+			</div>
 
-  
+			<!--Astra del articulo en ingles-->
+			<div class="row">
+				<div class="col-3" id="title-info">
+					<p>Article resume:</p>
+				</div>
+				<div class="col-9">
+					<textarea id="summernote_english" required name="en_text"></textarea>
+				</div>
+			</div>
+
+		</div>
+
+		<br>
+	@csrf
+
+  <div class="row justify-content-center">
+    <input type="submit" name="enviar" value="Actualizar Artículo">
+  </div>
+
+</form>
   
 </div>
 

@@ -9,9 +9,7 @@
             <div class="col-md-8">
             <br>
                 <div class="edition-cover">
-                    @foreach($editions as $edition)
-                        <img src="/images/{{ App::isLocale('es')?$edition->edition_route_image:$edition->edition_route_image_en }}" class="d-block w-100" style="height:505px;">
-                    @endforeach
+                    <img src="/images/{{ $edition->edition_route_image }}" class="d-block w-100" style="height:505px;">
                 </div>
             </div>
 
@@ -26,19 +24,10 @@
                         </div>
                     </div>
                     <!-- articulos populares -->
-                    @foreach($editions as $edition)
+                    @foreach($articles as $article)
                         <div class="contenido-popular-bar">
                             <li class="list-group-item">
-                                <p>Volumen:<b>{{ $edition->edition_number }}</b></p>
-                            </li>
-                            <li class="list-group-item">
-                                <p>Fecha:<b>{{ $edition->edition_date }}</b></p>
-                            </li>
-                            <li class="list-group-item">
-                                <p>Fecha:<b>{{ $edition->edition_date }}</b></p>
-                            </li>
-                            <li class="list-group-item">
-                                <p>Descripción:<b>{!! App::isLocale('es')?$edition->edition_description:$edition->edition_description_en !!}</b></p>
+                                <p>{{ App::isLocale('es')?$article->title:$article->en_title}}</p>
                             </li>
                         </div>
                     @endforeach
@@ -49,42 +38,34 @@
     <!------------------------------------------------- NOMBRE DE LA EDICIÓN ------------------------------------------------------------>
         <hr>
             <div class="edition_title">
-                @foreach($editions as $edition)
-                    <h4><b>{{ App::isLocale('es')?$edition->edition_title:$edition->edition_title_en }}</b></h4>
-                    
-                @endforeach
+                <h4><b>{{ App::isLocale('es')?$edition->edition_title:$edition->edition_title_en }}</b></h4>
             </div>
         <hr>
     </div>
-    <!------------------------------------------------- ARTICULOS ------------------------------------------------------------>  
+    <!------------------------------------------------- ARTICULOS ------------------------------------------------------------>
     <div class="container mt-5">
-        <!-- articulo --> 
-        
+        <!-- articulo -->
+        @foreach($articles as $article)
         <div class="card mb-3">
-            <div class="row no-gutters">  
-            @foreach($articles as $article)
+            <div class="row no-gutters">
+
                 <div class="col-md-4">
                     <a href="{{route('art', $article->slug)}}">
-                        <img src="/images/{{ App::isLocale('es')?$article->ruta_image:$article->ruta_en_image }}" class="img-fluid">
+                        <img src="images/{{$article->ruta_image}}" class="img-fluid">
                     </a>
                 </div>
                 <div class="col-md-8">
                     <div class="card-body">
                         <h6><a href="#" class="badge">{{ $article->section }}</a></h6>
                         <h5><b>{{ App::isLocale('es')?$article->title:$article->en_title }}</b></h5>
-                        @foreach ($authors as $author)
-                            <p>{{ $author->name_author }}</p>
-                        @endforeach
-                        @foreach ($editions as $edition)
-                            <p class="card-text"><small class="text-muted">{{ $edition->edition_date }}</small></p>
-                        @endforeach
-                        <br>
-                        <button type="button" class="btn btn-outline-dark">Ver más</button>
+                        <p>{{ $article->author->name_author }}</p>
+                        <p class="card-text"><small class="text-muted">{{ $edition->edition_date }}</small></p>
+                        <a type="button" class="btn btn-outline-dark" href="{{route('art', $article->slug)}}">Ver más</a>
                     </div>
                 </div>
-            @endforeach  
             </div>
         </div>
+        @endforeach
         <br>
     </div>
 </div>

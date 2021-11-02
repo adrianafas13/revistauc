@@ -26,9 +26,7 @@ class ArticleRequest extends FormRequest
         return [
             'title' => 'required|unique:articles|min:4|max:255',
             'image' => 'required|file|mimes:jpg, png, web',
-            'en_image' => 'required|file|mimes:jpg, png, web',
             'file' => 'required|mimes:pdf',
-            'en_file' => 'required|mimes:pdf',
         ];
     }
 }

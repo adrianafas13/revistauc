@@ -10,10 +10,10 @@
 		<!--Nombre del autor-->
 		<div class="row">
 			<div class="col-3" id="title-info">
-				<p>Nombre:</p>
+				<p>Apellido y nombre:</p>
 			</div>
 			<div class="col-9">
-				<input type="text" required id="name_author" name="name_author" placeholder="Nombre del Autor">
+				<input type="text" required id="name_author" name="name_author" placeholder="Apellido, Nombre">
 			</div>
 		</div>
 		<!--Correo del autor-->

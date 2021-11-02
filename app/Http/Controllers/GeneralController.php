@@ -6,7 +6,7 @@ use App\Cover;
 use App\Author;
 use App\Article;
 use App\Edition;
-use App\Contact;
+use App\Information;
 use App\About;
 use App\Comment;
 use App\Carousel;
@@ -16,38 +16,46 @@ class GeneralController extends Controller
 {
     public function index()
     {
-        $editions=Edition::all();
-        $authors=Author::all();
-        $articles = Article::orderBy('id')->paginate(10);
-        $covers=Cover::all();
-        return view('/welcome',compact('articles','covers', 'editions', 'authors'));
+        $edition= Edition::orderBy('id', 'desc')->get()->first();
+        $articles = Article::where('edition_id', (int) $edition->id)->orderBy('id','desc')->limit(10)->get();
+        $articlesData = [];
+        foreach ($articles as $article){
+            $article->author = Author::where('id', (int) $article->author_id)->get()->first();
+            $articlesData[] = $article;
+        }
+//        echo(json_encode($articlesData[0]->author,JSON_PRETTY_PRINT));
+//        die();
+        $articles = $articlesData;
+        return view('/welcome',compact('articles', 'edition'));
 	}
 
-    public function arti(){
-        $authors=Author::all();
-        $articles = Article::orderBy('created_at','desc')->orderBy('id')->paginate(10);
-        return view('/articulos',compact('articles', 'authors'));
+    public function arti($slug){
+        $article = Article::where('slug',$slug)->get()->first();
+        $article->author = Author::where('id', (int) $article->author_id)->get()->first();
+        return view('/articulos',compact('article'));
     }
 
     public function authors(){
-        return view('/authorsCatalog');
+        $authors=Author::all();
+        return view('/authorsCatalog',compact('authors'));
     }
 
     public function show($slug){
-        $authors=Author::all();
+        $authors=Author::orderBy('id', 'desc')->take(1)->get();
         $article=Article::with(['comment','comment.user'])->where('slug',$slug)->first();
         return view("/art", compact('article', 'authors'));
 
     }
 
     public function contacto(){
-        $contacts=Contact::all();
-        return view('/contacto',compact('contacts'));
+        $information=Information::all();
+        return view('/contacto',compact('information'));
     }
     //<!--tentativo-->
     public function edicion(){
         $editions=Edition::all();
         $editions = Edition::orderBy('id')->paginate(10);
+
         return view('/edicion', compact('editions'));
     }
 

@@ -4,7 +4,7 @@
 
 <div class=".xl-container">
 	<br>
-	<h4>Nueva Edición:</h4>
+	<h4><b>Nueva Edición:</b></h4>
 	<hr>
 
     <br>

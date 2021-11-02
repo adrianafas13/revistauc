@@ -26,7 +26,7 @@
                     <ul class="navbar-nav">
                         <div class="logotipo">
                             <a href="{{route('welcome')}}">
-                                <img src="{{ asset('images/LogotypeUCWhite.png') }}" alt="logo" width="175px" height="auto" style="margin-top:10px; margin-left:10px;">
+                                <img src="{{ asset('images/logotype.png') }}" alt="logo" width="195px" height="auto" style="margin-top:10px; margin-bottom:10px; margin-left:10px;">
                             </a>
                         </div>
                     </ul>
@@ -43,16 +43,13 @@
                                 <span class="caret"></span>
                             </a>
                             <div class=" dropdown-menu" id="lineas" arial-labelledby="dropdown_target" style="text-align: center;">
-                                <a class="dropdown-item" href="/seccion/administracion">@lang('data.administracion')</a>
-                                <a class="dropdown-item" href="/seccion/arte">@lang('data.arte')</a>
-                                <a class="dropdown-item" href="/seccion/idiomas">@lang('data.idiomas')</a>
-                                <a class="dropdown-item" href="/seccion/informatica">@lang('data.informatica')</a>
-                                <a class="dropdown-item" href="/seccion/derecho">@lang('data.derecho')</a>
-                                <a class="dropdown-item" href="#">@lang('data.educacion')</a>
-                                <a class="dropdown-item" href="/seccion/gerencia">@lang('data.gerencia')</a>
-                                <a class="dropdown-item" href="/seccion/historia">@lang('data.historia')</a>
-                                <a class="dropdown-item" href="/seccion/salud">@lang('data.salud')</a>
-                                <a class="dropdown-item" href="#">@lang('data.turismo')</a>
+                                <a class="dropdown-item" href="/seccion/biologia">Biología Marina</a>
+                                <a class="dropdown-item" href="/seccion/derecho">Derecho</a>
+                                <a class="dropdown-item" href="/seccion/economia">Economía</a>
+                                <a class="dropdown-item" href="/seccion/educacion">Educación</a> 
+                                <a class="dropdown-item" href="/seccion/epistemologia">Epistemología</a>
+                                <a class="dropdown-item" href="/seccion/filosofia">Filosofía</a>
+                                <a class="dropdown-item" href="/seccion/gerencia">Gerencia</a>
                             </div>
                         </li>
                         <li class="navbar-item">
@@ -178,7 +175,7 @@
                     <div class="col-sm">
                         <div class="unimar-link">
                             <a href="http://www.unimar.edu.ve/unimarportal/index.php">
-                                <img src="{{ asset('images/white-logo.png') }}" alt="logo blanco">
+                                <img src="{{ asset('images/white-logo.png') }}" alt="logo blanco" style="margin-bottom:10px;">
                             </a>
                         </div>
                     </div>
@@ -187,7 +184,7 @@
                     <div class="col-sm">
                         <div class="pev-link">
                             <a href="http://www.unimar.edu.ve/unimarportal/index.php">
-                                <img src="{{ asset('images/pevwhite.png') }}" alt="logo blanco">
+                                <img src="{{ asset('images/moodle.png') }}" alt="logo blanco" style="width:100px; height:90px; margin-top:60px;">
                             </a>
                         </div>
                     </div>
