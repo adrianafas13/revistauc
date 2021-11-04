@@ -4,17 +4,17 @@
 <div class="container">
 <br>
 	<div class="row">
-	
+
 		<div class="col-8">
-			<h4>Lista de Autores:</h4>
+			<h4><b>Lista de Autores:</b></h4>
 		</div>
-		<div class="col-4">
+		<!--div class="col-4">
 			<div class="input-group">
 				<input type="search" class="form-control rounded" placeholder="Buscar..." aria-label="Search"
 					aria-describedby="search-addon" />
 				<button type="button" class="btn btn-outline-primary">Buscar</button>
 			</div>
-		</div>
+		</div -->
 	</div>
 	<hr>
 
@@ -25,13 +25,13 @@
 			<th scope="col">Modificar</th>
 			<th scope="col">Eliminar</th>
 		</tr>
-		</thead> 
+		</thead>
 
 		<tbody>
 		@foreach($authors as $author)
 		<tr>
 			<td><p>{{ $author->name_author }}</p></td>
-			<td>	
+			<td>
 				<a href=" {{route('authors.edit', $author->id)}} " class="btn btn-success btn-sm"><i class="fas fa-edit"></i></a>
 			</td>
 			<td>
@@ -45,7 +45,7 @@
 		@endforeach
 		</tbody>
 	</table>
-
+<br>
 </div>
 
 @endsection

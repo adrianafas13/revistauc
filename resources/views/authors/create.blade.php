@@ -3,7 +3,7 @@
 @section('content')
 <div class=".xl-container">
 	<br>
-	<h4>Registro de Autor</h4> 
+    <h4><b>Registro de un nuevo autor:</b></h4>
 	<hr>
 
 	<form method="POST" action="/admin/authors" enctype="multipart/form-data">
@@ -41,7 +41,7 @@
 			<hr>
 			<div class="row">
 				<div class="col-3" id="title-info">
-					<p>Titulo Universitario:</p>
+					<p>Título Universitario:</p>
 				</div>
 				<div class="col-9">
 					<input type="text" required id="grades_author" name="grades_author" placeholder="Titulo Universitario del Autor">
@@ -60,7 +60,7 @@
 		<!--English-->
 		<br>
 		<div class="english-backgorund">
-			<h5><b>Info on English</b></h5>
+			<h5><b>Info in English</b></h5>
 			<hr>
 			<div class="row">
 				<div class="col-3" id="title-info">

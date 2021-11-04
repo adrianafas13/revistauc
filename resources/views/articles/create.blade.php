@@ -4,7 +4,7 @@
 @section('content')
 <div class=".xl-container">
 	<br>
-	<h4>Nuevo Artículo</h4>
+	<h4><b>Nuevo Artículo<b></h4>
 	<hr>
 
 	<form method="post" action="/admin/article" enctype="multipart/form-data">
@@ -14,7 +14,7 @@
 		<div class="row">
 			<div class="col-3" id="title-info">
 				<p>Edición:</p>
-			</div>	
+			</div>
 			<div class="col-9">
 				<div class="form-group">
 					<select class="form-control" id="edition_id" name="edition_id" placeholder="Autor del Artículo">
@@ -29,7 +29,7 @@
 		<div class="row">
 			<div class="col-3" id="title-info">
 				<p>Autor:</p>
-			</div>	
+			</div>
 			<div class="col-9">
 				<div class="form-group">
 					<select class="form-control" id="author" name="author_id" placeholder="Autor del Artículo">
@@ -37,15 +37,15 @@
 							<option value="{{$author->id}}"> {{$author->name_author}} </option>
 						@endforeach
 					</select>
-					
+
 				</div>
 			</div>
 		</div>
-		
+
 
 		<div class="row">
 			<div class="col-3" id="title-info">
-				<p>Sección:</p>
+				<p>Área de conocimiento:</p>
 			</div>
 			<div class="col-9">
 				<div class="form-group">
@@ -88,10 +88,10 @@
 				</div>
 			</div>
 
-			<!--Astra del articulo en español-->
+			<!--Abstra del articulo en español-->
 			<div class="row">
 				<div class="col-3" id="title-info">
-					<p>Astra del Artículo:</p>
+					<p>Abstracto del Artículo:</p>
 				</div>
 				<div class="col-9">
 					<textarea id="summernote_spanish" name="text"></textarea>
@@ -105,14 +105,14 @@
 				</div>
 				<div class="col-9">
 					<input accept="file/*" required type="file" name="file" value="file">
-				</div>	
+				</div>
 			</div>
 		</div>
 
 		<br>
 		<!--English-->
 		<div class="english-backgorund">
-			<h5><b>Article on English</b></h5>
+			<h5><b>Article in English</b></h5>
 			<hr>
 
 			<!--Titulo del articulo en ingles-->
@@ -125,23 +125,23 @@
 				</div>
 			</div>
 
-			
+
 
 			<!--Astra del articulo en ingles-->
 			<div class="row">
 				<div class="col-3" id="title-info">
-					<p>Article resume:</p>
+					<p>Abstract:</p>
 				</div>
 				<div class="col-9">
 					<textarea id="summernote_english" required name="en_text"></textarea>
 				</div>
 			</div>
 
-			
+
 		</div>
 
 		<br>
-		
+
 	@csrf
 	<div>
 		<input type="submit" name="enviar" value="Publicar">

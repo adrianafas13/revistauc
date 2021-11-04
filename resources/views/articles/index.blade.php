@@ -3,15 +3,15 @@
 <div class="container">
 <br>
 	<div class="row">
-	<div class="col-8">
-			<h4>Lista de Artículos Públicados:</h4>
+	    <div class="col-8">
+            <h4><b>Lista de Artículos Públicados:</b></h4>
 		</div>
-		<div class="col-4">
+		<!--div class="col-4">
 			<div class="input-group">
 				<input type="search" class="form-control rounded" placeholder="Buscar..." aria-label="Search"
 					aria-describedby="search-addon" />
 				<button type="button" class="btn btn-outline-primary">Buscar</button>
-			</div>
+			</div-->
 		</div>
 	</div>
 	<hr>
@@ -34,10 +34,10 @@
 		<tr>
 			<td><p>{{ $article->title }}</p></td>
 			<td><p>{{ $article->en_title }}</p></td>
-			<td><p>{{ $article->edition_id }}</p></td>
-			<td><p>{{ $article->author_id }}</p></td>
+			<td><p>{{ $article->edition->edition_number }}</p></td>
+			<td><p>{{ $article->author->name_author }}</p></td>
 			<td><p>{{ $article->section }}</p></td>
-			<td>	
+			<td>
 				<a href="{{route('article.edit', $article->id)}}" class="btn btn-success btn-sm"><i class="fas fa-edit"></i></a>
 			</td>
 			<td>

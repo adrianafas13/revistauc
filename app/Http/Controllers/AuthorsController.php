@@ -1,5 +1,5 @@
 <?php
- 
+
 namespace App\Http\Controllers;
 
 use App\Author;
@@ -14,7 +14,7 @@ class AuthorsController extends Controller
         $authors=Author::all();
         $authors=Author::orderBy('created_at','desc')->orderBy('id')->paginate(10);
         return view("authors.index" , compact("authors"));
-    } 
+    }
 
     /**
      * Show the form for creating a new resource.
@@ -23,6 +23,7 @@ class AuthorsController extends Controller
      */
     public function create()
     {
+
         return view("authors.create");
     }
 
@@ -32,10 +33,9 @@ class AuthorsController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(AuthorRequest $request)
+    public function store(Request $request)
     {
         $authors=$request->all();
-
         if($authorimg=$request->file('image_author')){
 
             $infoimg=$authorimg->getClientOriginalName();
@@ -47,11 +47,12 @@ class AuthorsController extends Controller
         }
         Author::create($authors);
 
-        return redirect("/admin/authors"); 
+        return redirect("/admin/authors");
+
     }
 
 
-    /** 
+    /**
      * Display the specified resource.
      *
      * @param  \App\Post  $post

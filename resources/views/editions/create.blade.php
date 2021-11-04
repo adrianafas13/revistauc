@@ -9,10 +9,10 @@
 
     <br>
     <form method="POST" action="/admin/editions" enctype="multipart/form-data">
-        
+
         <div class="row">
             <div class="col-3" id="title-info">
-                <p>Número de la Edicion:</p>
+                <p>Número de la Edición:</p>
             </div>
             <div class="col-9">
                 <input type="text" required id="edition_number" name="edition_number" placeholder="Número de la Edición">
@@ -21,7 +21,7 @@
 
         <div class="row">
             <div class="col-3" id="title-info">
-                <p>Fecha de la Edicion:</p>
+                <p>Fecha de la Edición:</p>
             </div>
             <div class="col-9">
                 <!--<input type="text" required id="edition_date" name="edition_date" placeholder="Número de la Edición">-->
@@ -44,9 +44,9 @@
 
             <!--Titulo de la edicion en español-->
             <div class="row">
-                <div class="col-3" id="title-info"> 
-                    <p>Titulo de la Edicion:</p>
-                </div> 
+                <div class="col-3" id="title-info">
+                    <p>Título de la Edición:</p>
+                </div>
                 <div class="col-9">
                     <input type="text" required id="edition_title" name="edition_title" placeholder="Título de la Edición">
                 </div>
@@ -55,8 +55,8 @@
             <!--Descripcion de la edicion en español-->
             <div class="row">
                 <div class="col-3" id="title-info">
-                    <p>Descripción de la Edicion:</p>
-                </div> 
+                    <p>Descripción de la Edición:</p>
+                </div>
                 <div class="col-9">
                     <textarea id="summernote_edition_description" name="edition_description"></textarea>
                 </div>
@@ -65,7 +65,7 @@
             <!--Caratula de la edicion en español-->
 			<div class="row">
 				<div class="col-3" id="title-info">
-					<p>Caratula de la Edición:</p>
+					<p>Carátula de la Edición:</p>
 				</div>
 				<div class="col-9">
 					<input accept="image/*" required type="file" name="edition_image" value="edition_image">
@@ -76,7 +76,7 @@
         <!--English-->
         <br>
         <div class="english-backgorund">
-            <h5><b>Information of the edition on English</b></h5>
+            <h5><b>Information of the edition in English</b></h5>
             <hr>
 
             <!--Titulo de la edicion en ingles-->
@@ -110,7 +110,7 @@
 			</div>
         </div>
         <br>
-        
+
         @csrf
 		<div>
 			<input type="submit" name="enviar" value="Guardar">

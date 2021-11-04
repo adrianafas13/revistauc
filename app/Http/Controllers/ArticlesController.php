@@ -10,17 +10,18 @@ use App\Http\Requests\ArticleRequest;
 
 class ArticlesController extends Controller
 {
-    
+
     public function index()
     {
         $articles=Article::all();
-        $authors=Author::all();
         $articles=Article::orderBy('id')->paginate(10);
+        $authors=Author::all();
+
         return view("articles.index" , compact("articles", "authors"));
     }
 
     public function create()
-    {   
+    {
         $editions=Edition::all();
         $authors=Author::all();
         return view('articles.create', compact("editions", "authors"));
@@ -84,7 +85,7 @@ class ArticlesController extends Controller
         $enter=$request->all();
         $article=Article::findOrFail($id);
         $enter['slug'] = str_slug($enter['title']);
-        
+
         //carga de imagen de articulo en español
         if($archivoimges=$request->file('image')){
             $infoimges=$archivoimges->getClientOriginalName();

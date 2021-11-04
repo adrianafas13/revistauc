@@ -1,6 +1,8 @@
 @extends('layouts.applayout')
 @section('content')
-<br>
+
+<div class="main">
+    <br>
     <div class="container">
         <div class="title-author">
             <h4><b>CATÁLOGO DE AUTORES:</b></h4>
@@ -33,6 +35,8 @@
             </div>
 
     </div>
-<br>
+    <br>
+
+</div>
 @include('modalAuthors')
 @endsection

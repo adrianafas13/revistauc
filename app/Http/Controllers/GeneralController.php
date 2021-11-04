@@ -2,14 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\Cover;
 use App\Author;
 use App\Article;
 use App\Edition;
 use App\Information;
 use App\About;
 use App\Comment;
-use App\Carousel;
 use Illuminate\Http\Request;
 
 class GeneralController extends Controller
@@ -17,7 +15,7 @@ class GeneralController extends Controller
     public function index()
     {
         $edition= Edition::orderBy('id', 'desc')->get()->first();
-        $articles = Article::where('edition_id', (int) $edition->id)->orderBy('id','desc')->limit(10)->get();
+        $articles = Article::where('edition_id', (int) $edition->id)->orderBy('id','asc')->limit(10)->get();
         $articlesData = [];
         foreach ($articles as $article){
             $article->author = Author::where('id', (int) $article->author_id)->get()->first();
