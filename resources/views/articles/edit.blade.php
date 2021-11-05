@@ -2,28 +2,24 @@
 @section('content')
 
 <div class="container">
+    <br>
   <form method="post" action="/admin/article/{{$article->id}}" enctype="multipart/form-data">
   @csrf
   @method('put')
-    <h2>Modificar el Artículo</h2>
-    <br>
-    <h3>Información</h3>
-
+      <h4><b>Modificar el Artículo</b></h4>
+    <hr>
     <input type="hidden" name="_method" value="PUT">
-
-    <h5>Información General:</h5>
-		<hr>
 
 		<div class="row">
 			<div class="col-3" id="title-info">
-				<p>Edición:</p>
-			</div>	
+				<p>Número de la edición:</p>
+			</div>
 			<div class="col-9">
 				<div class="form-group">
 					<select class="form-control" id="edition_id" value="{{$article->edition_id}}">
-						@foreach ($editions as $edition)
-							<option value="{{$edition->id}}"> {{$edition->edition_number}} </option>
-						@endforeach
+                        @foreach ($editions as $edition)
+                            <option value="{{$edition->id}}"> {{$edition->edition_number}} </option>
+                        @endforeach
 					</select>
 				</div>
 			</div>
@@ -32,35 +28,34 @@
 		<div class="row">
 			<div class="col-3" id="title-info">
 				<p>Autor:</p>
-			</div>	
+			</div>
 			<div class="col-9">
 				<div class="form-group">
 					<select class="form-control" id="author" value="{{$article->author_id}}">
-						@foreach ($authors as $author)
-							<option value="{{$author->id}}"> {{$author->name_author}} </option>
-						@endforeach
+                        @foreach ($authors as $author)
+                            <option value="{{$author->id}}"> {{$author->name_author}} </option>
+                        @endforeach
 					</select>
-					
+
 				</div>
 			</div>
 		</div>
-		
+
 
 		<div class="row">
 			<div class="col-3" id="title-info">
-				<p>Sección:</p>
+				<p>Ámbitos de conocimiento:</p>
 			</div>
 			<div class="col-9">
 				<div class="form-group">
 				<select class="form-control" id="section" value="{{$article->section}}">
-					<option value="administracion">Administracion</option>
-					<option value="arte">Arte</option>
-					<option value="idiomas">Idiomas</option>
-					<option value="informatica">Informatica</option>
-					<option value="derecho">Derecho</option>
-					<option value="gerencia">Gerencia</option>
-					<option value="historia">Historia</option>
-					<option value="salud">Salud</option>
+                    <option value="Biología Marina">Biología Marina</option>
+                    <option value="Derecho">Derecho</option>
+                    <option value="Economía">Economía</option>
+                    <option value="Educación">Educación</option>
+                    <option value="Epistemologíoa">Epistemología</option>
+                    <option value="Filosofía">Filosofía</option>
+                    <option value="Gerencia">Gerencia</option>
 				</select>
 				</div>
 			</div>
@@ -95,10 +90,10 @@
 			<!--Astra del articulo en español-->
 			<div class="row">
 				<div class="col-3" id="title-info">
-					<p>Astra del Artículo:</p>
+					<p>Abstracto del Artículo:</p>
 				</div>
 				<div class="col-9">
-					<textarea id="summernote_spanish" name="text"></textarea>
+					<textarea id="summernote_spanish" name="text">{!! $article->text !!}</textarea>
 				</div>
 			</div>
 
@@ -109,14 +104,14 @@
 				</div>
 				<div class="col-9">
 					<input accept="file/*" required type="file" value="{{$article->file}}">
-				</div>	
+				</div>
 			</div>
 		</div>
 
 		<br>
 		<!--English-->
 		<div class="english-backgorund">
-			<h5><b>Article on English</b></h5>
+			<h5><b>Article in English</b></h5>
 			<hr>
 
 			<!--Titulo del articulo en ingles-->
@@ -135,7 +130,7 @@
 					<p>Article resume:</p>
 				</div>
 				<div class="col-9">
-					<textarea id="summernote_english" required name="en_text"></textarea>
+					<textarea id="summernote_english" required name="en_text">{!! $article->en_title  !!}</textarea>
 				</div>
 			</div>
 
@@ -149,7 +144,7 @@
   </div>
 
 </form>
-  
+
 </div>
 
 @endsection

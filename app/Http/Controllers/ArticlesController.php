@@ -76,8 +76,9 @@ class ArticlesController extends Controller
     public function edit($id)
     {
         $article=Article::findOrFail($id);
-
-        return view("articles.edit" , compact("article"));
+        $editions=Edition::all();
+        $authors=Author::all();
+        return view("articles.edit" , compact("article","editions", "authors"));
     }
 
     public function update(Request $request, $id)
