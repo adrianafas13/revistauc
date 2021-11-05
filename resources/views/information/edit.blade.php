@@ -11,7 +11,7 @@
 		<!--Español-->
         <input type="hidden" name="_method" value="PUT">
 		<div class="spanish-backgorund">
-			<h5>Información en Español</h5>
+            <h5><b>Información en Español</b></h5>
 			<hr>
 			<!--Titulo de la informacion en español-->
 			<div class="row">
@@ -26,17 +26,26 @@
 			<!--Texto de la informacion en español-->
 			<div class="row">
 				<div class="col-3" id="title-info">
-					<p>Texto de la Información</p>
+					<p>Texto:</p>
 				</div>
 				<div class="col-9">
-					<textarea id="summernote_information" name="information_text" value="{{$information->information_text}}"></textarea>
+					<textarea id="summernote_information" name="information_text">{!!$information->information_text!!}</textarea>
 				</div>
 			</div>
+            <!--PDF dela informacion en español-->
+            <div class="row">
+                <div class="col-3" id="title-info">
+                    <p>Archivo PDF:</p>
+                </div>
+                <div class="col-9">
+                    <input accept="file/*" required type="file" name="info_file" value="{{$information->info_file}}">
+                </div>
+            </div>
 		</div>
 		<br>
 		<!--English-->
 		<div class="english-backgorund">
-			<h5>Information on English</h5>
+            <h5><b>Information in English</b></h5>
 			<hr>
 			<!--Titulo de la informacion en ingles-->
 			<div class="row">
@@ -54,37 +63,22 @@
 					<p>Text:</p>
 				</div>
 				<div class="col-9">
-					<textarea id="summernote_information_english" name="en_information_text" value="{{$information->en_information_text}}"></textarea>
-				</div>
-			</div>
-		</div>
-		<br>
-		<!--itailian
-		<div class="italian-backgorund">
-			<h5>Informazione en Italiano</h5>
-			<hr>
-			<!-Titulo de la informacion en italiano
-			<div class="row">
-				<div class="col-3" id="title-info">
-					<p>Titulo:</p>
-				</div>
-				<div class="col-9">
-					<input type="text" required id="it_information_title" name="it_information_title" placeholder="Título de la Información">
+					<textarea id="summernote_information_english" name="en_information_text"> {!! $information->en_information_text !!}</textarea>
 				</div>
 			</div>
 
-			<!-Texto de la informacion en italiano
-			<div class="row">
-				<div class="col-3" id="title-info">
-					<p>Texto:</p>
-				</div>
-				<div class="col-9">
-					<textarea id="summernote_information_italian" name="it_information_text"></textarea>
-				</div>
-			</div>
+            <!--PDF dela informacion en ingles-->
+            <div class="row">
+                <div class="col-3" id="title-info">
+                    <p>PDF File:</p>
+                </div>
+                <div class="col-9">
+                    <input accept="file/*" required type="file" name="info_en_file" value="{{$information->info_en_file}}">
+                </div>
+            </div>
 		</div>
 		<br>
-		-->
+
 		@csrf
 		<div>
 			<input type="submit" name="enviar" value="Guardar">

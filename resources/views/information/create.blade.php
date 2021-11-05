@@ -46,7 +46,7 @@
 		<br>
 		<!--English-->
 		<div class="english-backgorund">
-            <h5><b>Information on English</b></h5>
+            <h5><b>Information in English</b></h5>
 			<hr>
 			<!--Titulo de la informacion en ingles-->
 			<div class="row">
