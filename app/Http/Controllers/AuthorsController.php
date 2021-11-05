@@ -87,9 +87,19 @@ class AuthorsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $author=Author::findOrFail($id);
+        $enter=$request->all();
+        $authors=Author::findOrFail($id);
+        if($authorimg=$request->file('image_author')){
 
-        $author->update($request->all());
+            $infoimg=$authorimg->getClientOriginalName();
+
+            $authorimg->move('images', $infoimg);
+
+            $enter['route_image_author']=$infoimg;
+
+        }
+
+        $authors->update($enter);
 
         return redirect("/admin/authors");
     }

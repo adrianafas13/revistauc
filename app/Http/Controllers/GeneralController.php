@@ -45,9 +45,9 @@ class GeneralController extends Controller
 
     }
 
-    public function contacto(){
+    public function informacion(){
         $information=Information::all();
-        return view('/contacto',compact('information'));
+        return view('/informacion',compact('information'));
     }
     //<!--tentativo-->
     public function edicion(){

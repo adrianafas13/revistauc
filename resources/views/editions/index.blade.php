@@ -4,9 +4,9 @@
 <div class="container">
 <br>
 	<div class="row">
-	
+
 		<div class="col-8">
-			<h4><b>Ediciones Públicadas:</b></h4>
+			<h4><b>Ediciones Publicadas:</b></h4>
 		</div>
 		<!--<div class="col-4">
 			<div class="input-group">
@@ -35,7 +35,7 @@
 			<td><p>{{ $edition->edition_number }}</p></td>
 			<td><p>{{ $edition->edition_title }}</p></td>
 			<td><p>{{ $edition->edition_title_en }}</p></td>
-			<td>	
+			<td>
 			<a href=" {{route('editions.edit', $edition->id)}} " class="btn btn-success btn-sm"><i class="fas fa-edit"></i></a>
 			</td>
 			<td>

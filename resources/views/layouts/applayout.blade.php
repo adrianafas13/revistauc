@@ -9,8 +9,8 @@
         <link  rel="icon" href="/images/unimar-científica.png" type="image/png"/>
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        
-        
+
+
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="{{asset('plugins/fontawesome-free/css/all.min.css') }}">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -46,7 +46,7 @@
                                 <a class="dropdown-item" href="/seccion/biologia">Biología Marina</a>
                                 <a class="dropdown-item" href="/seccion/derecho">Derecho</a>
                                 <a class="dropdown-item" href="/seccion/economia">Economía</a>
-                                <a class="dropdown-item" href="/seccion/educacion">Educación</a> 
+                                <a class="dropdown-item" href="/seccion/educacion">Educación</a>
                                 <a class="dropdown-item" href="/seccion/epistemologia">Epistemología</a>
                                 <a class="dropdown-item" href="/seccion/filosofia">Filosofía</a>
                                 <a class="dropdown-item" href="/seccion/gerencia">Gerencia</a>
@@ -59,7 +59,7 @@
                             <a class="nav-link" href="{{route('edicion')}}">@lang('data.ediciones')</a>
                         </li>
                         <li class="navbar-item">
-                            <a class="nav-link" href="{{route('contacto')}}">@lang('data.contacto')</a>
+                            <a class="nav-link" href="{{route('informacion')}}">@lang('data.contacto')</a>
                         </li>
                         <!------------------------------------------------- BUSCADOR ------------------------------------------------------------>
                         <li class="navbar-item dropdown" id="icons">
@@ -73,8 +73,8 @@
                                 </form>
                             </div>
                         </li>
-                        <!------------------------------------------------- ICONOS DE IDIOMAS ------------------------------------------------------------>                            
-                        <li class="navbar-item dropdown" id="icons"> 
+                        <!------------------------------------------------- ICONOS DE IDIOMAS ------------------------------------------------------------>
+                        <li class="navbar-item dropdown" id="icons">
                             <button class="btn dropdown-toggle" type="button" id="dropdownLanguajeButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <i class="fa fa-globe fa-fw">{{ App::getLocale() }}</i>
                             </button>
@@ -100,7 +100,7 @@
                         @else
                         <li class="nav-item dropdown">
                             <button class="btn dropdown-toggle" type="button" id="dropdownSingUp" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:#fff; margin-top:5px;">
-                                {{ Auth::user()->name }} 
+                                {{ Auth::user()->name }}
                                 <span class="caret">
                             </button>
 
@@ -119,11 +119,11 @@
                                         document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
                                     </a>
-                                                    
+
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                         @csrf
                                     </form>
-                                    
+
                             </div>
 
                         </li>
@@ -135,7 +135,7 @@
 
             </nav>
 
-            <!------------------------------------------------- CONTENIDO ------------------------------------------------------------>       
+            <!------------------------------------------------- CONTENIDO ------------------------------------------------------------>
             <main>
                 @yield('content')
             </main>
@@ -179,7 +179,7 @@
                             </a>
                         </div>
                     </div>
-                    
+
                     <!------------------------------------------------- ENLACE DE UNIMAR ------------------------------------------------------------>
                     <div class="col-sm">
                         <div class="pev-link">
@@ -194,7 +194,7 @@
                     <p><b> Universidad de Margarita 2021 Copyright &copy Todos los derechos reservados</b></p>
                 </div>
             </div>
-            
+
         </div>
     <!------------------------------------------------- SCRIPTS ------------------------------------------------------------>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

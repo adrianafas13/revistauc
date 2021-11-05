@@ -1,9 +1,8 @@
 @extends('layouts.adminlayout')
 @section('content')
-<br><br><br>
 <div class="container">
 	<br>
-	<h4>Comentarios:</h4>
+    <h4><b>Comentarios publicados:</b></h4>
 	<hr>
 
 	<table class="table table-striped table-bordered">
@@ -19,7 +18,7 @@
 
 		<tbody>
 			@foreach($comments as $comment)
-			<tr>	
+			<tr>
 				<td><p>{{ $comment->comment }}</p></td>
 				<td><p>{{ $comment->user->name }}</p></td>
 				<td><p>{{ $comment->article?$comment->article->title:'' }}</p></td>

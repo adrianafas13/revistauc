@@ -3,9 +3,8 @@
 @section('content')
 <div class=".xl-container">
 	<br>
-	<h4>Modificar información de la edición:</h4>
+    <h4><b>Modificación de la edición:</b></h4>
 	<hr>
-
     <br>
     <form method="POST" action="/admin/editions/{{$editions->id}}" enctype="multipart/form-data">
         <input type="hidden" name="_method" value="PUT">
@@ -24,7 +23,6 @@
                 <p>Fecha de la Edicion:</p>
             </div>
             <div class="col-9">
-                <!--<input type="text" required id="edition_date" name="edition_date" placeholder="Número de la Edición">-->
                 <div class="input-group date" id="datepicker">
                     <input type="text" class="form-control" required id="edition_date" name="edition_date" value="{{$editions->edition_date}}">
                     <span class="input-group-append">
@@ -44,9 +42,9 @@
 
             <!--Titulo de la edicion en español-->
             <div class="row">
-                <div class="col-3" id="title-info"> 
-                    <p>Titulo de la Edicion:</p>
-                </div> 
+                <div class="col-3" id="title-info">
+                    <p>Titulo de la Edición:</p>
+                </div>
                 <div class="col-9">
                     <input type="text" required id="edition_title" name="edition_title" value="{{$editions->edition_title}}">
                 </div>
@@ -56,9 +54,9 @@
             <div class="row">
                 <div class="col-3" id="title-info">
                     <p>Descripción de la Edicion:</p>
-                </div> 
+                </div>
                 <div class="col-9">
-                    <textarea id="summernote_edition_description" name="edition_description"></textarea>
+                    <textarea id="summernote_edition_description" name="edition_description">{!! $editions->edition_description !!}</textarea>
                 </div>
             </div>
 
@@ -95,7 +93,7 @@
                     <p>Description of the Edition:</p>
                 </div>
                 <div class="col-9">
-                    <textarea id="summernote_edition_description_en" name="edition_description_en"></textarea>
+                    <textarea id="summernote_edition_description_en" name="edition_description_en">{!! $editions->edition_description_en !!}</textarea>
                 </div>
             </div>
 

@@ -4,13 +4,13 @@
 
 <div class=".xl-container">
 	<br>
-	<h4><b>Nueva Información:</b></h4>
+	<h4><b>Creación de una nueva sección de información:</b></h4>
 	<hr>
 
 	<form method="POST" action="/admin/information" enctype="multipart/form-data">
 		<!--Español-->
 		<div class="spanish-backgorund">
-			<h5>Información en Español</h5>
+            <h5><b>Información en Español</b></h5>
 			<hr>
 			<!--Titulo de la informacion en español-->
 			<div class="row">
@@ -25,28 +25,28 @@
 			<!--Texto de la informacion en español-->
 			<div class="row">
 				<div class="col-3" id="title-info">
-					<p>Texto de la Información</p>
+					<p>Texto:</p>
 				</div>
 				<div class="col-9">
 					<textarea id="summernote_information" name="information_text"></textarea>
 				</div>
 			</div>
 
-			<!--PDF de la informacion
+			<!--PDF de la informacion-->
 			<div class="row">
 				<div class="col-3" id="title-info">
 					<p>Archivo PDF:</p>
 				</div>
 				<div class="col-9">
 					<input accept="file/*" required type="file" name="info_file" value="info_file">
-				</div>	
-			</div>-->
+				</div>
+			</div>
 
 		</div>
 		<br>
 		<!--English-->
 		<div class="english-backgorund">
-			<h5>Information on English</h5>
+            <h5><b>Information on English</b></h5>
 			<hr>
 			<!--Titulo de la informacion en ingles-->
 			<div class="row">
@@ -68,18 +68,18 @@
 				</div>
 			</div>
 
-			<!--PDF dela informacion en ingles
+			<!--PDF dela informacion en ingles-->
 			<div class="row">
 				<div class="col-3" id="title-info">
 					<p>PDF File:</p>
 				</div>
 				<div class="col-9">
 					<input accept="file/*" required type="file" name="info_en_file" value="info_en_file">
-				</div>	
-			</div>-->
+				</div>
+			</div>
 		</div>
 		<br>
-		
+
 		@csrf
 		<div>
 			<input type="submit" name="enviar" value="Guardar">

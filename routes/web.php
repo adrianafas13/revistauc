@@ -7,7 +7,7 @@ Route::get('/articulos', 'GeneralController@arti')->name('articulos');
 Route::get('/seccion/{seccion}', 'ArticlesController@seccion');
 Route::get('/art/{slug}', 'GeneralController@show')->name('art');
 Route::post('/art/{article}', 'GeneralController@store')->name('art.store');
-Route::get('/contacto', 'GeneralController@contacto')->name('contacto');
+Route::get('/informacion', 'GeneralController@informacion')->name('informacion');
 //ruta de edicion tentativa
 Route::get('/edicion', 'GeneralController@edicion')->name('edicion');
 

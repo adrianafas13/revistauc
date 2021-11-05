@@ -41,7 +41,7 @@
 			<hr>
 			<div class="row">
 				<div class="col-3" id="title-info">
-					<p>Título Universitario:</p>
+					<p>Universidad / Institución:</p>
 				</div>
 				<div class="col-9">
 					<input type="text" required id="grades_author" name="grades_author" placeholder="Titulo Universitario del Autor">
@@ -50,7 +50,7 @@
 			<!--Reseña del Autor-->
 			<div class="row">
 				<div class="col-3" id="title-info">
-					<p>Reseña del Autor:</p>
+					<p>Estudios:</p>
 				</div>
 				<div class="col-9">
 					<textarea id="summernote_author_spanish" name="resume_author"></textarea>

@@ -4,7 +4,7 @@
 <br>
 	<div class="row">
 	    <div class="col-8">
-            <h4><b>Lista de Artículos Públicados:</b></h4>
+            <h4><b>Lista de Artículos Publicados:</b></h4>
 		</div>
 		<!--div class="col-4">
 			<div class="input-group">

@@ -6,13 +6,13 @@
 	<div class="col-8">
 			<h4><b>Informacion disponible:</b></h4>
 		</div>
-		<div class="col-4">
+		<!--div class="col-4">
 			<div class="input-group">
 				<input type="search" class="form-control rounded" placeholder="Buscar..." aria-label="Search"
 					aria-describedby="search-addon" />
 				<button type="button" class="btn btn-outline-primary">Buscar</button>
 			</div>
-		</div>
+		</div-->
 	</div>
 	<hr>
 
@@ -47,8 +47,8 @@
 		</tbody>
 
 	</table>
-	
+
 	<br>
 </div>
 
-@endsection 
+@endsection
