@@ -5,16 +5,16 @@
 <div class="main">
     <div class="container-fluid">
         <div class="row">
-    <!------------------------------------------------- CAROUSEL ------------------------------------------------------------>
-            <div class="col-md-8">
+    <!------------------------------------------------- portada ------------------------------------------------------------>
+            <div class="col-md-6">
             <br>
                 <div class="edition-cover">
-                    <img src="/images/{{ $edition->edition_route_image }}" class="d-block w-100" style="height:505px;">
+                    <img src="/images/{{ $edition->edition_route_image }}" style="display:block; width: 92%; margin:0 auto;">
                 </div>
             </div>
 
     <!------------------------------------------------- BARRA LATERAL ------------------------------------------------------------>
-            <div class="col-md-4" id="popular">
+            <div class="col-md-6" id="popular">
                 <div class="list-group">
                     <!-- titulo -->
                     <div class="list-group-item list-group-item-action" id="popular_header_barside">
