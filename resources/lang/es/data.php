@@ -3,8 +3,9 @@
 return [
 
 	//HOME
-	'popular'=> 'Artículos Destacados',
+	'indice'=> 'Indice',
 	'edicion' => 'EDICIÓN',
+    'ver_mas'=> 'Ver más',
 	//NAVBAR
 	'ediciones' => 'Ediciones',
 	'contacto' => 'Información',
@@ -13,18 +14,15 @@ return [
 	'español' => 'ES',
 	'ingles' => 'EN',
 	'italiano' => 'IT',
-	//LINEAS DE INVESTIGACION
-	'administracion' => 'Administración',
-	'arte' => 'Arte',
-	'idiomas' => 'Idiomas',
-	'informatica' => 'Informática',
+	//AREAS DE CONOCIMIENTO
+	'biologia' => 'Biología',
 	'derecho' => 'Derecho',
-	'gerencia' => 'Gerencia',
+	'economia' => 'Economía',
 	'educacion' => 'Educación',
-	'historia' => 'Historia',
-	'salud' => 'Salud',
-	'turismo' => 'Turismo',
-	//LOGIN 
+	'epistemologia' => 'Epistemología',
+    'filosofia' => 'Filosofía',
+	'gerencia' => 'Gerencia',
+	//LOGIN
 	'iniciar_sesion'=> 'Iniciar Sesión',
 	'correo' => 'Correo Electronico',
 	'contraseña' => 'Contraseña',

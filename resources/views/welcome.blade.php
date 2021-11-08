@@ -19,7 +19,7 @@
                     <!-- titulo -->
                     <div class="list-group-item list-group-item-action" id="popular_header_barside">
                         <div class="d-flex w-100 justify-content-between">
-                            <h5><b>Indice</b></h5>
+                            <h5><b>@lang('data.indice')</b></h5>
                             <i class="fas fa-list"></i>
                         </div>
                     </div>
@@ -60,7 +60,7 @@
                         <h5><b>{{ App::isLocale('es')?$article->title:$article->en_title }}</b></h5>
                         <p>{{ $article->author->name_author }}</p>
                         <p class="card-text"><small class="text-muted">{{ $edition->edition_date }}</small></p>
-                        <a type="button" class="btn btn-outline-dark" href="{{route('art', $article->slug)}}">Ver más</a>
+                        <a type="button" class="btn btn-outline-dark" href="{{route('art', $article->slug)}}">@lang('data.ver_mas')</a>
                     </div>
                 </div>
             </div>

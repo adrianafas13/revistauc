@@ -43,13 +43,13 @@
                                 <span class="caret"></span>
                             </a>
                             <div class=" dropdown-menu" id="lineas" arial-labelledby="dropdown_target" style="text-align: center;">
-                                <a class="dropdown-item" href="/seccion/biologia">Biología Marina</a>
-                                <a class="dropdown-item" href="/seccion/derecho">Derecho</a>
-                                <a class="dropdown-item" href="/seccion/economia">Economía</a>
-                                <a class="dropdown-item" href="/seccion/educacion">Educación</a>
-                                <a class="dropdown-item" href="/seccion/epistemologia">Epistemología</a>
-                                <a class="dropdown-item" href="/seccion/filosofia">Filosofía</a>
-                                <a class="dropdown-item" href="/seccion/gerencia">Gerencia</a>
+                                <a class="dropdown-item" href="/seccion/biologia">@lang('data.biologia')</a>
+                                <a class="dropdown-item" href="/seccion/derecho">@lang('data.derecho')</a>
+                                <a class="dropdown-item" href="/seccion/economia">@lang('data.economia')</a>
+                                <a class="dropdown-item" href="/seccion/educacion">@lang('data.educacion')</a>
+                                <a class="dropdown-item" href="/seccion/epistemologia">@lang('data.epistemologia')</a>
+                                <a class="dropdown-item" href="/seccion/filosofia">@lang('data.filosofia')</a>
+                                <a class="dropdown-item" href="/seccion/gerencia">@lang('data.gerencia')</a>
                             </div>
                         </li>
                         <li class="navbar-item">

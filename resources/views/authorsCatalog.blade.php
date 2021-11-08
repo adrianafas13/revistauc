@@ -20,9 +20,9 @@
                                     </div>
                                     <div class="col-md-8">
                                         <div class="card-body" style="margin-left: 25px">
-                                            <h5 class="card-title">{{ $author->name_author}}</h5>
-                                            <p class="card-text">{{ $author->email_author}}</p>
-                                            <p class="card-text"><small class="text-muted">{{ $author->grades_author}}</small></p>
+                                            <h5 class="card-title"><b>{{ $author->name_author}}</b></h5>
+                                            <p class="card-text"><small class="text-muted">{{ $author->email_author}}</small></p>
+                                            <p class="card-text">{{ $author->grades_author}}</p>
                                         </div>
                                     </div>
                                 </div>

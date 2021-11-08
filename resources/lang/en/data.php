@@ -2,8 +2,9 @@
 //engish
 return [
 	//HOME
-	'popular'=> 'Featured Articles',
+	'indice'=> 'Index',
 	'edicion' => 'EDITION',
+    'ver_mas'=> 'See more',
 	//NAVBAR
 	'ediciones' => 'Editions',
 	'contacto' => 'Information',
@@ -12,18 +13,15 @@ return [
 	'español' => 'ES',
 	'ingles' => 'EN',
 	'italiano' => 'IT',
-	//LINEAS DE INVESTIGACION
-	'administracion' => 'Administration',
-	'arte' => 'Art',
-	'idiomas' => 'Languajes',
-	'informatica' => 'Computing',
-	'derecho' => 'Law',
-	'gerencia' => 'Management',
-	'educacion' => 'Education',
-	'historia' => 'History',
-	'salud' => 'Heath',
-	'turismo' => 'Tourism',
-	//LOGIN 
+    //AREAS DE CONOCIMIENTO
+    'biologia' => 'Biology',
+    'derecho' => 'Laws',
+    'economia' => 'Economy',
+    'educacion' => 'Education',
+    'epistemologia' => 'Epistemology',
+    'filosofia' => 'Philosophy',
+    'gerencia' => 'Management',
+	//LOGIN
 	'iniciar_sesion'=> 'Log In',
 	'correo' => 'E-mail',
 	'contraseña' => 'Password',

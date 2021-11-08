@@ -26,7 +26,6 @@
                                     <h6><a href="#" class="badge">{{ $article->section }}</a></h6>
                                     <h5><b>{{ App::isLocale('es')?$article->title:$article->en_title }}</b></h5>
                                     <p>{{ $article->author->name_author }}</p>
-
                                     <a type="button" class="btn btn-outline-dark" href="{{route('art', $article->slug)}}">Ver más</a>
                                 </div>
                             </div>

@@ -29,8 +29,7 @@ class ArticlesController extends Controller
 
     public function seccion($seccion){
         $articles=Article::where('section',$seccion)->paginate();
-        $authors=Author::orderBy('id', 'desc')->take(1)->get();
-        return view("/articulos" , compact("articles"));
+        return view("articulos" , compact("articles"));
     }
 
     public function store(ArticleRequest $request)
