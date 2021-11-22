@@ -74,7 +74,7 @@
 					<p>Título:</p>
 				</div>
 				<div class="col-9">
-					<input type="text" required id="title" name="title" placeholder="Título del Artículo">
+					<input id="texto" type="text" required id="title" name="title" placeholder="Título del Artículo">
 				</div>
 			</div>
 
@@ -121,7 +121,7 @@
 					<p>Title:</p>
 				</div>
 				<div class="col-9">
-					<input type="text" required id="en_title" name="en_title" placeholder="Title of Article">
+					<input id="texto" type="text" required id="en_title" name="en_title" placeholder="Title of Article">
 				</div>
 			</div>
 

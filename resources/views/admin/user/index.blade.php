@@ -36,7 +36,7 @@
 				<th>{{ implode(', ', $user->roles()->get()->pluck('name')->toArray()) }}</th>
 				<th>
 					<a href=" {{route('user.edit', $user->id )}} ">
-						<button type="button" class="btn btn-success btn-sm"><i class="fas fa-edit"></i></button>
+						<button type="button" class="btn btn-warning btn-sm"><i class="fas fa-edit"></i></button>
 					</a>
 				</th>
 

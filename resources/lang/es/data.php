@@ -22,6 +22,10 @@ return [
 	'epistemologia' => 'Epistemología',
     'filosofia' => 'Filosofía',
 	'gerencia' => 'Gerencia',
+    //CATALOGO DE AUTORES
+    'catalogo' => 'Catálogo de Autores',
+    //EDICIONES
+    'ediciones' => 'Listado de Ediciones',
 	//LOGIN
 	'iniciar_sesion'=> 'Iniciar Sesión',
 	'correo' => 'Correo Electronico',

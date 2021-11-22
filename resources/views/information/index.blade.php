@@ -33,7 +33,7 @@
 			<td><p>{{ $information->information_title }}</p></td>
 			<td><p>{{ $information->en_information_title }}</p></td>
 				<th>
-				<a href=" {{route('information.edit', $information->id)}} " class="btn btn-success btn-sm"><i class="fas fa-edit"></i></a>
+				<a href=" {{route('information.edit', $information->id)}} " class="btn btn-warning btn-sm"><i class="fas fa-edit"></i></a>
 				</th>
 				<th>
 					<form action="{{route('information.destroy', $information->id)}}"  method="POST"">

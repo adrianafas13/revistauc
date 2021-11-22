@@ -36,7 +36,7 @@
 			<td><p>{{ $edition->edition_title }}</p></td>
 			<td><p>{{ $edition->edition_title_en }}</p></td>
 			<td>
-			<a href=" {{route('editions.edit', $edition->id)}} " class="btn btn-success btn-sm"><i class="fas fa-edit"></i></a>
+			<a href=" {{route('editions.edit', $edition->id)}} " class="btn btn-warning btn-sm"><i class="fas fa-edit"></i></a>
 			</td>
 			<td>
 				<form action="{{route('editions.destroy', $edition->id)}}" method="post">

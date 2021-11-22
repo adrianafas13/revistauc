@@ -21,6 +21,10 @@ return [
     'epistemologia' => 'Epistemology',
     'filosofia' => 'Philosophy',
     'gerencia' => 'Management',
+    //CATALOGO DE AUTORES
+    'catalogo' => 'Authors Catalog',
+    //EDICIONES
+    'ediciones' => 'List of Editions',
 	//LOGIN
 	'iniciar_sesion'=> 'Log In',
 	'correo' => 'E-mail',

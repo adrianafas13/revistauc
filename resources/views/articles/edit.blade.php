@@ -73,7 +73,7 @@
 					<p>Título:</p>
 				</div>
 				<div class="col-9">
-					<input type="text" required id="title" value="{{$article->title}}">
+					<input id="texto" type="text" required id="title" value="{{$article->title}}">
 				</div>
 			</div>
 
@@ -120,7 +120,7 @@
 					<p>Title:</p>
 				</div>
 				<div class="col-9">
-					<input type="text" required id="en_title" value="{{$article->en_title}}">
+					<input id="texto" type="text" required id="en_title" value="{{$article->en_title}}">
 				</div>
 			</div>
 

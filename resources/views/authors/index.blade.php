@@ -32,7 +32,7 @@
 		<tr>
 			<td><p>{{ $author->name_author }}</p></td>
 			<td>
-				<a href=" {{route('authors.edit', $author->id)}} " class="btn btn-success btn-sm"><i class="fas fa-edit"></i></a>
+				<a href=" {{route('authors.edit', $author->id)}} " class="btn btn-warning btn-sm"><i class="fas fa-edit"></i></a>
 			</td>
 			<td>
 				<form action="{{route('authors.destroy', $author->id)}}" method="post">

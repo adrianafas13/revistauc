@@ -4,7 +4,7 @@
 <br>
     <div class="container" >
         <div class="title-sections">
-            <h4><b>EDICIONES PUBLICADAS</b></h4>
+            <h4><b>@lang('data.ediciones')</b></h4>
         </div>
         <hr>
 

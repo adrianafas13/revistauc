@@ -38,7 +38,7 @@
 			<td><p>{{ $article->author->name_author }}</p></td>
 			<td><p>{{ $article->section }}</p></td>
 			<td>
-				<a href="{{route('article.edit', $article->id)}}" class="btn btn-success btn-sm"><i class="fas fa-edit"></i></a>
+				<a href="{{route('article.edit', $article->id)}}" class="btn btn-warning btn-sm"><i class="fas fa-edit"></i></a>
 			</td>
 			<td>
 				<form action="{{route('article.destroy', $article->id)}}" method="post">

@@ -15,7 +15,7 @@
                 <p>Número de la Edición:</p>
             </div>
             <div class="col-9">
-                <input type="text" required id="edition_number" name="edition_number" placeholder="Número de la Edición">
+                <input id="texto" type="text" required id="edition_number" name="edition_number" placeholder="Número de la Edición">
             </div>
         </div>
 
@@ -48,7 +48,7 @@
                     <p>Título de la Edición:</p>
                 </div>
                 <div class="col-9">
-                    <input type="text" required id="edition_title" name="edition_title" placeholder="Título de la Edición">
+                    <input id="texto" type="text" required id="edition_title" name="edition_title" placeholder="Título de la Edición">
                 </div>
             </div>
 
@@ -85,7 +85,7 @@
                     <p>Title of the Edition:</p>
                 </div>
                 <div class="col-9">
-                    <input type="text" required id="edition_title_en" name="edition_title_en" placeholder="Title of the Edition">
+                    <input id="texto" type="text" required id="edition_title_en" name="edition_title_en" placeholder="Title of the Edition">
                 </div>
             </div>
 

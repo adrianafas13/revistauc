@@ -1,44 +1,42 @@
+
 @extends('layouts.applayout')
 @section('content')
+<div class="main">
+  <br>
 
   <div class="container" >
-  <br>
     <h4><b>INFORMACÍON</b></h4>
     <hr>
-    <div class="row">
 
-    <div class="col-md-6">
-    <br>
-        <h6><b>SOBRE LA REVISTA</b></h6>
-        <hr>
-        <p align="justify">La Revista UNIMAR CIENTÍFICA, será una publicación arbitrada, con proyección de ser indexada, adscrita al Vicerrectorado académico y al  Subsistema de Investigación y Posgrado de la Universidad de Margarita. Difundirá trabajos científicos originales relacionados con las diferentes áreas del conocimiento, con la finalidad de fortalecer la divulgación de saberes,  posibilitar el intercambio entre pares y estimular la producción científica de la región.  Su aparición será semestral.</p>
-        <div class="button-article">
-					<a href="/files/resena.pdf" type="button" class="btn btn-outline-dark"></i>Reseña Historica</a>
-				</div>
-        <br>
-      </div>
-    @foreach ($information as $info)
+    @if (count($information))
+      @foreach ($information as $info)
+        <div class="accordion" id="myCollapsible">
 
-      <div class="col-md-6">
-      <br>
-        <h6><b>{{ $info->information_title }}</b></h6>
-        <hr>
-        <p>{!! $info->information_text !!}</p>
+          <div class="card">
 
-      </div>
-      <br>
+            <div class="card-header" id="heading">
+              <h2 class="mb-0">
+                <button class="btn btn-block text-left" type="button"  id="#collapse{{ $info->id }}" data-toggle="collapse" href="#collapse{{ $info->id }}" aria-expanded="false" aria-controls="collapse{{ $info->id }}">
+                  <h6><b>{{ $info->information_title }}<i class="fas fa-chevron-down"></i></b></h6>
+                </button> 
+              </h2>
+            </div>
+
+            <div id="collapse{{ $info->id }}" class="collapse in" data-parent="#collapse{{ $info->id }}">
+              <div class="card-body">
+                <p>{!! $info->information_text !!}</p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
       @endforeach
+    @endif
 
-      <div class="col-md-6">
-      <br>
-        <h6><b>NORMATIVAS DE PUBLICACIÓN</b></h6>
-        <hr>
-        <div class="button-article">
-					<a href="/files/resena.pdf" type="button" class="btn btn-outline-dark"></i>Normativas</a>
-				</div>
-        <br>
-      </div>
   </div>
   <br>
+
 </div>
 @endsection
