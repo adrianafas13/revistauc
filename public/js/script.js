@@ -1,22 +1,7 @@
-//navbar script
-/*let menuOpenBtn = document.querySelector(".navbar .bx-menu");
-let closeOpenBtn = document.querySelector(".nav-links .bx-x");
-let navLinks = document.querySelector(".nav-links");
-let dropdown_arrow = document.querySelector(".hoverarrow");
-/*menuOpenBtn.addEventListener("click", ()=>{
-    navLinks.style.left="0";
-});
-closeOpenBtn.addEventListener("click", ()=>{
-    navLinks.style.left="-100%";
-});
-//sidebar
-dropdown_arrow.addEventListener("click", ()=>{
-    navLinks.classList.toggle("show");
-});*/
 //data picker
-$(function(){
-    $('#datepicker').datepicker({
-        orientation: "bottom"
+$(function () {
+    $("#datepicker").datepicker({
+        orientation: "bottom",
     });
 });
 
