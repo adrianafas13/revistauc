@@ -20,10 +20,6 @@
 					<img src="/images/{{$article->ruta_image}}">
 				</div>
 
-				<div class="info-img">
-					<i><small class="text-muted">información de la imagen</small></i>
-				</div>
-
 				<br>
 
 				<div class="resume-article">
@@ -45,22 +41,23 @@
 			<div class="col-sm-3" id="content_bar_right">
 				<div class="content">
                     <br>
-                    <h6><b>Información del Autor</b></h6>
+                    <h6><b>@lang('data.info_authors')</b></h6>
                     <hr>
                     <img src="/images/{{ $article->author->route_image_author }}" class="img-fluid">
                     <br>
                     <div class="info-container">
                         <ul class="author-article" >
                             <p><b>{{ $article->author->name_author }}</b></p>
-                            <p>{{ $article->author->grades_author }}</p>
-                            <p><b>Contacto: </b>{{ $article->author->email_author }}</p>
+							
+                            <p>{{ App::isLocale('es')?$article->author->grades_author:$article->author->en_grades_author }}</p>
+                            <p><b>@lang('data.email') </b>{{ $article->author->email_author }}</p>
                         </ul>
                         <ul class="bio-author" >
-                            <p>{!! $article->author->resume_author !!}</p>
+                            <p>{!! App::isLocale('es')?$article->author->resume_author:$article->author->en_resume_author !!}</p>
                         </ul>
                         <br>
-                        <ul class="section-article" >
-                            <p><b>@lang('data.seccion'): </b> {{ $article->section }}</p>
+                        <ul class="card-body" >
+							<h6><a class="badge">{{ $article->section }}</a></h6>
                         </ul>
                     </div>
 				</div>

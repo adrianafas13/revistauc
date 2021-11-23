@@ -25,6 +25,7 @@ return [
     //CATALOGO DE AUTORES
     'catalogo' => 'Catálogo de Autores',
 	'articulos_autor' => "Artículos del Autor:",
+	'info_authors' => 'Información del Autor',
     //EDICIONES
     'ediciones' => 'Listado de Ediciones',
 	'fechap' => 'Fecha de Publicación:',
@@ -56,6 +57,6 @@ return [
 	'descarga' => 'Descargar Artículo',
 	'fecha' => 'Fecha',
 	'autor'=>'Autor',
-	'seccion' => 'Sección'
+	'email' => 'Correo:',
 
 ];
