@@ -69,9 +69,10 @@
                             <div class="dropdown-menu dropdown-menu-lg-right" aria-labelledby="dropdownSearch" style="aling-items: center;">
                                 <form class="px-4 py-3" type="get" action=" {{route('search')}} ">
                                     <input class="input" type="text" name="query" placeholder="@lang('data.buscar')...">
-                                    <button type="submit" class="btn btn-success">@lang('data.buscar')</button>
+                                    <button type="button" class="btn btn-success">@lang('data.buscar')</button>
                                 </form>
                             </div>
+                            
                         </li>
                         <!------------------------------------------------- ICONOS DE IDIOMAS ------------------------------------------------------------>
                         <li class="navbar-item dropdown" id="icons">
@@ -191,7 +192,7 @@
 
                 </div>
                 <div class="footer-copy" style="align:center">
-                    <p><b> Universidad de Margarita 2021 Copyright &copy Todos los derechos reservados</b></p>
+                    <p><b> Universidad de Margarita 2021 Copyright &copy @lang('data.derechos')</b></p>
                 </div>
             </div>
 

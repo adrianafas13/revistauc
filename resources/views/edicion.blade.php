@@ -20,12 +20,12 @@
                 <div class="col-md-8">
                     <div class="card-body">
                         <h5><b>{{ App::isLocale('es')?$edition->edition_title:$edition->edition_title_en }}</b></h5>
-                        <p><b>FECHA DE PUBLICACIÓN: </b> 01/11/2021</p>
-                        <p>{!! $edition->edition_description !!}</p>
+                        <p><b> @lang('data.fechap') </b> {{ $edition->edition_date }}</p>
+                        <p>{!! App::isLocale('es')?$edition->edition_description:$edition->edition_description_en !!}</p>
 
 
 
-                        <a href="/files/fulledition.pdf" type="button" class="btn btn-outline-dark">Edición Completa</a>
+                        <a href="#" type="button" class="btn btn-outline-dark">@lang('data.full_edition')</a>
                     </div>
                 </div>
             </div>

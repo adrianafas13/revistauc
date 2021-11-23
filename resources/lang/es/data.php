@@ -1,5 +1,5 @@
 <?php
-//español
+//español 
 return [
 
 	//HOME
@@ -24,8 +24,13 @@ return [
 	'gerencia' => 'Gerencia',
     //CATALOGO DE AUTORES
     'catalogo' => 'Catálogo de Autores',
+	'articulos_autor' => "Artículos del Autor:",
     //EDICIONES
     'ediciones' => 'Listado de Ediciones',
+	'fechap' => 'Fecha de Publicación:',
+	'full_edition' => 'Edicion Comppleta',
+	//INFORMACION
+	'info' => 'Información',
 	//LOGIN
 	'iniciar_sesion'=> 'Iniciar Sesión',
 	'correo' => 'Correo Electronico',
@@ -39,9 +44,7 @@ return [
 	'rep_contraseña' => 'Repita su contraseña',
 	//FOOTER
 	'redes_sociales' => 'Siguenos en',
-	'info_contacto' => 'Contacto',
-	'telefono' => 'Teléfono',
-	'postgrado' => 'Departamento de Postgrado',
+	'derechos' => 'Todos los derechos reservados',
 	//BUSQUEDA
 	'resultados' => 'Resultados',
 	'buscar' => 'Buscar',

@@ -1,5 +1,5 @@
 <?php
-//engish
+//engish 
 return [
 	//HOME
 	'indice'=> 'Index',
@@ -23,8 +23,13 @@ return [
     'gerencia' => 'Management',
     //CATALOGO DE AUTORES
     'catalogo' => 'Authors Catalog',
+	'articulos_autor' => "Author's Articles:",
     //EDICIONES
     'ediciones' => 'List of Editions',
+	'fechap' => 'Publication Date:',
+	'full_edition' => 'Full Edition',
+	//INFORMACION
+	'info' => 'Information',
 	//LOGIN
 	'iniciar_sesion'=> 'Log In',
 	'correo' => 'E-mail',
@@ -38,9 +43,8 @@ return [
 	'rep_contraseña' => 'Repeat your password',
 	//FOOTER
 	'redes_sociales' => 'Follow Us',
-	'info_contacto' => 'Contact',
-	'telefono' => 'Phone',
-	'postgrado' => 'Postgraduate Department',
+	'derechos' => 'All rights reserved',
+
 	//BUSQUEDA
 	'resultados' => 'Results',
 	'buscar' => 'Search',

@@ -28,8 +28,11 @@ class ArticlesController extends Controller
     }
 
     public function seccion($seccion){
-        $articles=Article::where('section',$seccion)->paginate();
-        return view("articulos" , compact("articles"));
+        $articles=Article::all();
+        $authors=Author::all();
+        $editions=Edition::all();
+        $articles=Article::where('section',$seccion)->paginate(10);
+        return view("articulos" , compact("articles","editions", "authors"));
     }
 
     public function store(ArticleRequest $request)

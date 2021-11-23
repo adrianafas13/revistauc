@@ -29,22 +29,23 @@
                         <div class="col-md-6 col-sm-12">
                             <div class="row">
                                 <div class="col-md-4 col-sm-12">
-                                    <img src="/images/{{ $author->route_image_author }}" style="width: 100%; height: 100%">
+                                    <img src="/images/{{ $author->route_image_author }}" style="width: 215px; height: 265px;">
                                 </div>
                                 <div class="col-md-8 col-sm-12">
-                                    <div class="card-body" style="margin-left: 15px">
+                                    <div class="card-body" style="padding-left: 45px">
                                         <h5 class="card-title"><b>{{ $author->name_author}}</b></h5>
                                         <p class="card-text"><small class="text-muted">{{ $author->email_author}}</small></p>
-                                        <p class="card-text">{!! $author->grades_author !!}</p>
+                                        <p class="card-text">{{ App::isLocale('es')?$author->grades_author:$author->en_grades_author }}</p>
+                                        <p class="card-text">{!! App::isLocale('es')?$author->resume_author:$author->en_resume_author !!}</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-6 col-sm-12">
                             <br>
-                            <h6><b>Artículos del Autor:<b></h6>
+                            <h6><b>@lang('data.articulos_autor')<b></h6>
                             <hr>
-                        </div>
+                        </div> 
                     </div>
 
                     

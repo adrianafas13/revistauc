@@ -72,10 +72,11 @@ class GeneralController extends Controller
         $search_text = $_GET['query'];
         $articles = Article::where('title', 'LIKE', '%'.$search_text.'%')
             ->orWhere('en_title', 'LIKE', '%'.$search_text.'%')
-            ->orWhere('author', 'LIKE', '%'.$search_text.'%')
-            ->paginate(9);
+            ->paginate(10);
+        $authors = Author::where('name_author', 'LIKE', '%'.$search_text.'%')
+            ->paginate(10);
 
-        return view('/search', compact('articles'));
+        return view('/search', compact('articles','authors'));
     }
 
     public function store(Request $request)
