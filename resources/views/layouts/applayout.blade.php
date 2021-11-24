@@ -151,22 +151,22 @@
                                 <p><b>@lang('data.redes_sociales')</p></b>
                             </div>
                             <li class="nav-item">
-                                <a href=#facebook>
+                                <a href="http://www.facebook.com/">
                                     <img src="{{ asset('images/Facebook-White.png') }}" alt="logo blanco" style="width:35px; height:auto; margin-top:2px;">
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href=#instagram>
+                                <a href="http://www.instagram.com/">
                                     <img src="{{ asset('images/Instagram-White.png') }}" alt="logo blanco" style="width:45px; height:auto; margin-top:10px;">
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href=#twitter>
+                                <a href="http://www.twitter.com/">
                                     <img src="{{ asset('images/Twitter-White.png') }}" alt="logo blanco" style="width:50px; height:auto; margin-top:10px;">
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href=#linkedin>
+                                <a href="http://www.linkedin.com/">
                                     <img src="{{ asset('images/Linkedin-White.png') }}" alt="logo blanco" style="width:55px; height:auto; margin-top:10px;">
                                 </a>
                             </li>
@@ -184,7 +184,7 @@
                     <!------------------------------------------------- ENLACE DE UNIMAR ------------------------------------------------------------>
                     <div class="col-sm">
                         <div class="pev-link">
-                            <a href="http://www.unimar.edu.ve/unimarportal/index.php">
+                            <a href="http://www.unimarcientifica.edu.ve/aulavirtual">
                                 <img src="{{ asset('images/moodle.png') }}" alt="logo blanco" style="width:100px; height:90px; margin-top:60px;">
                             </a>
                         </div>
