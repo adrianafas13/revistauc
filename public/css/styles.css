@@ -407,40 +407,23 @@ li.navbar-item a:focus {
     position: absolute;
     right: 1rem;
 }
-/*****************MODALES DE LOS AUTORES***************/
-.modal-content .modal-author-content .modal-header {
-    background-color: #d1d1d1;
-    position: relative;
-    color: #000;
-    height: 58px;
-    font-size: 18px;
+/*------------------------------------------AUTORES---------------------------------------------------*/
+.accordion .card .card-body #imgcontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.modal-content .modal-author-content .modal-body {
-    color: #313131;
+.accordion .card .card-body #imgauthor {
+    width: 160px;
+    height: 160px;
+    border-radius: 80%;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 4px 4px rgba(158, 158, 158, 0.4);
 }
-.modal-content .modal-author-content .modal-body .modal-info-author {
-    line-height: 3px;
-    margin-top: 10px;
-}
-.modal-content
-    .modal-author-content
-    .modal-body
-    .modal-info-author
-    .modal-author-name
-    p {
-    margin-left: 5px;
-    font-size: 15px;
-}
-.modal-content
-    .modal-author-content
-    .modal-body
-    .modal-info-author
-    .modal-author-article
-    p {
-    margin-left: 9px;
-    font-size: 13px;
-    line-height: 17px;
-}
+
 /******************************************************/
 .title-sections h2 {
     text-align: left;
@@ -546,7 +529,7 @@ div.content {
     justify-content: center;
 }
 
-/********************************************/
+/***********************admin*********************/
 .spanish-backgorund {
     background-color: #fdf5001e;
     border-radius: 10px;
