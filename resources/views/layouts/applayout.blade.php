@@ -143,33 +143,22 @@
             <!------------------------------------------------- FOOTER ------------------------------------------------------------>
 
             <div class="footer col-sm-12">
-                <div class="row">
+                <div class="row" id="contenido-footer">
+                
+                
+                
                     <!------------------------------------------------- REDES SOCIALES ------------------------------------------------------------>
                     <div class="col-sm">
                         <ul id="social-media">
                             <div class="social-media-title">
                                 <p><b>@lang('data.redes_sociales')</p></b>
                             </div>
-                            <li class="nav-item">
-                                <a href="http://www.facebook.com/">
-                                    <img src="{{ asset('images/Facebook-White.png') }}" alt="logo blanco" style="width:35px; height:auto; margin-top:2px;">
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="http://www.instagram.com/">
-                                    <img src="{{ asset('images/Instagram-White.png') }}" alt="logo blanco" style="width:45px; height:auto; margin-top:10px;">
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="http://www.twitter.com/">
-                                    <img src="{{ asset('images/Twitter-White.png') }}" alt="logo blanco" style="width:50px; height:auto; margin-top:10px;">
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="http://www.linkedin.com/">
-                                    <img src="{{ asset('images/Linkedin-White.png') }}" alt="logo blanco" style="width:55px; height:auto; margin-top:10px;">
-                                </a>
-                            </li>
+                            <div class="social-icons">
+                                <a href="/" class="social__icon--link"><i class="fab fa-facebook-f"></i></a>
+                                <a href="/" class="social__icon--link"><i class="fab fa-instagram"></i></a>
+                                <a href="/" class="social__icon--link"><i class="fab fa-twitter"></i></a>
+                                <a href="/" class="social__icon--link"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
                         </ul>
                     </div>
                     <!------------------------------------------------- BLANC SPACE ------------------------------------------------------------>
@@ -185,7 +174,7 @@
                     <div class="col-sm">
                         <div class="pev-link">
                             <a href="http://www.unimarcientifica.edu.ve/aulavirtual">
-                                <img src="{{ asset('images/moodle.png') }}" alt="logo blanco" style="width:100px; height:90px; margin-top:60px;">
+                                <img src="{{ asset('images/moodle.png') }}" alt="logo blanco" style="width:100px; height:120px; margin-top:60px;">
                             </a>
                         </div>
                     </div>

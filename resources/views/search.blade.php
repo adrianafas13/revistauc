@@ -9,7 +9,9 @@
     </div>
     <hr>
 
-    <div class="container mt-5">
+    <div class="row">
+        <div class="col-12 .col-sm-12 col-md-6 .col-lg-6 .col-xl-6">
+            <div class="container mt-5">
                 <!-- articulo -->
                 @foreach($articles as $article)
                 <div class="card mb-3">
@@ -33,6 +35,8 @@
                 @endforeach
                 <br>
             </div>
+        </div>
+    </div>
   
     <div class="personalize-pagination" style="display:flex;justify-content:center;"> 
     {{ $articles->links() }}

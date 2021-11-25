@@ -184,15 +184,23 @@ li.navbar-item a:focus {
     padding: 1em;
     width: 100%;
 }
+.footer #contenido-footer {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
 .footer ul#social-media .social-media-title {
     margin-top: 45px;
 }
-.footer ul#social-media .social-media-title p {
-    text-transform: uppercase;
-    font-weight: 500;
+
+.footer #contenido-footer .social-icons .social__icon--link {
+    color: #fff;
+    font-size: 24px;
 }
-.footer ul#social-media li {
-    display: inline-block;
+.footer #contenido-footer .social-icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 180px;
 }
 
 .footer .unimar-link img {
@@ -201,8 +209,8 @@ li.navbar-item a:focus {
     margin-top: 35px;
 }
 .footer .pev-link img {
-    width: 210px;
-    height: 200px;
+    width: 220px;
+    height: 290px;
 }
 /*-------------------------------------------HOME-----------------------------------------------------------*/
 .edition-cover img {
@@ -423,7 +431,12 @@ li.navbar-item a:focus {
     margin-right: auto;
     box-shadow: 4px 4px rgba(158, 158, 158, 0.4);
 }
-
+.accordion .card .card-body #infoautorcontainer {
+    padding-left: 45px;
+}
+.accordion .card .card-body #link-author a {
+    text-decoration: none;
+}
 /******************************************************/
 .title-sections h2 {
     text-align: left;

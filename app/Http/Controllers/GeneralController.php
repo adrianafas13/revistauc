@@ -21,8 +21,6 @@ class GeneralController extends Controller
             $article->author = Author::where('id', (int) $article->author_id)->get()->first();
             $articlesData[] = $article;
         }
-//        echo(json_encode($articlesData[0]->author,JSON_PRETTY_PRINT));
-//        die();
         $articles = $articlesData;
         return view('/welcome',compact('articles', 'edition'));
 	}
@@ -34,7 +32,8 @@ class GeneralController extends Controller
     }
 
     public function authors(){
-        $authors=Author::orderBy('name_author')->get();
+        $authors=Author::with(['articles'])->orderBy('name_author')->get();
+        
         return view('/authorsCatalog',compact('authors'));
     }
 

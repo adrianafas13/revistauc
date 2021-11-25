@@ -6,7 +6,7 @@
     <div class="container-fluid">
         <div class="row">
     <!------------------------------------------------- portada ------------------------------------------------------------>
-            <div class="col-md-6">
+            <div class="col-12 .col-sm-12 col-md-6 .col-lg-6 .col-xl-6">
             <br>
                 <div class="edition-cover">
                     <img src="/images/{{ $edition->edition_route_image }}" style="display:block; width: 92%; margin:0 auto;">
@@ -14,7 +14,7 @@
             </div>
 
     <!------------------------------------------------- BARRA LATERAL ------------------------------------------------------------>
-            <div class="col-md-6" id="popular">
+            <div class="col-12 .col-sm-12 col-md-6 .col-lg-6 .col-xl-6" id="popular">
                 <div class="list-group">
                     <!-- titulo -->
                     <div class="list-group-item list-group-item-action" id="popular_header_barside">
