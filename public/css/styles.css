@@ -195,6 +195,7 @@ li.navbar-item a:focus {
 .footer #contenido-footer .social-icons .social__icon--link {
     color: #fff;
     font-size: 24px;
+    position: relative;
 }
 .footer #contenido-footer .social-icons {
     display: flex;
