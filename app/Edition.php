@@ -23,7 +23,7 @@ class Edition extends Model
 
     public $timestamps = false;
 
-    public function article(){
+    public function articles(){
         return $this->hasMany('App\Article', 'edition_id');
     }
 }

@@ -49,12 +49,16 @@ class GeneralController extends Controller
         $information=Information::all();
         return view('/informacion',compact('information'));
     }
-    //<!--tentativo-->
+    
     public function edicion(){
-        $editions=Edition::all();
-        $editions = Edition::orderBy('id')->paginate(10);
-
+        $editions=Edition::orderBy('id', 'desc')->paginate(10)->get();
         return view('/edicion', compact('editions'));
+    }
+    public function fulledicion(){
+        $editions=Edition::with(['articles'])->get();
+        dd($editions);
+        $editions->article = Article::where('edition_id', (int) $edition->id)->orderBy('id','asc')->limit(10)->get();
+        return view('/fulledition', compact('editions'));
     }
 
     public function sobre(){

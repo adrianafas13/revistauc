@@ -8,15 +8,14 @@ Route::get('/seccion/{seccion}', 'ArticlesController@seccion');
 Route::get('/art/{slug}', 'GeneralController@show')->name('art');
 Route::post('/art/{article}', 'GeneralController@store')->name('art.store');
 Route::get('/informacion', 'GeneralController@informacion')->name('informacion');
-//ruta de edicion tentativa
 Route::get('/edicion', 'GeneralController@edicion')->name('edicion');
+Route::get('/fulledicion', 'GeneralController@fulledicion')->name('fulledicion');
 
 Route::get('/autores', 'GeneralController@authors')->name('autores');
-Route::get('/sobrenosotros', 'GeneralController@sobre')->name('sobrenosotros');
 Route::get('/lang/{locale}','GeneralController@setlocale');
 Route::get('search','GeneralController@search')->name('search');
 
-Auth::routes(['verify' => true]);
+Auth::routes();
 
 Route::middleware(['auth'])->group(function(){
 	Route::post('/comment/{article_id}','CommentsController@store');

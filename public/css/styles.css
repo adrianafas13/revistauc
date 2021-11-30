@@ -5,11 +5,11 @@
 body {
     overflow-x: hidden;
     position: relative;
-    min-height: 100vh;
+    min-height: 80vh;
 }
 .main {
     background-color: rgb(238, 238, 238);
-    min-height: 100vh;
+    min-height: 80vh;
 }
 
 /*---------------------BARRA DE NAVEGACIÓN----------------------------------*/

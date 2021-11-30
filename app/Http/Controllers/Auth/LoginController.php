@@ -34,7 +34,7 @@ class LoginController extends Controller
      *
      * @return void
      */
-    public function login(Request $request)
+   /* public function login(Request $request)
     {
         $this->validateLogin($request);
 
@@ -55,7 +55,7 @@ class LoginController extends Controller
         $this->incrementLoginAttempts($request);
 
         return $this->sendFailedLoginResponse($request);
-    }
+    }*/
 
     public function __construct()
     {
