@@ -9,7 +9,7 @@ Route::get('/art/{slug}', 'GeneralController@show')->name('art');
 Route::post('/art/{article}', 'GeneralController@store')->name('art.store');
 Route::get('/informacion', 'GeneralController@informacion')->name('informacion');
 Route::get('/edicion', 'GeneralController@edicion')->name('edicion');
-Route::get('/fulledicion', 'GeneralController@fulledicion')->name('fulledicion');
+Route::get('/fulledicion/{id}', 'GeneralController@fulledicion')->name('fulledicion');
 
 Route::get('/autores', 'GeneralController@authors')->name('autores');
 Route::get('/lang/{locale}','GeneralController@setlocale');

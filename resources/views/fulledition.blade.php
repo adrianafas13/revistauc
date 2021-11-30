@@ -22,7 +22,7 @@
                         </div>
                     </div>
                     <!-- articulos populares -->
-                    @foreach($articles as $article)
+                    @foreach($editions->articles as $article)
                         <div class="contenido-popular-bar">
                             <li class="list-group-item">
                                 <p>{{ App::isLocale('es')?$article->title:$article->en_title}}</p>
@@ -36,20 +36,20 @@
     <!------------------------------------------------- NOMBRE DE LA EDICIÓN ------------------------------------------------------------>
         <hr>
             <div class="edition_title">
-                <h4><b>{{ App::isLocale('es')?$edition->edition_title:$edition->edition_title_en }}</b></h4>
+                <h4><b>{{ App::isLocale('es')?$editions->edition_title:$editions->edition_title_en }}</b></h4>
             </div>
         <hr>
     </div>
     <!------------------------------------------------- ARTICULOS ------------------------------------------------------------>
     <div class="container mt-5">
         <!-- articulo -->
-        @foreach($articles as $article)
+        @foreach($editions->articles as $article)
         <div class="card mb-3">
             <div class="row no-gutters">
 
                 <div class="col-md-4">
                     <a href="{{route('art', $article->slug)}}">
-                        <img src="images/{{$article->ruta_image}}" class="img-fluid">
+                        <img src="/images/{{$article->ruta_image}}" class="img-fluid">
                     </a>
                 </div>
                 <div class="col-md-8">
@@ -57,7 +57,7 @@
                         <h6><a href="#" class="badge">{{ $article->section }}</a></h6>
                         <h5><b>{{ App::isLocale('es')?$article->title:$article->en_title }}</b></h5>
                         <p>{{ $article->author->name_author }}</p>
-                        <p class="card-text"><small class="text-muted">{{ $edition->edition_date }}</small></p>
+                        <p class="card-text"><small class="text-muted">{{ $editions->edition_date }}</small></p>
                         <a type="button" class="btn btn-outline-dark" href="{{route('art', $article->slug)}}">@lang('data.ver_mas')</a>
                     </div>
                 </div>

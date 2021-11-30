@@ -49,15 +49,15 @@ class GeneralController extends Controller
         $information=Information::all();
         return view('/informacion',compact('information'));
     }
-    
+
     public function edicion(){
-        $editions=Edition::orderBy('id', 'desc')->paginate(10)->get();
+        $editions=Edition::orderBy('id', 'desc')->paginate(10);
         return view('/edicion', compact('editions'));
     }
-    public function fulledicion(){
-        $editions=Edition::with(['articles'])->get();
-        dd($editions);
-        $editions->article = Article::where('edition_id', (int) $edition->id)->orderBy('id','asc')->limit(10)->get();
+    public function fulledicion($id){
+        $editions=Edition::where('id', (int) $id)->with(['articles'])->get()->first();
+       // dd($editions->articles);
+       // $editions->article = Article::where('edition_id', (int) $edition->id)->orderBy('id','asc')->limit(10)->get();
         return view('/fulledition', compact('editions'));
     }
 

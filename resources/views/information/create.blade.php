@@ -38,7 +38,7 @@
 					<p>Archivo PDF:</p>
 				</div>
 				<div class="col-9">
-					<input accept="file/*" required type="file" name="info_file" value="info_file">
+					<input accept="file/*" type="file" name="info_file" value="info_file">
 				</div>
 			</div>
 
@@ -74,7 +74,7 @@
 					<p>PDF File:</p>
 				</div>
 				<div class="col-9">
-					<input accept="file/*" required type="file" name="info_en_file" value="info_en_file">
+					<input accept="file/*" type="file" name="info_en_file" value="info_en_file">
 				</div>
 			</div>
 		</div>

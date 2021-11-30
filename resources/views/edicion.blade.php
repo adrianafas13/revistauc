@@ -29,7 +29,7 @@
                                             <h5><b>{{ App::isLocale('es')?$edition->edition_title:$edition->edition_title_en }}</b></h5>
                                             <p><b> @lang('data.fechap') </b> {{ $edition->edition_date }}</p>
                                             <p>{!! App::isLocale('es')?$edition->edition_description:$edition->edition_description_en !!}</p>
-                                            <a href="{{ route('fulledicion') }}" type="button" class="btn btn-outline-dark">@lang('data.full_edition')</a>
+                                            <a href="fulledicion/{{$edition->id}}" type="button" class="btn btn-outline-dark">@lang('data.full_edition')</a>
                                         </div>
                                     </div>
                                 </div>
