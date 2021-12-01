@@ -96,7 +96,7 @@
 									<p><b>/////////////</b></p>
 								</div>
 								<div class="inivtacion">
-									<p>Para publicar un comentario inicia sesión</p>
+									<p>@lang('data.aviso')</p>
 								</div>
 							</div>
 						@endif

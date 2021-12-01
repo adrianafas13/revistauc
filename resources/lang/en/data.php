@@ -31,6 +31,7 @@ return [
 	'full_edition' => 'Full Edition',
 	//INFORMACION
 	'info' => 'Information',
+	'information' => 'See More',
 	//LOGIN
 	'iniciar_sesion'=> 'Log In',
 	'correo' => 'E-mail',
@@ -58,5 +59,8 @@ return [
 	'fecha' => 'Date',
 	'autor'=>'Author',
 	'email' => 'E-mail:',
+	'aviso' => 'Please, login to post a comment',
+	//completo
+	'completa' => 'Full Edition',
 
 ];

@@ -26,7 +26,9 @@
               <div class="card-body">
                 <p>{!! App::isLocale('es')?$info->information_text:$info->en_information_text !!}</p>
                 @if (!empty($info->ruta_info_file))
-                  <a href="/files/{{ $info->ruta_info_file }}" type="button" class="btn btn-success"> Ver archivo</a>
+                  <div class="text-center">
+                  <a href="/files/{{ $info->ruta_info_file }}" type="button" class="btn btn-outline-dark">@lang('data.information')</a>
+                  </div>
                 @endif
 
                   

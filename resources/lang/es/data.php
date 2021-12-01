@@ -32,6 +32,7 @@ return [
 	'full_edition' => 'Edición Completa',
 	//INFORMACION
 	'info' => 'Información',
+	'information' => 'Ver Más',
 	//LOGIN
 	'iniciar_sesion'=> 'Iniciar Sesión',
 	'correo' => 'Correo Electronico',
@@ -58,5 +59,8 @@ return [
 	'fecha' => 'Fecha',
 	'autor'=>'Autor',
 	'email' => 'Correo:',
+	'aviso' => 'Para publicar un comentario inicia sesión',
+	//completo
+	'completa' => 'Edición Completa',
 
 ];

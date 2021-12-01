@@ -42,7 +42,7 @@
                                             <h6><b>@lang('data.articulos_autor')</b></h6>
                                             <hr>
                                             @foreach($author->articles as $article)
-                                            <a id="link-author" href="{{route('art', $article->slug)}}">
+                                            <a id="link-author" href="{{route('art', $article->slug)}}" style= "color: inherit;">
                                                 {{  App::isLocale('es')?$article->title:$article->en_title }}
                                             </a>
                                             @endforeach

@@ -39,9 +39,11 @@
             </div>
         </div>
         @auth
-			<div class="button-article">
-				<a href="/files/{{ $article->edition_route_full_file }}" type="button" class="btn btn-success"><i class="fas fa-download"></i> Edicion Completa</a>
-			</div>
+        <hr>
+            <div class="edition_title text-center"> 
+                <a href="/files/{{ $editions->edition_route_full_file }}" type="button" class="btn btn-outline-dark"><i class="fas fa-download"></i>@lang('data.completa')</a>
+            </div>
+        <hr>
 		@endauth
 
     </div>

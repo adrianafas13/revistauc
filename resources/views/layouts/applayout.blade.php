@@ -38,11 +38,11 @@
                     <!------------------------------------------------- ENLACES ------------------------------------------------------------>
                     <ul class="navbar-nav ml-auto">
                         <li class="navbar-item dropdown">
-                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" id="dropdown_target" href="#">
+                            <a class="nav-link dropdown-toggle btn-group" data-toggle="dropdown" id="dropdown_target" href="#">
                                 @lang('data.secciones')
                                 <span class="caret"></span>
                             </a>
-                            <div class=" dropdown-menu" id="lineas" arial-labelledby="dropdown_target" style="text-align: center;">
+                            <div class=" dropdown-menu" id="lineas" arial-labelledby="dropdown_target">
                                 <a class="dropdown-item" href="/seccion/biologia">@lang('data.biologia')</a>
                                 <a class="dropdown-item" href="/seccion/derecho">@lang('data.derecho')</a>
                                 <a class="dropdown-item" href="/seccion/economia">@lang('data.economia')</a>
@@ -90,7 +90,7 @@
                             <button class="btn dropdown-toggle" type="button" id="dropdownSingin" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <i class="fas fa-user-circle fa-fw"></i>
                             </button>
-                            <div class="dropdown-menu dropdown-menu-lg-right" aria-labelledby="dropdownSingin"  style="">
+                            <div class="dropdown-menu dropdown-menu-lg-right" aria-labelledby="dropdownSingin"  style="text-align: center;">
                                 <a class="dropdown-item" href="#" data-toggle="modal" data-target="#loginModal">@lang('data.iniciar_sesion')</a>
                                     @if (Route::has('register'))
                                         <a class="dropdown-item" href="#" data-toggle="modal" data-target="#singinModal">@lang('data.registro')</a>
