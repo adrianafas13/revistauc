@@ -15,7 +15,11 @@ class GeneralController extends Controller
     public function index()
     {
         $edition= Edition::orderBy('id', 'desc')->get()->first();
-        $articles = Article::where('edition_id', (int) $edition->id)->orderBy('id','asc')->limit(10)->get();
+        if ($edition){
+            $articles = Article::where('edition_id', (int) $edition->id)->orderBy('id','asc')->limit(10)->get();
+        }else{
+            $articles = [];
+        }
         $articlesData = [];
         foreach ($articles as $article){
             $article->author = Author::where('id', (int) $article->author_id)->get()->first();

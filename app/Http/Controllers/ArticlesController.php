@@ -100,7 +100,6 @@ class ArticlesController extends Controller
 
         }
 
-
         //carga de archivo de articulo en español
         if($archivofilees=$request->file('file')){
 
@@ -111,7 +110,6 @@ class ArticlesController extends Controller
             $enter['ruta_file']=$infofilees;
 
         }
-
 
         $article->update($enter);
 

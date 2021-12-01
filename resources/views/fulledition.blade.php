@@ -2,6 +2,12 @@
 @section('content')
 <div class="main">
     <div class="container-fluid">
+        <!------------------------------------------------- NOMBRE DE LA EDICIÓN ------------------------------------------------------------>
+            <div class="edition_title">
+            <br>
+                <h4><b>{{ App::isLocale('es')?$editions->edition_title:$editions->edition_title_en }}</b></h4>
+            </div>
+        <hr>
         <div class="row">
     <!------------------------------------------------- portada ------------------------------------------------------------>
             <div class="col-12 .col-sm-12 col-md-6 .col-lg-6 .col-xl-6">
@@ -32,13 +38,12 @@
                 </div>
             </div>
         </div>
+        @auth
+			<div class="button-article">
+				<a href="/files/{{ $article->edition_route_full_file }}" type="button" class="btn btn-success"><i class="fas fa-download"></i> Edicion Completa</a>
+			</div>
+		@endauth
 
-    <!------------------------------------------------- NOMBRE DE LA EDICIÓN ------------------------------------------------------------>
-        <hr>
-            <div class="edition_title">
-                <h4><b>{{ App::isLocale('es')?$editions->edition_title:$editions->edition_title_en }}</b></h4>
-            </div>
-        <hr>
     </div>
     <!------------------------------------------------- ARTICULOS ------------------------------------------------------------>
     <div class="container mt-5">

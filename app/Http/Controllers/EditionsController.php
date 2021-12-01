@@ -41,25 +41,26 @@ class EditionsController extends Controller
 
         $enter=$request->all();
 
-        //carga de imagen de la edicion en español
-        if($edition_es=$request->file('edition_image')){
+        //carga de imagen de articulo en español
+        if($editionimg=$request->file('edition_image')){
 
-            $infoedition=$edition_es->getClientOriginalName();
+            $imges=$editionimg->getClientOriginalName();
 
-            $edition_es->move('images', $infoedition);
+            $editionimg->move('images', $imges);
 
-            $enter['edition_route_image']=$infoedition;
+            $enter['edition_route_image']=$imges;
 
         }
 
-        //carga de imagen dela edicion en ingles
-        if($esdition_en=$request->file('edition_image_en')){
 
-            $infoedition=$esdition_en->getClientOriginalName();
+        //carga de archivo de articulo en español
+        if($archivoedition=$request->file('edition_full_file')){
 
-            $esdition_en->move('images', $infoedition);
+            $fileedit=$archivoedition->getClientOriginalName();
 
-            $enter['edition_route_image_en']=$infoedition;
+            $archivoedition->move('files', $fileedit);
+
+            $enter['edition_route_full_file']=$fileedit;
 
         }
 
@@ -102,30 +103,29 @@ class EditionsController extends Controller
      */
     public function update(Request $request, $id)
     {
-    
         $enter=$request->all();
 
         $editions=Edition::findOrFail($id);
 
-        //carga de imagen de la edicion en español
-        if($edition_es=$request->file('edition_image')){
+        //carga de imagen de articulo en español
+        if($editionimg=$request->file('edition_image')){
 
-            $infoedition=$edition_es->getClientOriginalName();
+            $imges=$editionimg->getClientOriginalName();
 
-            $edition_es->move('images', $infoedition);
+            $editionimg->move('images', $imges);
 
-            $enter['edition_route_image']=$infoedition;
+            $enter['edition_route_image']=$imges;
 
         }
 
-        //carga de imagen dela edicion en ingles
-        if($esdition_en=$request->file('edition_image_en')){
+        //carga de archivo de articulo en español
+        if($archivoedition=$request->file('edition_full_file')){
 
-            $infoedition=$esdition_en->getClientOriginalName();
+            $fileedit=$archivoedition->getClientOriginalName();
 
-            $esdition_en->move('images', $infoedition);
+            $archivoedition->move('files', $fileedit);
 
-            $enter['edition_route_image_en']=$infoedition;
+            $enter['edition_route_full_file']=$fileedit;
 
         }
 

@@ -10,11 +10,12 @@
 
 			<div class="col-sm-9">
 				<br>
-
-				<div class="title-article">
-					<h2><b>{{ App::isLocale('es')?$article->title:$article->en_title }}</b></h2>
-					<br>
-				</div>
+				<div class="container">
+					<div class="title-article">
+						<h2><b>{{ App::isLocale('es')?$article->title:$article->en_title }}</b></h2>
+						<br>
+					</div>
+				</div>	
 
 				<div class="img-article">
 					<img src="/images/{{$article->ruta_image}}">

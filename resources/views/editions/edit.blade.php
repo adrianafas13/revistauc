@@ -69,6 +69,16 @@
 					<input accept="image/*" required type="file" name="edition_image" value="edition_image">
 				</div>
 			</div>
+
+            <!--PDF de la edicion en español-->
+			<div class="row">
+				<div class="col-3" id="title-info">
+					<p>Archivo PDF de la edición completa:</p>
+				</div>
+				<div class="col-9">
+					<input accept="file/*" required type="file" name="edition_full_file" value="edition_full_file">
+				</div>
+			</div>
         </div>
 
         <!--English-->
@@ -97,15 +107,6 @@
                 </div>
             </div>
 
-            <!--Caratula de la edicion en ingles-->
-			<div class="row">
-				<div class="col-3" id="title-info">
-					<p>Cover's Edition</p>
-				</div>
-				<div class="col-9">
-					<input accept="image/*" required type="file" name="edition_image_en" value="edition_image_en">
-				</div>
-			</div>
         </div>
         <br>
 

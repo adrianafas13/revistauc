@@ -15,10 +15,10 @@ class Edition extends Model
         "edition_title",
         "edition_description",
         "edition_route_image",
+        "edition_route_full_file",
         /*english*/
         "edition_title_en",
         "edition_description_en",
-        "edition_route_image_en",
     ];
 
     public $timestamps = false;

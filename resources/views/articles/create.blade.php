@@ -50,13 +50,13 @@
 			<div class="col-9">
 				<div class="form-group">
 				<select class="form-control" id="section"  name="section" placeholder="Linea de Investigación">
-                    <option value="Biología Marina">Biología Marina</option>
-                    <option value="Derecho">Derecho</option>
-                    <option value="Economía">Economía</option>
-                    <option value="Educación">Educación</option>
-                    <option value="Epistemologíoa">Epistemología</option>
-                    <option value="Filosofía">Filosofía</option>
-                    <option value="Gerencia">Gerencia</option>
+                    <option value="biologia">Biología Marina</option>
+                    <option value="derecho">Derecho</option>
+                    <option value="economia">Economía</option>
+                    <option value="educación">Educación</option>
+                    <option value="epistemologia">Epistemología</option>
+                    <option value="filosofia">Filosofía</option>
+                    <option value="gerencia">Gerencia</option>
 				</select>
 				</div>
 			</div>

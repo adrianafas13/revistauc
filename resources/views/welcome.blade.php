@@ -2,6 +2,7 @@
 @extends('layouts.applayout')
 
 @section('content')
+@if(!empty($edition))
 <div class="main">
     <div class="container-fluid">
         <div class="row">
@@ -42,6 +43,7 @@
             </div>
         <hr>
     </div>
+    
     <!------------------------------------------------- ARTICULOS ------------------------------------------------------------>
     <div class="container mt-5">
         <!-- articulo -->
@@ -69,4 +71,5 @@
         <br>
     </div>
 </div>
+@endif
 @endsection

@@ -26,7 +26,7 @@
                     <ul class="navbar-nav">
                         <div class="logotipo">
                             <a href="{{route('welcome')}}">
-                                <img src="{{ asset('images/logotype.png') }}" alt="logo" width="195px" height="auto" style="margin-top:10px; margin-bottom:10px; margin-left:10px;">
+                                <img src="{{ asset('images/rcu-yellow-logo.png') }}" alt="logo" width="195px" height="auto" style="margin-top:10px; margin-bottom:10px; margin-left:10px;">
                             </a>
                         </div>
                     </ul>
@@ -80,8 +80,8 @@
                                 <i class="fa fa-globe fa-fw">{{ App::getLocale() }}</i>
                             </button>
                             <div class="dropdown-menu dropdown-menu-lg-right" aria-labelledby="dropdownLanguajeButton" style="text-align: center;">
-                                <a class="dropdown-item" href="/lang/es"> <img src="{{ asset('images/spanish.png') }}" alt="lang" width="16px" height="auto"> @lang('data.español')</a>
-                                <a class="dropdown-item" href="/lang/en"> <img src="{{ asset('images/english.png') }}" alt="lang" width="16px" height="auto"> @lang('data.ingles')</a>
+                                <a class="dropdown-item" href="/lang/es"> <img src="{{ asset('images/spanish-icon.png') }}" alt="lang" width="16px" height="auto"> @lang('data.español')</a>
+                                <a class="dropdown-item" href="/lang/en"> <img src="{{ asset('images/english-icon.png') }}" alt="lang" width="16px" height="auto"> @lang('data.ingles')</a>
                             </div>
                         </li>
                         <!------------------------------------------------- USUARIO ------------------------------------------------------------>
@@ -144,9 +144,6 @@
 
             <div class="footer col-sm-12">
                 <div class="row" id="contenido-footer">
-                
-                
-                
                     <!------------------------------------------------- REDES SOCIALES ------------------------------------------------------------>
                     <div class="col-sm">
                         <ul id="social-media">
@@ -154,18 +151,18 @@
                                 <p><b>@lang('data.redes_sociales')</p></b>
                             </div>
                             <div class="social-icons">
-                                <a href="/" class="social__icon--link"><i class="fab fa-facebook-f"></i></a>
-                                <a href="/" class="social__icon--link"><i class="fab fa-instagram"></i></a>
-                                <a href="/" class="social__icon--link"><i class="fab fa-twitter"></i></a>
-                                <a href="/" class="social__icon--link"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="http://www.facebook.com/univ.demargarita/" class="social__icon--link"><i class="fab fa-facebook-f"></i></a>
+                                <a href="http://www.instagram.com/universidademargarita/" class="social__icon--link"><i class="fab fa-instagram"></i></a>
+                                <a href="http://www.twitter.com/somosunimar/" class="social__icon--link"><i class="fab fa-twitter"></i></a>
+                                <a href="http://www.linkedin.com/in/universidad-de-margarita-7a2a37208/" class="social__icon--link"><i class="fab fa-linkedin-in"></i></a>
                             </div>
                         </ul>
                     </div>
                     <!------------------------------------------------- BLANC SPACE ------------------------------------------------------------>
-                    <div class="col-sm">
+                    <div class="col-sm" id="unimarlogo">
                         <div class="unimar-link">
                             <a href="http://www.unimar.edu.ve/unimarportal/index.php">
-                                <img src="{{ asset('images/white-logo.png') }}" alt="logo blanco" style="margin-bottom:10px;">
+                                <img src="{{ asset('/images/unimar-white-logo.png') }}" alt="logo blanco">
                             </a>
                         </div>
                     </div>
@@ -174,7 +171,7 @@
                     <div class="col-sm">
                         <div class="pev-link">
                             <a href="http://www.unimarcientifica.edu.ve/aulavirtual">
-                                <img src="{{ asset('images/moodle.png') }}" alt="logo blanco" style="width:100px; height:120px; margin-top:60px;">
+                                <img src="{{ asset('/images/moodle-white-logo.png') }}" alt="logo blanco">
                             </a>
                         </div>
                     </div>

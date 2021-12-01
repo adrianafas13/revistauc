@@ -16,15 +16,15 @@ class CreateAuthorsTable extends Migration
         Schema::create('authors', function (Blueprint $table) {
             $table->bigIncrements('id');
             /*spanish*/
-            $table->string('name_author',150)->nullable(false);
+            $table->string('name_author',300)->nullable(false);
             $table->string('email_author',60)->nullable(false)->unique();
-            $table->string('grades_author',300)->nullable(false);
-            $table->string('resume_author',900)->nullable(false);
+            $table->text('grades_author')->nullable(false);
+            $table->text('resume_author')->nullable(false);
             $table->text('route_image_author');
 
             /*english*/
-            $table->string('en_grades_author',300)->nullable(false);
-            $table->string('en_resume_author',900)->nullable(false);
+            $table->text('en_grades_author')->nullable(false);
+            $table->text('en_resume_author')->nullable(false);
 
             $table->timestamps();
         });

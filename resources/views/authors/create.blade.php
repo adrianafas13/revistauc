@@ -37,7 +37,7 @@
 		<!--Español-->
 		<br>
 		<div class="spanish-backgorund">
-			<h5><b>Info en Español</b></h5>
+			<h5><b>Información en Español</b></h5>
 			<hr>
 			<div class="row">
 				<div class="col-3" id="title-info">
@@ -60,7 +60,7 @@
 		<!--English-->
 		<br>
 		<div class="english-backgorund">
-			<h5><b>Info in English</b></h5>
+			<h5><b>Information in English</b></h5>
 			<hr>
 			<div class="row">
 				<div class="col-3" id="title-info">

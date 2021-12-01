@@ -5,11 +5,11 @@
 body {
     overflow-x: hidden;
     position: relative;
-    min-height: 80vh;
+    min-height: 100vh;
 }
 .main {
     background-color: rgb(238, 238, 238);
-    min-height: 80vh;
+    min-height: 100vh;
 }
 
 /*---------------------BARRA DE NAVEGACIÓN----------------------------------*/
@@ -195,7 +195,7 @@ li.navbar-item a:focus {
     margin-bottom: 15px;
 }
 .footer ul#social-media .social-media-title {
-    margin-top: 45px;
+    margin-top: 60px;
     text-align: left;
     margin-left: 90px;
     text-transform: uppercase;
@@ -222,14 +222,16 @@ li.navbar-item a:focus {
     margin-left: 0px;
 }
 
-.footer .unimar-link img {
-    width: 165px;
-    height: auto;
+.footer #unimarlogo .unimar-link img {
+    width: auto;
+    height: 150px;
     margin-top: 35px;
+    margin-bottom: 10px;
 }
-.footer .pev-link img {
-    width: 220px;
-    height: 290px;
+.footer #contenido-footer img {
+    width: auto;
+    height: 110px;
+    margin-top: 55px;
 }
 /*-------------------------------------------HOME-----------------------------------------------------------*/
 .edition-cover img {

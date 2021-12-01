@@ -29,7 +29,7 @@ return [
     //EDICIONES
     'ediciones' => 'Listado de Ediciones',
 	'fechap' => 'Fecha de Publicación:',
-	'full_edition' => 'Edicion Comppleta',
+	'full_edition' => 'Edición Completa',
 	//INFORMACION
 	'info' => 'Información',
 	//LOGIN

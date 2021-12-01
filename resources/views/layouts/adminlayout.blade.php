@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Administrador | Unimar Científica</title>
-  <link  rel="icon" href="/images/logo.png" type="image/png"/>
+  <link  rel="icon" href="/images/rcu-orange-isotype.png" type="image/png"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="{{asset('plugins/fontawesome-free/css/all.min.css') }}">
@@ -23,7 +23,7 @@
       <ul class="navbar-nav">
         <div class="logotipo">
           <a href="{{route('welcome')}}">
-          <img src="{{ asset('images/LogotypeUCWhite.png') }}" alt="logo" width="165px" height="auto" style="margin-top:10px; margin-left:10px;">
+          <img src="{{ asset('/images/rcu-yellow-logo.png') }}" alt="logo" width="165px" height="auto" style="margin-top:10px; margin-left:10px;">
           </a>
         </div>
       </ul>
