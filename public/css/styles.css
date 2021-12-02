@@ -241,51 +241,60 @@ li.navbar-item a:focus {
     margin-top: 55px;
 }
 /*-------------------------------------------HOME-----------------------------------------------------------*/
-.edition-cover img {
+/*imagen de poratda*/
+.main .edition-cover img {
+    display: block;
+    width: 92%;
+    margin: 0 auto;
     border-radius: 5px;
     box-shadow: 4px 4px rgba(158, 158, 158, 0.2);
 }
-
-#popular {
+/*cabera del index de los articulos*/
+.main #index {
     padding-top: 25px;
     padding-bottom: 25px;
 }
-
-.list-group #popular_header_barside {
+.main #index .list-group {
+    border-radius: 5px;
+    box-shadow: 4px 4px rgba(158, 158, 158, 0.2);
+}
+.main .list-group #index-cabecera {
     background-color: #ea9658;
     color: #000;
 }
-.list-group #popular_header_barside h5 {
+.main .list-group #index-cabecera h5 {
     font-size: 17px;
     font-weight: bold;
 }
-.list-group #popular_header_barside i {
+.main .list-group #index-cabecera i {
     font-size: 20px;
 }
-
-.list-group .contenido-popular-bar h6 {
-    text-transform: capitalize;
-    text-align: center;
-    justify-content: center;
-    font-size: 15px;
-}
-.list-group .contenido-popular-bar p {
+/*cuerpo del index de los articulos*/
+.main .list-group .index-contenido p {
     font-size: 14px;
-
     margin-bottom: 4px;
+    text-transform: capitalize;
 }
-.list-group-item:hover {
+.main .list-group .index-contenido .list-group-item:hover {
     transition: all 0.3s ease-out;
     background: rgba(234, 150, 88, 0.1);
 }
-
+/*------------------Titulo de la edicion---------------------------------------*/
 .edition_title h4 {
     font-size: 23px;
     text-align: center;
 }
-
-.mb-3 {
+/*---lista de los articulos tipo card-----------------*/
+.main .articulos-card {
     box-shadow: 4px 4px rgba(158, 158, 158, 0.2);
+}
+.main .articulos-card .articulos-card-img img {
+    opacity: 1;
+    -webkit-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+}
+.main .articulos-card .articlos-card-img:hover img {
+    opacity: 0.5;
 }
 .card:hover {
     transition: all 0.3s ease-out;
@@ -390,6 +399,7 @@ li.navbar-item a:focus {
 }
 .article-comments .comment-header .comment-area textarea {
     display: inline-block;
+    height: 70px;
     width: 90%;
     resize: none;
 }
