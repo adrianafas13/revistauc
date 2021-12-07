@@ -30,7 +30,7 @@ Route::middleware(['auth','auth.admin'])->prefix('admin')->group(function(){
 	Route::resource('/user', 'AdminUserController', ['except'=> ['show', 'create', 'store']] );
 	Route::resource('about', 'AboutsController');
 	Route::resource('/article', 'ArticlesController');
-	Route::resource('/area', 'AreasController');
+	Route::resource('/areas', 'AreasController');
 	Route::resource('/contact', 'ContactsController');
 	Route::resource('/authors', 'AuthorsController');
 	Route::resource('/editions', 'EditionsController');

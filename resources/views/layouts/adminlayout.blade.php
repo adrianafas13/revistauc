@@ -63,7 +63,7 @@
 
       <li class="nav-item">
         <a class="nav-link" type="button" data-toggle="collapse" data-target="#collapseArea" aria-expanded="false" aria-controls="collapseExample">
-          <i class="fas fa-pencil-alt fa-lg"></i> Autores
+          <i class="fas fa-pencil-alt fa-lg"></i> Áreas
         </a>
         <div class="collapse" id="collapseArea">
           <div class="card card-body" id="sidebar-items">

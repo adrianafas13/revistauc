@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Area;
 use Illuminate\Http\Request;
+
 
 class AreasController extends Controller
 {
@@ -44,7 +46,7 @@ class AreasController extends Controller
         
         $areas->save();
 
-        return redirect("/admin/area"); 
+        return redirect("/admin/areas"); 
     }
 
     /**
