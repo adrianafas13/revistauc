@@ -62,6 +62,18 @@
       </li>
 
       <li class="nav-item">
+        <a class="nav-link" type="button" data-toggle="collapse" data-target="#collapseArea" aria-expanded="false" aria-controls="collapseExample">
+          <i class="fas fa-pencil-alt fa-lg"></i> Autores
+        </a>
+        <div class="collapse" id="collapseArea">
+          <div class="card card-body" id="sidebar-items">
+            <a class="dropdown-item" href="{{ route('areas.create') }}">Registrar</a>
+            <a class="dropdown-item" href="{{ route('areas.index') }}">Ver Lista</a>
+          </div>
+        </div>
+      </li>
+
+      <li class="nav-item">
         <a class="nav-link" type="button" data-toggle="collapse" data-target="#collapseArticle" aria-expanded="false" aria-controls="collapseExample">
           <i class="far fa-sticky-note fa-lg"></i> Artículos
         </a>

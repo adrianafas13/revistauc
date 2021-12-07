@@ -13,7 +13,8 @@ class AreasController extends Controller
      */
     public function index()
     {
-        //
+        $areas=Area::orderBy('id','desc')->paginate(15);
+        return view("areas.index" , compact("areas"));
     }
 
     /**
@@ -23,7 +24,7 @@ class AreasController extends Controller
      */
     public function create()
     {
-        //
+        return view('areas.create');
     }
 
     /**
@@ -34,7 +35,16 @@ class AreasController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $areas=new Area;
+
+        /**español**/
+        $areas->area_es=$request->area_es;
+        /**english**/
+        $areas->area_en=$request->area_en;
+        
+        $areas->save();
+
+        return redirect("/admin/area"); 
     }
 
     /**
@@ -45,7 +55,8 @@ class AreasController extends Controller
      */
     public function show($id)
     {
-        //
+        $areas=Area::findOrFail($id);
+        return view("areas.show" , compact("areas"));
     }
 
     /**
@@ -56,7 +67,8 @@ class AreasController extends Controller
      */
     public function edit($id)
     {
-        //
+        $areas=Area::findOrFail($id);
+        return view("areas.edit" , compact("areas"));
     }
 
     /**
@@ -68,7 +80,11 @@ class AreasController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $areas=Area::findOrFail($id);
+
+        $areas->update($request->all());
+
+        return redirect("/admin/areas");
     }
 
     /**
@@ -79,6 +95,10 @@ class AreasController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $areas=Area::findOrFail($id);
+
+        $areas->delete();
+
+        return redirect("/admin/areas");
     }
 }
