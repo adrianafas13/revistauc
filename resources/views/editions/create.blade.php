@@ -25,7 +25,7 @@
             </div>
             <div class="col-9">
                 <!--<input type="text" required id="edition_date" name="edition_date" placeholder="Número de la Edición">-->
-                <div class="input-group date" id="datepicker">
+                <div class="input-group date" data-date-format="dd-mm-yyyy" id="datepicker">
                     <input type="text" class="form-control" required id="edition_date" name="edition_date" placeholder="DD/MM/YYYY">
                     <span class="input-group-append">
                         <span class="input-group-text bg-white">

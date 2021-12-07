@@ -2,6 +2,7 @@
 $(function () {
     $("#datepicker").datepicker({
         orientation: "bottom",
+        format: "dd-mm-yyyy",
     });
 });
 
