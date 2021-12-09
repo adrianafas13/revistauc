@@ -15,7 +15,7 @@ class AreasController extends Controller
      */
     public function index()
     {
-        $areas=Area::orderBy('id','desc')->paginate(15);
+        $areas=Area::all();
         return view("areas.index" , compact("areas"));
     }
 
@@ -70,7 +70,7 @@ class AreasController extends Controller
     public function edit($id)
     {
         $areas=Area::findOrFail($id);
-        return view("areas.edit" , compact("areas"));
+        return view("areas.edit" , compact("areas")); 
     }
 
     /**

@@ -29,20 +29,20 @@
 
 		<tbody>
 		@foreach($areas as $area)
-		<tr>
-			<td><p>{{ $area->area_es }}</p></td>
-			<td><p>{{ $area->area_en }}</p></td>
-				<th>
-				<a href=" {{route('areas.edit', $area->id)}} " class="btn btn-warning btn-sm"><i class="fas fa-edit"></i></a>
-				</th>
-				<th>
-					<form action="{{route('areas.destroy', $area->id)}}"  method="POST"">
+			<tr>
+				<td><p>{{ $area->area_es }}</p></td>
+				<td><p>{{ $area->area_en }}</p></td>
+				<td>
+					<a href=" {{route('areas.edit', $area->id)}}" class="btn btn-warning btn-sm"><i class="fas fa-edit"></i></a>
+				</td>
+				<td>
+					<form action="{{route('areas.destroy', $area->id)}}" method="post">
 						@csrf
 						@method('delete')
-						<button type="submit" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></button>
+							<button type="submit" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></button>
 					</form>
-				</th>
-		</tr>
+				</td>
+			</tr>
 		@endforeach
 		</tbody>
 

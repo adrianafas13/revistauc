@@ -5,7 +5,7 @@
 	<h4><b>Modificar Área de Conocimiento:</b></h4>
 	<hr>
 
-	<form method="POST" action="/admin/area/{{$area->id}}" enctype="multipart/form-data">
+	<form method="POST" action="/admin/areas/{{$areas->id}}" enctype="multipart/form-data">
 		<!--Español-->
         <input type="hidden" name="_method" value="PUT">
             <!--Español-->
@@ -18,7 +18,7 @@
                         <p>Área:</p>
                     </div>
                     <div class="col-9">
-                        <input id="texto" type="text" required id="area_es" name="area_es" value="{{$area->area_es}}">
+                        <input id="texto" type="text" required id="area_es" name="area_es" value="{{$areas->area_es}}">
                     </div>
                 </div>
             </div>
@@ -33,7 +33,7 @@
                         <p>Area:</p>
                     </div>
                     <div class="col-9">
-                        <input id="texto" type="text" required id="area_en" name="area_en" value="{{$area->area_en}}">
+                        <input id="texto" type="text" required id="area_en" name="area_en" value="{{$areas->area_en}}">
                     </div>
                 </div>
             </div>
