@@ -20,6 +20,8 @@ class CreateAreasTable extends Migration
             //ingles
             $table->string('area_en',355)->nullable(false);
 
+            $table->string('color');
+
             $table->timestamps();
         });
     }

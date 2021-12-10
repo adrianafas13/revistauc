@@ -37,15 +37,8 @@ class AreasController extends Controller
      */
     public function store(Request $request)
     {
-        $areas=new Area;
-
-        /**español**/
-        $areas->area_es=$request->area_es;
-        /**english**/
-        $areas->area_en=$request->area_en;
-        
-        $areas->save();
-
+        $areas=$request->all();
+        Area::create($areas);
         return redirect("/admin/areas"); 
     }
 

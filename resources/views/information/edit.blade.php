@@ -19,7 +19,9 @@
 					<p>Título:</p>
 				</div>
 				<div class="col-9">
-					<input id="texto" type="text" required id="information_title" name="information_title" value="{{$information->information_title}}">
+					<div class="input-texto">
+						<input type="text" required id="information_title" name="information_title" value="{{$information->information_title}}">
+					</div>
 				</div>
 			</div>
 
@@ -53,7 +55,9 @@
 					<p>Title:</p>
 				</div>
 				<div class="col-9">
-					<input id="texto" type="text" required id="en_information_title" name="en_information_title"value="{{$information->en_information_title}}">
+					<div class="input-texto">
+						<input type="text" required id="en_information_title" name="en_information_title"value="{{$information->en_information_title}}">
+					</div>
 				</div>
 			</div>
 

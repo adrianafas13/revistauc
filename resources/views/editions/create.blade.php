@@ -15,7 +15,9 @@
                 <p>Número de la Edición:</p>
             </div>
             <div class="col-9">
-                <input id="texto" type="text" required id="edition_number" name="edition_number" placeholder="Número de la Edición">
+                <div class="input-texto">
+                    <input type="text" required id="edition_number" name="edition_number" placeholder="Número de la Edición">
+                </div>
             </div>
         </div>
 
@@ -24,7 +26,6 @@
                 <p>Fecha de la Edición:</p>
             </div>
             <div class="col-9">
-                <!--<input type="text" required id="edition_date" name="edition_date" placeholder="Número de la Edición">-->
                 <div class="input-group date" data-date-format="dd-mm-yyyy" id="datepicker">
                     <input type="text" class="form-control" required id="edition_date" name="edition_date" placeholder="DD/MM/YYYY">
                     <span class="input-group-append">
@@ -48,7 +49,9 @@
                     <p>Título de la Edición:</p>
                 </div>
                 <div class="col-9">
-                    <input id="texto" type="text" required id="edition_title" name="edition_title" placeholder="Título de la Edición">
+                    <div class="input-texto">
+                        <input type="text" required id="edition_title" name="edition_title" placeholder="Título de la Edición">
+                    </div>
                 </div>
             </div>
 
@@ -94,7 +97,9 @@
                     <p>Title of the Edition:</p>
                 </div>
                 <div class="col-9">
-                    <input id="texto" type="text" required id="edition_title_en" name="edition_title_en" placeholder="Title of the Edition">
+                    <div class="input-texto">
+                        <input type="text" required id="edition_title_en" name="edition_title_en" placeholder="Title of the Edition">
+                    </div>
                 </div>
             </div>
 

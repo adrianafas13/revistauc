@@ -1,6 +1,5 @@
 
 @extends('layouts.adminlayout')
-
 @section('content')
 <div class=".xl-container">
 	<br>
@@ -74,7 +73,9 @@
 					<p>Título:</p>
 				</div>
 				<div class="col-9">
-					<input id="texto" type="text" required id="title" name="title" placeholder="Título del Artículo">
+					<div class="input-texto">
+						<input type="text" required id="title" name="title" placeholder="Título del Artículo">
+					</div>
 				</div>
 			</div>
 
@@ -121,7 +122,9 @@
 					<p>Title:</p>
 				</div>
 				<div class="col-9">
-					<input id="texto" type="text" required id="en_title" name="en_title" placeholder="Title of Article">
+					<div class="input-texto">
+						<input type="text" required id="en_title" name="en_title" placeholder="Title of Article">
+					</div>
 				</div>
 			</div>
 

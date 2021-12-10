@@ -14,7 +14,9 @@
                 <p>Número de la Edicion:</p>
             </div>
             <div class="col-9">
-                <input id="texto" type="text" required id="edition_number" name="edition_number" value="{{$editions->edition_number}}">
+                <div class="input-texto">
+                    <input type="text" required id="edition_number" name="edition_number" value="{{$editions->edition_number}}">
+                </div>
             </div>
         </div>
 
@@ -46,7 +48,9 @@
                     <p>Titulo de la Edición:</p>
                 </div>
                 <div class="col-9">
-                    <input id="texto" type="text" required id="edition_title" name="edition_title" value="{{$editions->edition_title}}">
+                    <div class="input-texto">
+                        <input type="text" required id="edition_title" name="edition_title" value="{{$editions->edition_title}}">
+                    </div>
                 </div>
             </div>
 
@@ -93,7 +97,9 @@
                     <p>Title of the Edition:</p>
                 </div>
                 <div class="col-9">
-                    <input id="texto" type="text" required id="edition_title_en" name="edition_title_en" value="{{$editions->edition_title_en}}">
+                    <div class="input-texto">
+                        <input type="text" required id="edition_title_en" name="edition_title_en" value="{{$editions->edition_title_en}}">
+                    </div>
                 </div>
             </div>
 

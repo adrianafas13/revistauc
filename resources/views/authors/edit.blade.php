@@ -14,7 +14,9 @@
 				<p>Apellido y Nombre:</p>
 			</div>
 			<div class="col-9">
-				<input id="texto" type="text" required id="name_author" name="name_author" value="{{$author->name_author}}">
+				<div class="input-texto">
+					<input type="text" required id="name_author" name="name_author" value="{{$author->name_author}}">
+				</div>
 			</div>
 		</div>
 
@@ -24,7 +26,9 @@
 				<p>Correo Electronico:</p>
 			</div>
 			<div class="col-9">
-				<input id="texto" type="text" required id="email_author" name="email_author" value="{{$author->email_author}}">
+				<div class="input-texto">
+					<input type="text" required id="email_author" name="email_author" value="{{$author->email_author}}">
+				</div>
 			</div>
 		</div>
 		<!--Imagen del autor-->
@@ -46,7 +50,9 @@
 					<p>Universidad / Institución:</p>
 				</div>
 				<div class="col-9">
-					<input id="texto" type="text" required id="grades_author" name="grades_author" value="{{$author->grades_author}}">
+					<div class="input-texto">
+						<input type="text" required id="grades_author" name="grades_author" value="{{$author->grades_author}}">
+					</div>
 				</div>
 			</div>
 			<!--Reseña del Autor-->
@@ -69,7 +75,9 @@
 					<p>University / Institution</p>
 				</div>
 				<div class="col-9">
-					<input id="texto" type="text" required id="en_grades_author" name="en_grades_author" value="{{$author->en_grades_author}}">
+					<div class="input-texto">
+						<input type="text" required id="en_grades_author" name="en_grades_author" value="{{$author->en_grades_author}}">
+					</div>
 				</div>
 			</div>
 			<!--Reseña del Autor-->

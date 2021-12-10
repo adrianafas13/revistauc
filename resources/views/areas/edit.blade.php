@@ -18,7 +18,9 @@
                         <p>Área:</p>
                     </div>
                     <div class="col-9">
-                        <input id="texto" type="text" required id="area_es" name="area_es" value="{{$areas->area_es}}">
+                        <div class="input-texto">
+                            <input type="text" required id="area_es" name="area_es" value="{{$areas->area_es}}">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -33,7 +35,9 @@
                         <p>Area:</p>
                     </div>
                     <div class="col-9">
-                        <input id="texto" type="text" required id="area_en" name="area_en" value="{{$areas->area_en}}">
+                        <div class="input-texto">
+                            <input type="text" required id="area_en" name="area_en" value="{{$areas->area_en}}">
+                        </div>
                     </div>
                 </div>
             </div>

@@ -73,7 +73,9 @@
 					<p>Título:</p>
 				</div>
 				<div class="col-9">
-					<input id="texto" type="text" required id="title" value="{{$article->title}}">
+					<div class="input-texto">
+						<input type="text" required id="title" value="{{$article->title}}">
+					</div>
 				</div>
 			</div>
 
@@ -120,7 +122,9 @@
 					<p>Title:</p>
 				</div>
 				<div class="col-9">
-					<input id="texto" type="text" required id="en_title" value="{{$article->en_title}}">
+					<div class="input-texto">
+						<input type="text" required id="en_title" value="{{$article->en_title}}">
+					</div>
 				</div>
 			</div>
 
@@ -139,9 +143,9 @@
 		<br>
 	@csrf
 
-  <div class="row justify-content-center">
-    <input type="submit" name="enviar" value="Actualizar Artículo">
-  </div>
+	<div class="row justify-content-center">
+    	<input type="submit" name="enviar" value="Actualizar Artículo">
+	</div>
 
 </form>
 

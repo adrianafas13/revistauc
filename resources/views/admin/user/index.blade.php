@@ -3,16 +3,16 @@
 <div class="container">
 <br>
 	<div class="row">
-	<div class="col-8">
+		<div class="col-8">
 			<h4><b>Usuarios registrados en el sistema:</b></h4>
 		</div>
-		<!--div class="col-4">
+		<div class="col-4">
 			<div class="input-group">
 				<input type="search" class="form-control rounded" placeholder="Buscar..." aria-label="Search"
 					aria-describedby="search-addon" />
 				<button type="button" class="btn btn-outline-primary">Buscar</button>
 			</div>
-		</-->
+		</div>
 	</div>
 	<hr>
 
