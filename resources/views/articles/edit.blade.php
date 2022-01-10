@@ -41,6 +41,21 @@
 			</div>
 		</div>
 
+		<div class="row">
+			<div class="col-3" id="title-info">
+				<p>Área:</p>
+			</div>
+			<div class="col-9">
+				<div class="form-group">
+					<select class="form-control" id="area" name="area_id" placeholder="Área de Investigación">
+						@foreach ($areas as $area)
+							<option value="{{$area->id}}"> {{$area->area_es}} </option>
+						@endforeach
+					</select>
+
+				</div>
+			</div>
+		</div>
 
 		<div class="row">
 			<div class="col-3" id="title-info">
