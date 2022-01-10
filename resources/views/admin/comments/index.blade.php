@@ -40,8 +40,8 @@
 
 	</table>
 
-	<div>
+	<ul class="pagination justify-content-center">
 		{{ $comments->links() }}
-	</div>
+	</ul>
 </div>
 @endsection

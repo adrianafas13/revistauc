@@ -46,7 +46,10 @@
 		</tbody>
 	</table>
 	<br>
-	{{ $authors->links() }}
+	<ul class="pagination justify-content-center">
+		{{ $authors->links() }}
+	</ul>
+	
 </div>
 
 @endsection

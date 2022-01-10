@@ -656,3 +656,8 @@ input[type="submit"] {
     -webkit-border-radius: 5px;
     border-radius: 5px;
 }
+
+.pagination-index {
+    align-items: center;
+    justify-content: center;
+}

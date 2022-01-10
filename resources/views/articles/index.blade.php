@@ -52,7 +52,10 @@
 		</tbody>
 	</table>
 	<br>
-	{{ $articles->links() }}
+	<ul class="pagination justify-content-center">
+		{{ $articles->links() }}
+	</ul>
+	
 </div>
 
 @endsection

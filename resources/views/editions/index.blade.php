@@ -50,7 +50,10 @@
 		</tbody>
 	</table>
 	<br>
-	{{ $editions->links() }}
+	<ul class="pagination justify-content-center">
+		{{ $editions->links() }}
+	</ul>
+	
 </div>
 
 @endsection

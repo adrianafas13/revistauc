@@ -53,8 +53,10 @@
 
 	</table>
 	<br>
-
-	{{ $users->links() }}
+	<ul class="pagination justify-content-center">
+		{{ $users->links() }}
+	</ul>
+	
 </div>
 
 @endsection

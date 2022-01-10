@@ -49,7 +49,10 @@
 	</table>
 
 	<br>
-	{{ $areas->links() }}
+	<ul class="pagination justify-content-center">
+		{{ $areas->links() }}
+	</ul>
+	
 </div>
 
 @endsection
