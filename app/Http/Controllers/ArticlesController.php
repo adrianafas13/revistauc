@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Article;
 use App\Author;
 use App\Edition;
+use App\Area;
 use Illuminate\Http\Request;
 use App\Http\Requests\ArticleRequest;
 
@@ -16,23 +17,26 @@ class ArticlesController extends Controller
         $articles=Article::all();
         $articles=Article::orderBy('id')->paginate(10);
         $authors=Author::all();
+        $areas=Area::all();
 
-        return view("articles.index" , compact("articles", "authors"));
+        return view("articles.index" , compact("articles", "authors", "areas"));
     }
 
     public function create()
     {
         $editions=Edition::all();
         $authors=Author::all();
-        return view('articles.create', compact("editions", "authors"));
+        $areas=Area::all();
+        return view('articles.create', compact("editions", "authors", "areas"));
     }
 
     public function seccion($seccion){
         $articles=Article::all();
         $authors=Author::all();
         $editions=Edition::all();
+        $areas=Area::all();
         $articles=Article::where('section',$seccion)->paginate(10);
-        return view("articulos" , compact("articles","editions", "authors"));
+        return view("articulos" , compact("articles","editions", "authors", "areas"));
     }
 
     public function store(ArticleRequest $request)
@@ -72,7 +76,7 @@ class ArticlesController extends Controller
 
         $article=Article::with(['comment','comment.user'])->where('slug',$article)->first();
 
-        return view("articles.show" , compact("article", "editions", "authors"));
+        return view("articles.show" , compact("article", "editions", "authors", "areas"));
 
     }
 
@@ -81,7 +85,8 @@ class ArticlesController extends Controller
         $article=Article::findOrFail($id);
         $editions=Edition::all();
         $authors=Author::all();
-        return view("articles.edit" , compact("article","editions", "authors"));
+        $areas=Area::all();
+        return view("articles.edit" , compact("article","editions", "authors", "areas"));
     }
 
     public function update(Request $request, $id)

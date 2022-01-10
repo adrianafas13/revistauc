@@ -29,4 +29,7 @@ class Article extends Model
 	public function author(){
         return $this->belongsTo('App\Author', 'author_id');
     }
+	public function area(){
+        return $this->belongsTo('App\Area', 'area_id');
+    }
 }

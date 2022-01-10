@@ -11,4 +11,7 @@ class Area extends Model
 		"area_en",
 		'color', 		    
 	];
+	public function articles(){
+        return $this->hasMany('App\Article', 'area_id');
+    }
 }
