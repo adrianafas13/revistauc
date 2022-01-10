@@ -1,8 +1,8 @@
 //data picker
 $(function () {
     $("#datepicker").datepicker({
+        format: "dd/mm/yyyy",
         orientation: "bottom",
-        format: "dd-mm-yyyy",
     });
 });
 

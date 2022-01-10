@@ -59,7 +59,8 @@ return [
 	'fecha' => 'Date',
 	'autor'=>'Author',
 	'email' => 'E-mail:',
-	'aviso' => 'Please, login to post a comment',
+	'aviso' => 'Please, log in to post a comment',
+	'aviso_articulo' =>'Please, log in to see the full article', 
 	//completo
 	'completa' => 'Full Edition',
 

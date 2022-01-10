@@ -342,8 +342,18 @@ li.navbar-item a:focus {
     margin-bottom: 30px;
 }
 /*BOTON DE DESCARGA DEL ARTÍCULO COMPLETO*/
-.article .button-article {
+.article .inivtacion-article {
     text-align: center;
+    padding-top: 4px;
+}
+.article .inivtacion-article p {
+    background-color: #d6d6d6ab;
+    width: 300px;
+    height: 35px;
+    line-height: 25px;
+    text-align: center;
+    font-size: 13px;
+    color: rgb(133, 2, 2);
 }
 /************************BARRA LATERAL DE INFORMACIÓN DEL AUTOR*****************/
 #content_bar_right {

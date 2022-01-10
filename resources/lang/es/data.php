@@ -60,6 +60,7 @@ return [
 	'autor'=>'Autor',
 	'email' => 'Correo:',
 	'aviso' => 'Para publicar un comentario inicia sesión',
+	'aviso_articulo' =>'Para ver el articulo completo inicia sesión',
 	//completo
 	'completa' => 'Edición Completa',
 
