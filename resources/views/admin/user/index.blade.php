@@ -53,6 +53,8 @@
 
 	</table>
 	<br>
+
+	{{ $users->links() }}
 </div>
 
 @endsection

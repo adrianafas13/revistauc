@@ -45,7 +45,8 @@
 		@endforeach
 		</tbody>
 	</table>
-<br>
+	<br>
+	{{ $authors->links() }}
 </div>
 
 @endsection

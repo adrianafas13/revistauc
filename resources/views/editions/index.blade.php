@@ -49,7 +49,8 @@
 		@endforeach
 		</tbody>
 	</table>
-
+	<br>
+	{{ $editions->links() }}
 </div>
 
 @endsection

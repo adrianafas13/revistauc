@@ -41,7 +41,7 @@
 	</table>
 
 	<div>
-		{{$comments->links()}}
+		{{ $comments->links() }}
 	</div>
 </div>
 @endsection

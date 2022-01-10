@@ -49,6 +49,7 @@
 	</table>
 
 	<br>
+	{{ $areas->links() }}
 </div>
 
 @endsection

@@ -16,6 +16,7 @@ class AreasController extends Controller
     public function index()
     {
         $areas=Area::all();
+        $areas = Area::orderBy('created_at','desc')->orderBy('id')->paginate(10);
         return view("areas.index" , compact("areas"));
     }
 

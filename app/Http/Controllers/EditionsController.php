@@ -16,7 +16,7 @@ class EditionsController extends Controller
     public function index()
     {
         $editions=Edition::all();
-        $editions=Edition::orderBy('id')->paginate(15);
+        $editions=Edition::orderBy('id')->paginate(10);
         return view("editions.index", compact("editions"));
     }
 

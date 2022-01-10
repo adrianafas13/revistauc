@@ -51,7 +51,8 @@
 		@endforeach
 		</tbody>
 	</table>
-
+	<br>
+	{{ $articles->links() }}
 </div>
 
 @endsection

@@ -16,7 +16,7 @@ class InformationController extends Controller
     public function index()
     {
         $information=Information::all();
-        $information=Information::orderBy('created_at','desc')->orderBy('id')->paginate(15);
+        $information=Information::orderBy('created_at','desc')->orderBy('id')->paginate(10);
         return view("information.index" , compact("information"));
     }
     public function create()

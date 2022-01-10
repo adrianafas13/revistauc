@@ -49,6 +49,7 @@
 	</table>
 
 	<br>
+	{{ $information->links() }}
 </div>
 
 @endsection
