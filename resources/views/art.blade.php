@@ -8,38 +8,38 @@
 					<div class="row">
 						<div class="col-sm-9">
 							<br>
-							<div class="container">
-								<div class="title-article">
-									<h2><b>{{ App::isLocale('es')?$article->title:$article->en_title }}</b></h2>
-									<br>
-								</div>
-							</div>	
-							<div class="img-article">
-								<img src="/images/{{$article->ruta_image}}">
-							</div>
-							<br>
-							<div class="resume-article">
 								<div class="container">
-									<p><b><i>@lang('data.resumen')</i></b></p>
-									<div>{!! App::isLocale('es')?$article->text:$article->en_text !!}</div>
+									<div class="title-article">
+										<h2><b>{{ App::isLocale('es')?$article->title:$article->en_title }}</b></h2>
+										<br>
+									</div>
+								</div>	
+								<div class="img-article">
+									<img src="/images/{{$article->ruta_image}}">
 								</div>
-							</div>
-							@if (Auth::check())
-								<div class="button-article">
-									<a href="/files/{{ $article->ruta_file }}" type="button" class="btn btn-success"><i class="fas fa-download"></i> @lang('data.descarga')</a>
+								<br>
+								<div class="resume-article">
+									<div class="container">
+										<p><b><i>@lang('data.resumen')</i></b></p>
+										<div>{!! App::isLocale('es')?$article->text:$article->en_text !!}</div>
+									</div>
 								</div>
-							@else
+								@if (Auth::check())
+									<div class="button-article">
+										<a href="/files/{{ $article->ruta_file }}" type="button" class="btn btn-success"><i class="fas fa-download"></i> @lang('data.descarga')</a>
+									</div>
+								@else
 									<div class="inivtacion-article">
 										<p>@lang('data.aviso_articulo')</p>
 									</div>
-							@endif
+								@endif
 							<br>
 							@auth
-				<div class="button-article">
-					<a href="
-					{{ asset('files/'.$article->ruta_file) }}" type="button" class="btn btn-success"><i class="fas fa-download"></i> @lang('data.descarga')</a>
-				</div>
-				@endauth
+								<div class="button-article">
+									<a href="
+									{{ asset('files/'.$article->ruta_file) }}" type="button" class="btn btn-success"><i class="fas fa-download"></i> @lang('data.descarga')</a>
+								</div>
+							@endauth
 						</div>
 						<!--Area de informacion del autor-->
 						<div class="col-sm-3" id="content_bar_right">
@@ -84,7 +84,7 @@
 											<form action="/comment/{{ $article->id }}" method="POST">
 												@csrf
 												<textarea type="text" class="form-control" name="comment" placeholder="@lang('data.escribe_comentario')"></textarea>
-												<input class="btn btn-primary" type="submit" value="@lang('data.enviar')">
+												<input class="btn btn-primary" type="submit" id="post-comment" value="@lang('data.enviar')">
 											</form>
 										</div>
 									@else

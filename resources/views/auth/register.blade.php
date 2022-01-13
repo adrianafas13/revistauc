@@ -63,7 +63,7 @@
                         </div>
 
                         <div class="form-group">
-                            <button type="submit" class="btn btn-primary btn-block btn-lg">
+                            <button type="submit" id="btnregister" class="btn btn-primary btn-block btn-lg">
                             {{ __('Register') }}
                             </button>
                         </div>
@@ -77,3 +77,9 @@
 </div>
 
 @endguest
+
+<!--<script>
+    $('#btnregister').on('click', function (){
+        swal("¡Bienvenido!", "Ha sido registrado con éxito", "success"); 
+    })
+</script>-->

@@ -1,3 +1,12 @@
+//sweetalert2
+$("#btnregister").on("click", function () {
+    swal("¡Bienvenido!", "Ha sido registrado con éxito", "success");
+});
+//comentatios
+$("#post-comment").on("click", function () {
+    swal("Su comentario ha sido enviado con éxito");
+});
+
 //data picker
 $(function () {
     $("#datepicker").datepicker({
