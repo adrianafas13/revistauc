@@ -8,9 +8,7 @@ class Article extends Model
 {
     protected $fillable=[
 		"title", 
-		"author",
-		"slug",
-		"section", 
+		"slug", 
 		"ruta_image",
 		"text", 
 		"ruta_file", 
@@ -18,6 +16,7 @@ class Article extends Model
 		"en_text", 
 		"edition_id",
 		"author_id",
+		"area_id",
 	];
 	public $timestamps = false;
 	public function comment(){

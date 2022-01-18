@@ -8,7 +8,7 @@
 		<div class="col-8">
 			<h4><b>Ediciones Publicadas:</b></h4>
 		</div>
-		<<div class="col-4">
+		<div class="col-4">
 			<div class="input-group">
 				<input type="search" class="form-control rounded" placeholder="Buscar..." aria-label="Search"
 					aria-describedby="search-addon" />
@@ -17,6 +17,10 @@
 		</div>
 	</div>
 	<hr>
+
+	@if(session('message'))
+		<div class="alert alert-success">{{session('message')}}</div>
+	@endif
 
 	<table class="table table-striped table-bordered">
 		<thead class="thead-dark">

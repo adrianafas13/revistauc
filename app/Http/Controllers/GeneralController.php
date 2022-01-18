@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Area;
 use App\Author;
 use App\Article;
 use App\Edition;
@@ -14,6 +14,7 @@ class GeneralController extends Controller
 {
     public function index()
     {
+        $areas= Area::all();
         $edition= Edition::orderBy('id', 'desc')->get()->first();
         if ($edition){
             $articles = Article::where('edition_id', (int) $edition->id)->orderBy('id','asc')->limit(10)->get();
@@ -28,7 +29,7 @@ class GeneralController extends Controller
 //        echo(json_encode($articlesData[0]->author,JSON_PRETTY_PRINT));
 //        die();
         $articles = $articlesData;
-        return view('/welcome',compact('articles', 'edition'));
+        return view('/welcome',compact('articles', 'edition', 'areas'));
 	}
 
     public function arti($slug){

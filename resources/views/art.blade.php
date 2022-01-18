@@ -61,8 +61,8 @@
 									</ul>
 									<br>
 									<ul class="card-body" >
-										<h6><a class="badge">{{ $article->section }}</a></h6>
-									</ul>
+										<h6><a class="badge">{{ App::isLocale('es')?$article->area->area_es:$article->area->area_en }}</a></h6>
+									</ul-->
 								</div>
 							</div>
 						</div>

@@ -47,7 +47,7 @@ class AuthorsController extends Controller
         }
         Author::create($authors);
 
-        return redirect("/admin/authors");
+        return redirect("/admin/authors")->with('message', 'Se ha registrado con éxito');
 
     }
 

@@ -16,6 +16,10 @@
 	</div>
 	<hr>
 
+	@if(session('message'))
+		<div class="alert alert-success" id="alert">{{session('message')}}</div>
+	@endif
+	
 	<table class="table table-striped table-bordered">
 
 		<thead class="thead-dark">
@@ -28,7 +32,7 @@
 		</thead>
 
 		<tbody>
-		@foreach($information as $information)
+		@foreach($informations as $information)
 		<tr>
 			<td><p>{{ $information->information_title }}</p></td>
 			<td><p>{{ $information->en_information_title }}</p></td>
@@ -50,7 +54,7 @@
 
 	<br>
 	<ul class="pagination justify-content-center">
-		{{ $information->links() }}
+		{{ $informations->links() }}
 	</ul>
 	
 </div>

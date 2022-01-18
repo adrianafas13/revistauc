@@ -3,8 +3,22 @@
     @section('content')
         @if(!empty($edition))
         <div class="main">
+        <br>
             <div class="container-fluid">
                 <div class="row">
+                    <div class="col-12 .col-sm-12 col-md-12 .col-lg-12 .col-xl-12">
+                        <div class="edition_title" style="text-align:center; 
+                        background-color: rgb(246, 229, 192); 
+                        color:#000; 
+                        padding-top:10px; 
+                        padding-bottom:0.1px;
+                        border-radius:5px; 
+                        box-shadow: 4px 4px rgba(158, 158, 158, 0.3);">
+                            <h5><b>AVISO</b></h5>
+                            <p><i>La Revista Unimar Científica informa que ya se inició el proceso de recepción y arbitraje de Artículos Científicos para los Volúmenes 2 y 3 del presente año.<br/>
+                            Para mayor información de los requisitos consultar en la pestaña de Información.</i></p>
+                        </div>
+                    </div>
                 <!---- Portada de la ultima edicion ------------------------------------------------------------>
                     <div class="col-12 .col-sm-12 col-md-6 .col-lg-6 .col-xl-6">
                     <br>
@@ -54,7 +68,7 @@
                             </div>
                             <div class="col-md-8">
                                 <div class="card-body" id="articulos-card-informacion">
-                                    <h6><a href="#" class="badge">{{ $article->section }}</a></h6>
+                                    <h6><a href="#" class="badge">{{ App::isLocale('es')?$article->area->area_es:$article->area->area_en }}</a></h6>
                                     <h5><b>{{ App::isLocale('es')?$article->title:$article->en_title }}</b></h5>
                                     <p>{{ $article->author->name_author }}</p>
                                     <p class="card-text"><small class="text-muted">{{ $edition->edition_date }}</small></p>

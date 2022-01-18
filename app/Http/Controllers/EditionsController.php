@@ -66,7 +66,7 @@ class EditionsController extends Controller
 
         Edition::create($enter);
 
-        return redirect("/admin/editions");
+        return redirect("/admin/editions")->with('message', 'Se ha registrado con éxito');
 
     }
     /**

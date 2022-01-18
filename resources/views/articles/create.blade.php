@@ -57,26 +57,6 @@
 			</div>
 		</div>
 
-
-		<div class="row">
-			<div class="col-3" id="title-info">
-				<p>Área de conocimiento:</p>
-			</div>
-			<div class="col-9">
-				<div class="form-group">
-				<select class="form-control" id="section"  name="section" placeholder="Linea de Investigación">
-                    <option value="biologia">Biología Marina</option>
-                    <option value="derecho">Derecho</option>
-                    <option value="economia">Economía</option>
-                    <option value="educación">Educación</option>
-                    <option value="epistemologia">Epistemología</option>
-                    <option value="filosofia">Filosofía</option>
-                    <option value="gerencia">Gerencia</option>
-				</select>
-				</div>
-			</div>
-		</div>
-
 		<br>
 		<!--Español-->
 		<div class="spanish-backgorund">

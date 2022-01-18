@@ -19,7 +19,7 @@
                                 </div>
                                 <div class="col-md-8">
                                     <div class="card-body">
-                                        <h6><a href="#" class="badge">{{ $article->section }}</a></h6>
+                                        <h6><a href="#" class="badge">{{ App::isLocale('es')?$article->area->area_es:$article->area->area_en }}</a></h6>
                                         <h5><b>{{ App::isLocale('es')?$article->title:$article->en_title }}</b></h5>
                                         <p>{{ $article->author->name_author }}</p>
                                         <a type="button" class="btn btn-outline-dark" href="{{route('art', $article->slug)}}">@lang('data.ver_mas')</a>

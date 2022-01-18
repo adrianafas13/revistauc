@@ -47,31 +47,12 @@
 			</div>
 			<div class="col-9">
 				<div class="form-group">
-					<select class="form-control" id="area" name="area_id" placeholder="Área de Investigación">
+					<select class="form-control" id="area"  value="{{$article->area_id}}">
 						@foreach ($areas as $area)
 							<option value="{{$area->id}}"> {{$area->area_es}} </option>
 						@endforeach
 					</select>
 
-				</div>
-			</div>
-		</div>
-
-		<div class="row">
-			<div class="col-3" id="title-info">
-				<p>Ámbitos de conocimiento:</p>
-			</div>
-			<div class="col-9">
-				<div class="form-group">
-				<select class="form-control" id="section" value="{{$article->section}}">
-					<option value="biologia">Biología Marina</option>
-                    <option value="derecho">Derecho</option>
-                    <option value="economia">Economía</option>
-                    <option value="educación">Educación</option>
-                    <option value="epistemologia">Epistemología</option>
-                    <option value="filosofia">Filosofía</option>
-                    <option value="gerencia">Gerencia</option>
-				</select>
 				</div>
 			</div>
 		</div>

@@ -16,6 +16,10 @@
 	</div>
 	<hr>
 
+	@if(session('message'))
+		<div class="alert alert-success">{{session('message')}}</div>
+	@endif
+
 	<table class="table table-striped table-bordered">
 		<thead class="thead-dark">
 		<tr>
@@ -36,7 +40,7 @@
 			<td><p>{{ $article->en_title }}</p></td>
 			<td><p>{{ $article->edition->edition_number }}</p></td>
 			<td><p>{{ $article->author->name_author }}</p></td>
-			<td><p>{{ $article->section }}</p></td>
+			<td><p>{{ $article->area->area_es }}</p></td>
 			<td>
 				<a href="{{route('article.edit', $article->id)}}" class="btn btn-warning btn-sm"><i class="fas fa-edit"></i></a>
 			</td>

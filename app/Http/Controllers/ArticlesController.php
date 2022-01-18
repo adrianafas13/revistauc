@@ -30,15 +30,6 @@ class ArticlesController extends Controller
         return view('articles.create', compact("editions", "authors", "areas"));
     }
 
-    public function seccion($seccion){
-        $articles=Article::all();
-        $authors=Author::all();
-        $editions=Edition::all();
-        $areas=Area::all();
-        $articles=Article::where('section',$seccion)->paginate(10);
-        return view("articulos" , compact("articles","editions", "authors", "areas"));
-    }
-
     public function store(ArticleRequest $request)
     {
         $enter=$request->all();

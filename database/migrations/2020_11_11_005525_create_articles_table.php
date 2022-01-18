@@ -13,9 +13,8 @@ class CreateArticlesTable extends Migration
             $table->bigIncrements('id');
             $table->unsignedBigInteger('edition_id')->nulleable();
             $table->unsignedBigInteger('author_id')->nulleable();
+            $table->unsignedBigInteger('area_id')->nulleable();
 
-            /**general**/
-            $table->string('section',150)->nullable(false);
             /**español**/
             $table->string('title',255)->nullable(false)->unique();
             $table->string('slug',255)->nullable(false)->unique();

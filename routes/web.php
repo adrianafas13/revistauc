@@ -4,7 +4,7 @@ use Illuminate\Support\facades\Mail;
 
 Route::get('/', 'GeneralController@index')->name('welcome');
 Route::get('/articulos', 'GeneralController@arti')->name('articulos');
-Route::get('/seccion/{seccion}', 'ArticlesController@seccion');
+//Route::get('/seccion/{seccion}', 'ArticlesController@seccion');
 Route::get('/art/{slug}', 'GeneralController@show')->name('art');
 Route::post('/art/{article}', 'GeneralController@store')->name('art.store');
 Route::get('/informacion', 'GeneralController@informacion')->name('informacion');

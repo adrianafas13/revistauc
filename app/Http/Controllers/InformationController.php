@@ -15,9 +15,9 @@ class InformationController extends Controller
      */
     public function index()
     {
-        $information=Information::all();
-        $information=Information::orderBy('created_at','desc')->orderBy('id')->paginate(10);
-        return view("information.index" , compact("information"));
+        $informations=Information::all();
+        $informations=Information::orderBy('created_at','desc')->orderBy('id')->paginate(10);
+        return view("information.index" , compact("informations"));
     }
     public function create()
     {
@@ -50,36 +50,36 @@ class InformationController extends Controller
 
         Information::create($enter);
 
-        return redirect("/admin/information/");
+        return redirect("/admin/information/")->with('message', 'Se ha registrado con éxito');
     }
 
     public function show($id)
     {
-        $information=Information::findOrFail($id);
+        $informations=Information::findOrFail($id);
 
         return view("information.show" , compact("information"));
     }
 
     public function edit($id)
     {
-        $information=Information::findOrFail($id);
+        $informations=Information::findOrFail($id);
 
         return view("information.edit" , compact("information"));
     }
 
     public function update(Request $request, $id)
     {
-        $information=Information::findOrFail($id);
+        $informations=Information::findOrFail($id);
 
-        $information->update($request->all());
+        $informations->update($request->all());
 
         return redirect("/admin/information");
     }
 
     public function destroy($id)
     {
-        $information=Information::findOrFail($id);
-        $information->delete();
+        $informations=Information::findOrFail($id);
+        $informations->delete();
         return redirect("/admin/information");
     }
 }
