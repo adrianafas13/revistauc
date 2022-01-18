@@ -40,6 +40,9 @@
                     @endforeach
                 @endif
                 <br>
+                <ul class="pagination justify-content-center">
+                    {{ $editions->links() }}
+                </ul>
             </div>
         </div>
 @endsection

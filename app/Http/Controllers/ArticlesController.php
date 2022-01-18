@@ -60,7 +60,7 @@ class ArticlesController extends Controller
 
         Article::create($enter);
 
-        return redirect("/admin/article/");
+        return redirect("/admin/article/")->with('message', 'Se ha registrado con éxito');
     }
 
     public function show($article){

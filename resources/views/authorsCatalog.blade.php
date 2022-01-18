@@ -55,6 +55,9 @@
                         @endforeach
                     @endif
                 </div>
+                <ul class="pagination justify-content-center">
+                    {{ $authors->links() }}
+                </ul>
             </div>
         <br>
         </div>

@@ -14,7 +14,7 @@
                         padding-bottom:0.1px;
                         border-radius:5px; 
                         box-shadow: 4px 4px rgba(158, 158, 158, 0.3);">
-                            <h5><b>AVISO</b></h5>
+                            <h5><b>AVISO</b></h6>
                             <p><i>La Revista Unimar Científica informa que ya se inició el proceso de recepción y arbitraje de Artículos Científicos para los Volúmenes 2 y 3 del presente año.<br/>
                             Para mayor información de los requisitos consultar en la pestaña de Información.</i></p>
                         </div>

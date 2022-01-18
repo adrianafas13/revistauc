@@ -11,9 +11,9 @@ use Illuminate\Support\Facades\Auth;
 
 class CommentsController extends Controller
 {
-   
+
     public function index(){
-        $comments = Comment::orderBy('created_at','desc')->orderBy('id')->paginate(8);
+        $comments = Comment::orderBy('created_at','desc')->orderBy('id')->paginate(10);
         return view('admin.comments.index',compact('comments'));
     }
 

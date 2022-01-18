@@ -40,7 +40,7 @@ class AreasController extends Controller
     {
         $areas=$request->all();
         Area::create($areas);
-        return redirect("/admin/areas"); 
+        return redirect("/admin/areas")->with('message', 'Se ha registrado con éxito');
     }
 
     /**

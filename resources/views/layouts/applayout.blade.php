@@ -36,7 +36,7 @@
 
                     <div class="collapse navbar-collapse" id="collapse_target">
                     <!------------------------------------------------- ENLACES ------------------------------------------------------------>
-                    <ul class="navbar-nav ml-auto">
+                   <ul class="navbar-nav ml-auto">
                         <li class="navbar-item dropdown">
                             <a class="nav-link dropdown-toggle btn-group" data-toggle="dropdown" id="dropdown_target" href="#">
                                 @lang('data.secciones')
@@ -46,7 +46,7 @@
                                 @if(count($areas))
                                     @foreach ($areas as $area)
                                         <a class="dropdown-item" href="#">
-                                        {{App::isLocale('es')?$article->area->area_es:$article->area->area_en}}
+                                            {{App::isLocale('es')?$area->area_es:$area->area_en}}
                                         </a>
                                     @endforeach
                                 @endif

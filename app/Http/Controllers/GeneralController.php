@@ -33,37 +33,43 @@ class GeneralController extends Controller
 	}
 
     public function arti($slug){
+        $areas= Area::all();
         $article = Article::where('slug',$slug)->get()->first();
         $article->author = Author::where('id', (int) $article->author_id)->get()->first();
-        return view('/articulos',compact('article'));
+        return view('/articulos',compact('article', 'areas'));
     }
 
     public function authors(){
-        $authors=Author::with(['articles'])->orderBy('name_author')->get();
-        return view('/authorsCatalog',compact('authors'));
+        $areas= Area::all();
+        $authors=Author::with(['articles'])->orderBy('name_author')->paginate(10);
+        return view('/authorsCatalog',compact('authors', 'areas')); 
     }
 
     public function show($slug){
+        $areas= Area::all();
         $authors=Author::orderBy('id', 'desc')->take(1)->get();
         $article=Article::with(['comment','comment.user'])->where('slug',$slug)->first();
-        return view("/art", compact('article', 'authors'));
+        return view("/art", compact('article', 'authors','areas'));
 
     }
 
     public function informacion(){
-        $information=Information::all();
-        return view('/informacion',compact('information'));
+        $areas= Area::all();
+        $information=Information::query()->paginate(10);
+        return view('/informacion',compact('information', 'areas'));
     }
 
     public function edicion(){
+        $areas= Area::all();
         $editions=Edition::orderBy('id', 'desc')->paginate(10);
-        return view('/edicion', compact('editions'));
+        return view('/edicion', compact('editions', 'areas'));
     }
     public function fulledicion($id){
+        $areas= Area::all();
         $editions=Edition::where('id', (int) $id)->with(['articles'])->get()->first();
        // dd($editions->articles);
        // $editions->article = Article::where('edition_id', (int) $edition->id)->orderBy('id','asc')->limit(10)->get();
-        return view('/fulledition', compact('editions'));
+        return view('/fulledition', compact('editions', 'areas'));
     }
 
     public function sobre(){
@@ -84,8 +90,10 @@ class GeneralController extends Controller
             ->paginate(10);
         $authors = Author::where('name_author', 'LIKE', '%'.$search_text.'%')
             ->paginate(10);
-
-        return view('/search', compact('articles','authors'));
+        $areas = Area::where('area_es', 'LIKE', '%'.$search_text.'%')
+            ->orWhere('area_en', 'LIKE', '%'.$search_text.'%')
+            ->paginate(10);
+        return view('/search', compact('articles','authors', 'areas'));
     }
 
     public function store(Request $request)

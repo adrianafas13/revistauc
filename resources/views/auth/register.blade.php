@@ -77,9 +77,8 @@
 </div>
 
 @endguest
-
-<!--<script>
-    $('#btnregister').on('click', function (){
-        swal("¡Bienvenido!", "Ha sido registrado con éxito", "success"); 
-    })
-</script>-->
+<script>
+    $("#btnregister").on("click", function () {
+        swal("¡Bienvenido!", "Ha sido registrado con éxito", "success");
+    });
+</script>

@@ -4,6 +4,7 @@
 }
 body {
     overflow-x: hidden;
+    overflow-y: overlay;
     position: relative;
     min-height: 100vh;
 }
@@ -52,7 +53,21 @@ li.navbar-item a:focus {
     background: #084456;
     color: #fff;
     border: none;
+    max-height: 250px;
+    overflow-x: hidden;
+    overflow-y: overlay;
     box-shadow: 2px rgba(0, 0, 0, 0.2);
+}
+::-webkit-scrollbar {
+    background: transparent;
+    width: 5px;
+}
+::-webkit-scrollbar-thumb {
+    background: #f6e5c0;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-corner {
+    border-radius: 10px;
 }
 .navbar .dropdown-menu .dropdown-item:hover {
     background: #f6e5c0;
@@ -343,7 +358,8 @@ li.navbar-item a:focus {
 }
 /*BOTON DE DESCARGA DEL ARTÍCULO COMPLETO*/
 .article .inivtacion-article {
-    text-align: center;
+    width: 70%;
+    margin: 0 auto;
     padding-top: 4px;
 }
 .article .inivtacion-article p {
@@ -354,6 +370,7 @@ li.navbar-item a:focus {
     text-align: center;
     font-size: 13px;
     color: rgb(133, 2, 2);
+    padding-top: 4px;
 }
 /************************BARRA LATERAL DE INFORMACIÓN DEL AUTOR*****************/
 #content_bar_right {

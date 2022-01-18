@@ -18,21 +18,23 @@
 									<img src="/images/{{$article->ruta_image}}">
 								</div>
 								<br>
-								<div class="resume-article">
-									<div class="container">
-										<p><b><i>@lang('data.resumen')</i></b></p>
-										<div>{!! App::isLocale('es')?$article->text:$article->en_text !!}</div>
+								<div class="container">
+									<div class="resume-article">
+										<div class="container">
+											<p><b><i>@lang('data.resumen')</i></b></p>
+											<div>{!! App::isLocale('es')?$article->text:$article->en_text !!}</div>
+										</div>
 									</div>
+									@if (Auth::check())
+										<div class="button-article">
+											<a href="/files/{{ $article->ruta_file }}" type="button" class="btn btn-success"><i class="fas fa-download"></i> @lang('data.descarga')</a>
+										</div>
+									@else
+										<div class="inivtacion-article">
+											<p>@lang('data.aviso_articulo')</p>
+										</div>
+									@endif
 								</div>
-								@if (Auth::check())
-									<div class="button-article">
-										<a href="/files/{{ $article->ruta_file }}" type="button" class="btn btn-success"><i class="fas fa-download"></i> @lang('data.descarga')</a>
-									</div>
-								@else
-									<div class="inivtacion-article">
-										<p>@lang('data.aviso_articulo')</p>
-									</div>
-								@endif
 							<br>
 							@auth
 								<div class="button-article">

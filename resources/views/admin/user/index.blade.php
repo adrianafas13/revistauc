@@ -60,7 +60,3 @@
 </div>
 
 @endsection
-
-<!--<a href="#" data-toggle="modal" data-target="#editUserModal">
-						<button type="button" class="btn btn-success btn-sm"><i class="fas fa-edit"></i></button>
-					</a>-->
