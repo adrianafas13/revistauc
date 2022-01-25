@@ -24,9 +24,9 @@
         <ul class="navbar-nav">
           <div class="logotipo">
             <a href="{{route('welcome')}}">
-            <img src="{{ asset('/images/rcu-yellow-logo.png') }}" alt="logo" width="165px" height="auto" style="margin-top:10px; margin-left:10px;">
+            <img src="{{ asset('/images/rcu-yellow-logo.png') }}" alt="logo">
             </a>
-          </div>
+          </div> 
         </ul>
         <ul class="navbar-nav ml-auto">
           <li class="nav-item text-nowrap">
@@ -36,89 +36,70 @@
       </nav>
       <!------------------------------------------------- SIDEBAR ------------------------------------------------------------>
     <div class="sidebar">
-      <ul class="nav flex-column">
+      <ul class="nav flex-column list-group-flush" id="barra-admin">
 
-        <li class="nav-item">
-          <a class="nav-link" type="button" data-toggle="collapse" data-target="#collapseEdiciones" aria-expanded="false" aria-controls="collapseExample">
-            <i class="far fa-newspaper fa-lg"></i> Ediciones
-          </a>
-          <div class="collapse" id="collapseEdiciones">
-            <div class="card card-body" id="sidebar-items">
-              <a class="dropdown-item" href="{{ route('editions.create') }}">Crear nueva</a>
-              <a class="dropdown-item" href="{{ route('editions.index') }}">Ver ediciones</a>
+        <li class="nav-item">  
+          <a class="nav-link" type="button" href="{{ route('editions.index') }}">
+            <div class="content-bar">
+              <i class="far fa-newspaper fa-lg"></i>
+              <p>Ediciones</p>
             </div>
-          </div>
+          </a>  
+        </li>
+      
+        <li class="nav-item">
+          <a class="nav-link" type="button" href="{{ route('authors.index') }}">
+            <div class="content-bar">
+              <i class="fas fa-pencil-alt fa-lg"></i> 
+              <p>Autores</p>
+            </div>
+          </a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" type="button" data-toggle="collapse" data-target="#collapseAuthor" aria-expanded="false" aria-controls="collapseExample">
-            <i class="fas fa-pencil-alt fa-lg"></i> Autores
-          </a>
-          <div class="collapse" id="collapseAuthor">
-            <div class="card card-body" id="sidebar-items">
-              <a class="dropdown-item" href="{{ route('authors.create') }}">Registrar</a>
-              <a class="dropdown-item" href="{{ route('authors.index') }}">Ver Lista</a>
+          <a class="nav-link" type="button" href="{{ route('areas.index') }}">
+            <div class="content-bar">
+              <i class="fas fa-atom"></i> 
+              <p>Áreas</p>
             </div>
-          </div>
+          </a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" type="button" data-toggle="collapse" data-target="#collapseArea" aria-expanded="false" aria-controls="collapseExample">
-          <i class="fas fa-atom"></i> Áreas
-          </a>
-          <div class="collapse" id="collapseArea">
-            <div class="card card-body" id="sidebar-items">
-              <a class="dropdown-item" href="{{ route('areas.create') }}">Registrar</a>
-              <a class="dropdown-item" href="{{ route('areas.index') }}">Ver Lista</a>
+          <a class="nav-link" type="button" href="{{ route('article.index') }}">
+            <div class="content-bar">
+              <i class="far fa-sticky-note fa-lg"></i> 
+              <p>Artículos</p>
             </div>
-          </div>
+          </a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" type="button" data-toggle="collapse" data-target="#collapseArticle" aria-expanded="false" aria-controls="collapseExample">
-            <i class="far fa-sticky-note fa-lg"></i> Artículos
-          </a>
-          <div class="collapse" id="collapseArticle">
-            <div class="card card-body" id="sidebar-items">
-              <a class="dropdown-item" href="{{ route('article.create') }}">Crear nuevo</a>
-              <a class="dropdown-item" href="{{ route('article.index') }}">Ver lista</a>
+          <a class="nav-link" type="button "href="{{ route('information.index') }}">
+            <div class="content-bar">
+              <i class="fas fa-info fa-lg"></i> 
+              <p>Información</p>
             </div>
-          </div>
+          </a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" type="button" data-toggle="collapse" data-target="#collapseInformacion" aria-expanded="false" aria-controls="collapseExample">
-            <i class="fas fa-info fa-lg"></i> Información
-          </a>
-          <div class="collapse" id="collapseInformacion">
-            <div class="card card-body" id="sidebar-items">
-              <a class="dropdown-item" href="{{ route('information.create') }}">Añadir</a>
-              <a class="dropdown-item" href="{{ route('information.index') }}">Ver disponibles</a>
+          <a class="nav-link" type="button" href="{{ route('comments') }}">
+            <div class="content-bar">
+              <i class="fas fa-images fa-lg"></i> 
+              <p>Comentarios</p>
             </div>
-          </div>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" type="button" data-toggle="collapse" data-target="#collapseComments" aria-expanded="false" aria-controls="collapseExample">
-            <i class="fas fa-images fa-lg"></i> Comentarios
           </a>
-          <div class="collapse" id="collapseComments">
-            <div class="card card-body" id="sidebar-items">
-              <a class="dropdown-item" href="{{ route('comments') }}">Ver comentarios</a>
-            </div>
-          </div>
         </li>
 
         @hasrole('Admin')
         <li class="nav-item">
-          <a class="nav-link" type="button" data-toggle="collapse" data-target="#collapseUsuarios" aria-expanded="false" aria-controls="collapseExample">
-            <i class="fas fa-users fa-lg"></i>  Usuarios
-          </a>
-          <div class="collapse" id="collapseUsuarios">
-            <div class="card card-body" id="sidebar-items">
-              <a class="dropdown-item" href=" {{ route('user.index') }}">Ver lista</a>
+          <a class="nav-link" type="button" href=" {{ route('user.index') }}">
+            <div class="content-bar">
+              <i class="fas fa-users fa-lg"></i>  
+              <p>Usuarios</p>
             </div>
-          </div>
+          </a>
         </li>
         @endhasrole
 

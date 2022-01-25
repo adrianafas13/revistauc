@@ -16,7 +16,7 @@ body {
 /*---------------------BARRA DE NAVEGACIÓN----------------------------------*/
 .navbar {
     background-color: #084456;
-    color: #fff;
+    color: #f6e5c0;
     font-size: 15px;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
@@ -47,11 +47,11 @@ li.navbar-item a:focus {
     border-radius: 4px;
 }
 .navbar a {
-    color: #fff;
+    color: #f6e5c0;
 }
 .navbar .dropdown-menu {
     background: #084456;
-    color: #fff;
+    color: #f6e5c0;
     border: none;
     max-height: 250px;
     overflow-x: hidden;
@@ -507,87 +507,6 @@ li.navbar-item a:focus {
     text-align: left;
     font-size: 30px;
 }
-/*---------------------ADMIN PANEL----------------------------------------------*/
-/*---------------------layout---------------------*/
-.navbar #navbar-admin {
-    background-color: #084456;
-    font-size: 15px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 60px;
-    position: relative;
-}
-.navbar #navbar-admin a {
-    color: #fff;
-}
-.navbar #navbar-admin a:hover {
-    color: #fff;
-}
-
-/* The side navigation menu */
-.sidebar {
-    margin: 0;
-    padding: 0;
-    width: 200px;
-    background-color: #313131;
-    position: fixed;
-    height: 100%;
-    overflow: auto;
-}
-
-.sidebar #sidebar-items {
-    background-color: #313131;
-    color: #fff;
-}
-
-.sidenav a,
-.dropdown-btn {
-    padding: 6px 8px 6px 16px;
-    text-decoration: none;
-    font-size: 20px;
-    display: block;
-    border: none;
-    background: none;
-    width: 100%;
-    text-align: left;
-    cursor: pointer;
-    outline: none;
-}
-
-/*On mouse-over */
-.sidenav a:hover {
-    color: #04aa6d;
-}
-.dropdown-btn:hover {
-    background-color: red;
-}
-/* Sidebar links */
-.sidebar a {
-    display: block;
-    color: #fff;
-    padding: 16px;
-    text-decoration: none;
-}
-
-/* Active/current link */
-.sidebar a.active {
-    background-color: #04aa6d;
-    color: white;
-}
-
-/* Links on mouse-over */
-.sidebar a:hover:not(.active) {
-    background-color: #555;
-    color: white;
-}
-
-/* Page content. The value of the margin-left property should match the value of the sidebar's width property */
-div.content {
-    margin-left: 200px;
-    padding: 1px 16px;
-}
-
 /*******************EDICIONES*******************************/
 .main .container #edicion {
     padding-bottom: 10px;
@@ -606,8 +525,77 @@ div.content {
     display: flex;
     justify-content: center;
 }
+/*---------------------ADMIN PANEL----------------------------------------------*/
+/***********************layout*********************/
+.navbar #navbar-admin {
+    background-color: #084456;
+    color: #f6e5c0;
+    font-size: 15px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
 
-/***********************admin*********************/
+.navbar #navbar-admin a {
+    color: #f6e5c0;
+}
+.navbar #navbar-admin a:hover {
+    color: #f6e5c0;
+}
+
+#navbar-admin .logotipo img {
+    width: 195px;
+    height: auto;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+.sidebar #barra-admin {
+    background-color: #084456;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+}
+#barra-admin li.nav-ietm .content-bar {
+    text-decoration: none;
+    padding: 6px;
+}
+#barra-admin li.nav-item i {
+    display: inline-block;
+    color: #f6e5c0;
+    font-size: 22px;
+}
+#barra-admin li.nav-item p {
+    display: inline-block;
+    color: #f6e5c0;
+    font-size: 18px;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+div.content {
+    margin-left: 200px;
+    padding: 1px 16px;
+}
+/*-----------------------------------structure index---------------------------------*/
+.main-admin .title-color {
+    background-color: #ea9658;
+    color: #000;
+    padding: 1em;
+    border-radius: 5px;
+    text-align: center;
+}
+.main-admin .tabla .thead {
+    background-color: #084456;
+    color: #fff;
+    text-align: center;
+}
+.main-admin .tabla tbody {
+    text-align: center;
+}
+/*-----------------------------------------------------------------------------------*/
 .spanish-backgorund {
     background-color: #fdf5001e;
     border-radius: 10px;
