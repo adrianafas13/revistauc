@@ -1,7 +1,7 @@
 @extends('layouts.adminlayout')
 @section('content')
 <div class="main-admin">
-	<div class="container">
+	<div class=".xl-container">
 	<br>
 
 		<div class="row" id="index-bar">

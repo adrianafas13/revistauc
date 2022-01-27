@@ -1,7 +1,7 @@
 @extends('layouts.adminlayout')
 @section('content')
 <div class="main-admin">
-	<div class="container">
+	<div class=".xl-container">
 	<br>
 		<div class="row" id="index-bar">
 			<div class="col-8"></div>
@@ -9,7 +9,7 @@
 				<div class="input-group">
 					<input type="search" class="form-control rounded" placeholder="Buscar..." aria-label="Search"
 						aria-describedby="search-addon" />
-					<button type="button" class="btn btn-outline-primary">Buscar</button>
+					<button type="button" class="btn btn-outline-primary"><i class="fas fa-search"></i> Buscar</button>
 				</div>
 			</div>
 		</div>

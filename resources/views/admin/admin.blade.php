@@ -2,6 +2,6 @@
 
 @section('content')
     <div class=".container-xl">
-        <img src="/images/instrucciones.png" style="width:1097px; height:602px; margin-left:-16px;">
+        <img src="/images/instrucciones.png" style="width:100%; height:auto;">
     </div>
 @endsection 
