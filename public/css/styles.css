@@ -659,8 +659,14 @@ div.content {
     text-align: center;
     margin-bottom: 10px;
 }
-.main-admin #send {
+.main-admin #save {
     background-color: #08833b;
+    color: #fff;
+    width: 100%;
+    border-radius: 5px;
+}
+.main-admin #modify {
+    background-color: #856d03;
     color: #fff;
     width: 100%;
     border-radius: 5px;

@@ -41,7 +41,7 @@
 
 		@csrf
 		<div>
-			<input id="send" type="submit" name="enviar" value="Guardar">
+			<input id="save" type="submit" name="enviar" value="Guardar">
 		</div>
 		<br>
 

@@ -28,6 +28,12 @@
 		@if(session('message'))
 			<div class="alert alert-success">{{session('message')}}</div>
 		@endif
+		@if(session('message-modify'))
+			<div class="alert alert-warning">{{session('message-modify')}}</div>
+		@endif
+		@if(session('message-delete'))
+			<div class="alert alert-danger">{{session('message-delete')}}</div>
+		@endif
 
 		<div class="tabla">
 			<table class="table table-striped table-bordered">

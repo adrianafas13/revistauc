@@ -36,7 +36,7 @@
 
                     <div class="collapse navbar-collapse" id="collapse_target">
                     <!------------------------------------------------- ENLACES ------------------------------------------------------------>
-                   <ul class="navbar-nav ml-auto">
+                    <ul class="navbar-nav ml-auto">
                         <li class="navbar-item dropdown">
                             <a class="nav-link dropdown-toggle btn-group" data-toggle="dropdown" id="dropdown_target" href="#">
                                 @lang('data.secciones')

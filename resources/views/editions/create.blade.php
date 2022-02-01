@@ -6,7 +6,7 @@
         <br>
 
         <div class="title-color">
-			<h5><b>Nueva Edicion</b></h5>
+			<h5><b>Nueva Edición</b></h5>
 		</div>
 
         <br>
@@ -63,6 +63,8 @@
 			</div>
         </div>
         <br>
+
+        <!--English-->
         <div class="title-color-languaje">
 			<h5><b>Information of the edition in English</b></h5>
 		</div>
@@ -79,7 +81,7 @@
         <br>
         @csrf
 		<div>
-			<input id="send" type="submit" name="enviar" value="Guardar">
+			<input id="save" type="submit" name="enviar" value="Guardar">
 		</div>
         <br>
 

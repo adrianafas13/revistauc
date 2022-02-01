@@ -106,7 +106,7 @@
 
 		@csrf
 		<div>
-			<input id="send" type="submit" name="enviar" value="Publicar">
+			<input id="save" type="submit" name="enviar" value="Publicar">
 		</div>
 		<br>
 

@@ -15,7 +15,7 @@ class ArticlesController extends Controller
     public function index()
     {
         $articles=Article::all();
-        $articles=Article::orderBy('id')->paginate(10);
+        $articles=Article::orderBy('id', 'desc')->paginate(10);
         $authors=Author::all();
         $areas=Area::all();
 
@@ -109,11 +109,11 @@ class ArticlesController extends Controller
 
         $article->update($enter);
 
-        return redirect("/admin/article");
+        return redirect("/admin/article")->with('message-modify', 'Se ha modificado con éxito');
     }
 
     public function destroy(Article $article){
         $article->delete();
-        return redirect("/admin/article");
+        return redirect("/admin/article")->with('message-delete', 'Se ha eliminado con éxito');
     }
 }

@@ -10,9 +10,8 @@ return [
 	'contacto' => 'Information',
 	'autores' => 'Authors',
 	'secciones' => 'Knowledge Areas',
-	'español' => 'ES',
-	'ingles' => 'EN',
-	'italiano' => 'IT',
+	'español' => 'Español',
+	'ingles' => 'English',
     //AREAS DE CONOCIMIENTO
     'biologia' => 'Biology',
     'derecho' => 'Laws',

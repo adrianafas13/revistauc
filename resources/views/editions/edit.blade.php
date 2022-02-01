@@ -1,127 +1,93 @@
 @extends('layouts.adminlayout')
-
 @section('content')
-<div class=".xl-container">
+<div class="main-admin">
+    <div class=".xl-container">
 	<br>
-    <h4><b>Modificación de la edición:</b></h4>
-	<hr>
-    <br>
-    <form method="POST" action="/admin/editions/{{$editions->id}}" enctype="multipart/form-data">
-        <input type="hidden" name="_method" value="PUT">
-        <!--General-->
-        <div class="row">
-            <div class="col-3" id="title-info">
-                <p>Número de la Edicion:</p>
-            </div>
-            <div class="col-9">
-                <div class="input-texto">
-                    <input type="text" required id="edition_number" name="edition_number" value="{{$editions->edition_number}}">
-                </div>
-            </div>
-        </div>
 
-        <div class="row">
-            <div class="col-3" id="title-info">
-                <p>Fecha de la Edicion:</p>
+        <div class="title-color">
+			<h5><b>Modificar Edición</b></h5>
+		</div>
+
+        <br>
+
+        <form method="POST" action="/admin/editions/{{$editions->id}}" enctype="multipart/form-data">
+            <input type="hidden" name="_method" value="PUT">
+            <!--General-->
+
+            <div class="general-title">
+                <h5><b>Información General:</b></h5>
             </div>
-            <div class="col-9">
-                <div class="input-group date" id="datepicker">
-                    <input type="text" class="form-control" required id="edition_date" name="edition_date" value="{{$editions->edition_date}}">
+            <div class="general-input">
+                <h6><b>Número de la Edición:</b></h6>
+                <input type="text" required id="edition_number" name="edition_number" value="{{$editions->edition_number}}">
+            </div>
+
+            <div class="general-input">
+                <h6><b>Fecha de la Edición:</b></h6>
+                <div class="input-group date" data-date-format="dd-mm-yyyy" id="datepicker">
                     <span class="input-group-append">
-                        <span class="input-group-text bg-white">
+                        <span class="input-group-text">
                             <i class="fa fa-calendar"></i>
                         </span>
                     </span>
+                    <input type="text" class="form-control" required id="edition_date" name="edition_date" value="{{$editions->edition_date}}">
                 </div>
             </div>
-        </div>
 
-        <!--Español-->
-        <br>
-        <div class="spanish-backgorund">
-            <h5><b>Información de la edición en Español</b></h5>
-            <hr>
+            <br>
 
-            <!--Titulo de la edicion en español-->
-            <div class="row">
-                <div class="col-3" id="title-info">
-                    <p>Titulo de la Edición:</p>
-                </div>
-                <div class="col-9">
-                    <div class="input-texto">
-                        <input type="text" required id="edition_title" name="edition_title" value="{{$editions->edition_title}}">
+            <!--Español-->
+            <div class="title-color-languaje">
+                <h5><b>Información de la edición en Español</b></h5>
+            </div>
+
+            <div class="general-input">
+                <h6><b>Título de la Edición:</b></h6>
+                <input type="text" required id="edition_title" name="edition_title" value="{{$editions->edition_title}}">
+            </div>
+
+            <div class="general-input">
+                <h6><b>Descripción de la Edición:</b></h6>
+                <textarea id="summernote_edition_description" name="edition_description">{!! $editions->edition_description !!}</textarea>
+            </div>
+
+            <div class="general-input">
+                <div class="row">
+                    <div class="col-6">
+                        <h6><b>Carátula de la Edición:</b></h6>
+                        <input id="button-add" accept="image/*" required type="file" name="edition_image" value="edition_image">
+                    </div>
+                    <div class="col-6">
+                        <h6><b>Archivo PDF de la edición completa:</b></h6>
+                        <input id="button-add" accept="file/*" required type="file" name="edition_full_file" value="edition_full_file">
                     </div>
                 </div>
             </div>
+            <br>
 
-            <!--Descripcion de la edicion en español-->
-            <div class="row">
-                <div class="col-3" id="title-info">
-                    <p>Descripción de la Edicion:</p>
-                </div>
-                <div class="col-9">
-                    <textarea id="summernote_edition_description" name="edition_description">{!! $editions->edition_description !!}</textarea>
-                </div>
+            <!--English-->
+            <div class="title-color-languaje">
+                <h5><b>Information of the edition in English</b></h5>
             </div>
 
-            <!--Caratula de la edicion en español-->
-			<div class="row">
-				<div class="col-3" id="title-info">
-					<p>Caratula de la Edición:</p>
-				</div>
-				<div class="col-9">
-					<input accept="image/*" required type="file" name="edition_image" value="edition_image">
-				</div>
-			</div>
-
-            <!--PDF de la edicion en español-->
-			<div class="row">
-				<div class="col-3" id="title-info">
-					<p>Archivo PDF de la edición completa:</p>
-				</div>
-				<div class="col-9">
-					<input accept="file/*" required type="file" name="edition_full_file" value="edition_full_file">
-				</div>
-			</div>
-        </div>
-
-        <!--English-->
-        <br>
-        <div class="english-backgorund">
-            <h5><b>Information of the edition on English</b></h5>
-            <hr>
-
-            <!--Titulo de la edicion en ingles-->
-            <div class="row">
-                <div class="col-3" id="title-info">
-                    <p>Title of the Edition:</p>
-                </div>
-                <div class="col-9">
-                    <div class="input-texto">
-                        <input type="text" required id="edition_title_en" name="edition_title_en" value="{{$editions->edition_title_en}}">
-                    </div>
-                </div>
+            <div class="general-input">
+                <h6><b>Title of the Edition:</b></h6>
+                <input type="text" required id="edition_title_en" name="edition_title_en" value="{{$editions->edition_title_en}}">
             </div>
 
-            <!--Descripcion de la edicion en ingles-->
-            <div class="row">
-                <div class="col-3" id="title-info">
-                    <p>Description of the Edition:</p>
-                </div>
-                <div class="col-9">
-                    <textarea id="summernote_edition_description_en" name="edition_description_en">{!! $editions->edition_description_en !!}</textarea>
-                </div>
+            <div class="general-input">
+                <h6><b>Description of the Edition:</b></h6>
+                <textarea id="summernote_edition_description_en" name="edition_description_en">{!! $editions->edition_description_en !!}</textarea>
             </div>
+            <br>
+            @csrf
+            <div>
+                <input id="modify" type="submit" name="enviar" value="Guardar">
+            </div>
+            <br>
 
-        </div>
-        <br>
-
-        @csrf
-		<div>
-			<input type="submit" name="enviar" value="Guardar">
-		</div>
-
-	</form>
+        </form>
+    </div>
 </div>
 
 @endsection

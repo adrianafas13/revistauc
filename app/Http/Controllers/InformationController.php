@@ -64,7 +64,7 @@ class InformationController extends Controller
     {
         $informations=Information::findOrFail($id);
 
-        return view("information.edit" , compact("information"));
+        return view("information.edit" , compact("informations"));
     }
 
     public function update(Request $request, $id)
@@ -73,13 +73,13 @@ class InformationController extends Controller
 
         $informations->update($request->all());
 
-        return redirect("/admin/information");
+        return redirect("/admin/information")->with('message-modify', 'Se ha modificado con éxito');
     }
 
     public function destroy($id)
     {
         $informations=Information::findOrFail($id);
         $informations->delete();
-        return redirect("/admin/information");
+        return redirect("/admin/information")->with('message-delete', 'Se ha eliminado con éxito');
     }
 }

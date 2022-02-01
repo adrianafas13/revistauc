@@ -80,7 +80,7 @@ class AreasController extends Controller
 
         $areas->update($request->all());
 
-        return redirect("/admin/areas");
+        return redirect("/admin/areas")->with('message-modify', 'Se ha modificado con éxito');
     }
 
     /**
@@ -95,6 +95,6 @@ class AreasController extends Controller
 
         $areas->delete();
 
-        return redirect("/admin/areas");
+        return redirect("/admin/areas")->with('message-delete', 'Se ha eliminado con éxito');
     }
 }

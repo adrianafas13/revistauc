@@ -16,7 +16,7 @@ class EditionsController extends Controller
     public function index()
     {
         $editions=Edition::all();
-        $editions=Edition::orderBy('id')->paginate(10);
+        $editions=Edition::orderBy('id', 'desc')->paginate(10);
         return view("editions.index", compact("editions"));
     }
 
@@ -91,7 +91,7 @@ class EditionsController extends Controller
     {
         $editions=Edition::findOrFail($id);
 
-        return view("editions.edit" , compact("editions"));
+        return view("editions.edit", compact("editions"));
     }
 
     /**
@@ -131,7 +131,7 @@ class EditionsController extends Controller
 
         $editions->update($enter);
 
-        return redirect("/admin/editions");
+        return redirect("/admin/editions")->with('message-modify', 'Se ha modificado con éxito');
     }
 
     /**
@@ -146,6 +146,6 @@ class EditionsController extends Controller
 
         $editions->delete();
 
-        return redirect("/admin/editions");
+        return redirect("/admin/editions")->with('message-delete', 'Se ha eliminado con éxito');
     }
 }

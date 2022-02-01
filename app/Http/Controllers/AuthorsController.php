@@ -101,7 +101,7 @@ class AuthorsController extends Controller
 
         $authors->update($enter);
 
-        return redirect("/admin/authors");
+        return redirect("/admin/authors")->with('message-modify', 'Se ha modificado con éxito');
     }
 
     /**
@@ -114,6 +114,6 @@ class AuthorsController extends Controller
     {
         $author=Author::findOrFail($id);
         $author->delete();
-        return redirect("/admin/authors");
+        return redirect("/admin/authors")->with('message-delete', 'Se ha eliminado con éxito');
     }
 }

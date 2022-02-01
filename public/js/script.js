@@ -4,6 +4,17 @@ $("message").ready(function () {
     }, 3000);
 });
 
+$("message-modify").ready(function () {
+    setTimeout(function () {
+        $("div.alert").remove();
+    }, 3000);
+});
+$("message-delete").ready(function () {
+    setTimeout(function () {
+        $("div.alert").remove();
+    }, 3000);
+});
+
 //sweetalert2
 $("#btnregister").on("click", function () {
     swal("¡Bienvenido!", "Ha sido registrado con éxito", "success");

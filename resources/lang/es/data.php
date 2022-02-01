@@ -11,9 +11,8 @@ return [
 	'contacto' => 'Información',
 	'autores' => 'Autores',
 	'secciones' => 'Ámbitos de Conocimiento',
-	'español' => 'ES',
-	'ingles' => 'EN',
-	'italiano' => 'IT',
+	'español' => 'Español',
+	'ingles' => 'English',
 	//AREAS DE CONOCIMIENTO
 	'biologia' => 'Biología',
 	'derecho' => 'Derecho',
