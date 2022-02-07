@@ -26,8 +26,8 @@
 										</div>
 									</div>
 									@if (Auth::check())
-										<div class="button-article">
-											<a href="/files/{{ $article->ruta_file }}" type="button" class="btn btn-success"><i class="fas fa-download"></i> @lang('data.descarga')</a>
+										<div class="edition_title text-center">
+											<a href="/files/{{ $article->ruta_file }}" type="button" class="btn btn-outline-dark"><i class="fas fa-download"></i> @lang('data.descarga')</a>
 										</div>
 									@else
 										<div class="inivtacion-article">
@@ -36,12 +36,6 @@
 									@endif
 								</div>
 							<br>
-							@auth
-								<div class="button-article">
-									<a href="
-									{{ asset('files/'.$article->ruta_file) }}" type="button" class="btn btn-success"><i class="fas fa-download"></i> @lang('data.descarga')</a>
-								</div>
-							@endauth
 						</div>
 						<!--Area de informacion del autor-->
 						<div class="col-sm-3" id="content_bar_right">

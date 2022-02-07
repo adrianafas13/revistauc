@@ -4,7 +4,7 @@ use Illuminate\Support\facades\Mail;
 
 Route::get('/', 'GeneralController@index')->name('welcome');
 Route::get('/articulos', 'GeneralController@arti')->name('articulos');
-//Route::get('/seccion/{seccion}', 'ArticlesController@seccion');
+Route::get('/area/{id}', 'GeneralController@areas')->name('areas');
 Route::get('/art/{slug}', 'GeneralController@show')->name('art');
 Route::post('/art/{article}', 'GeneralController@store')->name('art.store');
 Route::get('/informacion', 'GeneralController@informacion')->name('informacion');
@@ -32,4 +32,5 @@ Route::middleware(['auth','auth.admin'])->prefix('admin')->group(function(){
 	Route::resource('/authors', 'AuthorsController');
 	Route::resource('/editions', 'EditionsController');
 	Route::resource('/information', 'InformationController');
+	Route::resource('/notices', 'NoticeController');
 });

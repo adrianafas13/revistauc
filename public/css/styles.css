@@ -99,45 +99,57 @@ li.navbar-item a:focus {
 }
 
 /*--------------------------------------MODAL DE LOGIN/SINGIN--------------------------------------------------*/
+#loginModal .modal-backdrop {
+    opacity: 0.5;
+}
 #loginModal .modal-content {
-    padding: 5px;
     border-radius: 5px;
     border: none;
-    background-color: rgb(238, 238, 238);
+    background-color: #fff;
+    z-index: 10000000 !important;
 }
 #loginModal .modal-header {
-    background-color: #084456;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    background-color: rgba(8, 68, 86);
 }
 #loginModal .modal-header .modal-logo img {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 40%;
+    width: 35%;
 }
 #loginModal .modal-header button {
     color: red;
 }
 #loginModal .modal-body .modal-title {
     text-align: center;
-}
-#loginModal .modal-body .modal-title #linea {
-    color: hsl(25, 78%, 63%);
-    size: 3;
+    text-transform: uppercase;
+    font-size: 13px;
+    text-shadow: 1px 1px 2px rgba(8, 68, 86);
 }
 #loginModal .modal-body .form-group {
     position: relative;
 }
+#loginModal .modal-body #input-modal input {
+    padding-left: 40px;
+    height: 40px;
+    width: 100%;
+    color: #000;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(8, 68, 86);
+}
 #loginModal .modal-body h6 {
-    font-size: 17px;
+    font-size: 16px;
+    font-weight: bold;
+    margin-left: 10px;
 }
 #loginModal .modal-body i {
     position: absolute;
     left: 13px;
     top: 11px;
     font-size: 18px;
-}
-#loginModal .modal-body .form-control {
-    padding-left: 40px;
+    color: #084456;
 }
 #loginModal .modal-body .col-6 a {
     font-size: 15px;
@@ -146,6 +158,7 @@ li.navbar-item a:focus {
 #loginModal .modal-body .col-6 button {
     font-size: 15px;
 }
+
 /*-------------------------------------*/
 #singinModal .modal-content {
     padding: 10px;

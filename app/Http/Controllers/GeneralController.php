@@ -8,6 +8,7 @@ use App\Edition;
 use App\Information;
 use App\About;
 use App\Comment;
+use App\Notice;
 use Illuminate\Http\Request;
 
 class GeneralController extends Controller
@@ -15,6 +16,7 @@ class GeneralController extends Controller
     public function index()
     {
         $areas= Area::all();
+        $notices=Notice::all();
         $edition= Edition::orderBy('id', 'desc')->get()->first();
         if ($edition){
             $articles = Article::where('edition_id', (int) $edition->id)->orderBy('id','asc')->limit(10)->get();
@@ -29,7 +31,7 @@ class GeneralController extends Controller
 //        echo(json_encode($articlesData[0]->author,JSON_PRETTY_PRINT));
 //        die();
         $articles = $articlesData;
-        return view('/welcome',compact('articles', 'edition', 'areas'));
+        return view('/welcome',compact('articles', 'edition', 'areas', 'notices'));
 	}
 
     public function arti($slug){
@@ -37,6 +39,14 @@ class GeneralController extends Controller
         $article = Article::where('slug',$slug)->get()->first();
         $article->author = Author::where('id', (int) $article->author_id)->get()->first();
         return view('/articulos',compact('article', 'areas'));
+    }
+
+    public function areas($id){
+        $articles= Article::all();
+        $editions= Edition::all();
+        $authors= Author::all();
+        $areas=Area::where('id', $id)->with(['articles'])->orderBy('id', 'desc');
+        return view('/area',compact('articles','areas', 'editions', 'authors')); 
     }
 
     public function authors(){

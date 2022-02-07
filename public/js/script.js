@@ -79,6 +79,17 @@ $("#summernote_edition_description_en").summernote({
     tabsize: 2,
     height: 200,
 });
+/*textbox aviso*/
+$("#summernote_aviso").summernote({
+    placeholder: "Descripción de la edición",
+    tabsize: 2,
+    height: 200,
+});
+$("#summernote_notice").summernote({
+    placeholder: "Description of the edition",
+    tabsize: 2,
+    height: 200,
+});
 
 $("#colorPicker").colorpicker({
     el: ".color-picker",

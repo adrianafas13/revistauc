@@ -39,17 +39,15 @@
                     <ul class="navbar-nav ml-auto">
                         <li class="navbar-item dropdown">
                             <a class="nav-link dropdown-toggle btn-group" data-toggle="dropdown" id="dropdown_target" href="#">
-                                @lang('data.secciones')
+                                @lang('data.area')
                                 <span class="caret"></span>
                             </a>
                             <div class=" dropdown-menu" id="lineas" arial-labelledby="dropdown_target">
-                                @if(count($areas))
-                                    @foreach ($areas as $area)
-                                        <a class="dropdown-item" href="#">
-                                            {{App::isLocale('es')?$area->area_es:$area->area_en}}
-                                        </a>
-                                    @endforeach
-                                @endif
+                                @foreach ($areas as $area)
+                                    <a class="dropdown-item" href="{{route('areas', $area->id)}}">
+                                        {{App::isLocale('es')?$area->area_es:$area->area_en}}
+                                    </a>
+                                @endforeach
                             </div>
                         </li>
                         <li class="navbar-item">

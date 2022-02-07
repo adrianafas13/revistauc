@@ -1,24 +1,33 @@
 
 @extends('layouts.applayout')
     @section('content')
-        @if(!empty($edition))
-        <div class="main">
+    <div class="main">
         <br>
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-12 .col-sm-12 col-md-12 .col-lg-12 .col-xl-12">
-                        <div class="edition_title" style="text-align:center; 
-                        background-color: rgb(246, 229, 192); 
-                        color:#000; 
-                        padding-top:10px; 
-                        padding-bottom:0.1px;
-                        border-radius:5px; 
-                        box-shadow: 4px 4px rgba(158, 158, 158, 0.3);">
-                            <h5><b>AVISO</b></h6>
-                            <p><i>La Revista Unimar Científica informa que ya se inició el proceso de recepción y arbitraje de Artículos Científicos para los Volúmenes 2 y 3 del presente año.<br/>
-                            Para mayor información de los requisitos consultar en la pestaña de Información.</i></p>
+        @if(!empty($notices))
+            @foreach($notices as $notice)
+                <div class="container-fluid">
+                    
+                    <div class="row">
+                        <div class="col-12 .col-sm-12 col-md-12 .col-lg-12 .col-xl-12">
+                            <div class="edition_title" style="text-align:center; 
+                            background-color: rgb(246, 229, 192); 
+                            color:#000; 
+                            padding-top:10px; 
+                            padding-bottom:0.1px;
+                            border-radius:5px; 
+                            box-shadow: 4px 4px rgba(158, 158, 158, 0.3);">
+                                <h5><b>AVISO</b></h6>
+                                <p>{!! App::isLocale('es')?$notice->notice_es:$notice->notice_en !!}</p>
+                            </div>
                         </div>
                     </div>
+                </div>
+            @endforeach
+        @endif
+        @if(!empty($edition))
+        
+            <div class="container-fluid">
+                <div class="row">
                 <!---- Portada de la ultima edicion ------------------------------------------------------------>
                     <div class="col-12 .col-sm-12 col-md-6 .col-lg-6 .col-xl-6">
                     <br>

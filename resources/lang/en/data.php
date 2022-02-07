@@ -9,17 +9,9 @@ return [
 	'ediciones' => 'Editions',
 	'contacto' => 'Information',
 	'autores' => 'Authors',
-	'secciones' => 'Knowledge Areas',
+	'area' => 'Knowledge Areas',
 	'español' => 'Español',
 	'ingles' => 'English',
-    //AREAS DE CONOCIMIENTO
-    'biologia' => 'Biology',
-    'derecho' => 'Laws',
-    'economia' => 'Economy',
-    'educacion' => 'Education',
-    'epistemologia' => 'Epistemology',
-    'filosofia' => 'Philosophy',
-    'gerencia' => 'Management',
     //CATALOGO DE AUTORES
     'catalogo' => 'Authors Catalog',
 	'articulos_autor' => "Author's Articles:",

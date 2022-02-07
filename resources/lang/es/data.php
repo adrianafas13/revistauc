@@ -10,17 +10,9 @@ return [
 	'ediciones' => 'Ediciones',
 	'contacto' => 'Información',
 	'autores' => 'Autores',
-	'secciones' => 'Ámbitos de Conocimiento',
+	'area' => 'Ámbitos de Conocimiento',
 	'español' => 'Español',
 	'ingles' => 'English',
-	//AREAS DE CONOCIMIENTO
-	'biologia' => 'Biología',
-	'derecho' => 'Derecho',
-	'economia' => 'Economía',
-	'educacion' => 'Educación',
-	'epistemologia' => 'Epistemología',
-    'filosofia' => 'Filosofía',
-	'gerencia' => 'Gerencia',
     //CATALOGO DE AUTORES
     'catalogo' => 'Catálogo de Autores',
 	'articulos_autor' => "Artículos del Autor:",

@@ -23,7 +23,7 @@
         <!------------------------------------------------- LOGO ------------------------------------------------------------>
         <ul class="navbar-nav">
           <div class="logotipo">
-            <a href="{{route('welcome')}}">
+            <a href="{{ route('admin')}}"> 
             <img src="{{ asset('/images/rcu-yellow-logo.png') }}" alt="logo">
             </a>
           </div> 
@@ -73,6 +73,17 @@
             </div>
           </a>
         </li>
+
+        <li class="nav-item">
+          <a class="nav-link" type="button" href="{{ route('notices.index') }}">
+            <div class="content-bar">
+              <i class="fas fa-bell"></i> 
+              <p>Avisos</p>
+            </div>
+          </a>
+        </li>
+
+        
 
         <li class="nav-item">
           <a class="nav-link" type="button "href="{{ route('information.index') }}">

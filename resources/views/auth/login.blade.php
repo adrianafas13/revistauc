@@ -16,15 +16,14 @@
 
                 <div class="modal-title">
                     <h5><b>@lang('data.iniciar_sesion')</b></h5>
-                    <hr id="linea">
                 </div>
 
                 <form method="POST" action="{{ route('login') }}">
                     
                     @csrf
                     <h6>Correo Electronico</h6>
-                    <div class="form-group">
-                        <i class="fas fa-envelope"></i>
+                    <div class="form-group" id="input-modal">
+                        <i class="fas fa-at"></i>
 						<input type="email" id="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="example@unimar.edu.ve">
                             @error('email')
                                 <span class="invalid-feedback" role="alert">
@@ -34,8 +33,8 @@
                     </div>
 
                     <h6>Contraseña</h6>
-                    <div class="form-group">
-						<i class="fa fa-lock"></i>
+                    <div class="form-group" id="input-modal">
+                    <i class="fas fa-unlock-alt"></i>
 						<input type="password" id="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password" placeholder="@lang('data.contraseña')">
                             @error('password')
                                 <span class="invalid-feedback" role="alert">
@@ -54,24 +53,19 @@
                     </div>
 
                     <div class="form-group">
+                        <button type="submit" class="btn btn-primary btn-block">
+                            @lang('data.acceso')
+                        </button>
+                    </div>
+                    
+                    <div class="form-group">
+                        @if (Route::has('password.request'))
+                            <a class="btn" href="{{ route('password.request') }}">
+                                @lang('data.olvido_contraseña')
+                            </a>
+                        @endif
+                    </div>
 
-                        <div class="row">
-
-                            <div class="col-6">
-                                @if (Route::has('password.request'))
-                                    <a class="btn btn-outline-dark btn-block btn-lg" href="{{ route('password.request') }}">
-                                        @lang('data.olvido_contraseña')
-                                    </a>
-                                @endif
-                            </div>
-
-                            <div class="col-6">
-                                <button type="submit" class="btn btn-primary btn-block btn-lg">
-                                    @lang('data.acceso')
-                                </button>
-                            </div>
-
-                        </div>
 
                     </div>
 
