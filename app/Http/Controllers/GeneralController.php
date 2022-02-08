@@ -45,7 +45,7 @@ class GeneralController extends Controller
         $articles= Article::all();
         $editions= Edition::all();
         $authors= Author::all();
-        $areas=Area::where('id', $id)->with(['articles'])->orderBy('id', 'desc');
+        $areas=Area::where('id', $id)->with(['articles'])->orderBy('id', 'desc')->paginate(10);
         return view('/area',compact('articles','areas', 'editions', 'authors')); 
     }
 

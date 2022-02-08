@@ -6,7 +6,7 @@
 
 		<div class="row" id="index-bar">
 			<div class="col-8">
-				<a type="button" class="btn btn-success" href="{{ route('notices.create') }}"><b>+</b> Nueva Área</a>
+				<a type="button" class="btn btn-success" href="{{ route('notices.create') }}"><b>+</b> Nuevo Aviso</a>
 			</div>
 			<div class="col-4">
 				<div class="input-group">
