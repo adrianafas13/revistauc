@@ -315,7 +315,7 @@ li.navbar-item a:focus {
 }
 .main .list-group .index-contenido .list-group-item:hover {
     transition: all 0.3s ease-out;
-    background: rgba(234, 150, 88, 0.1);
+    background: rgba(246, 229, 192, 0.5);
 }
 /*------------------Titulo de la edicion---------------------------------------*/
 .edition_title h4 {
@@ -326,29 +326,24 @@ li.navbar-item a:focus {
 .main .articulos-card {
     box-shadow: 4px 4px rgba(158, 158, 158, 0.2);
 }
-.main .articulos-card .articulos-card-img img {
+.main .articulos-card #articulos-card-img img {
     opacity: 1;
     -webkit-transition: 0.3s ease-in-out;
     transition: 0.3s ease-in-out;
 }
-.main .articulos-card .articlos-card-img:hover img {
+.main .articulos-card #articulos-card-img:hover img {
     opacity: 0.5;
 }
 .card:hover {
     transition: all 0.3s ease-out;
-    background: rgba(234, 150, 88, 0.1);
+    background: rgba(246, 229, 192, 0.5);
 }
 .card-body .badge {
     background-color: #084456;
     color: #fff;
     text-transform: uppercase;
 }
-.card-body .badge #insidearticle {
-    background-color: #084456;
-    color: #fff;
-    text-transform: uppercase;
-    float: right;
-}
+
 /*------------------------------------------------ARTICULO-----------------------------------------------------------*/
 /*TITULO*/
 .article .title-article h2 {
@@ -369,6 +364,12 @@ li.navbar-item a:focus {
 .article .info-img {
     float: right;
     padding-right: 100px;
+}
+.article .badge #insidearticle {
+    background-color: #084456;
+    color: #fff;
+    text-transform: uppercase;
+    float: right;
 }
 /*ABSTRACTO DEL ARTÍCULO*/
 .article .title-resume-article {
@@ -402,7 +403,7 @@ li.navbar-item a:focus {
 }
 /************************BARRA LATERAL DE INFORMACIÓN DEL AUTOR*****************/
 #content_bar_right {
-    background-color: rgba(246, 229, 192, 0.5);
+    background-color: rgba(73, 58, 24, 0.5);
 }
 #content_bar_right .content {
     margin-left: 0;

@@ -65,7 +65,7 @@
                         <div class="row no-gutters">
                             <div class="col-md-4" id="articulos-card-img">
                                 <a href="{{route('art', $article->slug)}}">
-                                    <img src="images/{{$article->ruta_image}}" class="img-fluid">
+                                    <img src="images/{{$article->ruta_image}}" class="img-fluid h-100">
                                 </a>
                             </div>
                             <div class="col-md-8">
