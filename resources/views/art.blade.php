@@ -22,9 +22,9 @@
 									
 									<div class="resume-article">
 										<div class="container">
-										<ul class="card-body" >
-										<h6><a class="badge" href="{{route('areas', $article->area->id)}}" >{{ App::isLocale('es')?$article->area->area_es:$article->area->area_en }}</a></h6>
-									</ul>
+											<ul class="card-body" >
+												<h6><a class="badge" id="insideArticle" href="{{route('areas', $article->area->id)}}" >{{ App::isLocale('es')?$article->area->area_es:$article->area->area_en }}</a></h6>
+											</ul>
 											<p><b><i>@lang('data.resumen')</i></b></p>
 											<div>{!! App::isLocale('es')?$article->text:$article->en_text !!}</div>
 										</div>

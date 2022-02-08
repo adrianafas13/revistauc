@@ -338,8 +338,12 @@ li.navbar-item a:focus {
     transition: all 0.3s ease-out;
     background: rgba(234, 150, 88, 0.1);
 }
-
 .card-body .badge {
+    background-color: #084456;
+    color: #fff;
+    text-transform: uppercase;
+}
+.card-body .badge #insidearticle {
     background-color: #084456;
     color: #fff;
     text-transform: uppercase;
@@ -375,7 +379,7 @@ li.navbar-item a:focus {
 .article .resume-article {
     font-size: 15px;
     text-align: justify;
-    margin-top: 20px;
+    margin-top: 10px;
     margin-left: 65px;
     margin-right: 65px;
     margin-bottom: 30px;
@@ -398,7 +402,7 @@ li.navbar-item a:focus {
 }
 /************************BARRA LATERAL DE INFORMACIÓN DEL AUTOR*****************/
 #content_bar_right {
-    background-color: rgba(238, 232, 224, 0.5);
+    background-color: rgba(246, 229, 192, 0.5);
 }
 #content_bar_right .content {
     margin-left: 0;
@@ -438,11 +442,11 @@ li.navbar-item a:focus {
 /*CAJA DE COMENTARIOS*/
 .article-comments .comment-header .comment-area p {
     padding-top: 3px;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 2px;
 }
 .article-comments .comment-header .comment-area .gradiente {
-    color: #06801bbe;
+    color: #ea9658;
     padding-bottom: 3px;
 }
 .article-comments .comment-header .comment-area form {
