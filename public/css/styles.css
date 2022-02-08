@@ -124,7 +124,7 @@ li.navbar-item a:focus {
 #loginModal .modal-body .modal-title {
     text-align: center;
     text-transform: uppercase;
-    font-size: 13px;
+    font-size: 12px;
     text-shadow: 1px 1px 2px rgba(8, 68, 86);
 }
 #loginModal .modal-body .form-group {
@@ -139,7 +139,7 @@ li.navbar-item a:focus {
     border: none;
     border-bottom: 1px solid rgba(8, 68, 86);
 }
-#loginModal .modal-body h6 {
+#loginModal .modal-body h5 {
     font-size: 16px;
     font-weight: bold;
     margin-left: 10px;
@@ -161,58 +161,62 @@ li.navbar-item a:focus {
 
 /*-------------------------------------*/
 #singinModal .modal-content {
-    padding: 10px;
     border-radius: 5px;
     border: none;
-    background-color: rgb(238, 238, 238);
+    background-color: #fff;
+    z-index: 10000000 !important;
 }
 #singinModal .modal-header {
-    background-color: #084456;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    background-color: rgba(8, 68, 86);
 }
 #singinModal .modal-header .modal-logo img {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 40%;
+    width: 35%;
 }
 #singinModal .modal-header button {
     color: red;
 }
 #singinModal .modal-body .modal-title {
     text-align: center;
-}
-#singinModal .modal-body .modal-title #linea {
-    color: hsl(25, 78%, 63%);
-    size: 3;
+    text-transform: uppercase;
+    font-size: 12px;
+    text-shadow: 1px 1px 2px rgba(8, 68, 86);
 }
 #singinModal .modal-body .form-group {
     position: relative;
 }
-#singinModal .modal-body h6 {
-    font-size: 17px;
+#singinModal .modal-body #input-modal input {
+    padding-left: 40px;
+    height: 40px;
+    width: 100%;
+    color: #000;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(8, 68, 86);
+}
+#singinModal .modal-body h5 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-left: 10px;
 }
 #singinModal .modal-body i {
     position: absolute;
     left: 13px;
     top: 11px;
     font-size: 18px;
+    color: #084456;
 }
-#singinModal .modal-body .form-control {
-    padding-left: 40px;
+#singinModal .modal-body .col-6 a {
+    font-size: 15px;
+    padding: -5px;
 }
-#singinModal .modal-body button {
+#singinModal .modal-body .col-6 button {
     font-size: 15px;
 }
-.nombre input #name {
-    margin: 5px;
-    padding: 5px 15px;
-    background: #7c7c7c;
-    color: #fff;
-    border: 0 none;
-    cursor: pointer;
-    -webkit-border-radius: 5px;
-    border-radius: 5px;
-}
+
 /*-------------------------------------FOOTER----------------------------------------------------------------*/
 .footer {
     bottom: 0;
@@ -403,7 +407,7 @@ li.navbar-item a:focus {
 }
 /************************BARRA LATERAL DE INFORMACIÓN DEL AUTOR*****************/
 #content_bar_right {
-    background-color: rgba(73, 58, 24, 0.5);
+    background-color: rgba(246, 229, 192, 0.5);
 }
 #content_bar_right .content {
     margin-left: 0;

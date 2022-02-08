@@ -108,23 +108,17 @@ class GeneralController extends Controller
 
     public function store(Request $request)
     {
-        $this->validate($request, array(
-
-            'comment' => 'required|min:5|max:2000'
-        ));
-
+        $this->validate($request, array('comment' => 'required|min:5|max:2000'));
         if(Auth::user()->id== $id){
-        $user = User::find($id);
-        $article = Article::find($article_id);
+            $user = User::find($id);
+            $article = Article::find($article_id);
 
-        $comment = new Comment();
-        $comment->comment = $request->comment;
-        $comment->approved = true;
-        $comment->article()->associate($id);
-        $comment->user()->associate($id);
-
-        $comment->save();
-
+            $comment = new Comment();
+            $comment->comment = $request->comment;
+            $comment->approved = true;
+            $comment->article()->associate($id);
+            $comment->user()->associate($id);
+            $comment->save();
         }
         return redirect()->route('/art/{article}', [$article->id]);
     }

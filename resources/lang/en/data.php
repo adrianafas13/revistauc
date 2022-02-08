@@ -26,14 +26,14 @@ return [
 	//LOGIN
 	'iniciar_sesion'=> 'Log In',
 	'correo' => 'E-mail',
-	'contraseña' => 'Password',
+	'contrasena' => 'Password',
 	'recuerdame'=> 'Remember me',
-	'olvido_contraseña' => 'Forgot your password?',
-	'acceso' => 'Enter',
+	'olvido_contrasena' => 'Forgot your password?',
+	'acceso' => 'Log In',
 	//SINGIN
 	'registro' => 'Sing In',
-	'nombre_apellido' => 'Full Name',
-	'rep_contraseña' => 'Repeat your password',
+	'nombre_apellido' => 'Surname, First Name',
+	'rep_contrasena' => 'Repeat your password',
 	//FOOTER
 	'redes_sociales' => 'Follow Us',
 	'derechos' => 'All rights reserved',

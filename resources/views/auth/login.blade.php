@@ -21,7 +21,7 @@
                 <form method="POST" action="{{ route('login') }}">
                     
                     @csrf
-                    <h6>Correo Electronico</h6>
+                    <h6>@lang('data.correo')</h6>
                     <div class="form-group" id="input-modal">
                         <i class="fas fa-at"></i>
 						<input type="email" id="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="example@unimar.edu.ve">
@@ -32,10 +32,10 @@
                             @enderror
                     </div>
 
-                    <h6>Contraseña</h6>
+                    <h6>@lang('data.contrasena')</h6>
                     <div class="form-group" id="input-modal">
                     <i class="fas fa-unlock-alt"></i>
-						<input type="password" id="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password" placeholder="@lang('data.contraseña')">
+						<input type="password" id="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password" placeholder="********">
                             @error('password')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -58,15 +58,12 @@
                         </button>
                     </div>
                     
-                    <div class="form-group">
+                    <div class="form-group" style="text-align:center;">
                         @if (Route::has('password.request'))
                             <a class="btn" href="{{ route('password.request') }}">
-                                @lang('data.olvido_contraseña')
+                                @lang('data.olvido_contrasena')
                             </a>
                         @endif
-                    </div>
-
-
                     </div>
 
                 </form>

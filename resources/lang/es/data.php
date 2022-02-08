@@ -29,12 +29,12 @@ return [
 	'correo' => 'Correo Electronico',
 	'contraseña' => 'Contraseña',
 	'recuerdame'=> 'Recuérdame',
-	'olvido_contraseña' => '¿Olvidó su contraseña?',
+	'olvido_contrasena' => '¿Olvidó su contraseña?',
 	'acceso' => 'Acceder',
 	//SINGIN
 	'registro' => 'Registro',
-	'nombre_apellido' => 'Nombre y Apellido',
-	'rep_contraseña' => 'Repita su contraseña',
+	'nombre_apellido' => 'Apellido, Nombre',
+	'rep_contrasena' => 'Repita su contraseña',
 	//FOOTER
 	'redes_sociales' => 'Siguenos en',
 	'derechos' => 'Todos los derechos reservados',

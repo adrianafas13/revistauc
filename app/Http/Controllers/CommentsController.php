@@ -32,7 +32,6 @@ class CommentsController extends Controller
         $comment->articles_id = $article->id;
 
         $comment->save();
-
         return redirect('/art/'.$article->slug);
     }
     
@@ -42,7 +41,6 @@ class CommentsController extends Controller
         return redirect('/admin/comments');
     }
 
-  
     public function show($id)
     {
         //
