@@ -51,6 +51,11 @@
         </div>
 
         <div class="general-input">
+            <h6><b>Editorial:</b></h6>
+            <textarea id="summernote_edition_editorial_es" name="editorial_es"></textarea>
+        </div>
+
+        <div class="general-input">
             <div class="row">
 				<div class="col-6">
                     <h6><b>Carátula de la Edición:</b></h6>
@@ -77,6 +82,11 @@
         <div class="general-input">
             <h6><b>Description of the Edition:</b></h6>
             <textarea id="summernote_edition_description_en" name="edition_description_en"></textarea>
+        </div>
+
+        <div class="general-input">
+            <h6><b>Editorial:</b></h6>
+            <textarea id="summernote_edition_editorial_en" name="editorial_en"></textarea>
         </div>
         <br>
         @csrf

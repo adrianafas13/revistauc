@@ -19,7 +19,7 @@ class GeneralController extends Controller
         $notices=Notice::all();
         $edition= Edition::orderBy('id', 'desc')->get()->first();
         if ($edition){
-            $articles = Article::where('edition_id', (int) $edition->id)->orderBy('id','asc')->limit(10)->get();
+            $articles = Article::where('edition_id', (int) $edition->id)->orderBy('id','asc')->limit(12)->get();
         }else{
             $articles = [];
         }
@@ -45,13 +45,13 @@ class GeneralController extends Controller
         $articles= Article::all();
         $editions= Edition::all();
         $authors= Author::all();
-        $areas=Area::where('id', $id)->with(['articles'])->orderBy('id', 'desc')->paginate(10);
+        $areas=Area::where('id', $id)->with(['articles'])->orderBy('id', 'desc')->paginate(12);
         return view('/area',compact('articles','areas', 'editions', 'authors')); 
     }
 
     public function authors(){
         $areas= Area::all();
-        $authors=Author::with(['articles'])->orderBy('name_author')->paginate(10);
+        $authors=Author::with(['articles'])->orderBy('name_author')->paginate(12);
         return view('/authorsCatalog',compact('authors', 'areas')); 
     }
 
@@ -65,13 +65,13 @@ class GeneralController extends Controller
 
     public function informacion(){
         $areas= Area::all();
-        $information=Information::query()->paginate(10);
+        $information=Information::query()->paginate(12);
         return view('/informacion',compact('information', 'areas'));
     }
 
     public function edicion(){
         $areas= Area::all();
-        $editions=Edition::orderBy('id', 'desc')->paginate(10);
+        $editions=Edition::orderBy('id', 'desc')->paginate(12);
         return view('/edicion', compact('editions', 'areas'));
     }
     public function fulledicion($id){
@@ -80,11 +80,6 @@ class GeneralController extends Controller
        // dd($editions->articles);
        // $editions->article = Article::where('edition_id', (int) $edition->id)->orderBy('id','asc')->limit(10)->get();
         return view('/fulledition', compact('editions', 'areas'));
-    }
-
-    public function sobre(){
-        $abouts=About::all();
-        return view('/sobrenosotros',compact('abouts'));
     }
 
 	public function setlocale($locale){

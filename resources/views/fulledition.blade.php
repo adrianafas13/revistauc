@@ -38,12 +38,21 @@
                     </div>
                 </div>
                 @auth
-                <div class="edition_title text-center"> 
-                    <hr>
-                        <a href="/files/{{ $editions->edition_route_full_file }}" type="button" class="btn btn-outline-dark"><i class="fas fa-download"></i>@lang('data.completa')</a>
-                    <hr>
-                </div>
-		        @endauth
+                    <div class="edition_title text-center"> 
+                        <hr>
+                            <a href="/files/{{ $editions->edition_route_full_file }}" type="button" class="btn btn-outline-dark"><i class="fas fa-download"></i>@lang('data.completa')</a>
+                        <hr>
+                    </div>
+                @endauth
+            </div>
+
+            <div class="container mt-5">
+                <div class="resume-article">
+					<div class="container">
+						<p><b><i>Editorial</i></b></p>
+						<div>{!! App::isLocale('es')?$editions->editorial_es:$editions->editorial_en !!}</div>
+					</div>
+				</div>
             </div>
             <!------------------------------------------------- ARTICULOS ------------------------------------------------------------>
             <div class="container mt-5">

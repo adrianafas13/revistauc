@@ -14,11 +14,13 @@ class Edition extends Model
         /*spanish*/
         "edition_title",
         "edition_description",
+        "editorial_es",
         "edition_route_image",
         "edition_route_full_file",
         /*english*/
         "edition_title_en",
         "edition_description_en",
+        "editorial_en",
     ];
 
     public $timestamps = false;

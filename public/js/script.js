@@ -79,6 +79,18 @@ $("#summernote_edition_description_en").summernote({
     tabsize: 2,
     height: 200,
 });
+
+/*EDITORIAL*/
+$("#summernote_edition_editorial_es").summernote({
+    placeholder: "Editorial de la edicion",
+    tabsize: 2,
+    height: 200,
+});
+$("#summernote_edition_editorial_en").summernote({
+    placeholder: "Editorial of the edition",
+    tabsize: 2,
+    height: 200,
+});
 /*textbox aviso*/
 $("#summernote_aviso").summernote({
     placeholder: "Descripción de la edición",
