@@ -8,7 +8,7 @@
 			<h5><b>Comentarios Publicados:</b></h5>
 		</div>
 
-		<hr>
+		<br>
 
 		<div class="tabla">
 			<table class="table table-striped table-bordered">

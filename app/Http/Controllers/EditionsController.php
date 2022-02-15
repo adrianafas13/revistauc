@@ -148,4 +148,5 @@ class EditionsController extends Controller
 
         return redirect("/admin/editions")->with('message-delete', 'Se ha eliminado con éxito');
     }
+
 }

@@ -3,18 +3,6 @@
 <div class="main-admin">
 	<div class=".xl-container">
 	<br>
-		<div class="row" id="index-bar">
-			<div class="col-8"></div>
-			<div class="col-4">
-				<div class="input-group">
-					<input type="search" class="form-control rounded" placeholder="Buscar..." aria-label="Search"
-						aria-describedby="search-addon" />
-					<button type="button" class="btn btn-outline-primary"><i class="fas fa-search"></i> Buscar</button>
-				</div>
-			</div>
-		</div>
-
-		<hr>
 
 		<div class="title-color">
 			<h5><b>Usuarios Registrados:</b></h5>

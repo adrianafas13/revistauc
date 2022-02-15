@@ -9,11 +9,11 @@
 				<a type="button" class="btn btn-success" href="{{ route('areas.create') }}"><b>+</b> Nueva Área</a>
 			</div>
 			<div class="col-4">
-				<div class="input-group">
+				<!--div class="input-group">
 					<input type="search" class="form-control rounded" placeholder="Buscar..." aria-label="Search"
 						aria-describedby="search-addon" />
 					<button type="button" class="btn btn-outline-primary"><i class="fas fa-search"></i> Buscar</button>
-				</div>
+				</div-->
 			</div>
 		</div>
 
