@@ -19,7 +19,7 @@ class AccessAdmin
         if(Auth::user()->hasAnyRole('admin')){
             return $next($request);
         }
-        if(Auth::user()->hasAnyRole('comment_admin')){
+        if(Auth::user()->hasAnyRole('editor')){
             return $next($request);
         }
         return redirect('/');

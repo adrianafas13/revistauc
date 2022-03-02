@@ -1,18 +1,13 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use App\Edition;
 use Illuminate\Http\Request;
 use App\Http\Requests\EditionRequest;
 
 class EditionsController extends Controller
 {
-/**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response 
-     */
+
     public function index()
     {
         $editions=Edition::all();
@@ -20,28 +15,17 @@ class EditionsController extends Controller
         return view("editions.index", compact("editions"));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */ 
     public function create()
     {
         return view("editions.create");
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
-
+        //carga de la informacion de la edición
         $enter=$request->all();
 
-        //carga de imagen de articulo en español
+        //carga de imagen de articulo 
         if($editionimg=$request->file('edition_image')){
 
             $imges=$editionimg->getClientOriginalName();
@@ -53,7 +37,7 @@ class EditionsController extends Controller
         }
 
 
-        //carga de archivo de articulo en español
+        //carga de archivo de articulo
         if($archivoedition=$request->file('edition_full_file')){
 
             $fileedit=$archivoedition->getClientOriginalName();
@@ -69,24 +53,13 @@ class EditionsController extends Controller
         return redirect("/admin/editions")->with('message', 'Se ha registrado con éxito');
 
     }
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Post  $post
-     * @return \Illuminate\Http\Response
-     */
+
     public function show($id)
     {
         $editions=Edition::findOrFail($id);
         return view("editions.show" , compact("editions"));
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Post  $post
-     * @return \Illuminate\Http\Response
-     */
     public function edit($id)
     {
         $editions=Edition::findOrFail($id);
@@ -94,20 +67,14 @@ class EditionsController extends Controller
         return view("editions.edit", compact("editions"));
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Post  $post
-     * @return \Illuminate\Http\Response
-     */
     public function update(Request $request, $id)
     {
+        //carga de la informacion de la edicion modificada
         $enter=$request->all();
 
         $editions=Edition::findOrFail($id);
 
-        //carga de imagen de articulo en español
+        //carga de la imagen modificada
         if($editionimg=$request->file('edition_image')){
 
             $imges=$editionimg->getClientOriginalName();
@@ -118,7 +85,7 @@ class EditionsController extends Controller
 
         }
 
-        //carga de archivo de articulo en español
+        //carga del archivo modificado 
         if($archivoedition=$request->file('edition_full_file')){
 
             $fileedit=$archivoedition->getClientOriginalName();
@@ -134,18 +101,10 @@ class EditionsController extends Controller
         return redirect("/admin/editions")->with('message-modify', 'Se ha modificado con éxito');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Post  $post
-     * @return \Illuminate\Http\Response
-     */
     public function destroy($id)
     {
         $editions=Edition::findOrFail($id);
-
         $editions->delete();
-
         return redirect("/admin/editions")->with('message-delete', 'Se ha eliminado con éxito');
     }
 

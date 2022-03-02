@@ -6,31 +6,26 @@ use App\Role;
 
 class UsersTableSeeder extends Seeder
 {
-    /**
-     * Run the database seeds.
-     *
-     * @return void
-     */
     public function run()
     {
         User::truncate();
 
         $adminRole = Role::where('name', 'admin')->first();
-        $comment_adminRole = Role::where('name', 'comment_admin')->first();
+        $editorRole = Role::where('name', 'editor')->first();
         $userRole = Role::where('name', 'user')->first();
 
         $admin = User::create([
             'name' => 'Admin',
-            'email' => 'adrianafas13@hotmail.com',
+            'email' => 'admin@mail.com',
             'email_verified_at' => now(),
             'password' => bcrypt('admin1234')
         ]);
             
-        $comment_admin = User::create([
-            'name' => 'Comment Admin',
-            'email' => 'comment@mail.com',
+        $editor = User::create([
+            'name' => 'Editor',
+            'email' => 'editor@mail.com',
             'email_verified_at' => now(),
-            'password' => bcrypt('comment1234')
+            'password' => bcrypt('editor1234')
         ]);
 
         $user = User::create([
@@ -40,7 +35,7 @@ class UsersTableSeeder extends Seeder
         ]);
 
         $admin->roles()->attach($adminRole);
-        $comment_admin->roles()->attach($comment_adminRole);
+        $editor->roles()->attach($editorRole);
         $user->roles()->attach($userRole);
     }
 }

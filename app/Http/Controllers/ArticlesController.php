@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use App\Article;
 use App\Author;
 use App\Edition;
@@ -18,7 +17,6 @@ class ArticlesController extends Controller
         $articles=Article::orderBy('id', 'desc')->paginate(10);
         $authors=Author::all();
         $areas=Area::all();
-
         return view("articles.index" , compact("articles", "authors", "areas"));
     }
 
@@ -32,10 +30,11 @@ class ArticlesController extends Controller
 
     public function store(ArticleRequest $request)
     {
+        //carga de la informacion de los articulos
         $enter=$request->all();
         $enter['slug'] = str_slug($enter['title']);
 
-        //carga de imagen de articulo en español
+        //carga de imagen de articulo
         if($archivoimges=$request->file('image')){
 
             $infoimges=$archivoimges->getClientOriginalName();
@@ -46,8 +45,7 @@ class ArticlesController extends Controller
 
         }
 
-
-        //carga de archivo de articulo en español
+        //carga de archivo pdf de articulo 
         if($archivofilees=$request->file('file')){
 
             $infofilees=$archivofilees->getClientOriginalName();
@@ -66,7 +64,6 @@ class ArticlesController extends Controller
     public function show($article){
 
         $article=Article::with(['comment','comment.user'])->where('slug',$article)->first();
-
         return view("articles.show" , compact("article", "editions", "authors", "areas"));
 
     }
@@ -82,6 +79,7 @@ class ArticlesController extends Controller
 
     public function update(Request $request, $id)
     {
+         //carga de la informacion del articulo modificado
         $enter=$request->all();
         $article=Article::findOrFail($id);
         $enter['slug'] = str_slug($enter['title']);
@@ -96,7 +94,7 @@ class ArticlesController extends Controller
 
         }
 
-        //carga de archivo de articulo en español
+        //carga de archivo  pdf de articulo modificado
         if($archivofilees=$request->file('file')){
 
             $infofilees=$archivofilees->getClientOriginalName();
@@ -112,7 +110,9 @@ class ArticlesController extends Controller
         return redirect("/admin/article")->with('message-modify', 'Se ha modificado con éxito');
     }
 
-    public function destroy(Article $article){
+    public function destroy(Article $article)
+    {
+        $article=Article::findOrFail($id);
         $article->delete();
         return redirect("/admin/article")->with('message-delete', 'Se ha eliminado con éxito');
     }

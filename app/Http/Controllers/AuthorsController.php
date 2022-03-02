@@ -1,7 +1,5 @@
 <?php
-
 namespace App\Http\Controllers;
-
 use App\Author;
 use Illuminate\Http\Request;
 use App\Http\Requests\AuthorRequest;
@@ -16,26 +14,17 @@ class AuthorsController extends Controller
         return view("authors.index" , compact("authors"));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create()
     {
-
         return view("authors.create");
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
+        //carga de la informacion del autor
         $authors=$request->all();
+
+        //carga de imagen del autor
         if($authorimg=$request->file('image_author')){
 
             $infoimg=$authorimg->getClientOriginalName();
@@ -51,44 +40,27 @@ class AuthorsController extends Controller
 
     }
 
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Post  $post
-     * @return \Illuminate\Http\Response
-     */
     public function show($id)
     {
         $author=Author::findOrFail($id);
-
         return view("authors.show" , compact("author"));
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Post  $post
-     * @return \Illuminate\Http\Response
-     */
+
     public function edit($id)
     {
         $author=Author::findOrFail($id);
-
         return view("authors.edit", compact("author"));
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Post  $post
-     * @return \Illuminate\Http\Response
-     */
     public function update(Request $request, $id)
     {
+        //carga de la informacion del autor modificada
         $enter=$request->all();
+
         $authors=Author::findOrFail($id);
+
+        //carga de la imagen del autor modificada
         if($authorimg=$request->file('image_author')){
 
             $infoimg=$authorimg->getClientOriginalName();
@@ -104,12 +76,6 @@ class AuthorsController extends Controller
         return redirect("/admin/authors")->with('message-modify', 'Se ha modificado con éxito');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Post  $post
-     * @return \Illuminate\Http\Response
-     */
     public function destroy($id)
     {
         $author=Author::findOrFail($id);

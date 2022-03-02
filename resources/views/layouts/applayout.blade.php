@@ -109,7 +109,7 @@
                                     <a class="dropdown-item" href="{{ route('admin') }}">Panel de Administrador</a>
                                 @endhasrole
 
-                                @hasrole('comment_admin')
+                                @hasrole('editor')
                                     <a class="dropdown-item" href="{{ route('admin') }}">Panel de Administrador</a>
                                 @endhasrole
 

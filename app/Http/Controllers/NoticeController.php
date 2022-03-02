@@ -6,39 +6,25 @@ use Illuminate\Http\Request;
 
 class NoticeController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function index()
     {
         $notices=Notice::all();
-
         return view("notices.index" , compact("notices"));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create()
     {
         return view('notices.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
+        //carga del aviso
+        //solo esta permitido un aviso por vez
         $notices = Notice::first();
         if($notices){
-            $notices->delete();
+            $notices->delete();//si ya hay publicado un aviso se va a eliminar automaticamente para publicar el nuevo
         }
         $enter=$request->all();
 
@@ -48,61 +34,30 @@ class NoticeController extends Controller
 
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function show($id)
     {
         $notices=Notice::findOrFail($id);
-
         return view("notices.show" , compact("notices"));
-
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function edit($id)
     {
         $notices=Notice::findOrFail($id);
-
         return view("notices.edit" , compact("notices"));
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function update(Request $request, $id)
     {
+        //carga del aviso modificado
         $notices=Notice::findOrFail($id);
-
         $notices->update($request->all());
-
         return redirect("/admin/notices")->with('message-modify', 'Se ha modificado con éxito');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function destroy($id)
     {
         $notices=Notice::findOrFail($id);
-
         $notices->delete();
-
         return redirect("/admin/notices")->with('message-delete', 'Se ha eliminado con éxito');
     }
 }

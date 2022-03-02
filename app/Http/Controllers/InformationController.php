@@ -8,11 +8,6 @@ use App\Http\Requests\InformationRequest;
 
 class InformationController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
         $informations=Information::all();
@@ -25,8 +20,10 @@ class InformationController extends Controller
     }
     public function store(Request $request)
     {
+        //carga de la informacion 
         $enter=$request->all();
-        //carga de imagen de articulo en español
+
+        //carga de la informacion PDF en español
         if($archivoinfo=$request->file('info_file')){
 
         $infoes=$archivoinfo->getClientOriginalName();
@@ -37,7 +34,7 @@ class InformationController extends Controller
 
     }
 
-    //carga de imagen de articulo en español
+    //carga de la informacion PDF en ingles
     if($archivoinfoen=$request->file('info_en_file')){
 
         $infoen=$archivoinfoen->getClientOriginalName();
