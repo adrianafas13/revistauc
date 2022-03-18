@@ -411,7 +411,6 @@ li.navbar-item a:focus {
 }
 #content_bar_right .content {
     margin-left: 0;
-    margin-right: 5px;
 }
 #content_bar_right .content h6 {
     text-align: center;
@@ -434,6 +433,7 @@ li.navbar-item a:focus {
 #content_bar_right .content p {
     text-align: justify;
     font-size: 14px;
+    margin-right: 35px;
 }
 /**************************ÁREA DE COMENTARIOS*******************************/
 .article-comments .background-comment {

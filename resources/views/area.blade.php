@@ -34,9 +34,9 @@
 
                     <br>
                 </div>
-            </div>
-            <ul class="pagination justify-content-center">
-                {{ $areas->links() }}
+                <ul class="pagination justify-content-center">
+                {{ $articles->links() }}
             </ul>
+            </div>
         </div>
 @endsection

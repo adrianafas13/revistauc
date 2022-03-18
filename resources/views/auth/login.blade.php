@@ -58,13 +58,13 @@
                         </button>
                     </div>
                     
-                    <div class="form-group" style="text-align:center;">
+                    <!--div class="form-group" style="text-align:center;">
                         @if (Route::has('password.request'))
                             <a class="btn" href="{{ route('password.request') }}">
                                 @lang('data.olvido_contrasena')
                             </a>
                         @endif
-                    </div>
+                    </div-->
 
                 </form>
 

@@ -40,10 +40,10 @@
 				<hr>
 				<h6><b>Admin</b></h6>
 				<p>Administrador del sistema: Este tendrá total acceso a todas las funciones dentro del panel de administrador, incuyendo la modificación de los roles de usuario<p>
-				<h6><b>Comment_admin</b></h6>
-				<p>Este rol es para los editores de la revista, tendra acceso a todas las opciones dentro del panel de admionistrador menos a la opcion de Usuarios<p>
+				<h6><b>Editor</b></h6>
+				<p>Este rol es para los editores de la revista, tendra acceso a todas las opciones dentro del panel de administrador menos a la opcion de Usuarios<p>
 				<h6><b>User</b></h6>
-				<p>Este rol esta asignado a cualquier usuario que sea lector de la revista, con el tendra acceso solo a la parte pública de la revista, como la descraga de artículos y publicar comentarios<p>
+				<p>Este rol esta asignado a cualquier usuario que sea lector de la revista, con el tendra acceso solo a la parte pública de la revista, como la descraga de artículos y publicación de comentarios<p>
 			</div>
 		</div>
 	</div>

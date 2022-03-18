@@ -41,12 +41,10 @@ class GeneralController extends Controller
         return view('/articulos',compact('article', 'areas'));
     }
 
-    public function areas($id){
-        $articles= Article::all();
-        $editions= Edition::all();
-        $authors= Author::all();
-        $areas=Area::where('id', $id)->with(['articles'])->orderBy('id', 'desc')->paginate(12);
-        return view('/area',compact('articles','areas', 'editions', 'authors')); 
+    public function areas($id){ 
+        $areas= Area::all();
+        $articles = Article::where('area_id', 'LIKE', '%'.$id.'%')->paginate(12);
+        return view('/area',compact('areas', 'articles')); 
     }
 
     public function authors(){
