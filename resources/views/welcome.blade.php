@@ -70,7 +70,7 @@
                             </div>
                             <div class="col-md-8">
                                 <div class="card-body" id="articulos-card-informacion">
-                                    <h6 class="badge">{{ App::isLocale('es')?$article->area->area_es:$article->area->area_en }}</a></h6>
+                                    <a class="badge" href="{{route('areas', $article->area->id)}}">{{ App::isLocale('es')?$article->area->area_es:$article->area->area_en }}</a>
                                     <h5><b>{{ App::isLocale('es')?$article->title:$article->en_title }}</b></h5>
                                     <p>{{ $article->author->name_author }}</p>
                                     <p class="card-text"><small class="text-muted">{{ $edition->edition_date }}</small></p>

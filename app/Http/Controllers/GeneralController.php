@@ -26,6 +26,7 @@ class GeneralController extends Controller
         $articlesData = [];
         foreach ($articles as $article){
             $article->author = Author::where('id', (int) $article->author_id)->get()->first();
+            
             $articlesData[] = $article;
         }
 //        echo(json_encode($articlesData[0]->author,JSON_PRETTY_PRINT));
@@ -38,6 +39,7 @@ class GeneralController extends Controller
         $areas= Area::all();
         $article = Article::where('slug',$slug)->get()->first();
         $article->author = Author::where('id', (int) $article->author_id)->get()->first();
+        $articles = Article::where('area_id', 'LIKE', '%'.$id.'%')->paginate(12);
         return view('/articulos',compact('article', 'areas'));
     }
 
